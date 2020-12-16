@@ -1,0 +1,1781 @@
+###########################
+# Austria Focus Tree
+# By ~mw~ & Vidyaország
+###########################
+
+focus_tree = {
+	id = austrian_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 3400 y = 1000 }
+
+	### Military Tree
+	### Kickoff focus at 10% WT
+	focus = {
+		id = AUS_military_expansion
+		icon = GFX_focus_chi_army_reform
+		x = 30
+		y = 0
+		cost = 5
+
+		available = {
+			OR = {
+				threat > 0.1
+				has_war = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_military_expansion"
+			add_war_support = 0.05
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	### Land tech
+	focus = {
+		id = AUS_military_tech
+		icon = GFX_focus_generic_license_production
+		x = 2
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_military_expansion
+
+		prerequisite = {
+			focus = AUS_military_expansion
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_military_tech"
+			add_tech_bonus = {
+				name = AUS_military_tech
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_rifle_trials
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_military_tech
+
+		prerequisite = {
+			focus = AUS_military_tech
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_rifle_trials"
+			add_tech_bonus = {
+				name = AUS_rifle_trials
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_artillery_modernisation
+		icon = GFX_goal_national_artillery
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_rifle_trials
+
+		prerequisite = {
+			focus = AUS_rifle_trials
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_artillery_modernisation"
+			add_tech_bonus = {
+				name = AUS_artillery_modernisation
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_military_mountaineers
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_artillery_modernisation
+
+		prerequisite = {
+			focus = AUS_artillery_modernisation
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_military_mountaineers"
+			add_tech_bonus = {
+				name = AUS_military_mountaineers
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	### Land Doctrine
+	focus = {
+		id = AUS_reform_AOK
+		icon = GFX_goal_generic_army_doctrines
+		x = -2
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_military_expansion
+
+		prerequisite = {
+			focus = AUS_military_expansion
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_reform_AOK"
+			army_experience = 100
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = AUS_doctrine_von_Hubicki
+		icon = GFX_goal_doctrine_tank_warfare
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				already_has_other_doctrine_MW = yes
+			}
+		}
+
+		relative_position_id = AUS_reform_AOK
+
+		prerequisite = {
+			focus = AUS_reform_AOK
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_von_Hubicki"
+			add_tech_bonus = {
+				name = AUS_doctrine_von_Hubicki
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_mech_cavalry
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_doctrine_von_Hubicki
+
+		prerequisite = {
+			focus = AUS_doctrine_von_Hubicki
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_mech_cavalry"
+			add_tech_bonus = {
+				name = AUS_mech_cavalry
+				bonus = 1
+				category = cat_mechanized_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_kavalleriepanzer
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_mech_cavalry
+
+		prerequisite = {
+			focus = AUS_mech_cavalry
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_kavalleriepanzer"
+			add_tech_bonus = {
+				name = AUS_kavalleriepanzer
+				bonus = 1
+				uses = 2
+				category = cat_medium_armor
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	### Military finished
+	focus = {
+		id = AUS_mil_expanded
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = 0
+		y = 5
+		cost = 10
+
+		relative_position_id = AUS_military_expansion
+
+		prerequisite = {
+			focus = AUS_military_mountaineers
+		}
+		prerequisite = {
+			focus = AUS_kavalleriepanzer
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_mil_expanded"
+			add_ideas = AUS_modern_army
+		}
+	}
+
+	### ECO TREE
+
+	focus = {
+		id = AUS_eco_council
+		icon = GFX_focus_generic_treaty
+		x = 5
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_eco_council"
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = AUS_skoda
+		icon = GFX_goal_generic_trade
+		x = -3
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_eco_council
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_skoda"
+
+			custom_effect_tooltip = AUS_unlock_skoda
+
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_daimler
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -3
+		y = 2
+		cost = 5
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_skoda
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_daimler"
+			custom_effect_tooltip = AUS_unlock_daimler
+
+			add_tech_bonus = {
+				name = AUS_daimler
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_vienna_circle_1
+		icon = GFX_focus_research
+		x = -1
+		y = 1
+		cost = 10
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_eco_council
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_vienna_circle_1"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_vienna_circle_2
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = -1
+		y = 2
+		cost = 10
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_vienna_circle_1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_vienna_circle_2"
+			swap_ideas = {
+				remove_idea = AUS_vienna_circle
+				add_idea = AUS_vienna_circle-1
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				add_to_tech_sharing_group = austrian_research
+				every_country = {
+					limit = {
+						is_subject_of = AUS
+					}
+					add_to_tech_sharing_group = austrian_research
+				}
+				set_global_flag = vienna_circle_established
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = AUS_suedbahn
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_eco_council
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_suedbahn"
+			4 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			775 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			835 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			102 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			736 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_homeland_eco
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_suedbahn
+
+		prerequisite = {
+			focus = AUS_suedbahn
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_homeland_eco"
+			4 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_farms_expand
+		icon = GFX_IRE_farms
+		x = 3
+		y = 1
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		relative_position_id = AUS_eco_council
+
+		prerequisite = {
+			focus = AUS_eco_council
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_farms_expand"
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 4
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_alpine_mines
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		relative_position_id = AUS_farms_expand
+
+		prerequisite = {
+			focus = AUS_farms_expand
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_alpine_mines"
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 775
+			}
+			add_resource = {
+				type = tungsten
+				amount = 6
+				state = 835
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_homeland_mil
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		cost = 10
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_economy_ready_tooltip
+				NOT = {
+					has_idea = AUS_black_monday
+					has_idea = AUS_black_monday_cs-1
+					has_idea = AUS_black_monday_cs-2
+					has_idea = AUS_black_monday_cs-3
+					has_idea = AUS_black_monday_sdap-1
+					has_idea = AUS_black_monday_sdap-2
+					has_idea = AUS_black_monday_sdap-3
+				}
+			}
+		}
+
+		relative_position_id = AUS_farms_expand
+
+		prerequisite = {
+			focus = AUS_alpine_mines
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_homeland_mil"
+			4 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			736 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	######################
+	### 1936 ELECTIONS ###
+	######################
+
+	focus = {
+		id = AUS_elections
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 15
+		y = 0
+		cost = 5
+
+		available = {
+			date > 1936.3.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_elections"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	### SDAP ###
+
+	focus = {
+		id = AUS_sdap_industrial_workers_council
+		icon = GFX_goal_AUS_SDAP
+		x = -3
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_elections
+
+		prerequisite = {
+			focus = AUS_elections
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		mutually_exclusive = {
+			focus = AUS_cs_national_austerity_council
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_industrial_workers_council"
+			remove_ideas = AUS_socialist_promises
+		}
+	}
+
+	focus = {
+		id = AUS_sdap_1
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_industrial_workers_council
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_1"
+			add_stability = 0.05
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_sdap_2
+		icon = GFX_focus_AUS_naturfreunde
+		x = -1
+		y = 2
+		cost = 5
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_1
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_2"
+			remove_ideas = AUS_divided_society
+		}
+	}
+
+	focus = {
+		id = AUS_sdap_3
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 3
+		cost = 5
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_2
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_3"
+			add_stability = 0.03
+			add_war_support = 0.02
+			add_political_power = 30
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_sdap_4
+		icon = GFX_goal_munitions_factories
+		x = 1
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_industrial_workers_council
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_4"
+			swap_ideas = {
+				remove_idea = AUS_black_monday
+				add_idea = AUS_black_monday_sdap-1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_sdap_5
+		icon = GFX_goal_economic_control
+		x = 1
+		y = 2
+		cost = 10
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_4
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_5"
+			swap_ideas = {
+				remove_idea = AUS_black_monday_sdap-1
+				add_idea = AUS_black_monday_sdap-2
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_sdap_6
+		icon = GFX_goal_gold_up
+		x = 1
+		y = 3
+		cost = 10
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_5
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_6"
+			swap_ideas = {
+				remove_idea = AUS_black_monday_sdap-2
+				add_idea = AUS_black_monday_sdap-3
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_sdap_7
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 4
+		cost = 10
+
+		relative_position_id = AUS_sdap_industrial_workers_council
+
+		prerequisite = {
+			focus = AUS_sdap_3
+		}
+		prerequisite = {
+			focus = AUS_sdap_6
+		}
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_sdap_7"
+			remove_ideas = AUS_black_monday_sdap-3
+			add_timed_idea = {
+				idea = AUS_workers_spirit
+				days = 365
+			}
+		}
+	}
+
+	### CS ###
+
+	focus = {
+		id = AUS_cs_national_austerity_council
+		icon = GFX_goal_AUS_CS
+		x = 3
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_elections
+
+		prerequisite = {
+			focus = AUS_elections
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		mutually_exclusive = {
+			focus = AUS_sdap_industrial_workers_council
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_national_austerity_council"
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = AUS_cs_fill_the_coffers
+		icon = GFX_focus_empty_coffers
+		x = -1
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_national_austerity_council
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_fill_the_coffers"
+			swap_ideas = {
+				remove_idea = AUS_black_monday
+				add_idea = AUS_black_monday_cs-1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_cs_2
+		icon = GFX_IRE_medium_industry
+		x = -1
+		y = 2
+		cost = 10
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_fill_the_coffers
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_2"
+			swap_ideas = {
+				remove_idea = AUS_black_monday_cs-1
+				add_idea = AUS_black_monday_cs-2
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_cs_3
+		icon = GFX_IRE_heavy_industry
+		x = -1
+		y = 3
+		cost = 10
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_2
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_3"
+			swap_ideas = {
+				remove_idea = AUS_black_monday_cs-2
+				add_idea = AUS_black_monday_cs-3
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_cs_4
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_national_austerity_council
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_4"
+			remove_ideas = AUS_socialist_promises
+			add_stability = 0.03
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_cs_5
+		icon = GFX_focus_AUS_agriculture
+		x = 1
+		y = 2
+		cost = 5
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_4
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_5"
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_cs_6
+		icon = GFX_goal_tripartite_pact
+		x = 1
+		y = 3
+		cost = 5
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_5
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_6"
+			add_stability = 0.02
+			remove_ideas = AUS_divided_society
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = AUS_cs_7
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 4
+		cost = 10
+
+		relative_position_id = AUS_cs_national_austerity_council
+
+		prerequisite = {
+			focus = AUS_cs_3
+		}
+		prerequisite = {
+			focus = AUS_cs_6
+		}
+
+		available = {
+			has_government = social_conservative
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_cs_7"
+			remove_ideas = AUS_black_monday_cs-3
+			add_timed_idea = {
+				idea = AUS_tuned_economy
+				days = 365
+			}
+		}
+	}
+
+	######################
+	### 1937 AUSGLEICH ###
+	######################
+	focus = {
+		id = annex_BOH
+		x = 0
+		y = 4
+		cost = 10
+		relative_position_id = AUS_elections
+		prerequisite = {
+			focus = AUS_elections
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_ausgleich"
+			AUS = {
+				annex_country = {
+					target = CZE
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = AUS_ausgleich
+		icon = GFX_goal_AUS_ausgleich
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = annex_BOH
+
+		prerequisite = {
+			focus = annex_BOH
+		}
+		prerequisite = {
+			focus = AUS_sdap_industrial_workers_council
+			focus = AUS_cs_national_austerity_council
+		}
+		available = {
+			date > 1937.9.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_ausgleich"
+			add_timed_idea = {
+				idea = AUS_paid_reparations
+				days = 180
+			}
+			AUS = {
+				annex_country = {
+					target = HUN
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	###########################
+	### Embracing Pluralism ###
+	###########################
+
+	focus = {
+		id = AUS_embrace_pluralism
+		icon = GFX_goal_AUS_federation
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_ausgleich
+
+		prerequisite = {
+			focus = AUS_ausgleich
+		}
+
+		available = {
+			date > 1938.3.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_embrace_pluralism"
+			AUS = {
+				annex_country = {
+					target = GAL
+					transfer_troops = yes
+				}
+			}
+			AUS = {
+				annex_country = {
+					target = CRO
+					transfer_troops = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	### decentralised development scheme ###
+
+	focus = {
+		id = AUS_decentralised_development_scheme
+		icon = GFX_goal_economic_control
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = AUS_embrace_pluralism
+
+		prerequisite = {
+			focus = AUS_embrace_pluralism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_development_scheme"
+			add_timed_idea = {
+				idea = AUS_imperial_development_scheme
+				days = 365
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		cost = 5
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_development_scheme
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_infrastructure"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+					}
+					random_owned_state = {
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+					random_owned_state = {
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 2
+		cost = 5
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_infrastructure
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_military_factories"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+					}
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_docks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 4
+		cost = 5
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_military_factories
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_docks"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					random_owned_state = {
+						limit = {
+							is_coastal = yes
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+					}
+					random_owned_state = {
+						limit = {
+							is_coastal = yes
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_transformation_of_nature
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 2
+		cost = 5
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_infrastructure
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_transformation_of_nature"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+					}
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_resources
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 4
+		cost = 10
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_transformation_of_nature
+		}
+
+		available = {
+			OR = {
+				owns_state = 89
+				GAL = {
+					has_idea = AUS_part_of_the_Empire
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_resources"
+			add_resource = {
+				type = oil
+				amount = 20
+				state = 89
+			}
+			89 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			91 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 3
+		cost = 10
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_infrastructure
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_factories"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+					}
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AUS_decentralised_more_factories
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 5
+		cost = 5
+
+		relative_position_id = AUS_decentralised_development_scheme
+
+		prerequisite = {
+			focus = AUS_decentralised_factories
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_more_factories"
+			if = {
+				limit = {
+					CZE = {
+						is_subject = yes
+					}
+					HUN = {
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = AUS_part_of_the_Empire
+					}
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 9
+					owns_state = 43
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+}

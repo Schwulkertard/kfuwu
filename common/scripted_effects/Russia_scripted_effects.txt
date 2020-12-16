@@ -1,0 +1,262 @@
+RUS_setup_soviets = {
+	hidden_effect = {
+		set_country_flag = Georgiy_K_Zhukov_dead
+		set_country_flag = Aleksandr_I_Yegorov_dead
+		set_country_flag = Nikolay_F_Vatutin_dead
+		set_country_flag = Konstantin_K_Rokossovskiy_dead
+		set_country_flag = Vasiliy_I_Chuykov_dead
+		set_country_flag = Ivan_Belov_dead
+		set_country_flag = Ivan_Konev_dead
+		set_country_flag = Pavel_V_Rychagov_dead
+		every_unit_leader = {
+			limit = {
+				OR = {
+					has_id = 457 #Zhukov
+					has_id = 451 #Shaposhnikov
+					has_id = 455 #Chuykov
+					has_id = 490 #Rokossovskiy
+				}
+			}
+			set_nationality = SOV
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 195 #Petrograd
+					state = 205 #Kaluga
+					state = 208 #Luga
+					state = 209 #Pskov
+					state = 210 #Velikiye Luki
+					state = 219 #Moscow
+					state = 220 #Kursk
+					state = 222 #Orel
+					state = 223 #Tula
+					state = 224 #Bryansk
+					state = 242 #Smolensk
+					state = 243 #Roslavl
+					state = 244 #Volkhov
+					state = 246 #Rzhev
+					state = 247 #Tver
+					state = 248 #Yaroslavl
+					state = 253 #Vladimir
+					state = 254 #Ryazan
+					state = 258 #Lipetsk
+					state = 263 #Novgorod
+					state = 755 #Toropets
+					state = 880 #Dvinsk
+					state = 252 #Nizhny Novgorod
+					state = 257 #Tambov
+					state = 260 #Voronezh
+					state = 240 #Belgorod
+					AND = {
+						ROOT = { has_government = paternal_autocrat }
+						OR = {
+							state = 239 #Saratov
+							state = 250 #Simbisrk
+							state = 255 #Penza
+							state = 256 #Cheboksary
+							state = 265 #Kamyshin
+						}
+					}
+				}
+			}
+			SOV = {
+				add_state_core = PREV
+				transfer_state = PREV
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_government = paternal_autocrat }
+			}
+			transfer_units_fraction = {
+				target = SOV
+				size = 0.4
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+			SOV = {
+				set_politics = {
+					ruling_party = totalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					totalist = 23
+					radical_socialist = 19
+					syndicalist = 41
+					social_democrat = 9
+					social_liberal = 5
+					market_liberal = 3
+					social_conservative = 0
+					authoritarian_democrat = 0
+					paternal_autocrat = 0
+					national_populist = 0
+				}
+			}
+		}
+		else = {
+			transfer_units_fraction = {
+				target = SOV
+				size = 0.42
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+		}
+		SOV = {
+			transfer_technology = yes
+			transfer_navy = { target = RUS }
+			add_ideas = SOV_chaotic_revolution
+			country_lock_all_division_template = yes
+		}
+		for_each_scope_loop = {
+			array = RUS.owned_states
+			add_claim_by = SOV
+		}
+		for_each_scope_loop = {
+			array = SOV.owned_states
+			remove_core_of = RUS
+			add_claim_by = RUS
+			teleport_armies = {
+				limit = { tag = RUS }
+				to_state_array = owned_controlled_states
+			}
+		}
+	}
+}
+
+RUS_add_stability = {
+	if = {
+		limit = {
+			has_stability > 0.1
+		}
+		add_stability = 0.05
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.1
+		}
+		add_stability = 0.1
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.3
+		}
+		add_stability = 0.15
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.5
+		}
+		add_stability = 0.2
+	}
+	else = {
+		add_stability = 0.25
+	}
+}
+
+RUS_unlock_political_path = {
+	remove_ideas = RUS_political_instability
+	complete_national_focus = RUS_Political_Stabilisation
+}
+
+#choosing number of states affected
+
+RUS_zemstvo_add_civilian_factory = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+}
+RUS_zemstvo_add_military_factory = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+}
+RUS_zemstvo_add_infrastructure = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+}
+
+RUS_reduce_black_monday = {
+	if = {
+		limit = { has_idea = RUS_economic_depression_1 }
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_2 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_2
+			add_idea = RUS_economic_depression_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_3 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_3
+			add_idea = RUS_economic_depression_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_4 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_4
+			add_idea = RUS_economic_depression_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_5 }
+		remove_ideas = RUS_economic_depression_5
+	}
+}
+
+SOV_reduce_civil_war_devastation = {
+	if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_5 }
+		remove_ideas = SOV_aftermath_of_the_civil_war_5
+	}
+	else = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SOV_aftermath_of_the_civil_war_1
+				add_idea = SOV_aftermath_of_the_civil_war_2
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_idea = SOV_aftermath_of_the_civil_war_1 }
+				swap_ideas = {
+					remove_idea = SOV_aftermath_of_the_civil_war_1
+					add_idea = SOV_aftermath_of_the_civil_war_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOV_aftermath_of_the_civil_war_2 }
+				swap_ideas = {
+					remove_idea = SOV_aftermath_of_the_civil_war_2
+					add_idea = SOV_aftermath_of_the_civil_war_3
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOV_aftermath_of_the_civil_war_3 }
+				swap_ideas = {
+					remove_idea = SOV_aftermath_of_the_civil_war_3
+					add_idea = SOV_aftermath_of_the_civil_war_4
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOV_aftermath_of_the_civil_war_4 }
+				swap_ideas = {
+					remove_idea = SOV_aftermath_of_the_civil_war_4
+					add_idea = SOV_aftermath_of_the_civil_war_5
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,601 @@
+
+###
+### FOR BASIC TEMPLATE, SEE THE ONES IN _set_puppet_minister.txt
+### Organized by tag, not country name
+
+set_puppet_minister_america = {
+
+#	##
+#	##	GRAO PARA (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = AMA }
+#		if = {
+#			limit = { has_government = totalist }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	BAHIA (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = BAH }
+#		if = {
+#			limit = { has_government = totalist }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+	##
+	##	WEST INDIES
+	##
+	if = {
+		limit = { tag = CAF }
+		if = {
+			limit = {
+				OR = {
+					has_government = totalist
+					has_government = syndicalist
+				}
+			}
+			add_ideas = {
+				CAF_Elie_Bloncourt_hog_syn
+				CAF_Albert_Gomes_for_syn
+				CAF_Hubert_Nathaniel_Critchlow_eco_syn
+				CAF_Gerty_Archimede_sec_syn
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = radical_socialist
+			}
+			add_ideas = {
+				CAF_Yva_Lero_hog_rso
+				CAF_Rene_Menil_for_rso
+				CAF_Amedee_Fengarol_eco_rso
+				CAF_Arthur_Andrew_Cipriani_sec_rso
+			}
+		}
+		else_if = {
+			limit = { has_government = social_democrat }
+			add_ideas = {
+				CAF_Hegesippe_Jean_Legitimus_hog_sde
+				CAF_Norman_Manley_for_sde
+				CAF_Joseph_Lagrosilliere_eco_sde
+				CAF_Osmond_Theodore_Fairclough_sec_sde
+			}
+		}
+		else_if = {
+			limit = { has_government = social_liberal }
+			add_ideas = {
+				CAF_Henry_Lemery_hog_sli
+				CAF_Alexander_Bustamante_for_sli
+				CAF_Donald_Sangster_eco_sli
+				CAF_Gaston_Monnerville_sec_sli
+			}
+		}
+		else_if = {
+			limit = { has_government = market_liberal }
+			add_ideas = {
+				CAF_Gordon_James_Lethem_hog_mli
+				CAF_Bede_Clifford_for_mli
+				CAF_Charles_Dundas_eco_mli
+				CAF_Abraham_Elias_Issa_sec_mli
+			}
+		}
+		else_if = {
+			limit = { has_government = social_conservative }
+			add_ideas = {
+				CAF_Edward_Brandis_Denham_hog_sco
+				CAF_Douglas_James_Jardine_for_sco
+				CAF_Mark_Aitchison_Young_eco_sco
+				CAF_Robert_Arundell_sec_sco
+			}
+		}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
+			add_ideas = {
+				CAF_Eustace_Fiennes_hog_ade
+				CAF_Otho_Lewis_Hancock_for_ade
+				CAF_Felix_Eboue_eco_ade
+				CAF_Ralph_Grey_sec_ade
+			}
+		}
+	}
+
+	##
+	##	CANADA
+	##
+	if = {
+		limit = { tag = CAN }
+		if = {
+			limit = { has_government = totalist }
+			add_ideas = {
+				CAN_Tim_Buck_hog_tot
+				CAN_Alexander_Albert_MacLeod_for_tot
+				CAN_James_Litterick_eco_tot
+				CAN_Tom_McEwan_sec_tot
+			}
+		}
+		else_if = {
+			limit = { has_government = syndicalist }
+			add_ideas = {
+				CAN_Richard_Parmater_Pettipiece_hog_syn
+				CAN_Joe_Zuken_for_syn
+				CAN_William_Kashtan_eco_syn
+				CAN_Norman_Bethune_sec_syn
+			}
+		}
+		else_if = {
+			limit = { has_government = radical_socialist }
+			add_ideas = {
+				CAN_Claude_Jodoin_hog_rso
+				CAN_Humphrey_Mitchell_for_rso
+				CAN_William_Charles_Good_eco_rso
+				CAN_Joseph_Andrew_Clarke_sec_rso
+			}
+		}
+		else_if = {
+			limit = { has_government = social_democrat }
+			add_ideas = {
+				CAN_Major_James_Coldwell_hog_sde
+				CAN_David_Lewis_for_sde
+				CAN_Hazen_Argue_eco_sde
+				CAN_Stanley_Knowles_sec_sde
+			}
+		}
+		else_if = {
+			limit = { has_government = market_liberal }
+			add_ideas = {
+				CAN_William_Lyon_Mackenzie_King_hog_mli
+				CAN_George_W_Stephens_for_mli
+				CAN_CD_Howe_eco_mli
+				CAN_Douglas_Abbott_sec_mli
+			}
+		}
+		else_if = {
+			limit = { has_government = social_liberal }
+			add_ideas = {
+				CAN_Louis_St_Laurent_hog_sli
+				CAN_Mitchell_Hepburn_for_sli
+				CAN_Gerry_McGeer_eco_sli
+				CAN_Stuart_Garson_sec_sli
+			}
+		}
+		else_if = {
+			limit = { has_government = social_conservative }
+			add_ideas = {
+				CAN_John_Bracken_hog_sco
+				CAN_Sidney_Earle_Smith_for_sco
+				CAN_Stephen_Leacock_eco_sco
+				CAN_Gordon_Graydon_sec_sco
+			}
+		}
+		else_if = {
+			limit = { has_government = authoritarian_democrat }
+			add_ideas = {
+				CAN_JH_Blackmore_hog_ade
+				CAN_Ernest_Manning_for_ade
+				CAN_Victor_Quelch_eco_ade
+				CAN_Solon_Earl_Low_sec_ade
+			}
+		}
+		else_if = {
+			limit = { has_government = paternal_autocrat }
+			add_ideas = {
+				CAN_Harry_Crerar_hog_pau
+				CAN_Howard_Charles_Green_for_pau
+				CAN_Lloyd_Samuel_Breadner_eco_pau
+				CAN_Andrew_McNaughton_sec_pau
+			}
+		}
+		else_if = {
+			limit = { has_government = national_populist }
+			add_ideas = {
+				CAN_Henry_Herbert_Stevens_hog_npo
+				CAN_Adrien_Arcand_for_npo
+				CAN_John_Ross_Taylor_eco_npo
+				CAN_Chuck_Crate_sec_npo
+			}
+		}
+	}
+
+#	##
+#	##	COMBINED SYNDICATES OF AMERICA (No minister changes in game right now)
+#	##
+#	if = {
+#		limit = { tag = CSA }
+#		if = {
+#			limit = { has_government = totalist }
+#			add_ideas = {
+#			}
+#		}
+#		else_if = {
+#			limit = { has_government = syndicalist }
+#			add_ideas = {
+#			}
+#		}
+#		else_if = {
+#			limit = { has_government = radical_socialist }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+	##
+	##	CUBA
+	##
+	if = {
+		limit = { tag = CUB }
+		if = {
+			limit = { has_government = totalist }
+			add_ideas = {
+				CUB_Sandalio_Junco_Camellon_hog_tot
+				CUB_Emilio_Roig_Leuchsenring_for_tot
+				CUB_Jacinto_Torras_de_la_Luz_eco_tot
+				CUB_Anibal_Escalante_Dellunde_sec_tot
+			}
+		}
+		else_if = {
+			limit = { has_government = syndicalist }
+			add_ideas = {
+				CUB_Antonio_Guiteras_Holmes_hog_syn
+				CUB_Raul_Roa_Garcia_for_syn
+				CUB_Juan_Martines_Villera_eco_syn
+				CUB_Blas_Roca_Calderio_sec_syn
+			}
+		}
+		else_if = {
+			limit = { has_government = radical_socialist }
+			add_ideas = {
+				CUB_Alberto_Bayo_Giroud_hog_rso
+				CUB_Jose_Aguila_Ruiz_for_rso
+				CUB_Jose_Luciano_Franco_eco_rso
+				CUB_Fernando_Cruz_Portuondo_sec_rso
+			}
+		}
+		else_if = {
+			limit = { has_government = social_democrat }
+			add_ideas = {
+				CUB_Manuel_Bisbe_Alberni_hog_sde
+				CUB_Roberto_Agramonte_Pichardo_for_sde
+				CUB_Alberto_Inocente_Alvarez_eco_sde
+				CUB_Eduardo_Chibas_Ribas_sec_sde
+			}
+		}
+		else_if = {
+			limit = { has_government = social_liberal }
+			add_ideas = {
+				CUB_Carlos_Cespedes_Quesada_hog_sli
+				CUB_Sergio_Carbo_Morera_for_sli
+				CUB_Jorge_Luis_Echarte_eco_sli
+				CUB_Manuel_Urrutia_Lleo_sec_sli
+			}
+		}
+		else_if = {
+			limit = { has_government = market_liberal }
+			add_ideas = {
+				CUB_Miguel_Gomez_Arias_hog_mli
+				CUB_Jose_Barnet_Vinageras_for_mli
+				CUB_Miguel_Suarez_Fernandez_eco_mli
+				CUB_Frederico_Laredo_Bru_sec_mli
+			}
+		}
+		else_if = {
+			limit = { has_government = social_conservative }
+			add_ideas = {
+				CUB_Mario_Garcia_Menocal_hog_sco
+				CUB_Jose_Agustin_Martinez_for_sco
+				CUB_Porfirio_Franca_Alvarez_eco_sco
+				CUB_Cosme_Torriente_Peraza_sec_sco
+			}
+		}
+		else_if = {
+			limit = { has_government = authoritarian_democrat }
+			add_ideas = {
+				CUB_Carlos_Mendieta_Montefur_hog_ade
+				CUB_Antonio_Sanchez_Bustamente_for_ade
+				CUB_Jose_Manuel_Casanova_eco_ade
+				CUB_Raul_Cardenas_Echarte_sec_ade
+			}
+		}
+		else_if = {
+			limit = { has_government = paternal_autocrat }
+			add_ideas = {
+				CUB_Martin_Diaz_Tamayo_hog_pau
+				CUB_Guillermo_Martull_for_pau
+				CUB_Aristides_Sosa_Quesada_eco_pau
+				CUB_Jaime_Marine_Montes_sec_pau
+			}
+		}
+		else_if = {
+			limit = { has_government = national_populist }
+			add_ideas = {
+				CUB_Ramon_Grau_San_Martin_hog_npo
+				CUB_Oscar_Gans_Lopez_for_npo
+				CUB_Carlos_Prio_Soccares_eco_npo
+				CUB_Luis_Perez_Espinos_sec_npo
+			}
+		}
+	}
+
+#	##
+#	##	GUARAPES (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = GRP }
+#		if = {
+#			limit = { has_government = totalist }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	GUYANA (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = GUY }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+	##
+	##	HAWAII
+	##
+	if = {
+		limit = { tag = HAW }
+		if = {
+			limit = { has_government = totalist }
+			add_ideas = {
+				HAW_Bill_Bailey_hog_tot
+				HAW_Maxie_Weisbarth_for_tot
+				HAW_Charles_Fujimoto_eco_tot
+				HAW_James_Mattoon_sec_tot
+			}
+		}
+		else_if = {
+			limit = { has_government = syndicalist }
+			add_ideas = {
+				HAW_Harry_Kamoku_hog_syn
+				HAW_John_Reinecke_for_syn
+				HAW_Koji_Ariyoshi_eco_syn
+				HAW_Myer_C_Symonds_sec_syn
+			}
+		}
+		else_if = {
+			limit = { has_government = radical_socialist }
+			add_ideas = {
+				HAW_Arthur_Rutledge_hog_rso
+				HAW_Arthur_Rutledge_for_rso
+				HAW_George_Kaisan_eco_rso
+				HAW_John_E_Elias_sec_rso
+			}
+		}
+		else_if = {
+			limit = { has_government = social_democrat }
+			add_ideas = {
+				HAW_Charles_Kahiliaulani_Notley_hog_sde
+				HAW_David_Kalakaua_Kawananakoa_for_sde
+				HAW_Spark_Masayuki_Matsunaga_eco_sde
+				HAW_John_Anthony_Burns_sec_sde
+			}
+		}
+		else_if = {
+			limit = { has_government = social_liberal }
+			add_ideas = {
+				HAW_Hiram_Leong_Fong_hog_sli
+				HAW_George_F_Wright_for_sli
+				HAW_David_K_Ewaliko_eco_sli
+				HAW_Apana_Chang_sec_sli
+			}
+		}
+		else_if = {
+			limit = { has_government = market_liberal }
+			add_ideas = {
+				HAW_Adolph_Bernard_Spreckels_hog_mli
+				HAW_William_Bowers_Bourn_II_for_mli
+				HAW_Lurline_Matson_Roth_eco_mli
+				HAW_Charles_A_Rice_sec_mli
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = social_conservative
+					has_government = authoritarian_democrat
+				}
+			}
+			add_ideas = {
+				HAW_Frank_Fowler_Baldwin_hog_ade
+				HAW_William_Richards_Castle_Jr_for_ade
+				HAW_Lorrin_Andrews_Thurston_eco_ade
+				HAW_Joseph_V_Hodgson_sec_ade
+			}
+		}
+		else_if = {
+			limit = { has_dictatorship_government = yes }
+			add_ideas = {
+				HAW_Delos_Carleton_Emmons_hog_pau
+				HAW_James_Rudolph_Garfield_for_pau
+				HAW_Thomas_H_Hobron_eco_ade
+				HAW_Joseph_Boyd_Poindexter_sec_ade
+			}
+		}
+	}
+
+#	##
+#	##	GOYAZ (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = GOY }
+#		if = {
+#			limit = { has_government = totalist }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	JAMAICA (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = JAM }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	PUERTO RICO (No ministers yet)
+#	##
+#	if = {
+#		limit = { tag = PRI }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	QECHUA (No ministers yet)
+#	##
+#	if = {
+#		limit = { tag = QCH }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	QUEBEC (No ministers yet)
+#	##
+#	if = {
+#		limit = { tag = QUE }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+#	##
+#	##	TRINIDAD AND TOBAGO (No ministers right now)
+#	##
+#	if = {
+#		limit = { tag = TRI }
+#		if = {
+#			limit = { has_socialist_government = yes }
+#			add_ideas = {
+#			}
+#		}
+#	}
+
+	##
+	##	VENEZUELA
+	##
+	if = {
+		limit = { tag = VEN }
+		if = {
+			limit = { has_government = totalist }
+			add_ideas = {
+				VEN_Federico_Mariano_Picon_Salas_hog_tot
+				VEN_Juan_Pablo_Perez_Alfonso_for_syn
+				VEN_Rafael_Simon_Urbina_Lopez_eco_tot
+				VEN_Guillermo_Prince_Lara_sec_tot
+			}
+		}
+		else_if = {
+			limit = { has_government = syndicalist }
+			add_ideas = {
+				VEN_Salvador_de_la_Plaza_hog_syn
+				VEN_Juan_Pablo_Perez_Alfonso_for_syn
+				VEN_Eloy_Tarazona_eco_syn
+				VEN_Miguel_Otero_Silva_sec_syn
+			}
+		}
+		else_if = {
+			limit = { has_government = radical_socialist }
+			add_ideas = {
+				VEN_Eloy_Antonio_Lares_Martinez_hog_rso
+				VEN_Pedro_Grases_Gonzalez_for_rso
+				VEN_Eloy_Tarazona_eco_syn
+				VEN_Miguel_Otero_Silva_sec_syn
+			}
+		}
+		else_if = {
+			limit = { has_government = social_democrat }
+			add_ideas = {
+				VEN_Lisandro_Alvarado_hog_sde
+				VEN_Jose_Antonio_Ramos_Sucre_for_sde
+				VEN_Maria_Cruz_Salmeron_Acosta_eco_sde
+				VEN_Isaac_Jose_Pardo_Soublette_sec_sde
+			}
+		}
+		else_if = {
+			limit = { has_government = social_liberal }
+			add_ideas = {
+				VEN_Rufino_Blanco_Fombona_hog_sli
+				VEN_Juan_Oropeza_Riera_for_sli
+				VEN_Santiago_Aguerrevere_Michelena_eco_sli
+				VEN_Carlos_Alberto_Lleras_Restrepo_sec_sli
+			}
+		}
+		else_if = {
+			limit = { has_government = market_liberal }
+			add_ideas = {
+				VEN_Guillermo_Tell_Villegas_Pulido_hog_mli
+				VEN_Manuel_Perez_Guerrero_for_mli
+				VEN_Pedro_Pablo_Azpurua_Quiroba_eco_mli
+				VEN_Concepcion_Quijada_sec_mli
+			}
+		}
+		else_if = {
+			limit = { has_government = social_conservative }
+			add_ideas = {
+				VEN_Cesar_Zumeta_hog_sco
+				VEN_Gonzalo_Bustillos_Barrios_for_sco
+				VEN_Dr_Antonio_Jose_Villegas_eco_sco
+				VEN_Guillermo_Griffiths_Escardo_sec_sco
+			}
+		}
+		else_if = {
+			limit = { has_government = authoritarian_democrat }
+			add_ideas = {
+				VEN_Juan_Bautista_Perez_hog_ade
+				VEN_Mario_Briceno_Iragorry_for_ade
+				VEN_Comandante_Francisco_Pelliser_eco_ade
+				VEN_Jose_Cipriano_Castro_Ruiz_sec_ade
+			}
+		}
+		else_if = {
+			limit = { has_government = paternal_autocrat }
+			add_ideas = {
+				VEN_Isaias_Medina_Angarita_hog_pau
+				VEN_Arturo_Uslar_Pietri_for_pau
+				VEN_Carlos_Roman_Delgado_Chalbaud_Gomez_eco_pau
+				VEN_Luis_Felipe_Llovera_Paez_sec_pau
+			}
+		}
+		else_if = {
+			limit = { has_government = national_populist }
+			add_ideas = {
+				VEN_Jose_Maria_Ortega_Martinez_hog_npo
+				VEN_Andres_Eloy_Blanco_Meano_for_npo
+				VEN_Jose_Manuel_Hernandez_eco_npo
+				VEN_Jose_Ignacio_Cardenas_Garcia_sec_npo
+			}
+		}
+	}
+}

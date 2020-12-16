@@ -1,0 +1,242 @@
+﻿###OOB File for CAN.txt
+units = {
+	fleet = {
+		name = "Royal Canadian Fleet"
+		naval_base = 7361 ###Change to proper province number
+		task_force = {
+			name = "Royal Canadian Fleet"
+			location = 7361 ###Change to proper province number
+			ship = { name = "HMCS Howe" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Empress" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Canada" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = CAN version_name = "Ark Royal Class" } }
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "CAN" amount = 8 }
+					cv_nav_bomber_equipment_1 =  { owner = "CAN" amount = 12 }
+				}
+			}
+			ship = { name = "HMCS Acasta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Achates" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Acheron" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Active" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Antelope" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Anthony" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Ardent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Arrow" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Codrington" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Amazon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Ambuscade" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Acasta Class" } } }
+			ship = { name = "HMCS Count Raymond de Saint-Gilles" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Count Robert II" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Crusader" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Duke Godfrey of Bouillon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Duke Robert Curthose" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Prince Bohemond" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Shamrock" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Shikari" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Sirdar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Somme" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Steadfast" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Sterling" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Success" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tactician" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tilbury" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tintagel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tribune" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Trinidad" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Trojan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tumult" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Turquoise" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS André de Montbard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Count Fulk V of Anjou" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Godfrey de Saint-Omer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Hugues d'Argentein" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Hugues de Champagne" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Hugues de Payens" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Robert de Torteville" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Roncelin de Fos" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "HMCS Abdiel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Gabriel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Ithuriel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Kempenfelt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Lightfoot" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Stuart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Broke" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Keppel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Saunders" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Shakespeare" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Spragge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Wallace" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Agincourt" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Moncton" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Montreal" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Ottawa" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Toronto" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Belfast" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Neptune" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAN version_name = "Neptune Class" } } }
+			ship = { name = "HMCS Dragon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Calypso" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Calliope" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Castor" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Carlisle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Colombo" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Caroline" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Carysfort" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Conquest" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Dartmouth" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Magnificent" definition = SH_battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = CAN version_name = "Magnificent Class" } } }
+			ship = { name = "HMCS Majestic" definition = SH_battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = CAN version_name = "Magnificent Class" } } }
+			ship = { name = "HMCS Victorious" definition = SH_battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = CAN version_name = "Magnificent Class" } } }
+			ship = { name = "HMCS Hawke" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Rodney" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Nelson" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Bellerophon" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Conqueror" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Orion" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Thunderer" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Iron Duke" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Barham" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Valiant" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Warspite" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CAN version_name = "Hood Class" } } }
+			ship = { name = "HMCS Ramillies" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Queen Elizabeth/Iron Duke Class" } } }
+			ship = { name = "HMCS Resolution" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Queen Elizabeth/Iron Duke Class" } } }
+			ship = { name = "HMCS Revenge" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Queen Elizabeth/Iron Duke Class" } } }
+			ship = { name = "HMCS N-1" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS N-2" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS N-3" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS N-4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS N-5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS N-6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CAN version_name = "N Type" } } }
+			ship = { name = "HMCS K-38" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-39" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-40" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-41" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-42" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-43" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS X-2" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "HMCS Campbell" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Douglas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Malcolm" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Montrose" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Blenheim" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Emerald" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Cavendish" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Frobisher" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Hawkins" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Sardonyx" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Saturn" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Speedy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Spindrift" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Sturdy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Sycamore" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tobago" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Tenedos" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Thanet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Thracian" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Diomede" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Cambrian" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Canterbury" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Argus" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Centaur" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = CAN version_name = "Ark Royal Class" } }
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "CAN" amount = 8 }
+					cv_nav_bomber_equipment_1 =  { owner = "CAN" amount = 12 }
+				}
+			}
+			ship = { name = "HMCS Scimitar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Scotsman" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Scout" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Stonehenge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Stormcloud" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Turbulent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "River/S Class" } } }
+			ship = { name = "HMCS Vega" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Vehement" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Velox" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Walton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Watson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Wave" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Westminster" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Wivern" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Wolverine" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "V/W Class" } } }
+			ship = { name = "HMCS Danae" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Euphrates" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Caledon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Caradoc" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Ceres" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Curlew" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "HMCS Anson" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Cockburn" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Nelson/Rodney Class" } } }
+			ship = { name = "HMCS Royal Oak" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAN version_name = "Queen Elizabeth/Iron Duke Class" } } }
+			ship = { name = "HMCS H-24" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "H Type" } } }
+			ship = { name = "HMCS H-25" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "H Type" } } }
+			ship = { name = "HMCS H-26" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "H Type" } } }
+			ship = { name = "HMCS H-27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "H Type" } } }
+			ship = { name = "HMCS K-29" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-30" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-36" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "HMCS K-37" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Edgar Quinet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "Ernest Renan" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CAN version_name = "Town/C-Class" } } }
+			ship = { name = "Algérien" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Annamite" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Arabe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Bambara" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Hova" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Kabyle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Marocain" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Sakalave" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Sénégalais" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Somali" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Tonkinois" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Touareg" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Aventurier" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Intrépide" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Opiniâtre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Téméraire" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Bisson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Commandant Lucas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Mangini" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Protet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Renaudin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Capitaine Mehl" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Casque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Cimeterre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Commandant Bory" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Commandant Rivière" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Dehorter" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Chasseur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Janissaire" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Tirailleur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Voltigeur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Chacal" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Jaguar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Léopard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Lynx" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Panthère" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Tigre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Bison" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Guépard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Lion" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Valmy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Verdun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAN version_name = "Crusader/Templar Class" } } }
+			ship = { name = "Amazone" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Amphitrite" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Antiope" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Diane" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Méduse" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Aréthuse" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Argonaute" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Atalante" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = CAN version_name = "X1 Type" } } }
+			ship = { name = "Ariane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Calypso" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Danaé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Eurydicé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Nymphe" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Circé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Thétis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Galatée" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Ondine" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Sirène" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+			ship = { name = "Naïade" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAN version_name = "K Type" } } }
+		}
+	}
+}

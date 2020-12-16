@@ -1,0 +1,3 @@
+
+# MAF big collapse command
+# Note that MAF isn't annexed and the player doesn't switch nation so if those are desired effects they must be done separately

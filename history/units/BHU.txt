@@ -1,0 +1,30 @@
+﻿division_template = {
+	name = "Kodamag Sadamag"
+	division_names_group = BHU_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Zhibye Damag"
+	division_names_group = BHU_MIL_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.71
+		efficiency = 100
+	}
+}
+

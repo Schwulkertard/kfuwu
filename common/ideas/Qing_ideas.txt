@@ -1,0 +1,21 @@
+### Qing ideas
+ideas = {
+    ##############
+	# Country ideas
+	##############
+	
+	country = {
+		QIE_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_army"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = AST_anzac_spirit
+			modifier = {
+				army_morale_factor = -0.20
+				army_attack_factor = -0.30
+				army_defence_factor = -0.30
+				army_org_factor = -0.20
+			}
+		}
+	}
+}

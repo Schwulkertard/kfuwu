@@ -1,0 +1,10 @@
+state = {
+	id = 1034
+	name = "STATE_1034"
+	provinces = {
+		13380
+	}
+	manpower = 1
+	impassable = yes
+	state_category = wasteland
+}

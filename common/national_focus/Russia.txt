@@ -1,0 +1,1570 @@
+###########################
+# Russia Focus Tree
+# By Nijato
+# Reworked by Alpinia
+###########################
+focus_tree = {
+	id = Russia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 1575 y = 680 }
+
+	#############
+	###### Internal Politics #######
+	#############
+
+	focus = {
+		id = RUS_Political_Stabilisation
+		icon = GFX_goal_generic_neutrality_focus
+		available = {
+			hidden_trigger = { always = no }
+		}
+		x = 7
+		y = 0
+		cost = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Political_Stabilisation"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = RUS_A_Firm_Hand
+		icon = GFX_focus_ger_strike_at_the_source
+		available = {
+			OR = {
+				RUS_savinkov_in_power = yes
+			}
+		}
+		prerequisite = {
+			focus = RUS_Political_Stabilisation
+		}
+		relative_position_id = RUS_Political_Stabilisation
+		x = 0
+		y = 1
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_A_Firm_Hand"
+			if = {
+				limit = { RUS_savinkov_in_power = yes }
+				custom_effect_tooltip = RUS_A_Firm_Hand_savinkov_tooltip
+				add_stability = 0.1
+				hidden_effect = {
+					country_event = russia.18
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						RUS_wrangel_in_power = yes
+						RUS_denikin_in_power = yes
+					}
+				}
+				custom_effect_tooltip = RUS_A_Firm_Hand_military_tooltip
+				if = {
+					limit = { RUS_denikin_in_power = yes }
+					add_stability = -0.2
+				}
+				else = {
+					add_stability = -0.1
+				}
+				hidden_effect = {
+					country_event = russia.183
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Centralised_Apparatus_Of_State
+		icon = GFX_goal_consolidating_coalitionv2
+		prerequisite = {
+			focus = RUS_A_Firm_Hand
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = 0
+		y = 1
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Centralised_Apparatus_Of_State"
+			add_stability = 0.1
+			add_war_support = 0.2
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_A_New_Russia
+		icon = GFX_goal_national_populism
+		prerequisite = {
+			focus = RUS_Centralised_Apparatus_Of_State
+		}
+		mutually_exclusive = {
+			focus = RUS_Legacy_Of_The_Whites
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = -2
+		y = 2
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_A_New_Russia"
+			add_ideas = RUS_a_new_russia_1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = RUS_Natsguardiya
+		icon = GFX_EGY_Palestine_Defence
+		prerequisite = {
+			focus = RUS_A_New_Russia
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = -4
+		y = 3
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Natsguardiya"
+			add_manpower = 100000
+			if = { #has yunarmiya
+				limit = { has_idea = RUS_a_new_russia_3 }
+				swap_ideas = {
+					remove_idea = RUS_a_new_russia_3
+					add_idea = RUS_a_new_russia_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_a_new_russia_1
+					add_idea = RUS_a_new_russia_2
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						date > 1938.04.24
+					}
+					country_event = {
+						id = rusd.124
+						days = 15
+					}
+				}
+				else = {
+					country_event = {
+						id = rusd.124
+						days = 365
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Yunarmiya
+		icon = GFX_focus_generic_manpower
+		prerequisite = {
+			focus = RUS_A_New_Russia
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = -2
+		y = 3
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Yunarmiya"
+			if = { #has natsguardia
+				limit = { has_idea = RUS_a_new_russia_2 }
+				swap_ideas = {
+					remove_idea = RUS_a_new_russia_2
+					add_idea = RUS_a_new_russia_4
+				}
+			}
+			else = { #has only basic
+				swap_ideas = {
+					remove_idea = RUS_a_new_russia_1
+					add_idea = RUS_a_new_russia_3
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Legacy_Of_The_Whites
+		icon = GFX_goal_RUS_white_legacy
+		prerequisite = {
+			focus = RUS_Centralised_Apparatus_Of_State
+		}
+		mutually_exclusive = {
+			focus = RUS_A_New_Russia
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = 2
+		y = 2
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Legacy_Of_The_Whites"
+			army_experience = 50
+			add_ideas = RUS_legacy_of_the_whites_1
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = RUS_Stratocratic_Government
+		icon = GFX_goal_manage_industries
+		prerequisite = {
+			focus = RUS_Legacy_Of_The_Whites
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = 2
+		y = 3
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Stratocratic_Government"
+			if = { #has mil. spir
+				limit = { has_idea = RUS_legacy_of_the_whites_3 }
+				swap_ideas = {
+					remove_idea = RUS_legacy_of_the_whites_3
+					add_idea = RUS_legacy_of_the_whites_4
+				}
+			}
+			else = { #has only basic
+				swap_ideas = {
+					remove_idea = RUS_legacy_of_the_whites_1
+					add_idea = RUS_legacy_of_the_whites_2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = RUS_Military_Spirit
+		icon = GFX_goal_generic_join_faction
+		prerequisite = {
+			focus = RUS_Legacy_Of_The_Whites
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = 4
+		y = 3
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Military_Spirit"
+			army_experience = 50
+			if = { #has strat
+				limit = { has_idea = RUS_legacy_of_the_whites_2 }
+				swap_ideas = {
+					remove_idea = RUS_legacy_of_the_whites_2
+					add_idea = RUS_legacy_of_the_whites_4
+				}
+			}
+			else = { #has only basic
+				swap_ideas = {
+					remove_idea = RUS_legacy_of_the_whites_1
+					add_idea = RUS_legacy_of_the_whites_3
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_State_Revanchism
+		icon = GFX_focus_generic_eagle
+		prerequisite = {
+			focus = RUS_Natsguardiya
+			focus = RUS_Military_Spirit
+		}
+		prerequisite = {
+			focus = RUS_Yunarmiya
+			focus = RUS_Stratocratic_Government
+		}
+		relative_position_id = RUS_A_Firm_Hand
+		x = 0
+		y = 4
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_State_Revanchism"
+			add_ideas = RUS_state_revanchism
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	#############
+	###Economy###
+	#############
+
+	focus = {
+		id = RUS_Establish_The_VES
+		icon = GFX_goal_economic_control
+		x = 18
+		y = 0
+		cost = 5
+		select_effect = { RUS_reduce_black_monday = yes }
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Establish_The_VES"
+			add_ideas = RUS_supreme_economic_council_1
+			add_stability = 0.02
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Ural_Tractor_Plants
+		icon = GFX_goal_generic_heavy_tank
+		relative_position_id = RUS_Establish_The_VES
+		x = -5
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Ural_Tractor_Plants"
+			RUS_reduce_black_monday = yes
+			custom_effect_tooltip = RUS_Ural_Tractor_Plants_tooltip
+			hidden_effect = {
+				if = { #has MTS
+					limit = { has_idea = RUS_supreme_economic_council_3 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_3
+						add_idea = RUS_supreme_economic_council_5
+					}
+				}
+				else_if = { #has railways
+					limit = { has_idea = RUS_supreme_economic_council_4 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_4
+						add_idea = RUS_supreme_economic_council_6
+					}
+				}
+				else_if = { #has MTS + railways
+					limit = { has_idea = RUS_supreme_economic_council_7 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_7
+						add_idea = RUS_supreme_economic_council_8
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_1
+						add_idea = RUS_supreme_economic_council_2
+					}
+				}
+			}
+			572 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+			add_stability = 0.01
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Machine_And_Tractor_Stations
+		icon = GFX_goal_agricultural_aid
+		relative_position_id = RUS_Establish_The_VES
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Machine_And_Tractor_Stations"
+			RUS_reduce_black_monday = yes
+			custom_effect_tooltip = RUS_Machine_And_Tractor_Stations_tooltip
+			hidden_effect = {
+				if = { #has tankograd
+					limit = { has_idea = RUS_supreme_economic_council_2 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_2
+						add_idea = RUS_supreme_economic_council_5
+					}
+				}
+				else_if = { #has railways
+					limit = { has_idea = RUS_supreme_economic_council_4 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_4
+						add_idea = RUS_supreme_economic_council_7
+					}
+				}
+				else_if = { #has tankograd + railways
+					limit = { has_idea = RUS_supreme_economic_council_6 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_6
+						add_idea = RUS_supreme_economic_council_8
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_1
+						add_idea = RUS_supreme_economic_council_3
+					}
+				}
+			}
+			add_stability = 0.03
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Novgorod
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Pskov
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Ufa
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Yaroslavl
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Nizhny_Novgorod
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Railway_Nationalisation
+		icon = GFX_goal_generic_seize_railway
+		relative_position_id = RUS_Establish_The_VES
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Railway_Nationalisation"
+			RUS_reduce_black_monday = yes
+			custom_effect_tooltip = RUS_Railway_Nationalisation_tooltip
+			hidden_effect = {
+				if = { #has tankograd
+					limit = { has_idea = RUS_supreme_economic_council_2 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_2
+						add_idea = RUS_supreme_economic_council_6
+					}
+				}
+				else_if = { #has MTS
+					limit = { has_idea = RUS_supreme_economic_council_3 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_3
+						add_idea = RUS_supreme_economic_council_7
+					}
+				}
+				else_if = { #has tankograd + MTS
+					limit = { has_idea = RUS_supreme_economic_council_5 }
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_5
+						add_idea = RUS_supreme_economic_council_8
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = RUS_supreme_economic_council_1
+						add_idea = RUS_supreme_economic_council_4
+					}
+				}
+			}
+			add_political_power = -100
+			every_owned_state = {
+				limit = {
+					infrastructure > 0
+					infrastructure < 4
+					is_impassable_state = no
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = RUS_Korporatsiya_Yusupova
+		icon = GFX_goal_factory_complex
+		relative_position_id = RUS_Establish_The_VES
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Korporatsiya_Yusupova"
+			RUS_reduce_black_monday = yes
+			add_tech_bonus = {
+				name = RUS_Korporatsiya_Yusupova
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_stability = 0.02
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Yekaterinburg
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Omsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Irkutsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Novo_Nikolayevsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Krasnoyarsk
+			hidden_effect = {
+				country_event = {
+					id = rusd.137
+					days = 90
+					random = 720
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Industrial_Draft_Scheme
+		icon = GFX_goal_social_reforms
+		relative_position_id = RUS_Establish_The_VES
+		x = -2
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = RUS_Ural_Tractor_Plants
+		}
+		prerequisite = {
+			focus = RUS_Machine_And_Tractor_Stations
+		}
+		prerequisite = {
+			focus = RUS_Railway_Nationalisation
+		}
+		prerequisite = {
+			focus = RUS_Korporatsiya_Yusupova
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Industrial_Draft_Scheme"
+			RUS_reduce_black_monday = yes
+			custom_effect_tooltip = RUS_Industrial_Draft_Scheme_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = RUS_supreme_economic_council_8
+					add_idea = RUS_supreme_economic_council_9
+				}
+			}
+			add_stability = 0.02
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Resource_Prospection
+		icon = GFX_goal_generic_coal_mining
+		relative_position_id = RUS_Establish_The_VES
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Resource_Prospection"
+			unlock_decision_category_tooltip = RUS_Resource_decisions
+		}
+	}
+
+	focus = {
+		id = RUS_Expand_The_Transsiberian
+		icon = GFX_goal_generic_railroad
+		relative_position_id = RUS_Resource_Prospection
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			561 = { is_owned_and_controlled_by = ROOT } # Amur
+			563 = { is_owned_and_controlled_by = ROOT } # Chita
+			564 = { is_owned_and_controlled_by = ROOT } # Verkhneudinsk
+			566 = { is_owned_and_controlled_by = ROOT } # Irkutsk
+			567 = { is_owned_and_controlled_by = ROOT } # Bratsk
+			568 = { is_owned_and_controlled_by = ROOT } # Krasnoyarsk
+			569 = { is_owned_and_controlled_by = ROOT } # Shcheglovsk
+			657 = { is_owned_and_controlled_by = ROOT } # Blagoveshchensk
+		}
+
+		prerequisite = {
+			focus = RUS_Resource_Prospection
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Expand_The_Transsiberian"
+			569 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			568 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			567 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			566 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			564 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			563 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			561 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			657 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = RUS_Research_Investments
+		icon = GFX_focus_research2
+		relative_position_id = RUS_Expand_The_Transsiberian
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			num_of_factories > 80
+		}
+		prerequisite = {
+			focus = RUS_Expand_The_Transsiberian
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Research_Investments"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	#############
+	###### Military #######
+	#############
+
+	focus = {
+		id = RUS_Army_Modernisation
+		icon = GFX_goal_RUS_army
+
+		x = 11
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Army_Modernisation"
+			army_experience = 50
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		icon = GFX_goal_secret_agents
+		relative_position_id = RUS_Army_Modernisation
+		x = -4
+		y = 1
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_Okhrannoye_Otdeleniye_tooltip
+				NOT = { has_country_flag = RUS_Okhrannoye_Otdeleniye_locked }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Reintroduce_Okhrannoye_Otdeleniye"
+			add_ideas = RUS_okhrannoye_otdeleniye_1
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				if = {
+					limit = { has_intelligence_agency = yes }
+					add_political_power = 50
+				}
+				else = {
+					create_intelligence_agency = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Electronic_Warfare
+		icon = GFX_goal_radio
+		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		}
+		prerequisite = {
+			focus = RUS_Equipment_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Electronic_Warfare"
+			add_tech_bonus = {
+				name = RUS_Electronic_Warfare
+				bonus = 1
+				uses = 1
+				category = computing_tech
+			}
+			if = { 
+				limit = { has_idea = RUS_okhrannoye_otdeleniye_2a }
+					swap_ideas = {
+						remove_idea = RUS_okhrannoye_otdeleniye_2a
+						add_idea = RUS_okhrannoye_otdeleniye_3
+					}				
+				else = {
+					swap_ideas = {
+						remove_idea = RUS_okhrannoye_otdeleniye_1
+						add_idea = RUS_okhrannoye_otdeleniye_2b
+					}
+				}	
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_Front_Line_Commissars
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		}
+		prerequisite = {
+			focus = RUS_Equipment_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Front_Line_Commissars"
+			if = { 
+				limit = { has_idea = RUS_okhrannoye_otdeleniye_2b }
+					swap_ideas = {
+						remove_idea = RUS_okhrannoye_otdeleniye_2b
+						add_idea = RUS_okhrannoye_otdeleniye_3
+					}				
+				else = {
+					swap_ideas = {
+						remove_idea = RUS_okhrannoye_otdeleniye_1
+						add_idea = RUS_okhrannoye_otdeleniye_2a
+					}
+				}	
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Equipment_Modernisation
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = RUS_Army_Modernisation
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_Army_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Equipment_Modernisation"
+			add_tech_bonus = {
+				name = RUS_Equipment_Modernisation
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			if = {
+				limit = {
+					has_completed_focus = RUS_Overwhelming_Firepower
+				}
+				add_tech_bonus = {
+					name = RUS_Equipment_Modernisation
+					bonus = 1
+					uses = 2
+					category = support_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_Army_Motorisation
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = RUS_Army_Modernisation
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = RUS_Equipment_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Army_Motorisation"
+			if = {
+				limit = {
+					NOT = { has_tech = motorised_infantry }
+				}
+				set_technology = { motorised_infantry = 1 }
+			}
+			else = {
+				add_tech_bonus = {
+					name = RUS_Army_Motorisation
+					bonus = 1
+					uses = 1
+					category = cat_mechanized_equipment
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {	
+		id = RUS_VVSR
+		icon = GFX_goal_RUS_airforce
+		relative_position_id = RUS_Army_Modernisation
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = RUS_Equipment_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_VVSR"
+			add_tech_bonus = {
+				name = RUS_VVSR
+				bonus = 1
+				uses = 12
+				category = air_doctrine
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state_population > 500000
+					air_base < 8
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state_population > 500000
+					air_base < 8
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 260
+				}
+				260 = {
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 590
+				}
+				590 = {
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 566
+				}
+				566 = {
+					add_building_construction = {
+						type = air_base
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_The_ORT_System
+		icon = GFX_EGY_Radio_Free_Cairo
+		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = RUS_Electronic_Warfare
+		}
+		prerequisite = {
+			focus = RUS_VVSR
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_The_ORT_System"
+			add_tech_bonus = {
+				name = RUS_The_ORT_System
+				bonus = 1
+				uses = 2
+				category = radar_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_Air_Superiority
+		icon = GFX_goal_new_airforce
+		relative_position_id = RUS_VVSR
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_VVSR
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Air_Superiority"
+			add_tech_bonus = {
+				name = RUS_Air_Superiority
+				bonus = 1
+				uses = 1
+				category = fighter_techs
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_Spearhead_Doctrine
+		icon = GFX_EGY_Operation_Abu
+		prerequisite = {
+			focus = RUS_Army_Modernisation
+		}
+
+		relative_position_id = RUS_Army_Modernisation
+		x = 4
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2000
+			modifier = {
+				factor = 2
+				RUS_savinkov_in_power = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Spearhead_Doctrine"
+			add_tech_bonus = {
+				name = RUS_Spearhead_Doctrine
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_Armour_Modernisation
+		icon = GFX_focus_generic_tank_destroyer
+		relative_position_id = RUS_Spearhead_Doctrine
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_Spearhead_Doctrine
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Armour_Modernisation"
+			add_tech_bonus = {
+				name = RUS_Armour_Modernisation
+				bonus = 1
+				uses = 2
+				category = armor
+			add_tech_bonus = {
+				name = RUS_High_Command_Reforms
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = RUS_National_Armoured_School
+		icon = GFX_goal_doctrine_tank_warfare
+		relative_position_id = RUS_Spearhead_Doctrine
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = RUS_Armour_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_National_Armoured_School"
+			add_ideas = tank_academy
+		}
+	}
+
+	### Navy Tree ###
+	focus = {
+		id = RUS_Navy_Modernisation
+		icon = GFX_goal_RUS_navy
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_Navy_Modernisation_tooltip
+				NOT = { has_country_flag = RUS_navy_locked }
+			}
+		}
+		x = 26
+		y = 1
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Navy_Modernisation"
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 9
+				add_building_construction = {
+					type = dockyard
+					level = 9
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	###############################
+	###### Foreign Politics #######
+	###############################
+
+	focus = {
+		id = RUS_Expansionism
+		icon = GFX_focus_generic_eagle
+		x = 2
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 5000
+			modifier = {
+				factor = 0
+				has_completed_focus = RUS_Empower_The_Duma
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Expansionism"
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = russian_alliance
+			}
+			hidden_effect = {
+				random_other_country = {
+					news_event = {
+						id = worldnews.8
+						days = 1
+					}
+				}
+				country_event = {
+					id = worldtension.9
+					days = 1
+				}
+			}
+			add_stability = 0.1
+			custom_effect_tooltip = RUS_Expansionism_tooltip
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Secure_Central_Asia
+		icon = GFX_goal_RUS_central_asia
+		x = 0
+		y = 10
+		cost = 5
+		available = {
+			date > 1937.6.1
+		}
+		prerequisite = {
+			focus = RUS_Expansionism
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_completed_focus = RUS_Into_The_Caucasus
+				OR = {
+					has_war_with = DKB
+					has_annex_war_goal = DKB
+				}
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = RUS_GER_blocks_caucasus
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Secure_Central_Asia"
+			add_stability = 0.05
+			annex_country = {
+				target = ALO
+			}
+			annex_country = {
+				target = TRK
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = RUS_Into_The_Caucasus
+		icon = GFX_goal_RUS_caucasus
+		x = 4
+		y = 10
+		cost = 5
+		available = {
+		date > 1938.4.1
+		}
+		prerequisite = {
+			focus = RUS_Expansionism
+		}
+		select_effect = {
+			GER = {
+				if = {
+					limit = {
+						is_subject = no
+						surrender_progress < 0.2
+						ROOT = { can_declare_war_on = PREV }
+					}
+					country_event = {
+						id = rusfor.1000
+						days = 2
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_completed_focus = RUS_Secure_Central_Asia
+				OR = {
+					country_exists = ALO
+					country_exists = TRK
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Into_The_Caucasus"
+			annex_country = {
+				target = DKB
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_Repudiate_Brest_Litovsk
+		icon = GFX_goal_RUS_eastern_europe
+		x = 2
+		y = 12
+		cost = 5
+		available = {
+			is_subject = no
+			if = {
+				limit = {
+					OR = {
+						country_exists = ALO
+						country_exists = TRK
+					}
+				}
+				405 = { is_owned_by_ROOT_or_subject = yes }
+				589 = { is_owned_by_ROOT_or_subject = yes }
+			}
+			if = {
+				limit = { country_exists = AZE }
+				229 = { is_owned_by_ROOT_or_subject = yes }
+			}
+			if = {
+				limit = { country_exists = GEO }
+				231 = { is_owned_by_ROOT_or_subject = yes }
+			}
+			if = {
+				limit = { country_exists = DKB }
+				234 = { is_owned_by_ROOT_or_subject = yes }
+			}
+		}
+		bypass = {
+			hidden_trigger = { has_war_with = GER }
+		}
+
+		prerequisite = {
+			focus = RUS_Into_The_Caucasus
+		}
+		prerequisite = {
+			focus = RUS_Secure_Central_Asia
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 10
+				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Repudiate_Brest_Litovsk"
+			add_political_power = 25
+			army_experience = 10
+			every_state = {
+				limit = {
+					OR = {
+						region = 37 #Baltic States
+						region = 39 #White Ruthenia
+						region = 130 #Western Ukraine
+						region = 165 #Eastern Ukraine
+						state = 146 #Karelia
+						state = 147 #Kuolajarvi
+					}
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			}
+			unlock_decision_tooltip = RUS_Attack_Germany
+			if = {
+				limit = {
+					FIN = {
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+				unlock_decision_tooltip = RUS_Demand_Karelia
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_in_faction_with = ROM
+						is_in_faction_with = RRM
+					}
+				}
+				unlock_decision_tooltip = RUS_Demand_Bessarabia
+			}
+			if = {
+				limit = { has_completed_focus = RUS_Expansionism }
+				unlock_decision_tooltip = RUS_Demand_Galicia
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Force_Open_The_Straits
+		icon = GFX_goal_RUS_middle_east
+		x = 1
+		y = 13
+		cost = 5
+		available = {
+			is_subject = no
+			96 = { is_owned_by_ROOT_or_subject = yes } #Vilnius
+			202 = { is_owned_by_ROOT_or_subject = yes } #Kiev
+			206 = { is_owned_by_ROOT_or_subject = yes } #Minsk
+			1091 = { is_owned_by_ROOT_or_subject = yes } #Riga
+		}
+		prerequisite = {
+			focus = RUS_Repudiate_Brest_Litovsk
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Force_Open_The_Straits"
+			add_political_power = 25
+			army_experience = 10
+			if = {
+				limit = { has_completed_focus = RUS_Expansionism }
+				custom_effect_tooltip = unlocks_decision
+				custom_effect_tooltip = RUS_Attack_Persia_tooltip
+			}
+			else = {
+				custom_effect_tooltip = unlocks_decision
+				custom_effect_tooltip = RUS_Ultimatum_To_Persia_tooltip
+			}
+			if = {
+				limit = { has_completed_focus = RUS_Expansionism }
+				unlock_decision_tooltip = RUS_Claim_The_Straits
+			}
+			custom_effect_tooltip = unlocks_decision
+			if = {
+				limit = { country_exists = TUR }
+				custom_effect_tooltip = RUS_Attack_Ottomans_TUR_tooltip
+			}
+			else = {
+				custom_effect_tooltip = RUS_Attack_Ottomans_OTT_tooltip
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RUS_Enemy_In_The_East
+		icon = GFX_goal_RUS_japan
+		x = 3
+		y = 13
+		cost = 5
+		available = {
+			is_subject = no
+			96 = { is_owned_by_ROOT_or_subject = yes } #Vilnius
+			202 = { is_owned_by_ROOT_or_subject = yes } #Kiev
+			206 = { is_owned_by_ROOT_or_subject = yes } #Minsk
+			1091 = { is_owned_by_ROOT_or_subject = yes } #Riga
+		}
+		bypass = {
+			hidden_trigger = { has_war_with = JAP }
+		}
+
+		prerequisite = {
+			focus = RUS_Repudiate_Brest_Litovsk
+		}
+
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_stability < 0.25
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Enemy_In_The_East"
+			add_war_support = 0.05
+			add_state_claim = 408 #Vladivostok
+			add_state_claim = 409 #Khabarovsk
+			add_state_claim = 537 #Sakhalin
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = RUS_Attack_Transamur_tooltip
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = RUS_Attack_Japan_tooltip
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
+	}
+}

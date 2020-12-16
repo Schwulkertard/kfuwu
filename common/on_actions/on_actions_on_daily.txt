@@ -1,0 +1,15 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+				FRA = {
+					has_war_with = GER
+				}					
+				}
+				FRA = { add_idea = { idea = GER_FRA_war_0 } }
+				GER = { add_idea = { idea = GER_FRA_war_0 } }
+			}
+		}
+	}
+}

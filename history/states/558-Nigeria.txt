@@ -1,0 +1,10 @@
+state = {
+	id = 558
+	name = "STATE_558"
+
+	provinces = {
+		1932 1992 2025 2050 4889 4952 7978 8021 8034 10820 10831 12731 12817 12900
+	}
+	manpower = 1
+	state_category = two
+}

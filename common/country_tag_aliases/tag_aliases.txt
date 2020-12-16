@@ -1,0 +1,19 @@
+
+### Sino-Japanese War Missions
+JPW = {
+	targets = { JAP }
+	has_war_with = event_target:current_china_leader
+}
+
+### Entente Leader
+ENT = {
+	global_event_target = KR_entente_leader
+}
+
+
+# operative operation target
+# only set for majors who has agency
+# set on on_weekly
+MOT = {
+	variable = generic_operation_target
+}

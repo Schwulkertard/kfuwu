@@ -1,0 +1,9 @@
+
+soundeffect =
+{
+	name = "superev_gerjap"
+	sounds = {
+		sound = "super_gerjap"
+	}
+	volume = 1
+}

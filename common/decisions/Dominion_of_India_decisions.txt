@@ -1,0 +1,37 @@
+################################
+# Dominion of India Decisions
+################################
+foreign_politics = {
+	DEH_annex_AFG = {
+		icon = generic_operation
+
+		allowed = {
+			tag = DEH
+		}
+
+		available = {
+			tag = DEH
+			AFG = { is_ai = yes }
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		visible = {
+			country_exists = AFG
+		}
+
+		complete_effect = {
+			add_state_core = 415
+			add_state_core = 267
+			DEH = {
+				annex_country = {
+					target = AFG
+					transfer_troops = yes
+				}
+			}
+		}
+
+	}
+}

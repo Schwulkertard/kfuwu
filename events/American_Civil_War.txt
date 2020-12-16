@@ -1,0 +1,156 @@
+﻿###########################
+# American Civil War Events
+###########################
+# By herkles
+###########################
+
+add_namespace = amcivwar
+
+### USA Events 61 - 76 ###
+country_event = { # Chief of Staff
+	id = amcivwar.71
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.71" }
+	title = amcivwar.71.t
+	desc = amcivwar.71.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_completed_focus = USA_war_department
+		NOT = {
+			has_idea = USA_George_Catlett_Marshall_Jr_cos
+			has_idea = USA_Joseph_'Lightning_Joe'_Lawton_Collins_cos
+			has_idea = USA_Malin_Craig_cos
+			has_idea = USA_Omar_Nelson_Bradley_cos
+			has_idea = USA_Walter_Bedell_'Beetle'_Smith_cos
+		}
+	}
+
+	option = { # Omar Bradly
+		name = amcivwar.71.a
+		add_ideas = USA_Omar_Nelson_Bradley_cos
+	}
+	option = { # Marlin Craig
+		name = amcivwar.71.b
+		add_ideas = USA_Malin_Craig_cos
+	}
+	option = { # Walter Smith
+		name = amcivwar.71.c
+		add_ideas = USA_Walter_Bedell_'Beetle'_Smith_cos
+	}
+}
+
+country_event = { # Chief of Army
+	id = amcivwar.72
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.72" }
+	title = amcivwar.72.t
+	desc = amcivwar.72.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_completed_focus = USA_reform_plan
+		NOT = {
+			has_idea = USA_Alexander_Vandegrift_carm
+			has_idea = USA_Dwight_D_Eisenhower_carm
+			has_idea = USA_Joseph_T_McNarney_carm
+			has_idea = USA_Kenneth_George_Althaus_carm
+			has_idea = USA_Samuel_D_Sturgis_Jr_carm
+		}
+	}
+
+	option = { # Dwight Eisenhower
+		name = amcivwar.72.a
+		add_ideas = USA_Dwight_D_Eisenhower_carm
+	}
+	option = { # Kenneth George Althaus
+		name = amcivwar.72.b
+		add_ideas = USA_Kenneth_George_Althaus_carm
+	}
+	option = { # Samuel D. Sturgis Jr.
+		name = amcivwar.72.c
+		add_ideas = USA_Samuel_D_Sturgis_Jr_carm
+	}
+}
+
+country_event = { # Chief of Navy
+	id = amcivwar.73
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.73" }
+	title = amcivwar.73.t
+	desc = amcivwar.73.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_completed_focus = USA_navy
+		NOT = {
+			has_idea = USA_Charles_Edison_cnav
+			has_idea = USA_Chester_William_Nimitz_Sr_cnav
+			has_idea = USA_Ernest_Joseph_King_cnav
+			has_idea = USA_Harold_Rainsford_Stark_cnav
+			has_idea = USA_Robert_Lee_Ghormley_cnav
+			has_idea = USA_Thomas_Charles_Hart_cnav
+			has_idea = USA_William_Harrison_Standley_cnav
+		}
+	}
+
+	option = { # William Harrison Standley
+		name = amcivwar.73.a
+		add_ideas = USA_William_Harrison_Standley_cnav
+	}
+	option = { # Ernest Joseph King
+		name = amcivwar.73.b
+		add_ideas = USA_Ernest_Joseph_King_cnav
+	}
+	option = { # Thomas Hart
+		name = amcivwar.73.c
+		add_ideas = USA_Thomas_Charles_Hart_cnav
+	}
+}
+
+country_event = { # Chief of Air Force
+	id = amcivwar.74
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.74" }
+	title = amcivwar.74.t
+	desc = amcivwar.74.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_completed_focus = USA_air_force_debate
+		NOT = {
+			has_idea = USA_Carl_Andrew_Spaatz_cair
+			has_idea = USA_Edward_Vernon_Rickenbacker_cair
+			has_idea = USA_Hoyt_Sanford_Vandenberg_cair
+			has_idea = USA_Ira_Clarence_Eaker_cair
+			has_idea = USA_James_Harold_Doolittle_cair
+			has_idea = USA_Joseph_Warren_Stilwell_cair
+			has_idea = USA_Nathan_Bedford_Forrest_III_cair
+		}
+	}
+
+	option = { # Carl Andrew Spaatz
+		name = amcivwar.74.a
+		add_ideas = USA_Carl_Andrew_Spaatz_cair
+	}
+	option = { # Edward Vernon Rickenbacker
+		name = amcivwar.74.b
+		add_ideas = USA_Edward_Vernon_Rickenbacker_cair
+	}
+	option = { # Ira Clarence Eaker
+		name = amcivwar.74.c
+		add_ideas = USA_Ira_Clarence_Eaker_cair
+	}
+}

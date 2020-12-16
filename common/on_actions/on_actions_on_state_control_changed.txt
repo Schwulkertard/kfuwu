@@ -1,0 +1,155 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_state_control_changed OLD CONTROLLER: [From.GetName] STATE: [From.From.GetName]"
+			### RUS/SOV control array
+			if = {
+				limit = {
+					OR = {
+						tag = RUS
+						tag = SOV
+					}
+					NOT = { is_in_array = { ROOT.enemy_controlled_states = FROM.FROM } }
+					FROM.FROM = {
+						owner = { has_war_with = ROOT }
+						OR = {
+							is_on_continent = europe
+							is_on_continent = middle_east
+						}
+					}
+				}
+				set_country_flag = has_enemy_control_array
+				add_to_array = { ROOT.enemy_controlled_states = FROM.FROM }
+			}
+
+			### Russian event - "A New 1812/1328"
+			if = {
+				limit = {
+					FROM = { tag = RUS }
+					FROM.FROM = {
+						OR = {
+							state = 252
+							state = 255
+							state = 205
+							state = 242
+							state = 246
+						}
+					}
+				}
+				FROM = {
+					country_event = {
+						id = rusfor.51
+						hours = 6
+					}
+				}
+			}
+
+			### South African Civil War
+			if = {
+				limit = {
+					FROM.FROM = { state = 681 } #Cape Town
+					tag = SFR
+					has_authoritarian_government = yes
+					FROM = { tag = SAF }
+				}
+				FROM = { country_event = saf.76 }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 275 } #Transvaal
+					tag = SFR
+					has_authoritarian_government = no
+					FROM = { tag = SAF }
+				}
+				FROM = { country_event = saf.77 }
+			}
+
+			### BHC Civil War
+			if = {
+				limit = {
+					FROM.FROM = { state = 431 } #Calcutta
+					tag = INR
+					has_government = totalist
+					FROM = { tag = BHC }
+				}
+				FROM = { country_event = beng.83 }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 431 } #Calcutta
+					tag = INR
+					has_government = radical_socialist
+					FROM = { tag = BHC }
+				}
+				FROM = { country_event = beng.90 }
+			}
+
+			### Clearing State Modifiers
+			if = { #French Flanders state modifier
+				limit = {
+					ROOT = {
+						980 = {
+							has_state_flag = FLN_conscription_flag
+						}
+						controls_state = 980
+						NOT = {
+							tag = FLN
+						}
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_non_core_manpower = -0.18
+					}
+				}
+			}
+			if = { #French Flanders state modifier put back for FLN
+				limit = {
+					ROOT = {
+						980 = {
+							has_state_flag = FLN_conscription_flag
+						}
+						controls_state = 980
+						tag = FLN
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_non_core_manpower = 0.18
+					}
+				}
+			}
+
+			### Fixing state control when occupying occupied territory
+			if = {
+				limit = {
+					FROM.FROM = {
+						owner = {
+							NOT = { tag = ROOT }
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								ROOT = { is_subject_of = PREV }
+							}
+						}
+					}
+				}
+				FROM.FROM = {
+					owner = {
+						set_state_controller = PREV
+					}
+				}
+			}
+			### German-French war Germany winning 1
+			if = {
+				limit = {
+				tag = GER
+				11483 = {is_controlled_by_GER_or_ally = yes}					
+				}
+				FRA = { add_idea = { idea = GER_FRA_war_A } }
+				GER = { add_idea = { idea = GER_FRA_war_1 } }
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+state = {
+	id = 301
+	name = "STATE_301"
+
+	provinces = {
+		2152 2173 2194 11023 12901 13247
+	}
+	manpower = 1
+	state_category = four
+}

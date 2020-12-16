@@ -1,0 +1,11 @@
+state = {
+	id = 297
+	name = "STATE_297" # Equatorial Guinea
+	manpower = 1
+
+	state_category = one
+
+	provinces = {
+		1903 8244
+	}
+}

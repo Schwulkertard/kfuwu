@@ -1,0 +1,11 @@
+state = {
+	id = 77
+	name = "STATE_77" # Silistra
+	manpower = 1
+
+	state_category = two
+
+	provinces = {
+		657 9614 11597
+	}
+}

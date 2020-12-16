@@ -1,0 +1,261 @@
+#defined_text = {
+#	name = FNG_zhigong_party_influence
+#	text = {
+#		trigger = {
+#			has_country_flag = FNG_zhigong_party_active
+#		}
+#		localization_key = FNG_zhigong_party_influence_text
+#	}
+#	text = {
+#		trigger = {
+#			NOT = { has_country_flag = FNG_zhigong_party_active }
+#		}
+#		localization_key = ""
+#	}
+#}
+defined_text = {
+	name = FNG_concordia_association_influence
+	text = {
+		trigger = {
+			has_country_flag = FNG_concordia_association_active
+		}
+		localization_key = FNG_concordia_association_influence_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = FNG_concordia_association_active }
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = FNG_communications_clique_influence
+	text = {
+		trigger = {
+			has_country_flag = FNG_communications_clique_active
+		}
+		localization_key = FNG_communications_clique_influence_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = FNG_communications_clique_active }
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = FNG_recovery_league_influence
+	text = {
+		trigger = {
+			has_country_flag = FNG_recovery_league_active
+		}
+		localization_key = FNG_recovery_league_influence_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = FNG_recovery_league_active }
+		}
+		localization_key = ""
+	}
+}
+#defined_text = {
+#	name = FNG_national_unity_league_influence
+#	text = {
+#		trigger = {
+#			has_country_flag = FNG_national_unity_league_active
+#		}
+#		localization_key = FNG_national_unity_league_influence_text
+#	}
+#	text = {
+#		trigger = {
+#			NOT = { has_country_flag = FNG_national_unity_league_active }
+#		}
+#		localization_key = ""
+#	}
+#}
+defined_text = {
+	name = FNG_zhang_clique_influence
+	text = {
+		trigger = {
+			has_country_flag = FNG_zhang_clique_active
+		}
+		localization_key = FNG_zhang_clique_influence_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = FNG_zhang_clique_active }
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuPP
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_political_power < 0 }
+			AND = {
+				check_variable = { FNG.FNG_mantetsu_stability = 0 }
+				check_variable = { FNG.FNG_mantetsu_war_support = 0 }
+				check_variable = { FNG.FNG_mantetsu_construction_speed = 0 }
+				check_variable = { FNG.FNG_mantetsu_max_efficiency = 0 }
+				check_variable = { FNG.FNG_mantetsu_factory_output = 0 }
+				check_variable = { FNG.FNG_mantetsu_factories = 0 }
+			}
+		}
+		localization_key = FNG_mantetsu_political_power_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_political_power < 0 }
+		}
+		localization_key = FNG_mantetsu_political_power_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuStability
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_stability < 0 }
+			AND = {
+				check_variable = { FNG.FNG_mantetsu_war_support = 0 }
+				check_variable = { FNG.FNG_mantetsu_construction_speed = 0 }
+				check_variable = { FNG.FNG_mantetsu_max_efficiency = 0 }
+				check_variable = { FNG.FNG_mantetsu_factory_output = 0 }
+				check_variable = { FNG.FNG_mantetsu_factories = 0 }
+			}
+		}
+		localization_key = FNG_mantetsu_stability_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_stability < 0 }
+		}
+		localization_key = FNG_mantetsu_stability_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuWarSupport
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_war_support < 0 }
+			AND = {
+				check_variable = { FNG.FNG_mantetsu_construction_speed = 0 }
+				check_variable = { FNG.FNG_mantetsu_max_efficiency = 0 }
+				check_variable = { FNG.FNG_mantetsu_factory_output = 0 }
+				check_variable = { FNG.FNG_mantetsu_factories = 0 }
+			}
+		}
+		localization_key = FNG_mantetsu_war_support_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_war_support < 0 }
+		}
+		localization_key = FNG_mantetsu_war_support_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuConstructionSpeed
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_construction_speed > 0 }
+			AND = {
+				check_variable = { FNG.FNG_mantetsu_max_efficiency = 0 }
+				check_variable = { FNG.FNG_mantetsu_factory_output = 0 }
+				check_variable = { FNG.FNG_mantetsu_factories = 0 }
+			}
+		}
+		localization_key = FNG_mantetsu_construction_speed_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_construction_speed > 0 }
+		}
+		localization_key = FNG_mantetsu_construction_speed_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuMaxEfficiency
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_max_efficiency > 0 }
+			AND = {
+				check_variable = { FNG.FNG_mantetsu_factory_output = 0 }
+				check_variable = { FNG.FNG_mantetsu_factories = 0 }
+			}
+		}
+		localization_key = FNG_mantetsu_max_efficiency_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_max_efficiency > 0 }
+		}
+		localization_key = FNG_mantetsu_max_efficiency_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = MantetsuFactoryOutput
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_factory_output > 0 }
+			check_variable = { FNG.FNG_mantetsu_factories = 0 }
+		}
+		localization_key = FNG_mantetsu_factory_output_text_last
+	}
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_factory_output > 0 }
+		}
+		localization_key = FNG_mantetsu_factory_output_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { #FNG factories sent to JAP
+	name = MantetsuFactoriesSent
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_factories > 0 }
+		}
+		localization_key = FNG_mantetsu_factories_sent_text
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { #FNG factories received by JAP
+	name = MantetsuFactoriesReceived
+	text = {
+		trigger = {
+			check_variable = { FNG.FNG_mantetsu_factories > 0 }
+		}
+		localization_key = JAP_mantetsu_factories_received_text
+	}
+	text = {
+		localization_key = ""
+	}
+}

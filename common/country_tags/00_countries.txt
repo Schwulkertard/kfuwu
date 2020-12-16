@@ -1,0 +1,159 @@
+### Western Europe ###
+AST = "countries/WestEur.txt"
+AUS = "countries/WestEur.txt"
+BAV = "countries/WestEur.txt"
+BEL = "countries/WestEur.txt"
+BOS = "countries/WestEur.txt"
+BRI = "countries/WestEur.txt"
+CAF = "countries/WestEur.txt"
+CAN = "countries/WestEur.txt"
+CAR = "countries/WestEur.txt"
+CAT = "countries/WestEur.txt"
+CNT = "countries/WestEur.txt"
+CRO = "countries/WestEur.txt"
+CZE = "countries/WestEur.txt"
+DDR = "countries/WestEur.txt" #Prussia
+DEI = "countries/WestEur.txt"
+DEN = "countries/WestEur.txt"
+ENG = "countries/WestEur.txt"
+ENP = "countries/WestEur.txt"
+FIN = "countries/WestEur.txt"
+FLN = "countries/WestEur.txt"
+FRA = "countries/WestEur.txt"
+FRP = "countries/WestEur.txt"
+GBP = "countries/WestEur.txt"
+GBR = "countries/WestEur.txt"
+GER = "countries/WestEur.txt"
+GEX = "countries/WestEur.txt" #Germany in exile
+GLC = "countries/WestEur.txt"
+GRU = "countries/WestEur.txt"
+HAW = "countries/WestEur.txt"
+HOL = "countries/WestEur.txt"
+HUN = "countries/WestEur.txt"
+ICE = "countries/WestEur.txt"
+IRE = "countries/WestEur.txt"
+ITA = "countries/WestEur.txt"
+LUX = "countries/WestEur.txt"
+MAF = "countries/WestEur.txt"
+NFA = "countries/WestEur.txt"
+NGF = "countries/WestEur.txt"
+NOR = "countries/WestEur.txt"
+NZL = "countries/WestEur.txt"
+PAP = "countries/WestEur.txt" #Papal States
+POL = "countries/WestEur.txt"
+POR = "countries/WestEur.txt"
+SAF = "countries/WestEur.txt"
+SCA = "countries/WestEur.txt"
+SCT = "countries/WestEur.txt"
+SFR = "countries/WestEur.txt"
+SIC = "countries/WestEur.txt"
+SLO = "countries/WestEur.txt"
+SPR = "countries/WestEur.txt"
+SRD = "countries/WestEur.txt" #Sardinia/Kingdom of Italy
+SRI = "countries/WestEur.txt"
+SVK = "countries/WestEur.txt"
+SWE = "countries/WestEur.txt"
+SWI = "countries/WestEur.txt"
+USA = "countries/WestEur.txt"
+WAL = "countries/WestEur.txt"
+WGR = "countries/WestEur.txt" #Rhineland
+WLL = "countries/WestEur.txt"
+
+### Eastern Europe ###
+BAT = "countries/EastEur.txt"
+BUL = "countries/EastEur.txt"
+DKB = "countries/EastEur.txt"
+EST = "countries/EastEur.txt"
+GAL = "countries/EastEur.txt"
+GEO = "countries/EastEur.txt"
+GRE = "countries/EastEur.txt"
+GRR = "countries/EastEur.txt"
+MTN = "countries/EastEur.txt"
+OTT = "countries/EastEur.txt"
+ROM = "countries/EastEur.txt"
+RRM = "countries/EastEur.txt"
+RUS = "countries/EastEur.txt"
+SER = "countries/EastEur.txt"
+SIB = "countries/EastEur.txt"
+SOV = "countries/EastEur.txt"
+LAT = "countries/EastEur.txt"
+LIT = "countries/EastEur.txt"
+TRS = "countries/EastEur.txt"
+TUR = "countries/EastEur.txt"
+UKR = "countries/EastEur.txt"
+WHR = "countries/EastEur.txt"
+
+### Asian ###
+ALO = "countries/Asian.txt"
+BHU = "countries/Asian.txt"
+BOR = "countries/Asian.txt"
+BUR = "countries/Asian.txt"
+CAM = "countries/Asian.txt"
+ETS = "countries/Asian.txt" #East Turkestan
+GEA = "countries/Asian.txt" #German East Asia
+PRC = "countries/Asian.txt" #Liangguang Rebels
+INC = "countries/Asian.txt"
+INS = "countries/Asian.txt"
+JAP = "countries/Asian.txt"
+KAC = "countries/Asian.txt" #Kachin
+KOR = "countries/Asian.txt"
+KYR = "countries/Asian.txt" #Kyrgyzstan
+LAO = "countries/Asian.txt"
+LEC = "countries/Asian.txt"
+MAN = "countries/Asian.txt" #Great Empire of Manchuria
+MLY = "countries/Asian.txt"
+QIE = "countries/Asian.txt" #Qing Empire
+PHI = "countries/Asian.txt"
+SAR = "countries/Asian.txt"
+SIA = "countries/Asian.txt"
+SIK = "countries/Asian.txt"
+TAJ = "countries/Asian.txt" #Tajikistan
+UZB = "countries/Asian.txt" #Uzbekistan
+VIE = "countries/Asian.txt"
+
+### Indian ###
+BHC = "countries/Indian.txt"
+CEY = "countries/Indian.txt"
+DEH = "countries/Indian.txt"
+INR = "countries/Indian.txt" #Indian Rebels
+MAD = "countries/Indian.txt"
+MYS = "countries/Indian.txt" #Mysore
+PRF = "countries/Indian.txt"
+RAJ = "countries/Indian.txt"
+TRV = "countries/Indian.txt" #Travancore
+
+### MidEast ###
+AFG = "countries/MidEast.txt"
+ARM = "countries/MidEast.txt"
+AZE = "countries/MidEast.txt"
+EGY = "countries/MidEast.txt"
+IKH = "countries/MidEast.txt"
+IRQ = "countries/MidEast.txt"
+JBS = "countries/MidEast.txt"
+JOR = "countries/MidEast.txt"
+KUR = "countries/MidEast.txt" #Kurdreich
+LBA = "countries/MidEast.txt"
+LEB = "countries/MidEast.txt" #Lebanon
+MOR = "countries/MidEast.txt"
+OMA = "countries/MidEast.txt"
+PAL = "countries/MidEast.txt"
+PER = "countries/MidEast.txt"
+SAU = "countries/MidEast.txt"
+SYR = "countries/MidEast.txt"
+TRK = "countries/MidEast.txt"
+YEM = "countries/MidEast.txt"
+
+### South/Central America ###
+VEN = "countries/WestEur.txt"
+
+### African ###
+ERI = "countries/African.txt"
+ETH = "countries/African.txt"
+SOM = "countries/African.txt"
+SUD = "countries/African.txt"
+
+### No national units
+
+#### GFX storage only - These tags should always be at the end of this list
+XXA = "countries/WestEur.txt"
+XXB = "countries/WestEur.txt"

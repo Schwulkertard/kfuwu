@@ -1,0 +1,64 @@
+# from released country's scope
+syndicalist_socdem_government_change = {
+	if = {
+		limit = {
+			ROOT = {
+				has_government = social_democrat
+				has_country_flag = soc_dems_are_socialists
+			}
+		}
+		hidden_effect = {
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.4
+			}
+		}
+	}
+}
+
+occupy_small_country = {
+	add_political_power = -25
+	add_stability = -0.025
+	add_war_support = -0.025
+}
+
+occupy_medium_country = {
+	add_political_power = -50
+	add_stability = -0.05
+	add_war_support = -0.05
+}
+
+occupy_large_country = {
+	add_political_power = -100
+	add_stability = -0.1
+	add_war_support = -0.1
+}
+
+occupy_massive_country = {
+	add_political_power = -200
+	add_stability = -0.2
+	add_war_support = -0.2
+}
+
+setup_vavro_srobar = {
+	if = {
+		limit = { has_elected_government = yes }
+		meta_effect = {
+			text = {
+				create_country_leader = {
+					name = "Vavro Srobar"
+					desc = "POLITICS_VAVRO_SROBAR_DESC"
+					picture = "gfx/leaders/SVK/Portrait_SVK_Vavro_Srobar.tga"
+					expire = "1965.1.1"
+					ideology = [OVERLORD_IDEOLOGY]
+				}
+			}
+			OVERLORD_IDEOLOGY = "[ROOT.GetRulingIdeologySubtype]"
+		}
+		set_country_flag = CZE_SVK_was_puppeted
+	}
+}

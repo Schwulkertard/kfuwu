@@ -1,0 +1,11 @@
+state = {
+	id = 621
+	name = "STATE_621" #Suiyuan
+	manpower = 1
+
+	state_category = one
+
+	provinces = {
+		2087 4525 7048 7158 7631 10424 10629 12331 12403 12609 12880
+	}
+}

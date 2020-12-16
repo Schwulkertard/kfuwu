@@ -1,0 +1,11 @@
+state = {
+	id = 872
+	name = "STATE_872" # Tacna
+	manpower = 1
+
+	state_category = wasteland
+
+	provinces = {
+		13086
+	}
+}

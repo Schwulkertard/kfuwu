@@ -1,0 +1,7 @@
+
+sound = {
+	name = "super_gerjap"
+	file = "menu/gerjap.wav"
+	volume = 1
+	always_load = yes
+}

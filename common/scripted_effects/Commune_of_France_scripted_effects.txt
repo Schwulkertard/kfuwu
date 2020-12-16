@@ -1,0 +1,99 @@
+FRA_phalanstere_opinion = {
+	add_opinion_modifier = {
+		target = FRA
+		modifier = FRA_aided_phalanstere
+	}
+	if = {
+		limit = {
+			has_global_flag = PHALANSTERE_ENG
+			NOT = { tag = ENG }
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = FRA_aided_phalanstere
+		}
+	}
+}
+
+FRA_phalanstere_tech_sharing = {
+	if = {
+		limit = {
+			has_global_flag = scientific_phalanstere
+		}
+		add_to_tech_sharing_group = phalanstere_research
+	}
+	else = {
+		set_country_flag = phalanstere_internationale_member
+	}
+	country_event = comfrance.129
+}
+
+FRA_phalanstere_development_in_random_state = {
+	random_owned_state = {
+		limit = {
+			is_in_home_area = yes
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+			NOT = {
+				has_state_category = zero
+				has_state_category = wasteland
+				has_state_category = zero_island
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+FRA_phalanstere_development_in_capital = {
+	if = {
+		limit = {
+			capital_scope = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+		}
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	else = {
+		FRA_phalanstere_development_in_random_state = yes
+	}
+}
+
+FRA_phalanstere_development_in_targeted_state = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	else = {
+		FRA_phalanstere_development_in_random_state = yes
+	}
+}

@@ -1,0 +1,238 @@
+# AI scripted effects
+# By Rylock and Alpinia
+
+FROM_send_volunteers_to_ROOT = {
+	FROM = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = sent_volunteers_@ROOT }
+			}
+
+			#unlock volunteers diplo action
+			if = {
+				limit = {
+					NOT = { has_country_flag = can_send_volunteers }
+				}
+				log = "[THIS.GetName]: unlocked AI volunteers"
+			}
+			else = {
+				log = "[THIS.GetName]: AI volunteers already unlocked"
+			}
+
+			#set variable if not set already, update count
+			if = {
+				limit = {
+					NOT = { has_variable = send_volunteers_count }
+				}
+				set_variable = { send_volunteers_count = 0 }
+			}
+			add_to_variable = { send_volunteers_count = 1 }
+
+			#add spare unit factor
+			if = {
+				limit = {
+					num_divisions < 32
+					num_divisions > 24
+					is_actual_major = no
+				}
+				log = "[THIS.GetName]: increased spare unit factor by 12"
+				set_country_flag = AI_increased_spare_factor_12
+				add_ai_strategy = {
+					type = spare_unit_factor
+					value = 12
+				}
+			}
+			else_if = {
+				limit = {
+					num_divisions < 24
+					num_divisions > 12
+					is_actual_major = no
+				}
+				log = "[THIS.GetName]: increased spare unit factor by 6"
+				set_country_flag = AI_increased_spare_factor_6
+				add_ai_strategy = {
+					type = spare_unit_factor
+					value = 6
+				}
+			}
+			else_if = {
+				limit = {
+					num_divisions < 12
+					num_divisions > 6
+					is_actual_major = no
+				}
+				log = "[THIS.GetName]: increased spare unit factor by 3"
+				set_country_flag = AI_increased_spare_factor_3
+				add_ai_strategy = {
+					type = spare_unit_factor
+					value = 3
+				}
+			}
+
+			#add strategies
+			log = "[THIS.GetName]: increased volunteer desire to [ROOT.GetName]"
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = ROOT
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = support
+				id = ROOT
+				value = 200
+			}
+
+			#set flag
+			set_country_flag = sent_volunteers_@ROOT
+		}
+	}
+}
+
+send_volunteers_to_TARGET = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = sent_volunteers_@event_target:volunteer_target }
+		}
+
+		#unlock volunteers diplo action
+		if = {
+			limit = {
+				NOT = { has_country_flag = can_send_volunteers }
+			}
+			set_country_flag = can_send_volunteers
+			log = "[THIS.GetName]: unlocked AI volunteers"
+		}
+		else = {
+			log = "[THIS.GetName]: AI volunteers already unlocked"
+		}
+
+		#set variable if not set already, update count
+		if = {
+			limit = {
+				NOT = { has_variable = send_volunteers_count }
+			}
+			set_variable = { send_volunteers_count = 0 }
+		}
+		add_to_variable = { send_volunteers_count = 1 }
+
+		#add spare unit factor if necessary
+		if = {
+			limit = {
+				num_divisions < 32
+				num_divisions > 24
+				is_actual_major = no
+			}
+			log = "[THIS.GetName]: increased spare unit factor by 12"
+			set_country_flag = AI_increased_spare_factor_12
+			add_ai_strategy = {
+				type = spare_unit_factor
+				value = 12
+			}
+		}
+		else_if = {
+			limit = {
+				num_divisions < 24
+				num_divisions > 12
+				is_actual_major = no
+			}
+			log = "[THIS.GetName]: increased spare unit factor by 6"
+			set_country_flag = AI_increased_spare_factor_6
+			add_ai_strategy = {
+				type = spare_unit_factor
+				value = 6
+			}
+		}
+		else_if = {
+			limit = {
+				num_divisions < 12
+				num_divisions > 6
+				is_actual_major = no
+			}
+			log = "[THIS.GetName]: increased spare unit factor by 3"
+			set_country_flag = AI_increased_spare_factor_3
+			add_ai_strategy = {
+				type = spare_unit_factor
+				value = 3
+			}
+		}
+
+		#add strategies
+		log = "[THIS.GetName]: increased volunteer desire to [volunteer_target.GetName]"
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = event_target:volunteer_target
+			value = 1000
+		}
+		add_ai_strategy = {
+			type = support
+			id = event_target:volunteer_target
+			value = 200
+		}
+
+		#set flag
+		set_country_flag = sent_volunteers_@event_target:volunteer_target
+	}
+}
+
+clear_volunteers_to_TARGET = {
+	#lock volunteers diplo action if no other volunteers
+	subtract_from_variable = { send_volunteers_count = 1 }
+	if = {
+		limit = {
+			check_variable = { send_volunteers_count < 1 }
+		}
+		clr_country_flag = can_send_volunteers
+		log = "[THIS.GetName]: locked AI volunteers"
+	}
+
+	#remove spare unit factor
+	if = {
+		limit = {
+			has_country_flag = AI_increased_spare_factor_12
+		}
+		log = "[THIS.GetName]: reduced spare unit factor by 12"
+		clr_country_flag = AI_increased_spare_factor_12
+		add_ai_strategy = {
+			type = spare_unit_factor
+			value = -12
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = AI_increased_spare_factor_6
+		}
+		log = "[THIS.GetName]: reduced spare unit factor by 6"
+		clr_country_flag = AI_increased_spare_factor_6
+		add_ai_strategy = {
+			type = spare_unit_factor
+			value = -6
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = AI_increased_spare_factor_3
+		}
+		log = "[THIS.GetName]: reduced spare unit factor by 3"
+		clr_country_flag = AI_increased_spare_factor_3
+		add_ai_strategy = {
+			type = spare_unit_factor
+			value = -3
+		}
+	}
+
+	#remove strategies
+	log = "[THIS.GetName]: removed volunteer desire to [volunteer_target.GetName]"
+	add_ai_strategy = {
+		type = send_volunteers_desire
+		id = event_target:volunteer_target
+		value = -1000
+	}
+	add_ai_strategy = {
+		type = support
+		id = event_target:volunteer_target
+		value = -200
+	}
+
+	#clear flag
+	clr_country_flag = sent_volunteers_@event_target:volunteer_target
+}

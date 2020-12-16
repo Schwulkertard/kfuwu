@@ -1,0 +1,492 @@
+﻿###########################
+# Austrian Events
+###########################
+# By ~mw~
+###########################
+
+add_namespace = austria
+add_namespace = aus.elections
+add_namespace = austromarxism
+
+### Introduction event
+country_event = {
+	id = austria.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austria.1" }
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_Austria_COA
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+	}
+}
+
+### Remove Hungary not paying-idea if Hungary doesn't exist
+country_event = {
+	id = austria.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austria.2" }
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+		HUN = {
+			OR = {
+				exists = no
+				NOT = {
+					is_subject_of = AUS
+				}
+			}
+		}
+	}
+
+	option = {
+		remove_ideas = AUS_financial_ties_broken
+		remove_ideas = AUS_paid_reparations
+		HUN = {
+			remove_ideas = HUN_financial_ties_broken
+		}
+	}
+}
+
+### Karl dies, Otto takes throne
+country_event = {
+	id = austria.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austria.3" }
+	title = austria.3.t
+	desc = austria.3.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+		date > 1947.4.1
+		has_country_leader = {
+			ruling_only = yes
+			name = "Karl I"
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = austria.3.a
+		kill_country_leader = yes
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_DESC"
+			picture = "Portrait_AUS_Otto_I.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+		}
+	}
+}
+
+### Election Events 1936
+
+country_event = {
+	id = aus.elections.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.1" }
+	title = aus.elections.1.t
+	desc = aus.elections.1.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+		date > 1936.2.11
+	}
+
+	option = {
+		name = aus.elections.1.a
+		add_ideas = AUS_elections
+		hidden_effect = {
+			country_event = {
+				id = aus.elections.2
+				days = 5
+			}
+			country_event = {
+				id = aus.elections.4
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.2" }
+	title = aus.elections.2.t
+	desc = aus.elections.2.d
+	picture = GFX_Renner_Speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aus.elections.2.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_start_election
+					option = AUS_START_SOCIAL_CONSERVATIVE
+				}
+			}
+		}
+		add_ideas = AUS_socialist_promises
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.07
+		}
+		country_event = {
+			id = aus.elections.3
+			days = 2
+		}
+	}
+
+	option = {
+		name = aus.elections.2.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_start_election
+					option = AUS_START_SOCIAL_DEMOCRAT
+				}
+			}
+		}
+		add_ideas = AUS_socialist_promises
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.3" }
+	title = aus.elections.3.t
+	desc = aus.elections.3.d
+	picture = GFX_Viktor_Adler
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aus.elections.3.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.025
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.4" }
+	title = aus.elections.4.t
+	desc = aus.elections.4.d
+	picture = GFX_CS_Hunt
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aus.elections.4.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_start_election
+					option = AUS_START_SOCIAL_DEMOCRAT
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = AUS_start_election
+					option = AUS_START_SOCIAL_CONSERVATIVE
+				}
+			}
+			country_event = {
+				id = aus.elections.5
+				days = 2
+			}
+			else = {
+				random_list = {
+					80 = {
+						country_event = {
+							id = aus.elections.5
+							days = 2
+						}
+					}
+					20 = {
+						country_event = {
+							id = aus.elections.6
+							days = 2
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aus.elections.4.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_start_election
+					option = AUS_START_SOCIAL_CONSERVATIVE
+				}
+			}
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.02
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.5" }
+	title = aus.elections.5.t
+	desc = aus.elections.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aus.elections.5.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.6" }
+	title = aus.elections.6.t
+	desc = aus.elections.6.d
+	picture = GFX_Otto_Hurt
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aus.elections.6.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.15
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.elections.100" }
+	title = aus.elections.100.t
+	desc = aus.elections.100.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+		date < 1937.1.1
+
+		NOT = {
+			has_country_flag = elections_1936_over
+		}
+		has_idea = AUS_elections
+	}
+
+	option = {
+		name = aus.elections.100.a
+
+		hidden_effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = AUS_start_election
+						option = AUS_START_SOCIAL_CONSERVATIVE
+					}
+				}
+				country_event = {
+					id = aus.elections.101
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = AUS_start_election
+						option = AUS_START_SOCIAL_DEMOCRAT
+					}
+				}
+				country_event = {
+					id = aus.elections.102
+					days = 1
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						social_conservative_plurality = yes
+					}
+					country_event = {
+						id = aus.elections.101
+						days = 1
+					}
+				}
+				if = {
+					limit = {
+						social_democrat_plurality = yes
+					}
+					country_event = {
+						id = aus.elections.102
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.101
+	title = aus.elections.101.t
+	desc = aus.elections.101.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event aus.elections.101"
+		set_country_flag = elections_1936_over
+	}
+
+	option = {
+		name = aus.elections.101.a
+
+		set_politics = {
+			ruling_party = social_conservative
+		}
+
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = AUS_Otto_Ender_hog_sco
+			add_ideas = AUS_Rudolf_Ramek_for_sco
+			add_ideas = AUS_Carl_Vaugoin_eco_sco
+			add_ideas = AUS_Richard_Schmitz_sec_sco
+
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.10
+			}
+		}
+
+		swap_ideas = {
+			remove_idea = AUS_elections
+			add_idea = AUS_divided_society
+		}
+	}
+}
+
+country_event = {
+	id = aus.elections.102
+	title = aus.elections.102.t
+	desc = aus.elections.102.d
+	picture = GFX_Austria_SDAP
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event aus.elections.102"
+		set_country_flag = elections_1936_over
+	}
+
+	option = {
+		name = aus.elections.102.a
+
+		set_politics = {
+			ruling_party = social_democrat
+		}
+
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = AUS_Karl_Renner_hog_sde
+			add_ideas = AUS_Otto_Bauer_for_sde
+			add_ideas = AUS_Wilhelm_Ellenbogen_eco_sde
+			add_ideas = AUS_Ferdinand_Hanusch_sec_sde
+
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.10
+			}
+		}
+
+		swap_ideas = {
+			remove_idea = AUS_elections
+			add_idea = AUS_divided_society
+		}
+	}
+}
