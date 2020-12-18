@@ -47,12 +47,9 @@ country_event = {
 			AND = {
 				country_exists = CAR
 				OR = {
-					tag = SIC
 					tag = CAN
 					tag = GBR
-					tag = POR
 					tag = AUS
-					tag = IRE
 				}
 			}
 		}

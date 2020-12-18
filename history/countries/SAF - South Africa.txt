@@ -10,8 +10,6 @@ add_ideas = {
 	SAF_Eric_H_Louw_for_ade
 	SAF_Charles_T_te_Water_eco_sco
 	SAF_N_J_van_der_Merwe_sec_ade
-	SAF_segregation_3
-	SAF_divided_government_1
 }
 
 set_technology = {
@@ -110,8 +108,6 @@ add_opinion_modifier = { target = CAF modifier = embargo }
 add_opinion_modifier = { target = AST modifier = embargo }
 add_opinion_modifier = { target = DEH modifier = embargo }
 add_opinion_modifier = { target = NFA modifier = embargo }
-
-country_event = { id = saf.1 days = 2 } # Introduction event
 
 create_country_leader = {
 	name = "Moses M. Kotane"

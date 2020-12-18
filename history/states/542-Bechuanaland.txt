@@ -1,21 +1,9 @@
 state = {
 	id = 542
 	name = "STATE_542"
-	manpower = 234000
+	manpower = 1
 
 	state_category = one
-
-	resources = {
-		chromium = 168
-	}
-
-	history = {
-		owner = SAF
-		add_core_of = SAF
-		buildings = {
-			infrastructure = 1
-		}
-	}
 
 	provinces = {
 		1580 8214 10525 12940 12963 13084 13636

@@ -62,18 +62,6 @@ add_opinion_modifier = { target = ENG modifier = embargo }
 
 set_research_slots = 3
 
-country_event = { id = lithuania.1 days = 1 } #Intro event
-country_event = { id = lithuania.42 days = 74 random = 48 } #Lithuanian Group for the Study of French Culture
-country_event = { id = lithuania.4 days = 180 }
-country_event = { id = lithuania.39 days = 222 random = 48 } #The National Lithuanian Olympiad
-country_event = { id = lithuania.38 days = 232 random = 48 } #The History of Lithuania
-country_event = { id = lithuania.36 days = 486 random = 48 } #EuroBasket 1937
-country_event = { id = lithuania.35 days = 1096 random = 4320 } #Red Flood
-country_event = { id = lithuania.40 days = 1474 random = 4320 } #Cult of Vytautas the Great
-country_event = { id = lithuania.37 days = 1512 random = 48 } #Death of Dovas Zaunius
-country_event = { id = lithuania.41 days = 1607 random = 168 } #Matas Salcius's Last Expedition
-
-
 set_war_support = 0.1
 
 set_politics = {

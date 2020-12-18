@@ -73,10 +73,6 @@ set_popularities = {
 	national_populist = 0
 }
 
-country_event = { id = egy.1 days = 1 }
-country_event = { id = egy.2 days = 110 }
-country_event = { id = egy.100 days = 10 }
-
 set_convoys = 50
 set_stability = 0.6
 set_war_support = 0.5
@@ -129,10 +125,6 @@ add_ideas = {
 	EGY_Hussein_Serry_for_sco
 	EGY_Mohamed_Ahmed_Farghaly_eco_sco
 	EGY_Abdelfattah_Amr_sec_sco
-	EGY_backwards_economy_1
-	EGY_illiterate_populace
-	EGY_inexperinced_officer_corps
-	EGY_iqta
 }
 
 ### Field Marshals ###

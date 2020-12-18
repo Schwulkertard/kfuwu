@@ -91,8 +91,6 @@ add_ideas = {
 	INC_Nguyen_Tuong_Tam_for_sde
 	INC_Nguyen_Duy_Thai_eco_syn
 	INC_Phan_Van_Chanh_sec_syn
-	INC_Guerilla_Tradition
-	INC_vietminh
 }
 
 ### Leader Spam ###

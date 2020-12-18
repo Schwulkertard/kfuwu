@@ -82,8 +82,6 @@ add_ideas = {
 	PHI_Jose_Yulo_sec_sli
 }
 
-country_event = { id = phil.0 days = 1 } #Intro
-
 create_country_leader = {
 	name = "Manuel Luis Quezón"
 	desc = "POLITICS_MANUEL_LUIS_QUEZON_DESC"

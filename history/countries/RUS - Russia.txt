@@ -96,6 +96,47 @@ set_convoys = 400
 set_stability = 0.3
 set_war_support = 0.7
 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 150000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 3000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 4000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 3000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = fighter_equipment_1
+	amount = 1000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 400
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 2000
+	producer = RUS
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 1000
+	producer = RUS
+}
+
 set_politics = {
 	ruling_party = national_populist
 	last_election = "1932.6.9"

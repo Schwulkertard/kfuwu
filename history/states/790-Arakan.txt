@@ -10,7 +10,7 @@ state = {
 	state_category = four
 
 	history = {
-		owner = BHC
+		owner = DEH
 		victory_points = {
 			12090 5 #Sitwe
 		}

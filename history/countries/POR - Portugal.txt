@@ -73,7 +73,6 @@ set_research_slots = 3
 set_convoys = 60
 add_opinion_modifier = { target = CAR modifier = embargo }
 add_opinion_modifier = { target = CNT modifier = embargo }
-country_event = { id = por.4 days = 1 }
 
 set_war_support = 0.35
 
@@ -102,7 +101,6 @@ add_ideas = {
 	POR_Afonso_Lopes_Vieira_for_npo
 	POR_Alberto_Monsaraz_eco_pau
 	POR_Jose_Hipolito_Vaz_Raposo_sec_pau
-	POR_integralist_ethos
 }
 
 create_country_leader = {

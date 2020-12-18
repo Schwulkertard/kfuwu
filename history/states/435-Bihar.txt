@@ -6,15 +6,12 @@ state = {
 	state_category = five
 
 	history = {
-		owner = BHC
-		add_core_of = BHC
-		add_claim_by = PRF
-		add_claim_by = DEH
+		owner = DEH
+		add_core_of = DEH
 		victory_points = { 4516 5 } #Patna
 		buildings = {
 			infrastructure = 5
 			arms_factory = 1
-			industrial_complex = 4
 		}
 	}
 

@@ -320,7 +320,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Establish_The_VES"
-			add_ideas = RUS_supreme_economic_council_1
 			add_stability = 0.02
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
@@ -343,36 +342,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Ural_Tractor_Plants"
 			RUS_reduce_black_monday = yes
-			custom_effect_tooltip = RUS_Ural_Tractor_Plants_tooltip
-			hidden_effect = {
-				if = { #has MTS
-					limit = { has_idea = RUS_supreme_economic_council_3 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_3
-						add_idea = RUS_supreme_economic_council_5
-					}
-				}
-				else_if = { #has railways
-					limit = { has_idea = RUS_supreme_economic_council_4 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_4
-						add_idea = RUS_supreme_economic_council_6
-					}
-				}
-				else_if = { #has MTS + railways
-					limit = { has_idea = RUS_supreme_economic_council_7 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_7
-						add_idea = RUS_supreme_economic_council_8
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_1
-						add_idea = RUS_supreme_economic_council_2
-					}
-				}
-			}
 			572 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -408,36 +377,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Machine_And_Tractor_Stations"
 			RUS_reduce_black_monday = yes
-			custom_effect_tooltip = RUS_Machine_And_Tractor_Stations_tooltip
-			hidden_effect = {
-				if = { #has tankograd
-					limit = { has_idea = RUS_supreme_economic_council_2 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_2
-						add_idea = RUS_supreme_economic_council_5
-					}
-				}
-				else_if = { #has railways
-					limit = { has_idea = RUS_supreme_economic_council_4 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_4
-						add_idea = RUS_supreme_economic_council_7
-					}
-				}
-				else_if = { #has tankograd + railways
-					limit = { has_idea = RUS_supreme_economic_council_6 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_6
-						add_idea = RUS_supreme_economic_council_8
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_1
-						add_idea = RUS_supreme_economic_council_3
-					}
-				}
-			}
 			add_stability = 0.03
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Novgorod
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Pskov
@@ -465,36 +404,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Railway_Nationalisation"
 			RUS_reduce_black_monday = yes
-			custom_effect_tooltip = RUS_Railway_Nationalisation_tooltip
-			hidden_effect = {
-				if = { #has tankograd
-					limit = { has_idea = RUS_supreme_economic_council_2 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_2
-						add_idea = RUS_supreme_economic_council_6
-					}
-				}
-				else_if = { #has MTS
-					limit = { has_idea = RUS_supreme_economic_council_3 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_3
-						add_idea = RUS_supreme_economic_council_7
-					}
-				}
-				else_if = { #has tankograd + MTS
-					limit = { has_idea = RUS_supreme_economic_council_5 }
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_5
-						add_idea = RUS_supreme_economic_council_8
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = RUS_supreme_economic_council_1
-						add_idea = RUS_supreme_economic_council_4
-					}
-				}
-			}
 			add_political_power = -100
 			every_owned_state = {
 				limit = {
@@ -578,13 +487,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Industrial_Draft_Scheme"
 			RUS_reduce_black_monday = yes
-			custom_effect_tooltip = RUS_Industrial_Draft_Scheme_tooltip
-			hidden_effect = {
-				swap_ideas = {
-					remove_idea = RUS_supreme_economic_council_8
-					add_idea = RUS_supreme_economic_council_9
-				}
-			}
+			add_ideas = RUS_supreme_economic_council_9
 			add_stability = 0.02
 			add_research_slot = 1
 		}

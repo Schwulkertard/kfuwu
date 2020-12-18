@@ -77,7 +77,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	BAT_war_of_independence
 	extensive_conscription
 	EST_Konstantin_Paets_hog_ade
 	EST_Hjalmar_Maee_for_npo

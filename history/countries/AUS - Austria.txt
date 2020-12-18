@@ -90,7 +90,7 @@ if = {
 		super_heavy_dreadnought_nonmtg = 1
 
 		### Transport ###
-		transport_n = 1
+		transport = 1
 	}
 }
 
@@ -106,7 +106,7 @@ set_country_flag = legation_council_vote
 country_event = { id = austria.1 days = 1 } # Intro event
 country_event = { id = literature.1 days = 761 } #Alamut - newest book of Vladimir Bartol
 
-set_war_support = 0.1
+set_war_support = 0.15
 
 set_politics = {
 	ruling_party = social_conservative
@@ -152,10 +152,10 @@ set_autonomy = {
 }
 
 add_ideas = {
-	AUS_financial_ties_broken
 	AUS_k_u_k_armee_bonus
 	AUS_vienna_circle
 	low_economic_mobilisation
+	AUS_army_1
 	### Minister
 	AUS_Albert_von_Mensdorff_Pouilly_Dietrichstein_hog_ade
 	AUS_Edmund_Glaise_von_Horstenau_for_ade

@@ -127,6 +127,43 @@ ENG = {
 }
 
 set_convoys = 1000
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 2000
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 1000
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 100000
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 2000
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 2000
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = light_tank_equipment_2
+	amount = 800
+	producer = FRA
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 1000
+	producer = FRA
+}
+
 set_stability = 0.5
 set_war_support = 0.4
 
@@ -137,21 +174,12 @@ add_opinion_modifier = { target = CZE modifier = embargo }
 add_opinion_modifier = { target = HUN modifier = embargo }
 add_opinion_modifier = { target = CRO modifier = embargo }
 add_opinion_modifier = { target = CAN modifier = embargo }
-add_opinion_modifier = { target = CAF modifier = embargo }
 add_opinion_modifier = { target = ITA modifier = embargo }
 add_opinion_modifier = { target = OTT modifier = embargo }
 add_opinion_modifier = { target = NFA modifier = embargo }
-add_opinion_modifier = { target = MAF modifier = embargo }
 add_opinion_modifier = { target = QIE modifier = embargo }
 add_opinion_modifier = { target = SAU modifier = embargo }
-add_opinion_modifier = { target = LIT modifier = embargo }
-add_opinion_modifier = { target = FRP modifier = embargo }
-add_opinion_modifier = { target = PRF modifier = embargo }
 add_opinion_modifier = { target = UKR modifier = embargo }
-add_opinion_modifier = { target = WHR modifier = embargo }
-add_opinion_modifier = { target = GBR modifier = embargo }
-add_opinion_modifier = { target = BAT modifier = embargo }
-add_opinion_modifier = { target = SWI modifier = embargo }
 add_opinion_modifier = { target = SRI modifier = KR_close_allies }
 add_opinion_modifier = { target = ENG modifier = KR_close_allies }
 

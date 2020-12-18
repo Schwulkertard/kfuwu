@@ -3,23 +3,9 @@ OOB = "SWE"
 set_naval_oob= "SWE_naval"
 
 SWE = {
-	country_event = { days = 2 id = swe.9999 }
-	country_event = { days = 365 id = swe.66 }
-	country_event = { days = 5412 id = swe.72 }
-	country_event = { days = 2219 id = swe.90 }
-	country_event = { days = 2219 id = swe.110 }
-	country_event = { days = 2565 id = swe.103 }
-	country_event = { days = 2565 id = swe.104 }
-	country_event = { days = 2565 id = swe.105 }
-	country_event = { days = 2565 id = swe.106 }
-	country_event = { days = 2565 id = swe.107 }
-	country_event = { days = 2565 id = swe.108 }
 }
 
 add_ideas = {
-	SWE_conservative_army_idea_1
-	SWE_statare_idea
-	SWE_political_instability_idea
 	limited_conscription
 	SWE_Goesta_Bagge_hog_sco
 	SWE_Christian_Guenther_for_sco

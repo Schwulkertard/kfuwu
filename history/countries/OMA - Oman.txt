@@ -46,8 +46,6 @@ if = {
 	}
 }
 
-country_event = { id = oma.1 days = 1 } #startup event
-
 set_war_support = 0.1
 
 set_politics = {
@@ -91,9 +89,6 @@ add_ideas = {
 	OMA_Salim_bin_Faisal_for_ade
 	OMA_Sayyid_Abbas_bin_Muhammad_Al_Said_eco_pau
 	OMA_Abdullah_bin_Salim_Al_Zidi_sec_ade
-	OMA_tribal_army
-	OMA_army_of_muscat
-	OMA_imamate_of_oman
 }
 
 ### Field Marshals ###

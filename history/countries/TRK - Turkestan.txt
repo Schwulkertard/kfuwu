@@ -51,10 +51,6 @@ add_ideas = {
 	TRK_Kush_Beggi_sec_pau
 }
 
-country_event = { id = turkestan.2 days = 517 random = 2400 }
-country_event = { id = turkestan.3 days = 943 random = 2400 }
-country_event = { id = turkestan.13 days = 2557 random = 1080 }
-
 ### Field Marshals ###
 create_field_marshal = { #Auto-Generated
 	name = "Ibrahim Bek"

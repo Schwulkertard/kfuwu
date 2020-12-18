@@ -98,8 +98,6 @@ set_popularities = {
 
 add_ideas = {
 	limited_conscription
-	SPR_social_breakdown
-	SPR_memories_of_the_republic
 
 	# Ministers
 	SPR_JM_Gil_Robles_Quinones_hog_ade

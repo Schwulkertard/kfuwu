@@ -5,9 +5,6 @@ OOB = "DEI"
 set_naval_oob = "DEI_naval"
 
 add_ideas = {
-	DEI_idea_colonial_nation
-	DEI_idea_insulindian_unity_low
-	DEI_idea_insulindian_strength_very_low
 	free_trade
 	DEI_Willem_van_Helsdingen_hog_ade
 	DEI_Bep_Schrieke_for_ade
@@ -138,20 +135,6 @@ set_popularities = {
 	paternal_autocrat = 29
 	national_populist = 0
 }
-
-country_event = { id = dei.1 days = 4 } #Dutch East Indies in 1936
-country_event = { id = dei.2 days = 60 } #Black Monday comes to the Indies
-country_event = { id = dei.16 days = 188 } #Volksraad passes Petition-Sutardjo
-country_event = { id = dei.7 days = 542 } #Governor General De Jonge resigns
-
-country_event = { id = dei_flavor.11 days = 16 } #Return of the Mimika expedition
-country_event = { id = dei_flavor.3 days = 191 } #Founding of the NIVU
-country_event = { id = dei_flavor.10 days = 156 } #East-Indies-Hungary
-country_event = { id = dei_flavor.6 days = 302 } #The Carstenz Expedition
-country_event = { id = dei_flavor.4 days = 707 } #Premiere of Terang Boelan
-country_event = { id = dei_flavor.1 days = 712 } #Founding of ANTARA
-country_event = { id = dei_flavor.5 days = 1346 } #First launch of Cultureel Indië
-country_event = { id = dei_flavor.2 days = 1586 } #Renovation of the Sociëteit Concordia
 
 create_country_leader = {
 	name = "Bonifacius de Jonge"

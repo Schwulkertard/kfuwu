@@ -88,8 +88,6 @@ if = {
 	}
 }
 
-country_event = { id = ita.1 days = 1 }
-
 set_convoys = 60
 set_stability = 0.55
 set_war_support = 0.20

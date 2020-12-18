@@ -93,24 +93,6 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
 		}
 
-		rus_divided_staff = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_divided_staff"}
-			allowed = { always = no }
-			research_bonus = {
-				land_doctrine = -0.50
-			}
-			picture = chi_incompetent_officers
-		}
-
-		rus_divided_marine = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_divided_marine"}
-			allowed = { always = no }
-			research_bonus = {
-				naval_doctrine = -0.50
-			}
-			picture = generic_coastal_defense_ships2
-		}
-
 		rus_better_working_conditions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_better_working_conditions"}
 			allowed = { always = no }
@@ -535,7 +517,7 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.10
 				conscription_factor = -0.10
-				production_factory_max_efficiency_factor = 0.20
+				production_factory_max_efficiency_factor = 0.10
 			}
 			equipment_bonus = {
 				armor = {
@@ -599,9 +581,9 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.10
 				conscription_factor = -0.20
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
 				production_speed_buildings_factor = 0.10
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.05
 			}
 			equipment_bonus = {
 				armor = {

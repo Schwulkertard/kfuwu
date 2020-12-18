@@ -120,16 +120,6 @@ set_convoys = 150
 set_stability = 0.45
 set_war_support = 0.3
 
-country_event = {
-	id = Ostasien.0
-	days = 1
-}
-
-country_event = {
-	id = Ostasien.1
-	days = 3
-}
-
 set_politics = {
 	ruling_party = paternal_autocrat
 	last_election = "1930.11.9"
@@ -151,8 +141,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	GEA_colonial_question
-	GEA_admirality
 	free_trade
 	GEA_Paul_Koenig_hog_pau
 	GEA_Rudolph_Firle_for_pau

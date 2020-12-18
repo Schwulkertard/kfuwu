@@ -1430,11 +1430,6 @@ technologies = {
 	}
 
 	armored_car1 = {
-	
-		allow_branch = {
-
-			always=no
-		}
 
 		enable_subunits = {
 			armored_car

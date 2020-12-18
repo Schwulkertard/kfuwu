@@ -1,7 +1,6 @@
 ﻿capital = 37
 OOB = "DEN"
 set_naval_oob= "DEN_naval"
-country_event = { id = den.71 days = 156 }
 set_research_slots = 3
 set_technology = {
 
@@ -172,7 +171,6 @@ create_country_leader = {
 }
 
 add_ideas = {
-	DEN_idea_opposition_controlled_landsting
 	DEN_Thorvald_Stauning_hog_sde
 	DEN_Peter_Munch_for_sli
 	DEN_Alsing_Andersen_eco_sde

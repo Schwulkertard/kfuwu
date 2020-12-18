@@ -105,10 +105,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	BEL_Flemish_Lion
-	FLN_Severed_Trade
-	FLN_Liberation_Army
-	FLN_Succesion_Crisis
 	FLN_Camille_Huysmans_hog_sde
 	FLN_Eugene_Soudan_for_sli
 	FLN_Albert_de_Vleeschauwer_eco_sco

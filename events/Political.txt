@@ -25,65 +25,13 @@ country_event = {
 		create_ambition_areas = yes
 
 		### Kill Cores that are Auto Added ###
-
-		OTT = {
-			remove_state_core = 754
-			remove_state_core = 679
-		}
-		MAF = {
-			remove_state_core = 274
-			remove_state_core = 558
-			remove_state_core = 878
-			remove_state_core = 913
-			remove_state_core = 548
-			remove_state_core = 969
-			remove_state_core = 547
-			remove_state_core = 925
-			remove_state_core = 892
-			remove_state_core = 871
-			remove_state_core = 955
-			remove_state_core = 956
-			remove_state_core = 813
-			remove_state_core = 958
-			remove_state_core = 957
-			remove_state_core = 970
-		}
-		SPR = {
-			remove_state_core = 297
-		}
-		BHC = {
-			remove_state_core = 858
-		}
 		GER = {
 			remove_state_core = 543
 			remove_state_core = 422
 		}
-		SAF = {
-			remove_state_core = 542
-			remove_state_core = 545
-		}
-		ETH = {
-			remove_state_core = 550
-			remove_state_core = 961
-		}
 		JAP = {
 			remove_state_core = 525
 			remove_state_core = 527
-		}
-		POR = {
-			remove_state_core = 296
-			remove_state_core = 540
-			remove_state_core = 544
-			remove_state_core = 914
-			remove_state_core = 916
-			remove_state_core = 917
-			remove_state_core = 950
-			remove_state_core = 951
-			remove_state_core = 954
-			remove_state_core = 959
-		}
-		BUR = {
-			remove_state_core = 72
 		}
 		SIA = {
 			remove_state_core = 750

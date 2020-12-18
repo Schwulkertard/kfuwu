@@ -924,63 +924,6 @@ country_event = {
 		}
 	}
 	desc = {
-		text = entente.20.d.italy_united
-		trigger = {
-			SRD = {
-				is_in_faction_with = event_target:KR_king_base
-				owns_state = 158
-			}
-			NOT = { country_exists = SRI }
-			event_target:KR_king_base = {
-				NOT = {
-					has_country_flag = CAN_speech_italy_united
-					AND = {
-						tag = GBR
-						NOT = { has_country_flag = CAN_speech_home_isles }
-					}
-					AND = {
-						has_war_with = ENG
-						NOT = { has_country_flag = CAN_speech_war_eng }
-					}
-					AND = {
-						has_war_with = GER
-						NOT = { has_country_flag = CAN_speech_war_ger }
-					}
-					AND = {
-						OR = {
-							has_war_with = USA
-
-						}
-						NOT = { has_country_flag = CAN_speech_war_acw }
-					}
-					AND = {
-						NFA = {
-							owns_state = 16
-							is_in_faction_with = PREV
-						}
-						NOT = { has_country_flag = CAN_speech_france_taken }
-					}
-					AND = {
-						NFA = {
-							owns_state = 21
-							NOT = { owns_state = 16 }
-							is_in_faction_with = PREV
-						}
-						NOT = { has_country_flag = CAN_speech_france_mainland }
-					}
-					AND = {
-						DEH = {
-							is_in_faction_with = PREV
-							owns_state = 431
-							owns_state = 427
-						}
-						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-				}
-			}
-		}
-	}
-	desc = {
 		text = entente.20.d.india_defeated
 		trigger = {
 			NOT = { country_exists = DEH }
@@ -1027,13 +970,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 				}
 			}
@@ -1086,13 +1022,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }
@@ -1149,13 +1078,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }
@@ -1215,13 +1137,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }
@@ -1285,13 +1200,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }
@@ -1361,13 +1269,6 @@ country_event = {
 						NOT = { has_country_flag = CAN_speech_india_united }
 					}
 					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
-					}
-					AND = {
 						NOT = { country_exists = DEH }
 						NOT = { has_country_flag = CAN_speech_india_defeated }
 					}
@@ -1433,13 +1334,6 @@ country_event = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = PREV
-							owns_state = 158
-						}
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }
@@ -1532,17 +1426,6 @@ country_event = {
 				NOT = { has_country_flag = CAN_speech_india_united }
 			}
 			set_country_flag = CAN_speech_india_united
-		}
-		else_if = {
-			limit = {
-				SRD = {
-					is_in_faction_with = event_target:KR_king_base
-					owns_state = 158
-				}
-				NOT = { country_exists = SRI }
-				NOT = { has_country_flag = CAN_speech_italy_united }
-			}
-			set_country_flag = CAN_speech_italy_united
 		}
 		else_if = {
 			limit = {
@@ -5288,11 +5171,6 @@ country_event = {
 		hidden_effect = {
 			clr_global_flag = CAN_king_busy
 			clr_global_flag = CAN_king_edward_VIII
-			clr_country_flag = GBR_has_returning_king
-			clr_country_flag = GBR_remove_returning_king_trait
-			clr_country_flag = GBR_has_unpopular_monarch
-			clr_country_flag = GBR_remove_unpopular_monarch_trait
-			clr_country_flag = GBR_remove_figurehead_trait
 			set_global_flag = CAN_king_albert_I
 			set_variable = { king_popularity = 2 }
 			set_variable = { global.king_albert_story = 0 }
@@ -5303,12 +5181,6 @@ country_event = {
 					DEH = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
 				}
 				DEH = { DEH_create_monarchy = yes }
-			}
-			if = {
-				limit = {
-					SAF = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
-				}
-				SAF = { SAF_create_monarchy = yes }
 			}
 
 			news_event = { id = entente.111 days = 1 }
@@ -5352,11 +5224,6 @@ country_event = {
 		hidden_effect = {
 			clr_global_flag = CAN_king_busy
 			clr_global_flag = CAN_king_edward_VIII
-			clr_country_flag = GBR_has_returning_king
-			clr_country_flag = GBR_remove_returning_king_trait
-			clr_country_flag = GBR_has_unpopular_monarch
-			clr_country_flag = GBR_remove_unpopular_monarch_trait
-			clr_country_flag = GBR_remove_figurehead_trait
 			set_global_flag = CAN_king_henry_IX
 			set_variable = { king_popularity = 2 }
 			set_variable = { global.king_henry_story = 0 }
@@ -5367,12 +5234,6 @@ country_event = {
 					DEH = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
 				}
 				DEH = { DEH_create_monarchy = yes }
-			}
-			if = {
-				limit = {
-					SAF = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
-				}
-				SAF = { SAF_create_monarchy = yes }
 			}
 			if = {
 				limit = {
@@ -5409,11 +5270,6 @@ country_event = {
 		hidden_effect = {
 			clr_global_flag = CAN_king_busy
 			clr_global_flag = CAN_king_edward_VIII
-			clr_country_flag = GBR_has_returning_king
-			clr_country_flag = GBR_remove_returning_king_trait
-			clr_country_flag = GBR_has_unpopular_monarch
-			clr_country_flag = GBR_remove_unpopular_monarch_trait
-			clr_country_flag = GBR_remove_figurehead_trait
 			set_global_flag = CAN_king_george_VI
 			set_variable = { king_popularity = 2 }
 			set_variable = { global.king_george_story = 0 }
@@ -5424,12 +5280,6 @@ country_event = {
 					DEH = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
 				}
 				DEH = { DEH_create_monarchy = yes }
-			}
-			if = {
-				limit = {
-					SAF = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
-				}
-				SAF = { SAF_create_monarchy = yes }
 			}
 			if = {
 				limit = {

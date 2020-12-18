@@ -78,7 +78,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	BAT_war_of_independence
 	extensive_conscription
 	LAT_Krrlis_Ulmanis_hog_pau
 	LAT_Vilhelms_Munters_for_pau

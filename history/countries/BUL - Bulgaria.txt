@@ -83,8 +83,6 @@ set_war_support = 0.40
 
 add_ideas = {
 	extensive_conscription
-	BUL_military_pensions_idea
-	BUL_ailing_economy_idea
 	BUL_Aleksandar_Malinov_hog_ade
 	BUL_Nikola_Mushanov_for_ade
 	BUL_Todor_Krastev_eco_ade

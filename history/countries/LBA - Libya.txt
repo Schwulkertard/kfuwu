@@ -52,19 +52,6 @@ add_ideas = {
 	LBA_Nuri_Killigil_sec_ade
 }
 
-country_event = {
-	id = libya.1
-	hours = 10
-}
-country_event = {
-	id = libya.13
-	days = 1295
-}
-country_event = {
-	id = libya.14
-	days = 1223
-}
-
 set_politics = {
 	ruling_party = authoritarian_democrat
 	last_election = "1930.11.9"

@@ -92,21 +92,9 @@ if = {
 		interwar_armored_cruiser_nonmtg = 1
 
 		### Transport ###
-		transport_n = 1
+		transport = 1
 	}
 }
-
-country_event = { id = bel.94 days = 1 }
-country_event = { id = bel.225 days = 10 }
-country_event = { id = flawa.1 days = 95 }
-country_event = { id = bel.118 days = 192 }
-country_event = { id = bel.218 days = 202 }
-country_event = { id = bel.9 days = 120 }
-country_event = { id = flawa.5 days = 120 }
-country_event = { id = bel.30 days = 132 }
-country_event = { id = bel.23 days = 255 }
-country_event = { id = bel.140 days = 96 }
-country_event = { id = bel.807 days = 553 }
 
 GER = {
 	set_autonomy = {
@@ -161,16 +149,7 @@ add_equipment_to_stockpile = {
 	producer = BEL
 }
 
-country_event = {
-	id = bel.1
-	days = 48
-}
-
 add_ideas = {
-	BEL_King_Exile
-	BEL_Language_Trouble
-	BEL_Antwerp_Harbor
-	BEL_anti_german_sentiment3
 	BEL_Paul_Van_Zeeland_hog_sco
 	BEL_Charles_d'Aspremont_Lynden_for_ade
 	BEL_Alexandre_Galopin_eco_mli

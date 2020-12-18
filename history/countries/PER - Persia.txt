@@ -76,61 +76,6 @@ set_popularities = {
 	national_populist = 2
 }
 
-country_event = {
-	id = pers.1 # Persia introduction
-	days = 2
-}
-
-country_event = {
-	id = pers.85 # Nowruz
-	days = 78
-}
-
-country_event = {
-	id = pers.91 # Muharram
-	days = 83
-}
-
-country_event = {
-	id = pers.99 # Yalda Night
-	days = 87
-}
-
-country_event = {
-	id = pers.2 # Death of Ahmad Shah
-	days = 95
-}
-
-country_event = {
-	id = pers.97 # Ramadan
-	days = 204
-}
-
-country_event = {
-	id = pers.89 # Dehkhoda's Dictionary
-	days = 220
-}
-
-country_event = {
-	id = pers.90 # Persepolis Excavation
-	days = 459
-}
-
-country_event = {
-	id = pers.38 # 1938 Presidential Election
-	days = 950
-}
-
-country_event = {
-	id = pers.38 # 1938 Majlis Election
-	days = 950
-}
-
-country_event = {
-	id = pers.101 # Rostam the Bear
-	days = 2355
-}
-
 create_country_leader = {
 	name = "Bahram Ariana"
 	desc = "POLITICS_RESTA_ROUZA_DESC"
@@ -217,12 +162,6 @@ add_ideas = {
 	PER_Mostowfi_ol_Mamalek_eco_sde
 	PER_Mohammad_Taqi_Khan_Pessian_sec_sde
 
-	PER_political_upheaval
-	PER_bad_military
-	PER_semi_famine
-	PER_corrupt_aristocrats
-	PER_unruly_khans
-	PER_illiteracy
 }
 
 ### Field Marshals ###

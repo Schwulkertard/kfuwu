@@ -6,7 +6,7 @@ state = {
 	state_category = one
 
 	history = {
-		owner = BHC
+		owner = DEH
 		add_core_of = DEH
 		buildings = {
 			infrastructure = 2

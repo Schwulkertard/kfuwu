@@ -81,7 +81,7 @@ if = {
 		weltkrieg_carrier_nonmtg = 1
 
 		### Transport ###
-		transport_n = 1
+		transport = 1
 	}
 }
 
@@ -93,10 +93,6 @@ set_convoys = 50
 
 set_variable = { var = CAF_socialist_anger value = 34 }
 set_variable = { var = CAF_british_anger value = 21 }
-
-country_event = {
-	id = wifpol.1 days = 1
-}
 
 add_opinion_modifier = { target = FRA modifier = embargo }
 add_opinion_modifier = { target = ENG modifier = embargo }
@@ -126,10 +122,6 @@ set_popularities = {
 
 add_ideas = {
 	volunteer_only
-
-	CAF_cayenne_agreement
-	CAF_young_army
-	CAF_economic_downfall
 
 	CAF_Gordon_James_Lethem_hog_mli
 	CAF_Bede_Clifford_for_mli

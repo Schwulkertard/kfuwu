@@ -12,15 +12,11 @@ state = {
 	}
 
 	history = {
-		owner = BHC
-		add_core_of = BHC
-		add_claim_by = PRF
-		add_claim_by = DEH
+		owner = DEH
+		add_core_of = DEH
 		victory_points = { 10088 1 } #Cuttack
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
-			arms_factory = 1
 		}
 	}
 

@@ -11,6 +11,7 @@ state = {
 		rubber = 116
 		aluminium = 4
 		tungsten = 203
+		chromium = 400
 	}
 
 	history = {

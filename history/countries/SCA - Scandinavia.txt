@@ -3,8 +3,6 @@ OOB = "empty"
 set_convoys = 150
 set_research_slots = 4
 add_ideas = {
-	SCA_conflicting_governmental_services_idea
-	SCA_Federal_Navy_idea
 	SCA_Magnus_Nilssen_hog_sde
 	SCA_Gustaf_Andersson_i_Rasjoen_for_sli
 	SCA_Valdemar_Thomsen_eco_sco

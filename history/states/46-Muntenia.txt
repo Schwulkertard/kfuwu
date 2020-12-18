@@ -3,6 +3,8 @@ state = {
 	name = "STATE_46" # Muntenia
 	manpower = 1
 
+	state_category = one
+
 	provinces = {
 		660 674 818 3636 3639 3663 6658 6677 6695 9617 9651 11603 11619 11636
 	}

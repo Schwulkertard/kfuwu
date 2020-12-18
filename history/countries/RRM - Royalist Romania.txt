@@ -6,7 +6,6 @@ set_research_slots = 3
 
 add_ideas = {
 	limited_conscription
-	RRM_for_the_king_idea
 
 	RRM_Constantin_Sanatescu_hog_ade
 	RRM_Gheorghe_Tatarescu_for_ade

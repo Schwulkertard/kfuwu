@@ -16,7 +16,6 @@ set_variable = { GBR_pw_dev = 20 }
 set_variable = { GBR_legacy_rev = 5 }
 
 add_ideas = {
-	GBR_military_chaos_1
 }
 
 set_politics = {

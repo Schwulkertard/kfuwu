@@ -4,7 +4,6 @@ set_naval_oob= "HOL_naval"
 set_convoys = 400
 set_research_slots = 3
 
-country_event = { id = holflavor.12 days = 242 }
 set_country_flag = SUR_CONQ
 
 ### Starting Technologies ###
@@ -92,7 +91,6 @@ if = {
 }
 
 add_ideas = {
-	HOL_idea_ambtenarenverbod
 	HOL_Hendrikus_Colijn_hog_sco
 	HOL_Jacob_Patijn_for_mli
 	HOL_Pieter_Oud_eco_sli

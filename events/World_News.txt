@@ -1691,37 +1691,6 @@ news_event = {
 	}
 }
 
-# Eritrean Rebellion
-news_event = {
-	id = worldnews.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.66" }
-	title = worldnews.66.t
-	desc = worldnews.66.d
-	picture = GFX_news_event_ETH_Eritrean_Revolt
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = ETH
-		}
-		OR = {
-			regional_middle_east_news = yes
-			regional_africa_news = yes
-		}
-	}
-
-	option = {
-		name = worldnews.66.a
-	}
-}
-
 # Pope Pius Dies
 news_event = {
 	id = worldnews.67
@@ -2828,49 +2797,6 @@ news_event = {
 
 	option = {
 		name = worldnews.112.a
-	}
-}
-
-# Said Barre Coup (Somalia)
-news_event = {
-	id = worldnews.113
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.113" }
-	title = worldnews.113.t
-	desc = worldnews.113.d
-	picture = GFX_news_event_SOM_Said_Barre_Coup
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = SOM
-		}
-		OR = {
-			regional_middle_east_news = yes
-			regional_africa_news = yes
-		}
-	}
-
-	option = {
-		trigger = {
-			has_socialist_government = yes
-		}
-		name = worldnews.113.a
-	}
-
-	option = {
-		trigger = {
-			NOT = {
-				has_socialist_government = yes
-			}
-		}
-		name = worldnews.113.b
 	}
 }
 
@@ -4514,144 +4440,6 @@ news_event = {
 	}
 }
 
-# Colonial reform in Mittelafrika
-news_event = {
-	id = worldnews.178
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.178" }
-	title = worldnews.178.t
-	desc = worldnews.178.d
-	picture = GFX_news_event_MAF_reform
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = MAF
-		}
-	}
-
-	option = {
-		name = worldnews.178.a
-	}
-}
-
-# Mittelafrikan-Portuguese War
-news_event = {
-	id = worldnews.180
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.180" }
-	title = worldnews.180.t
-	desc = worldnews.180.d
-	picture = GFX_news_event_MAF_bushwar
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = MAF
-			tag = POR
-		}
-	}
-
-	option = {
-		name = worldnews.180.a
-	}
-}
-
-# Sovereignist Mittelafrika
-news_event = {
-	id = worldnews.181
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.181" }
-	title = worldnews.181.t
-	desc = worldnews.181.d
-	picture = GFX_news_event_MAF_notreform
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = MAF
-		}
-	}
-	option = {
-		name = worldnews.181.a
-	}
-}
-
-# Venetian Revolt
-news_event = {
-	id = worldnews.182
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.182" }
-	title = worldnews.182.t
-	desc = worldnews.182.d
-	picture = GFX_news_event_ITA_venice
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = VEN
-			tag = ITA
-		}
-	}
-
-	option = {
-		name = worldnews.182.a
-	}
-}
-
-# Yemen Rebellion
-news_event = {
-	id = worldnews.183
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.183" }
-	title = worldnews.183.t
-	desc = worldnews.183.d
-	picture = GFX_news_event_YEM_revolt
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = YEM
-			tag = OTT
-		}
-		regional_middle_east_news = yes
-	}
-
-	option = {
-		name = worldnews.183.a
-	}
-}
-
 # Second Peace With Honour
 news_event = {
 	id = worldnews.184
@@ -4699,60 +4487,6 @@ news_event = {
 
 	option = {
 		name = worldnews.185.a
-	}
-}
-
-# Syndicalist Belorussia
-news_event = {
-	id = worldnews.186
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.186" }
-	title = worldnews.186.t
-	desc = worldnews.186.d
-	picture = GFX_POL_syndies_event
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = WHR
-		}
-	}
-
-	option = {
-		name = worldnews.186.a
-	}
-}
-
-# Sigismund's Coup
-news_event = {
-	id = worldnews.187
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.187" }
-	title = worldnews.187.t
-	desc = worldnews.187.d
-	picture = GFX_news_event_second_russian_civil_war
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
-
-	show_major = {
-		NOT = {
-			tag = WHR
-		}
-	}
-
-	option = {
-		name = worldnews.187.a
 	}
 }
 
@@ -4917,17 +4651,6 @@ news_event = {
 		trigger = {
 			HOL = {
 				has_country_flag = hol_binnenhof_burning
-			}
-		}
-	}
-	desc = {
-		text = worldnews.191.d.socialistputsch
-		trigger = {
-			HOL = {
-				has_cosmetic_tag = BATCOM
-				NOT = {
-					has_country_flag = hol_binnenhof_burning
-				}
 			}
 		}
 	}

@@ -45,24 +45,6 @@ country_event = {
 				id = ustates.2
 			}
 		}
-		SPR = {
-			country_event = {
-				days = 12
-				id = sprd.2
-			}
-		}
-		SAF = {
-			country_event = {
-				days = 12
-				id = saf.3
-			}
-		}
-		PER = {
-			country_event = {
-				days = 12
-				id = pers.31
-			}
-		}
 		SIA = {
 			country_event = {
 				days = 24
@@ -141,10 +123,6 @@ news_event = {
 			country_event = {
 				id = black.4
 				days = 2
-			}
-			country_event = {
-				id = black.7
-				days = 35
 			}
 			country_event = {
 				id = gerdom.11

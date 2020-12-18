@@ -11,16 +11,13 @@ state = {
 	}
 
 	history = {
-		owner = BHC
-		add_core_of = BHC
-		add_claim_by = PRF
-		add_claim_by = DEH
+		owner = DEH
+		add_core_of = DEH
 		victory_points = { 4245 15 } #Calcutta
 		victory_points = { 12338 1 } #Darjeeling
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 3
-			arms_factory = 3
+			arms_factory = 1
 			air_base = 2
 			4245 = {
 				naval_base = 6

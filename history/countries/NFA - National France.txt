@@ -92,7 +92,6 @@ if = {
 	}
 }
 
-country_event = { id = nfa.1 days = 1 }
 country_event = { id = literature.3 days = 730 }
 set_research_slots = 3
 set_convoys = 500

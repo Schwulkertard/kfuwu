@@ -90,17 +90,9 @@ if = {
 	}
 }
 
-country_event = { id = papalstate.40 days = 1 }
-country_event = { id = papalstate.3 days = 32 }
-country_event = { id = papalstate.2 days = 65 }
-country_event = { id = papalstate.7 days = 70 }
-
 set_convoys = 50
 set_stability = 0.6
 set_war_support = 0.1
-
-give_military_access = SIC
-give_guarantee = SIC
 
 set_politics = {
 	ruling_party = paternal_autocrat

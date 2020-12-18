@@ -4,8 +4,6 @@ OOB = "NOR"
 set_naval_oob= "NOR_naval"
 
 add_ideas = {
-	NOR_divided_airforce_idea
-	NOR_weak_economy_1
 
 	NOR_Johan_Henrik_Andresen_hog_mli
 	NOR_Arne_Scheel_for_mli
@@ -74,9 +72,6 @@ if = {
 		interwar_armored_cruiser_nonmtg = 1
 	}
 }
-
-country_event = { id = norway.1 days = 1 }
-country_event = { id = norway.6 days = 21 }
 
 set_research_slots = 3
 set_convoys = 500 # Biggest Merchant Marines in the World - copied from Vanilla

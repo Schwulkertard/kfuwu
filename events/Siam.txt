@@ -2350,18 +2350,6 @@ country_event = { # What whould we do with the Germans factories?
 				modifier = SIA_IndNat_bastard
 				} # -50
 		}
-		if = {
-			limit = {
-				MAF = {
-					exists = yes
-					is_subject_of = GER
-				}
-			}
-			reverse_add_opinion_modifier = {
-				target = MAF
-				modifier = SIA_IndNat_bastard
-				} # -50
-		}
 		set_global_flag = SIA_IndNat_GER
 		add_stability = 0.03 # WtT
 		822 = { # Lanna

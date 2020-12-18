@@ -77,7 +77,7 @@ if = {
 		weltkrieg_carrier_nonmtg = 1
 
 		### Transport ###
-		transport_n = 1
+		transport = 1
 	}
 }
 
@@ -167,8 +167,6 @@ add_ideas = {
 	BHC_Subhas_Chandra_Bose_for_tot
 	BHC_Lal_Bahadur_Shastri_eco_syn
 	BHC_Rafi_Ahmed_Kidwai_sec_rso
-	BHC_divided_government
-	BHC_backwards_economy_1
 }
 
 ### Field Marshals ###

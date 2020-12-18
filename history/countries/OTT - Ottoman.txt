@@ -84,14 +84,8 @@ if = {
 
 set_research_slots = 3
 
-activate_mission = OTT_German_OPDA_mission
-activate_mission = OTT_Austrian_OPDA_mission
-activate_mission = OTT_Entente_OPDA_mission
-
 add_ideas = {
 	limited_conscription
-	ott_decline
-	ott_opda_idea
 	free_trade
 	OTT_Hueseyin_Avni_Pasa_hog_pau
 	OTT_Ali_Fuad_Pasa_for_pau
@@ -102,8 +96,6 @@ add_ideas = {
 }
 
 set_country_flag = ott_opda_flag
-
-country_event = { id = ott.1 days = 1 } # Intro event
 
 add_opinion_modifier = { target = EGY modifier = embargo }
 add_opinion_modifier = { target = FRA modifier = embargo }
@@ -117,8 +109,6 @@ add_opinion_modifier = { target = RRM modifier = embargo }
 add_opinion_modifier = { target = PER modifier = embargo }
 add_opinion_modifier = { target = SER modifier = embargo }
 add_opinion_modifier = { target = SAU modifier = embargo }
-
-give_military_access = GER
 
 set_convoys = 50
 add_equipment_to_stockpile = { type = gw_tank_equipment amount = 28 producer = NFA }
@@ -151,33 +141,6 @@ set_popularities = {
 	authoritarian_democrat = 11
 	paternal_autocrat = 43
 	national_populist = 2
-}
-
-set_autonomy = {
-	target = YEM
-	autonomy_state = kr_autonomous_puppet
-}
-
-YEM = {
-	set_politics = {
-		ruling_party = paternal_autocrat
-		last_election = "1888.6.15"
-		election_frequency = 48
-		elections_allowed = no
-	}
-
-	set_popularities = {
-		totalist = 0
-		radical_socialist = 4
-		syndicalist = 0
-		social_democrat = 0
-		social_liberal = 12
-		market_liberal = 4
-		social_conservative = 15
-		authoritarian_democrat = 5
-		paternal_autocrat = 60
-		national_populist = 0
-	}
 }
 
 create_country_leader = {
