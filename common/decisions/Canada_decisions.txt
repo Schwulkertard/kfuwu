@@ -1919,7 +1919,6 @@ CAN_returning_home_decisions = {
 				FROM = { has_war = no }
 				NOT = {
 					AND = {
-						has_tech = transport_n
 						has_completed_focus = CAN_economic_recovery
 						has_completed_focus = CAN_deal_with_admiralty
 						has_completed_focus = CAN_new_munitions_plants
@@ -2079,124 +2078,6 @@ CAN_returning_home_decisions = {
 
 		ai_will_do = {
 			factor = 100
-		}
-	}
-
-	CAN_contact_irish_unionists = {
-		icon = eng_support_imperialist_coup
-		allowed = { tag = CAN }
-
-		available = {
-			ROOT = {
-				has_war_with = FROM
-				NOT = { has_capitulated = yes }
-			}
-			FROM = {
-				controls_state = 119
-			}
-		}
-
-		visible = {
-			is_faction_leader = yes
-			NOT = { country_exists = GBR }
-			FROM = {
-				owns_state = 119 #Ulster
-				has_socialist_government = yes
-			}
-		}
-
-		target_root_trigger = { has_completed_focus = CAN_contact_loyalists }
-		targets = { IRE ENG }
-		target_trigger = {
-			FROM = {
-				owns_state = 119 #Ulster
-				has_socialist_government = yes
-			}
-		}
-
-		fire_only_once = yes
-		cost = 50
-		priority = 8
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CAN_contact_irish_unionists target: [From.GetName]"
-			country_event = canada.177
-			hidden_effect = {
-				FROM = { country_event = canada.178 }
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	CAN_approach_ireland = {
-		icon = generic_agreement
-		allowed = { tag = CAN }
-
-		available = {
-			ROOT = {
-				is_faction_leader = yes
-				if = {
-					limit = { has_war = yes }
-					surrender_progress < 0.20
-				}
-			}
-			FROM = {
-				has_war = no
-			}
-		}
-
-		visible = {
-			is_faction_leader = yes
-			not_has_socialist_government = yes
-			NOT = { country_exists = GBR }
-			OR = {
-				has_global_flag = ENG_CANIRE_protection
-				has_global_flag = ENG_CANIRE_support
-			}
-			if = {
-				limit = { has_global_flag = ENG_CANIRE_support }
-				FROM = {
-					NOT = { gives_military_access_to = ROOT }
-				}
-			}
-			FROM = {
-				exists = yes
-				is_subject = no
-				is_in_faction = no
-				not_has_socialist_government = yes
-				NOT = { is_guaranteed_by = GER }
-			}
-		}
-
-		priority = 5
-		cost = 100
-		fire_only_once = yes
-
-		target_root_trigger = { has_completed_focus = CAN_within_arms_reach }
-		targets = { IRE }
-		target_trigger = {
-			FROM = {
-				is_subject = no
-				is_in_faction = no
-				not_has_socialist_government = yes
-				NOT = { is_guaranteed_by = GER }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CAN_approach_ireland target: [From.GetName]"
-			country_event = canada.150
-		}
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 10
-				has_global_flag = ENG_CANIRE_protection
-			}
 		}
 	}
 
@@ -2575,14 +2456,6 @@ CAN_kings_influence_decisions = {
 							owns_state = 427
 						}
 						NOT = { has_country_flag = CAN_speech_india_united }
-					}
-					AND = {
-						SRD = {
-							is_in_faction_with = ROOT
-							owns_state = 158
-						}
-						NOT = { country_exists = SRI }
-						NOT = { has_country_flag = CAN_speech_italy_united }
 					}
 					AND = {
 						NOT = { country_exists = DEH }

@@ -13,8 +13,6 @@ on_actions = {
 						FROM = { tag = UKR }
 					}
 				}
-				country_event = { id = romania.55 hours = 6 }
-				country_event = { id = romania.55 hours = 6 }
 			}
 		}
 	}

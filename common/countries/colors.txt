@@ -122,21 +122,9 @@ ENP = {
 	color = rgb { 152 129 123 }
 	color_ui = rgb { 152 129 123 }
 }
-ERI = {
-	color = rgb { 146 213 90 }
-	color_ui = rgb { 146 213 90 }
-}
 EST = {
 	color = rgb { 50 135 175 }
 	color_ui = rgb { 99 204 254 }
-}
-ETH = {
-	color = rgb { 146 113 90 }
-	color_ui = rgb { 146 113 90 }
-}
-ETS = {
-	color = rgb { 71 178 224 }
-	color_ui = rgb { 71 178 224 }
 }
 FIN = {
 	color = rgb { 205 212 228 }
@@ -181,10 +169,6 @@ GER = {
 GEX = {
 	color = rgb { 77 93 83 }
 	color_ui = rgb { 138 155 116 }
-}
-GLC = {
-	color = rgb { 0 255 255 }
-	color_ui = rgb { 0 255 255 }
 }
 GRE = {
 	color = rgb { 93 181 227 }
@@ -294,21 +278,9 @@ LIT = {
 	color = rgb { 154 69 116 }
 	color_ui = rgb { 154 69 116 }
 }
-LUX = {
-	color = rgb { 65 175 179 }
-	color_ui = rgb { 85 228 233 }
-}
 MAD = {
 	color = rgb { 43 43 186 }
 	color_ui = rgb { 43 43 186 }
-}
-MAF = {
-	color = rgb { 135 169 107 }
-	color_ui = rgb { 135 169 107 }
-}
-MAN = {
-	color = rgb { 255 120 71 }
-	color_ui = rgb { 255 120 71 }
 }
 MLY = {
 	color = rgb { 255 40 95 }
@@ -434,17 +406,9 @@ SIB = {
 	color = rgb { 182 107 88 }
 	color_ui = rgb { 182 107 88 }
 }
-SIC = {
-	color = rgb { 204 204 0 }
-	color_ui = rgb { 204 204 0 }
-}
 SLO = {
 	color = rgb { 15 102 252 }
 	color_ui = rgb { 15 102 252 }
-}
-SOM = {
-	color = rgb { 0 128 131 }
-	color_ui = rgb { 0 128 131 }
 }
 SOV = {
 	color = rgb { 175 13 0 }
@@ -506,10 +470,6 @@ USA = {
 	color = rgb { 20 133 237 }
 	color_ui = rgb { 87 160 255 }
 }
-UZB = {
-	color = rgb { 49 222 43 }
-	color_ui = rgb { 49 222 43 }
-}
 VIE = {
 	color = rgb { 149 99 11 }
 	color_ui = rgb { 149 99 1 }
@@ -525,10 +485,6 @@ WAL = {
 WGR = {
 	color = rgb { 0 146 51 }
 	color_ui = rgb { 0 146 51 }
-}
-WHR = {
-	color = rgb { 239 238 215 }
-	color_ui = rgb { 239 238 215 }
 }
 WLL = {
 	color = rgb { 144 0 32 }

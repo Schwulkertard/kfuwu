@@ -3123,9 +3123,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_mission_to_india"
-			PRF = {
-				country_event = japfor.45
-			}
 		}
 	}
 
@@ -3592,17 +3589,6 @@ focus_tree = {
 					1020 = { is_owned_by = DEI }
 				}
 				create_wargoal = { type = annex_everything target = DEI }
-				hidden_effect = {
-					if = {
-						limit = {
-							DEI = { is_subject_of = HOL }
-						}
-						HOL = { country_event = dei.55 }
-					}
-					else = {
-						DEI = { country_event = dei.55 }
-					}
-				}
 			}
 			else = {
 				create_wargoal = { type = annex_everything target = INS }
@@ -3930,7 +3916,6 @@ focus_tree = {
 						tag = JAP
 						is_in_faction_with = JAP
 						is_subject_of = JAP
-						is_ruled_by_pro_fengtian = yes
 					}
 				}
 				add_opinion_modifier = {

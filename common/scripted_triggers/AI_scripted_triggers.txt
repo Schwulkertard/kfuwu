@@ -26,7 +26,6 @@ spanish_civil_war_volunteers = {
 		AND = {
 			FROM = { tag = CAR }
 			OR = {
-				tag = SIC
 				tag = CAN
 				tag = GBR
 				tag = POR
@@ -169,7 +168,6 @@ south_african_civil_war_volunteers = {
 			OR = {
 				tag = GER
 				tag = HOL
-				tag = MAF
 				AND = {
 					tag = AST
 					has_government = paternal_autocrat
@@ -207,17 +205,6 @@ indian_civil_war_volunteers = {
 			}
 		}
 	}
-}
-
-venetian_rebellion_volunteers = {
-	ITA = {
-		has_country_flag = ITA_venice_will_rebel
-		has_war_with = VNC
-	}
-	FROM = { tag = VNC }
-	tag = AUS
-	is_subject = no
-	has_socialist_government = no
 }
 
 german_austrian_volunteers = {

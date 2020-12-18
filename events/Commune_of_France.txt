@@ -1076,10 +1076,6 @@ country_event = {
 			modifier = FRA_world_revolution2_op
 		}
 		add_opinion_modifier = {
-			target = MAF
-			modifier = FRA_world_revolution2_op
-		}
-		add_opinion_modifier = {
 			target = JAP
 			modifier = FRA_world_revolution2_op
 		}
@@ -1164,15 +1160,7 @@ country_event = {
 			modifier = FRA_revenge_germany
 		}
 		add_opinion_modifier = {
-			target = MAF
-			modifier = FRA_revenge_germany
-		}
-		add_opinion_modifier = {
 			target = BAT
-			modifier = FRA_revenge_germany
-		}
-		add_opinion_modifier = {
-			target = WHR
 			modifier = FRA_revenge_germany
 		}
 		add_opinion_modifier = {
@@ -2271,14 +2259,6 @@ country_event = {
 			modifier = FRA_first_inter1
 		}
 		add_opinion_modifier = {
-			target = SRD
-			modifier = FRA_first_inter1
-		}
-		add_opinion_modifier = {
-			target = SIC
-			modifier = FRA_first_inter1
-		}
-		add_opinion_modifier = {
 			target = PAP
 			modifier = FRA_first_inter1
 		}
@@ -3115,10 +3095,6 @@ country_event = {
 			target = AST
 			modifier = FRA_overthrow_bourgeoisie
 		}
-		reverse_add_opinion_modifier = {
-			target = MAF
-			modifier = FRA_overthrow_bourgeoisie
-		}
 		GER = {
 			country_event = comfrance.60
 		}
@@ -3361,14 +3337,6 @@ country_event = {
 		}
 		add_stability = -0.06
 		set_country_flag = FRA_working_women_flag
-		hidden_effect = {
-			GER = {
-				country_event = {
-					id = gerdom.12
-					days = 30
-				}
-			}
-		}
 	}
 
 	option = { #Women in the factories? Send them Back to the kitchen!
@@ -3414,14 +3382,6 @@ country_event = { # The socialist Risorgimento
 			modifier = FRA_support_sri
 		}
 		reverse_add_opinion_modifier = {
-			target = SRD
-			modifier = FRA_support_sri
-		}
-		reverse_add_opinion_modifier = {
-			target = SIC
-			modifier = FRA_support_sri
-		}
-		reverse_add_opinion_modifier = {
 			target = PAP
 			modifier = FRA_support_sri
 		}
@@ -3457,15 +3417,7 @@ country_event = { # The socialist Risorgimento
 			modifier = FRA_support_sri
 		}
 		reverse_add_opinion_modifier = {
-			target = SRD
-			modifier = FRA_support_sri
-		}
-		reverse_add_opinion_modifier = {
 			target = PAP
-			modifier = FRA_support_sri
-		}
-		reverse_add_opinion_modifier = {
-			target = SIC
 			modifier = FRA_support_sri
 		}
 		reverse_add_opinion_modifier = {
@@ -4561,7 +4513,6 @@ country_event = {
 			modifier = aided_us_civwar
 		}
 		add_manpower = 1000
-		add_ideas = CNT_advisors_france
 		custom_effect_tooltip = received_equipment_1000
 		FROM_send_volunteers_to_ROOT = yes
 	}

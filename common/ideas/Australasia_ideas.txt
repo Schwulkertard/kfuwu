@@ -825,26 +825,6 @@ ideas = {
 			}
 		}
 
-		colonial_ammunition_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea colonial_ammunition_company"}
-			allowed = {
-				OR = {
-					original_tag = AST
-					tag = LEC
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_pressure_westerners }
-				}
-			}
-			traits = { infantry_equipment_producer_allround_1 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-		}
-
 		royal_australian_artillery = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea royal_australian_artillery"}
 			allowed = { original_tag = AST }
@@ -893,26 +873,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea new_south_wales"}
 			allowed = { original_tag = AST }
 			traits = { small_tank_producer_defense_1 }
-			research_bonus = {
-				armor = 0.1
-			}
-		}
-
-		vickers_armstrong_australasia = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea vickers_armstrong_australasia"}
-			allowed = {
-				OR = {
-					original_tag = AST
-					tag = LEC
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_pressure_westerners }
-				}
-			}
-			traits = { vickers_armstrong_industries }
 			research_bonus = {
 				armor = 0.1
 			}

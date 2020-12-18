@@ -268,6 +268,10 @@ focus_tree = {
 
 		relative_position_id = AUS_military_expansion
 
+		available = {
+			date > 1940.1.1
+		}
+
 		prerequisite = {
 			focus = AUS_military_mountaineers
 		}
@@ -278,6 +282,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_mil_expanded"
 			add_ideas = AUS_modern_army
+			remove_ideas = 	AUS_army_1
 		}
 	}
 
@@ -1221,8 +1226,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_ausgleich"
 			add_timed_idea = {
-				idea = AUS_paid_reparations
-				days = 180
+				idea = AUS_Unification
+				days = 420
 			}
 			AUS = {
 				annex_country = {

@@ -1402,7 +1402,6 @@ ideas = {
 			allowed = {
 				OR = {
 					tag = CAN
-					tag = QUE
 				}
 			}
 			available = { owns_state = 832 }
@@ -1441,7 +1440,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = CAN
-					original_tag = QUE
 				}
 			}
 			available = {

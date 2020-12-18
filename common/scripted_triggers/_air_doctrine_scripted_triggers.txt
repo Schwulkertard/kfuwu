@@ -19,70 +19,20 @@
 
 
 # these countries will never research the first level of Strategic Destruction because they have focuses which require other doctrines
-never_research_strategic_destruction = {
-	OR = {
-		tag = CUB
-	}
-}
 
 # these countries have choices in their focus trees between air doctrines this list is for countries that have a choice of Strategic Destruction, but shouldn't research it if they've already made their choice for another doctrine
 dont_research_strategic_destruction_if_choice_made = {
 	OR = {
 		AND = {
-			tag = AUS
-			has_completed_focus = AUS_uzelac-plan
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_battle_ground_support
-		}
-		AND = {
 			tag = GER
 			has_completed_focus = GER_heerflieger
-		}
-		AND = {
-			tag = ITA
-			has_completed_focus = ITA_army_air_support
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_army_air_support
 		}
 	}
 }
 
 # these countries will never research the first level of Battlefield Support because they have focuses which require other doctrines
-never_research_battlefield_support = {
-	OR = {
-		tag = MAF
-	}
-}
 
 # these countries have choices in their focus trees between air doctrines this list is for countries that have a choice of Battlefield Support, but shouldn't research it if they've already made their choice for another doctrine
-dont_research_battlefield_support_if_choice_made = {
-	OR = {
-		AND = {
-			tag = AUS
-			has_completed_focus = AUS_loehr-plan
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_dominate_the_sky
-		}
-		AND = {
-			tag = GER
-			has_completed_focus = GER_luftwaffe
-		}
-		AND = {
-			tag = ITA
-			has_completed_focus = ITA_air_supremcy
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_air_supremecy
-		}
-	}
-}
 
 # these countries will never research the first level of Operational Integrity because they have focuses which require other doctrines
 never_research_operational_integrity = {
@@ -90,8 +40,6 @@ never_research_operational_integrity = {
 		tag = AUS
 		tag = EGY
 		tag = GER
-		tag = HAW
-		tag = MAF
 		tag = ITA
 		tag = CAR
 		tag = VEN

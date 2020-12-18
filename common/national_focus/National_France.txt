@@ -56,7 +56,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_restore_constitution"
 			custom_effect_tooltip = NFA_restore_constitution_tooltip
-			country_event = nfa.2
 			add_stability = 0.08
 			add_popularity = {
 				ideology = social_conservative
@@ -116,7 +115,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_monarchy"
 			custom_effect_tooltip = NFA_monarchy_tooltip
-			country_event = nfa.3
 			add_stability = 0.02
 			set_country_flag = NFA_monarch
 			if = {
@@ -181,7 +179,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_empire"
 			custom_effect_tooltip = NFA_empire_tooltip
-			country_event = nfa.4
 			add_stability = -0.02
 			set_country_flag = NFA_empire
 			if = {
@@ -241,8 +238,6 @@ focus_tree = {
 				elections_allowed = no
 			}
 			set_country_flag = NFA_prepet
-			country_event = nfa.5
-			country_event = nfa.6
 			remove_ideas = NFA_political_unrest
 			hidden_effect = {
 				create_country_leader = {
@@ -328,7 +323,6 @@ focus_tree = {
 			custom_effect_tooltip = NFA_new_president_tooltip
 			add_stability = -0.02
 			set_country_flag = NFA_new_pres
-			country_event = nfa.6
 			remove_ideas = NFA_political_unrest
 			hidden_effect = {
 				create_country_leader = {
@@ -596,7 +590,6 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = -0.15
 			}
-			country_event = nfa.6
 			remove_ideas = NFA_political_unrest
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -646,7 +639,6 @@ focus_tree = {
 			add_stability = -0.04
 			remove_ideas_with_trait = head_of_government
 			add_ideas = NFA_Charles_Maurras_hog_pau
-			country_event = nfa.7
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = 0.15
@@ -1139,22 +1131,7 @@ focus_tree = {
 				}
 				set_state_flag = NFA_expand_airway_1IC
 			}
-			hidden_effect = {
-				random_list = {
-					75 = {
-						country_event = {
-							id = nfa.41
-							days = 300
-						}
-						} #the DAA crashes and burns
-					25 = {
-						country_event = {
-							id = nfa.42
-							days = 300
-						}
-					}
-				}
-				} #expansion is a success
+ #expansion is a success
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1379,18 +1356,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_sahara_census"
 			custom_effect_tooltip = NFA_sahara_census_tooltip
-			hidden_effect = {
-				country_event = {
-					id = nfa.43
-					days = 50
-					random = 1200
-				}
-				country_event = {
-					id = nfa.44
-					days = 50
-					random = 1200
-				}
-			}
 		}
 	}
 
@@ -1419,7 +1384,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_transsaharian"
 			custom_effect_tooltip = building_transaharian_tooltip
-			country_event = nfa.125
 		}
 	}
 
@@ -2089,7 +2053,6 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_southern_conscription"
-			country_event = nfa.38
 		}
 	}
 
@@ -2894,7 +2857,6 @@ focus_tree = {
 		cost = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_return_to_paris"
-			country_event = nfa.67
 			add_stability = 0.2
 			set_country_flag = NFA_returned_mainland
 			remove_ideas = NFA_french_in_exile
@@ -2922,7 +2884,6 @@ focus_tree = {
 				has_completed_focus = NFA_return_to_paris
 				has_war_with = GER
 				has_war_with = FRP
-				has_war_with = OCC
 				country_exists = FRA
 				controls_state = 16
 				16 = {
@@ -2939,7 +2900,6 @@ focus_tree = {
 		cost = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_return_to_marseille"
-			country_event = nfa.68
 			set_country_flag = NFA_returned_mainland
 			add_stability = 0.2
 			remove_ideas = NFA_french_in_exile
@@ -2978,7 +2938,6 @@ focus_tree = {
 			NOT = {
 				country_exists = FRA
 				has_war_with = FRP
-				country_exists = OCC
 			}
 		}
 		ai_will_do = {
@@ -2999,7 +2958,6 @@ focus_tree = {
 				target = FRP
 				modifier = NFA_established_under_railroad
 			}
-			country_event = nfa.69
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -3028,7 +2986,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NFA_restore_consitution_mainland"
 			add_stability = 0.12
 			set_country_flag = NFA_demo
-			country_event = nfa.6
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.05
@@ -3219,7 +3176,6 @@ focus_tree = {
 			add_state_claim = 310
 			add_state_claim = 1037
 			CAF = {
-				country_event = nfa.70
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -3255,31 +3211,6 @@ focus_tree = {
 					has_war = no
 					NOT = {
 						is_in_faction_with = FRP
-						country_exists = OCC
-					}
-				}
-				AND = {
-					OCC = {
-						OR = {
-							is_subject_of = RUS
-							is_subject_of = GER
-							is_subject_of = CAR
-						}
-						OR = {
-							AND = {
-								owns_state = 21
-								controls_state = 21
-							}
-							AND = {
-								owns_state = 31
-								controls_state = 31
-							}
-						}
-					}
-					is_subject = no
-					has_war = no
-					NOT = {
-						is_in_faction_with = OCC
 					}
 				}
 			}
@@ -3299,24 +3230,8 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					country_exists = OCC
-					OCC = { owns_state = 21 }
-				}
-				OCC = {
-					country_event = nfa.87
-				}
-				add_opinion_modifier = {
-					target = OCC
-					modifier = NFA_established_maquis
-				}
-			}
-			if = {
-				limit = {
 					country_exists = FRP
 					FRP = { owns_state = 21 }
-				}
-				FRP = {
-					country_event = nfa.88
 				}
 				add_opinion_modifier = {
 					target = FRP

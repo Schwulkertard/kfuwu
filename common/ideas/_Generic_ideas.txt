@@ -76,9 +76,6 @@ ideas = {
 		generic_naval_company = {
 			allowed = {
 				uses_generic_concerns = yes
-				NOT = {
-					tag = CUB
-				}
 			}
 			traits = {
 				small_ship_producer_offense_0
@@ -96,9 +93,6 @@ ideas = {
 		generic_fighter_company = {
 			allowed = {
 				uses_generic_concerns = yes
-				NOT = {
-					tag = CUB
-				}
 			}
 			traits = {
 				fighter_producer_offense_0

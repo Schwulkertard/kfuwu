@@ -25,7 +25,6 @@ GBP = "countries/WestEur.txt"
 GBR = "countries/WestEur.txt"
 GER = "countries/WestEur.txt"
 GEX = "countries/WestEur.txt" #Germany in exile
-GLC = "countries/WestEur.txt"
 GRU = "countries/WestEur.txt"
 HAW = "countries/WestEur.txt"
 HOL = "countries/WestEur.txt"
@@ -33,8 +32,6 @@ HUN = "countries/WestEur.txt"
 ICE = "countries/WestEur.txt"
 IRE = "countries/WestEur.txt"
 ITA = "countries/WestEur.txt"
-LUX = "countries/WestEur.txt"
-MAF = "countries/WestEur.txt"
 NFA = "countries/WestEur.txt"
 NGF = "countries/WestEur.txt"
 NOR = "countries/WestEur.txt"
@@ -46,10 +43,8 @@ SAF = "countries/WestEur.txt"
 SCA = "countries/WestEur.txt"
 SCT = "countries/WestEur.txt"
 SFR = "countries/WestEur.txt"
-SIC = "countries/WestEur.txt"
 SLO = "countries/WestEur.txt"
 SPR = "countries/WestEur.txt"
-SRD = "countries/WestEur.txt" #Sardinia/Kingdom of Italy
 SRI = "countries/WestEur.txt"
 SVK = "countries/WestEur.txt"
 SWE = "countries/WestEur.txt"
@@ -81,7 +76,6 @@ LIT = "countries/EastEur.txt"
 TRS = "countries/EastEur.txt"
 TUR = "countries/EastEur.txt"
 UKR = "countries/EastEur.txt"
-WHR = "countries/EastEur.txt"
 
 ### Asian ###
 ALO = "countries/Asian.txt"
@@ -89,7 +83,6 @@ BHU = "countries/Asian.txt"
 BOR = "countries/Asian.txt"
 BUR = "countries/Asian.txt"
 CAM = "countries/Asian.txt"
-ETS = "countries/Asian.txt" #East Turkestan
 GEA = "countries/Asian.txt" #German East Asia
 PRC = "countries/Asian.txt" #Liangguang Rebels
 INC = "countries/Asian.txt"
@@ -100,7 +93,6 @@ KOR = "countries/Asian.txt"
 KYR = "countries/Asian.txt" #Kyrgyzstan
 LAO = "countries/Asian.txt"
 LEC = "countries/Asian.txt"
-MAN = "countries/Asian.txt" #Great Empire of Manchuria
 MLY = "countries/Asian.txt"
 QIE = "countries/Asian.txt" #Qing Empire
 PHI = "countries/Asian.txt"
@@ -108,7 +100,6 @@ SAR = "countries/Asian.txt"
 SIA = "countries/Asian.txt"
 SIK = "countries/Asian.txt"
 TAJ = "countries/Asian.txt" #Tajikistan
-UZB = "countries/Asian.txt" #Uzbekistan
 VIE = "countries/Asian.txt"
 
 ### Indian ###
@@ -147,9 +138,6 @@ YEM = "countries/MidEast.txt"
 VEN = "countries/WestEur.txt"
 
 ### African ###
-ERI = "countries/African.txt"
-ETH = "countries/African.txt"
-SOM = "countries/African.txt"
 SUD = "countries/African.txt"
 
 ### No national units

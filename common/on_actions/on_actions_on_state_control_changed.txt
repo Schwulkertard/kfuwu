@@ -37,52 +37,6 @@ on_actions = {
 						}
 					}
 				}
-				FROM = {
-					country_event = {
-						id = rusfor.51
-						hours = 6
-					}
-				}
-			}
-
-			### South African Civil War
-			if = {
-				limit = {
-					FROM.FROM = { state = 681 } #Cape Town
-					tag = SFR
-					has_authoritarian_government = yes
-					FROM = { tag = SAF }
-				}
-				FROM = { country_event = saf.76 }
-			}
-			if = {
-				limit = {
-					FROM.FROM = { state = 275 } #Transvaal
-					tag = SFR
-					has_authoritarian_government = no
-					FROM = { tag = SAF }
-				}
-				FROM = { country_event = saf.77 }
-			}
-
-			### BHC Civil War
-			if = {
-				limit = {
-					FROM.FROM = { state = 431 } #Calcutta
-					tag = INR
-					has_government = totalist
-					FROM = { tag = BHC }
-				}
-				FROM = { country_event = beng.83 }
-			}
-			if = {
-				limit = {
-					FROM.FROM = { state = 431 } #Calcutta
-					tag = INR
-					has_government = radical_socialist
-					FROM = { tag = BHC }
-				}
-				FROM = { country_event = beng.90 }
 			}
 
 			### Clearing State Modifiers
@@ -140,15 +94,6 @@ on_actions = {
 						set_state_controller = PREV
 					}
 				}
-			}
-			### German-French war Germany winning 1
-			if = {
-				limit = {
-				tag = GER
-				11483 = {is_controlled_by_GER_or_ally = yes}					
-				}
-				FRA = { add_idea = { idea = GER_FRA_war_A } }
-				GER = { add_idea = { idea = GER_FRA_war_1 } }
 			}
 		}
 	}

@@ -30,68 +30,12 @@ never_research_fleet_in_being = {
 dont_research_fleet_in_being_if_choice_made = {
 	OR = {
 		AND = {
-			tag = BEL
-			NOT = { has_completed_focus = BEL_Fleet_of_our_own }
-		}
-		AND = {
-			tag = DEN
-			NOT = {
-				has_completed_focus = DEN_expand_the_navy_airforce
-				has_completed_focus = DEN_expand_the_army_airforce
-			}
-		}
-		AND = {
-			tag = DEN
-			OR = {
-				has_completed_focus = DEN_expand_the_navy_airforce
-				has_completed_focus = DEN_submarine_fleet
-			}
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_defend_the_coasts
-		}
-		AND = {
-			tag = FLN
-			has_completed_focus = FLN_Focus_On_Raiding_Ships
-		}
-		AND = {
-			tag = GEA
-			OR = {
-				has_completed_focus = GEA_battlecruiser1
-				has_completed_focus = GEA_strikegroup1
-			}
-		}
-		AND = {
-			tag = HOL
-			NOT = { has_completed_focus = HOL_vlootplan_doorman }
-		}
-		AND = {
 			tag = PER
 			NOT = { has_completed_focus = PER_com_navy }
 		}
 		AND = {
-			tag = ITA
-			has_completed_focus = ITA_defend_the_coast
-		}
-		AND = {
-			tag = SRD
-			OR = {
-				has_completed_focus = SRD_carrier_plan
-				has_completed_focus = SRD_sub_plan
-			}
-		}
-		AND = {
-			tag = SCA
-			has_completed_focus = SCA_Baltic_Green_Water
-		}
-		AND = {
 			tag = SIA
 			has_completed_focus = SIA_wolfpacks
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_defend_the_coast
 		}
 		AND = {
 			tag = ENG
@@ -105,13 +49,6 @@ dont_research_fleet_in_being_if_choice_made = {
 			OR = {
 				has_completed_focus = USA_defend_our_trade
 				has_completed_focus = USA_carriers
-			}
-		}
-		AND = {
-			tag = CAF
-			OR = {
-				NOT = { has_completed_focus = CAF_readjust_budget }
-				has_socialist_government = yes
 			}
 		}
 	}
@@ -129,68 +66,8 @@ never_research_trade_interdiction = {
 dont_research_trade_interdiction_if_choice_made = {
 	OR = {
 		AND = {
-			tag = BEL
-			NOT = { has_completed_focus = BEL_Rely_on_the_Kriegsmarine }
-		}
-		AND = {
-			tag = DEN
-			NOT = {
-				has_completed_focus = DEN_expand_the_navy_airforce
-				has_completed_focus = DEN_expand_the_army_airforce
-			}
-		}
-		AND = {
-			tag = DEN
-			OR = {
-				has_completed_focus = DEN_build_aircraft_carrier
-				has_completed_focus = DEN_proper_surface_fleet
-			}
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_grand_navy
-		}
-		AND = {
-			tag = FLN
-			has_completed_focus = FLN_Focus_On_Capital_Ships
-		}
-		AND = {
-			tag = GEA
-			OR = {
-				has_completed_focus = GEA_fleet1
-				has_completed_focus = GEA_strikegroup1
-			}
-		}
-		AND = {
-			tag = HOL
-			NOT = { has_completed_focus = HOL_vlootplan_helfrich }
-		}
-		AND = {
-			tag = PER
-			NOT = { has_completed_focus = PER_swe_navy }
-		}
-		AND = {
-			tag = ITA
-			has_completed_focus = ITA_grand_navy
-		}
-		AND = {
-			tag = SRD
-			OR = {
-				has_completed_focus = SRD_battleship_plan
-				has_completed_focus = SRD_carrier_plan
-			}
-		}
-		AND = {
-			tag = SCA
-			has_completed_focus = SCA_Atlantic_Blue_Water
-		}
-		AND = {
 			tag = SIA
 			has_completed_focus = SIA_alargefleet
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_grand_navy
 		}
 		AND = {
 			tag = ENG
@@ -206,27 +83,16 @@ dont_research_trade_interdiction_if_choice_made = {
 				has_completed_focus = USA_carriers
 			}
 		}
-		AND = {
-			tag = CAF
-			has_socialist_government = no
-			NOT = { has_completed_focus = CAF_producing_own_ships }
-		}
 	}
 }
 
 # these countries will never research the first level of Base Strike because they have focuses which require other doctrines
 never_research_base_strike = {
 	OR = {
-		tag = BEL
-		tag = CUB
-		tag = EGY
-		tag = FLN
-		tag = ITA
 		tag = SCA
 		tag = SIA
 		tag = CAR
 		tag = VEN
-		tag = CAF
 	}
 }
 
@@ -234,41 +100,8 @@ never_research_base_strike = {
 dont_research_base_strike_if_choice_made = {
 	OR = {
 		AND = {
-			tag = DEN
-			NOT = {
-				has_completed_focus = DEN_expand_the_navy_airforce
-				has_completed_focus = DEN_expand_the_army_airforce
-			}
-		}
-		AND = {
-			tag = DEN
-			OR = {
-				has_completed_focus = DEN_expand_the_army_airforce
-				has_completed_focus = DEN_proper_surface_fleet
-				has_completed_focus = DEN_submarine_fleet
-			}
-		}
-		AND = {
-			tag = GEA
-			OR = {
-				has_completed_focus = GEA_fleet1
-				has_completed_focus = GEA_battlecruiser1
-			}
-		}
-		AND = {
-			tag = HOL
-			NOT = { has_completed_focus = HOL_vlootplan_furstner }
-		}
-		AND = {
 			tag = PER
 			NOT = { has_completed_focus = PER_marine_academie }
-		}
-		AND = {
-			tag = SRD
-			OR = {
-				has_completed_focus = SRD_battleship_plan
-				has_completed_focus = SRD_sub_plan
-			}
 		}
 		AND = {
 			tag = ENG

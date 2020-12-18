@@ -37,7 +37,7 @@
 SPAN_INF_01 = {
 	name = "Infantry Division"
 
-	for_countries = { VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -77,7 +77,7 @@ SPAN_INF_01 = {
 SPAN_INFB_01 = {
 	name = "Infantry Brigade"
 
-	for_countries = { VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -114,90 +114,10 @@ SPAN_INFB_01 = {
 	}
 }
 
-SPAN_INF_02 = {
-	name = "Infantry Division"
-
-	for_countries = {  CUB }
-
-	can_use = { always = yes }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da División del Ejército"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División del Ejército" }
-		2 = { "%da División del Ejército" }
-		3 = { "%da División del Ejército" }
-		4 = { "%da División del Ejército" }
-		5 = { "%da División del Ejército" }
-		6 = { "%da División del Ejército" }
-		7 = { "%da División del Ejército" }
-		8 = { "%da División del Ejército" }
-		9 = { "%da División del Ejército" }
-		10 = { "%da División del Ejército" }
-		11 = { "%da División del Ejército" }
-		12 = { "%da División del Ejército" }
-		13 = { "%da División del Ejército" }
-		14 = { "%da División del Ejército" }
-		15 = { "%da División del Ejército" }
-		16 = { "%da División del Ejército" }
-		17 = { "%da División del Ejército" }
-		18 = { "%da División del Ejército" }
-		19 = { "%da División del Ejército" }
-		20 = { "%da División del Ejército" }
-	}
-}
-
-SPAN_INFB_02 = {
-	name = "Infantry Brigade"
-
-	for_countries = {  CUB }
-
-	can_use = { always = yes }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da Brigada del Ejército"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da Brigada del Ejército" }
-		2 = { "%da Brigada del Ejército" }
-		3 = { "%da Brigada del Ejército" }
-		4 = { "%da Brigada del Ejército" }
-		5 = { "%da Brigada del Ejército" }
-		6 = { "%da Brigada del Ejército" }
-		7 = { "%da Brigada del Ejército" }
-		8 = { "%da Brigada del Ejército" }
-		9 = { "%da Brigada del Ejército" }
-		10 = { "%da Brigada del Ejército" }
-		11 = { "%da Brigada del Ejército" }
-		12 = { "%da Brigada del Ejército" }
-		13 = { "%da Brigada del Ejército" }
-		14 = { "%da Brigada del Ejército" }
-		15 = { "%da Brigada del Ejército" }
-		16 = { "%da Brigada del Ejército" }
-		17 = { "%da Brigada del Ejército" }
-		18 = { "%da Brigada del Ejército" }
-		19 = { "%da Brigada del Ejército" }
-		20 = { "%da Brigada del Ejército" }
-	}
-}
-
 SPAN_CAV_01 = {
 	name = "Cavalry Division"
 
-	for_countries = {  CUB VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -227,7 +147,7 @@ SPAN_CAV_01 = {
 SPAN_CAVB_01 = {
 	name = "Cavalry Brigade"
 
-	for_countries = {  CUB VEN }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -254,130 +174,10 @@ SPAN_CAVB_01 = {
 	}
 }
 
-SPAN_MOT_01 = {
-	name = "Motorized Division"
-
-	for_countries = { CUB BAS CAT GLC }
-
-	can_use = { always = yes }
-
-	division_types = { "motorized" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da División Motorizada"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División Motorizada" }
-		2 = { "%da División Motorizada" }
-		3 = { "%da División Motorizada" }
-		4 = { "%da División Motorizada" }
-		5 = { "%da División Motorizada" }
-		6 = { "%da División Motorizada" }
-		7 = { "%da División Motorizada" }
-		8 = { "%da División Motorizada" }
-		9 = { "%da División Motorizada" }
-		10 = { "%da División Motorizada" }
-	}
-}
-
-SPAN_MOT_02 = {
-	name = "Motorized Infantry"
-
-	for_countries = {  VEN }
-
-	can_use = { always = yes }
-
-	division_types = { "motorized" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_02 }
-
-	fallback_name = "%da División de Inf. Motorizada"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División de Inf. Motorizada" }
-		2 = { "%da División de Inf. Motorizada" }
-		3 = { "%da División de Inf. Motorizada" }
-		4 = { "%da División de Inf. Motorizada" }
-		5 = { "%da División de Inf. Motorizada" }
-		6 = { "%da División de Inf. Motorizada" }
-		7 = { "%da División de Inf. Motorizada" }
-		8 = { "%da División de Inf. Motorizada" }
-		9 = { "%da División de Inf. Motorizada" }
-		10 = { "%da División de Inf. Motorizada" }
-	}
-}
-
-SPAN_MEC_01 = {
-	name = "Mechanized Division"
-
-	for_countries = { CUB BAS CAT GLC }
-
-	can_use = { always = yes }
-
-	division_types = { "mechanized" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da División Mecanizada"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División Mecanizada" }
-		2 = { "%da División Mecanizada" }
-		3 = { "%da División Mecanizada" }
-		4 = { "%da División Mecanizada" }
-		5 = { "%da División Mecanizada" }
-		6 = { "%da División Mecanizada" }
-		7 = { "%da División Mecanizada" }
-		8 = { "%da División Mecanizada" }
-		9 = { "%da División Mecanizada" }
-		10 = { "%da División Mecanizada" }
-	}
-}
-
-SPAN_MEC_02 = {
-	name = "Mechanized Infantry"
-
-	for_countries = {  VEN }
-
-	can_use = { always = yes }
-
-	division_types = { "mechanized" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_02 }
-
-	fallback_name = "%da División de Inf. Mecanizada"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División de Inf. Mecanizada" }
-		2 = { "%da División de Inf. Mecanizada" }
-		3 = { "%da División de Inf. Mecanizada" }
-		4 = { "%da División de Inf. Mecanizada" }
-		5 = { "%da División de Inf. Mecanizada" }
-		6 = { "%da División de Inf. Mecanizada" }
-		7 = { "%da División de Inf. Mecanizada" }
-		8 = { "%da División de Inf. Mecanizada" }
-		9 = { "%da División de Inf. Mecanizada" }
-		10 = { "%da División de Inf. Mecanizada" }
-	}
-}
-
 SPAN_ARM_01 = {
 	name = "Armored Division"
 
-	for_countries = {  CUB VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -404,40 +204,10 @@ SPAN_ARM_01 = {
 	}
 }
 
-SPAN_PAR_01 = {
-	name = "Parachute Division"
-
-	for_countries = {  BAS CAT GLC }
-
-	can_use = { always = yes }
-
-	division_types = { "paratrooper" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da División de Paracaidistas"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División de Paracaidistas" }
-		2 = { "%da División de Paracaidistas" }
-		3 = { "%da División de Paracaidistas" }
-		4 = { "%da División de Paracaidistas" }
-		5 = { "%da División de Paracaidistas" }
-		6 = { "%da División de Paracaidistas" }
-		7 = { "%da División de Paracaidistas" }
-		8 = { "%da División de Paracaidistas" }
-		9 = { "%da División de Paracaidistas" }
-		10 = { "%da División de Paracaidistas" }
-	}
-}
-
 SPAN_PAR_02 = {
 	name = "Airborne Division"
 
-	for_countries = { CUB VEN }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -467,7 +237,7 @@ SPAN_PAR_02 = {
 SPAN_MAR_01 = {
 	name = "Marine Infantry Division"
 
-	for_countries = {  CUB VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -494,70 +264,10 @@ SPAN_MAR_01 = {
 	}
 }
 
-SPAN_MTN_01 = {
-	name = "Mountain Division"
-
-	for_countries = { CUB BAS CAT GLC }
-
-	can_use = { always = yes }
-
-	division_types = { "mountaineers" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_01 }
-
-	fallback_name = "%da División de Montaña"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División de Montaña" }
-		2 = { "%da División de Montaña" }
-		3 = { "%da División de Montaña" }
-		4 = { "%da División de Montaña" }
-		5 = { "%da División de Montaña" }
-		6 = { "%da División de Montaña" }
-		7 = { "%da División de Montaña" }
-		8 = { "%da División de Montaña" }
-		9 = { "%da División de Montaña" }
-		10 = { "%da División de Montaña" }
-	}
-}
-
-SPAN_MTN_02 = {
-	name = "Mountain Infantry"
-
-	for_countries = {  VEN }
-
-	can_use = { always = yes }
-
-	division_types = { "mountaineers" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { SPAN_INF_02 }
-
-	fallback_name = "%da División de Inf. de Montaña"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%da División de Inf. de Montaña" }
-		2 = { "%da División de Inf. de Montaña" }
-		3 = { "%da División de Inf. de Montaña" }
-		4 = { "%da División de Inf. de Montaña" }
-		5 = { "%da División de Inf. de Montaña" }
-		6 = { "%da División de Inf. de Montaña" }
-		7 = { "%da División de Inf. de Montaña" }
-		8 = { "%da División de Inf. de Montaña" }
-		9 = { "%da División de Inf. de Montaña" }
-		10 = { "%da División de Inf. de Montaña" }
-	}
-}
-
 SPAN_GAR_01 = {
 	name = "Garrison Division"
 
-	for_countries = {  CUB VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 
@@ -597,7 +307,7 @@ SPAN_GAR_01 = {
 SPAN_MIL_01 = {
 	name = "Garrison Division"
 
-	for_countries = {  CUB VEN BAS CAT GLC }
+	for_countries = { VEN }
 
 	can_use = { always = yes }
 

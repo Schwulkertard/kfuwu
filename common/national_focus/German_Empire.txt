@@ -221,42 +221,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_women_suffrage
-		icon = GFX_goal_women_industry
-		prerequisite = {
-			focus = GER_democracy_in_prussia
-		}
-		available = {
-			has_country_flag = {
-				flag = women_suffrage
-				value > 3
-			}
-		}
-		x = -4
-		y = 4
-		relative_position_id = GER_political_1
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_women_suffrage"
-			add_stability = 0.1
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.1
-			}
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.05
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
 		id = GER_restore_country_rights
 		icon = GFX_focus_generic_treaty
 		prerequisite = {
@@ -471,10 +435,8 @@ focus_tree = {
 						target = ROOT
 						modifier = polish_deal_op
 					}
-					country_event = gerfor.168
 				}
 			}
-			country_event = gerfor.167
 		}
 	}
 
@@ -1850,7 +1812,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_expansion_naval_1"
-			country_event = gerdom.15
 			custom_effect_tooltip = naval_construction
 		}
 	}

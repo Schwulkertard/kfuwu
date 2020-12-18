@@ -1174,61 +1174,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { # restored from decision to focus
-		id = FRA_Demand_Romandy
-		icon = GFX_goal_FRA_savoie
-
-		available = {
-			is_subject = no
-			has_global_flag = can_demand_romandy
-		}
-
-		prerequisite = {
-			focus = FRA_road_to_war
-		}
-
-		bypass = {
-			OR = {
-				owns_state = 760
-				NOT = { can_declare_war_on = SWI }
-			}
-		}
-
-		will_lead_to_war_with = GER
-		will_lead_to_war_with = SWI
-		will_lead_to_war_with = AUS
-
-		cost = 5
-		x = 2
-		y = 1
-		relative_position_id = FRA_road_to_war
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-		}
-
-		ai_will_do = {
-			factor = 1000
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_Demand_Romandy"
-			if = {
-				limit = {
-					country_exists = SWI
-				}
-				country_event = prewar.7
-			}
-			custom_effect_tooltip = SWI_romandie_confrontation
-		}
-		cancel_if_invalid = yes
-	}
-
-
 	focus = {
 		id = FRA_military_buildup
 		icon = GFX_goal_economic_control

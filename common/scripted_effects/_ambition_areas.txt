@@ -126,17 +126,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@AZE = 1 }
 		}
-		# BAS = Basque
-		if = {
-			limit = {
-				OR = {
-					is_core_of = BAS
-					is_claimed_by = BAS
-					state = 172
-				}
-			}
-			set_variable = { ambition_area_@BAS = 1 }
-		}
 		# BAT = Baltic States
 		if = {
 			limit = {
@@ -486,18 +475,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@EGY = 1 }
-		}
-		# EMI = Emiglia
-		if = {
-			limit = {
-				OR = {
-					is_core_of = EMI
-					is_claimed_by = EMI
-					state = 1004
-					state = 161
-				}
-			}
-			set_variable = { ambition_area_@EMI = 1 }
 		}
 		# ENG = Union of Britain
 		if = {
@@ -1066,17 +1043,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@LIT = 1 }
 		}
-		# LOM = Lombardy
-		if = {
-			limit = {
-				OR = {
-					is_core_of = LOM
-					is_claimed_by = LOM
-					state = 159
-				}
-			}
-			set_variable = { ambition_area_@LOM = 1 }
-		}
 		# MAD = Madras
 		if = {
 			limit = {
@@ -1209,20 +1175,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@NOR = 1 }
-		}
-		# OCC = Occitania
-		if = {
-			limit = {
-				OR = {
-					is_core_of = OCC
-					is_claimed_by = OCC
-					state = 1
-					state = 762
-					state = 735
-					state = 943
-				}
-			}
-			set_variable = { ambition_area_@OCC = 1 }
 		}
 		# OTT = Ottoman Empire
 		if = {
@@ -1376,17 +1328,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@QIE = 1 }
-		}
-		# QUE = Quebec
-		if = {
-			limit = {
-				OR = {
-					is_core_of = QUE
-					is_claimed_by = QUE
-					region = 121
-				}
-			}
-			set_variable = { ambition_area_@QUE = 1 }
 		}
 		# ROM = Romania
 		if = {
@@ -1859,17 +1800,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@UKR = 1 }
 		}
-		# ULS = Ulster
-		if = {
-			limit = {
-				OR = {
-					is_core_of = ULS
-					is_claimed_by = ULS
-					region = 4
-				}
-			}
-			set_variable = { ambition_area_@ULS = 1 }
-		}
 		# USA = United States
 		if = {
 			limit = {
@@ -1929,20 +1859,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@VEN = 1 }
-		}
-		# VNC = Venice
-		if = {
-			limit = {
-				OR = {
-					is_core_of = VNC
-					is_claimed_by = VNC
-					state = 106
-					state = 759
-					state = 736
-					state = 163
-				}
-			}
-			set_variable = { ambition_area_@VNC = 1 }
 		}
 		# WAL = Wallonia
 		if = {

@@ -589,7 +589,6 @@ focus_tree = {
 					}
 				}
 				add_opinion_modifier = { target = ROOT modifier = GER_asked_join_entente }
-				country_event = gerfor.67
 			}
 		}
 	}

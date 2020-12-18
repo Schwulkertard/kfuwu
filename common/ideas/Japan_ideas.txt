@@ -803,10 +803,6 @@ ideas = {
 			}
 			available = {
 				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_fight_jap_influence }
-				}
-				if = {
 					limit = { tag = JAP }
 					NOT = { has_completed_focus = JAP_NAT_ZAI }
 				}
@@ -887,12 +883,6 @@ ideas = {
 					tag = LEC
 				}
 			}
-			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_fight_jap_influence }
-				}
-			}
 			traits = {
 				small_ship_producer_offense_1
 			}
@@ -922,10 +912,6 @@ ideas = {
 				if = {
 					limit = { tag = JAP }
 					NOT = { has_completed_focus = JAP_NAT_ZAI}
-				}
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_fight_jap_influence}
 				}
 			}
 			traits = {
@@ -1113,10 +1099,6 @@ ideas = {
 				}
 			}
 			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_fight_jap_influence }
-				}
 				if = {
 					limit = { tag = JAP }
 					NOT = { has_completed_focus = JAP_NAT_ZAI }

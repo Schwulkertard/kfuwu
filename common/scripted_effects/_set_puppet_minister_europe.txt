@@ -86,40 +86,6 @@ set_puppet_minister_europe = {
 	}
 
 	##
-	##	VASCONIA
-	##
-	if = {
-		limit = { tag = BAS }
-		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				BAS_Anacleto_Ortueta_hog_rso
-				BAS_Telesforo_Monzon_for_syn
-				BAS_Gonzalo_Nardiz_eco_rso
-				BAS_Anacleto_Ortueta_sec_rso
-			}
-		}
-		else_if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				BAS_Jesus_Maria_de_Leizaola_hog_sco
-				BAS_Elias_Gallastegui_Uriarte_for_sde
-				BAS_Agustin_Zumalabe_Mendiburu_eco_sde
-				BAS_Adolfo_de_Larranaga_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				BAS_Jose_Felix_Lequerica_hog_ade
-				BAS_Jose_Maria_de_Areilza_for_ade
-				BAS_Jose_Luis_Arrese_eco_pau
-				BAS_Pedro_Mourlane_Michelena_sec_pau
-			}
-		}
-	}
-
-	##
 	##	BALTIC DUCHY
 	##
 	if = {
@@ -1071,76 +1037,6 @@ set_puppet_minister_europe = {
 				DKB_Alexander_P_Filimonov_for_ade
 				DKB_Dimitri_Grabbe_Nikitin_eco_ade
 				DKB_Grigoriy_Y_Kislov_sec_ade
-			}
-		}
-	}
-
-	##
-	##	EMILIA
-	##
-	if = {
-		limit = { tag = EMI }
-		if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				EMI_Giuseppe_Castagnetti_hog_sde
-				EMI_Ferruccio_Teglio_for_sde
-				EMI_Arturo_Anderlini_eco_sde
-				EMI_Odoardo_Focherini_sec_sde
-			}
-		}
-		else_if = {
-			limit = { has_government = market_liberal }
-			add_ideas = {
-				EMI_Enzo_Ferrari_hog_mli
-				EMI_Giovannino_Guareschi_for_mli
-				EMI_Ettore_Maserati_eco_mli
-				EMI_Giuseppe_Merosi_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				EMI_Odoardo_Focherini_hog_sli
-				EMI_Attilio_Bertolucci_for_sli
-				EMI_Bruno_Alessandrini_eco_sli
-				EMI_Giovanni_Spezia_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_conservative }
-			add_ideas = {
-				EMI_Carlo_Bergamini_hog_sco
-				EMI_Bonifacio_Pignatti_Morano_di_Custoza_for_sco
-				EMI_Cesare_Campioli_eco_sco
-				EMI_Valentino_Babini_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				EMI_Carlo_Pignatti_Morano_di_Custoza_hog_ade
-				EMI_Mario_Roatta_for_ade
-				EMI_Carlo_Pezzati_eco_ade
-				EMI_Giuseppe_Boriani_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_government = paternal_autocrat }
-			add_ideas = {
-				EMI_Elia_di_Borbone_Parma_hog_pau
-				EMI_Valentino_Babini_for_pau
-				EMI_Mario_Racheli_eco_pau
-				EMI_Giacomo_Carboni_sec_pau
-			}
-		}
-		else_if = {
-			limit = { has_government = national_populist }
-			add_ideas = {
-				EMI_Mario_Roatta_hog_npo
-				EMI_Enrico_Prampolini_for_npo
-				EMI_Giacomo_Carboni_eco_npo
-				EMI_Marco_Arturo_Vicini_sec_npo
 			}
 		}
 	}
@@ -2664,76 +2560,6 @@ set_puppet_minister_europe = {
 	}
 
 	##
-	##	LOMBARDIA
-	##
-	if = {
-		limit = { tag = LOM }
-		if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				LOM_Ludovico_D'Aragona_hog_sde
-				LOM_Paolo_Treves_for_sde
-				LOM_Luigi_Sessa_eco_sde
-				LOM_Pier_Luigi_Della_Torre_sec_sde
-			}
-		}
-		else_if = {
-			limit = { has_government = market_liberal }
-			add_ideas = {
-				LOM_Luigi_Einaudi_hog_mli
-				LOM_Pietro_Beretta_for_mli
-				LOM_Giuseppe_De_Capitani_d'Arzago_eco_mli
-				LOM_Cesare_Genovesi_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				LOM_Ivanoe_Bonomi_hog_sli
-				LOM_Nicol_Carandini_for_sli
-				LOM_Ettore_Conti_di_Verampio_eco_sli
-				LOM_Giuseppe_Ghisalberti_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_conservative }
-			add_ideas = {
-				LOM_Sebastiano_Visconti_Prasca_hog_sco
-				LOM_Tommaso_Gallarati_Scotti_for_sco
-				LOM_Agostino_Rocca_eco_sco
-				LOM_Febo_Borromeo_d'Adda_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				LOM_Emilio_de_Bono_hog_ade
-				LOM_Fedele_de_Giorgis_for_ade
-				LOM_Ferrante_Vincenzo_Gonzaga_eco_ade
-				LOM_Cesare_Mori_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_government = paternal_autocrat }
-			add_ideas = {
-				LOM_Piero_Parini_hog_pau
-				LOM_Giuseppe_Visconti_di_Modrone_for_pau
-				LOM_Franco_Lanfredi_eco_pau
-				LOM_Arrigo_Solmi_sec_pau
-			}
-		}
-		else_if = {
-			limit = { has_government = national_populist }
-			add_ideas = {
-				LOM_Giacomo_Acerbo_hog_npo
-				LOM_Ercole_Durini_di_Monza_for_npo
-				LOM_Carlo_Favagrossa_eco_npo
-				LOM_Ernesto_Belloni_sec_npo
-			}
-		}
-	}
-
-	##
 	##	LUXEMBURG
 	##
 	if = {
@@ -2959,59 +2785,6 @@ set_puppet_minister_europe = {
 				NOR_Axel_Stang_for_npo
 				NOR_Carl_Froelich_Hanssen_eco_npo
 				NOR_Arnvid_Vasbotten_sec_npo
-			}
-		}
-	}
-
-	##
-	##	OCCITANIA
-	##
-	if = {
-		limit = { tag = OCC }
-		if = {
-			limit = {
-				has_socialist_government = yes
-				NOT = {
-					has_government = social_democrat
-				}
-			}
-			add_ideas = {
-				OCC_Abbe_Pierre_hog_rso
-				OCC_Albert_Camus_for_syn
-				OCC_Gilbert_Bugeac_eco_rso
-				OCC_Jacques_Soustelle_sec_syn
-			}
-		}
-		else_if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				OCC_Jacques_Chaban_Delmas_hog_sde
-				OCC_Edgard_de_Larminat_for_sde
-				OCC_Emile_Coulaudon_eco_sde
-				OCC_Jacques_Brunschwig_Bordier_sec_sde
-			}
-		}
-		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				OCC_Alexandre_Varenne_hog_sli
-				OCC_Francis_Louis_Closon_for_sli
-				OCC_Louis_Armand_eco_sli
-				OCC_Louis_Bonvin_sec_sli
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_right_democratic_government = yes
-					has_government = authoritarian_democrat
-				}
-			}
-			add_ideas = {
-				OCC_Jea_Marie_Lattre_de_Tassigny_hog_sco
-				OCC_Charlotte_Grimaldi_for_mli
-				OCC_Irenee_Cros_eco_sco
-				OCC_Jacques_Baumel_sec_sco
 			}
 		}
 	}
@@ -4224,76 +3997,6 @@ set_puppet_minister_europe = {
 #	}
 
 	##
-	##	TUSCANY
-	##
-	if = {
-		limit = { tag = TUS }
-		if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				TUS_Piero_Calamandrei_hog_sde
-				TUS_Renato_Cappugi_for_sde
-				TUS_Giuseppe_Togni_eco_sde
-				TUS_Renato_Pagni_sec_sde
-			}
-		}
-		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				TUS_Giorgio_La_Pira_hog_sli
-				TUS_Giuseppe_della_Gherardesca_for_sli
-				TUS_Guido_Bisori_eco_sli
-				TUS_Palmiro_Foresi_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_government = market_liberal }
-			add_ideas = {
-				TUS_Carlo_Sforza_hog_mli
-				TUS_Mario_Augusto_Martini_for_mli
-				TUS_Armando_Angelini_eco_mli
-				TUS_Tommaso_Corsini_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_conservative }
-			add_ideas = {
-				TUS_Cesare_Angelini_hog_sco
-				TUS_Giovanni_Bertini_for_sco
-				TUS_Pietro_Sordi_eco_sco
-				TUS_Giotto_Dainelli_Dolfi_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				TUS_Umberto_Ajello_hog_ade
-				TUS_Galeazzo_Ciano_for_ade
-				TUS_Zenone_Benini_eco_ade
-				TUS_Umberto_Somma_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_government = paternal_autocrat }
-			add_ideas = {
-				TUS_Camillo_Grossi_hog_pau
-				TUS_Luigi_Ridolfi_Vay_da_Verrazzano_for_pau
-				TUS_Paolo_Venerosi_pesciolini_eco_pau
-				TUS_Dino_Perrone_Compagni_sec_pau
-			}
-		}
-		else_if = {
-			limit = { has_government = national_populist }
-			add_ideas = {
-				TUS_Guido_Buffarini_Guidi_hog_npo
-				TUS_Eugenio_Coselschi_for_npo
-				TUS_Angelo_Tarchi_eco_npo
-				TUS_Tullio_Tamburini_sec_npo
-			}
-		}
-	}
-
-	##
 	##	UKRAINE
 	##
 	if = {
@@ -4631,76 +4334,6 @@ set_puppet_minister_europe = {
 				WLL_Jose_Streel_for_npo
 				WLL_Leon_Degrelle_eco_npo
 				WLL_Andre_Moyen_sec_npo
-			}
-		}
-	}
-
-	##
-	##	VENICE
-	##
-	if = {
-		limit = { tag = VNC }
-		if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				VNC_Giovanni_Battista_Gianquinto_hog_sde
-				VNC_Antonio_Costantini_for_sde
-				VNC_Carlo_Caldera_eco_sde
-				VNC_Lina_Merlin_sec_sde
-			}
-		}
-		else_if = {
-			limit = { has_government = market_liberal }
-			add_ideas = {
-				VNC_Giuseppe_Volpi_hog_mli
-				VNC_Andrea_Emo_Capodilista_for_mli
-				VNC_Gino_Luzzatto_eco_mli
-				VNC_Andrea_Da_Mosto_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				VNC_Umberto_Merlin_hog_sli
-				VNC_Igino_Borin_for_sli
-				VNC_Ferruccio_Morterra_eco_sli
-				VNC_Ugo_Vallenari_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_conservative }
-			add_ideas = {
-				VNC_Giovanni_Ponti_hog_sco
-				VNC_Antonio_Ferrarese_for_sco
-				VNC_Antonio_Pavan_eco_sco
-				VNC_Cesarino_Crescente_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				VNC_Giuseppe_Volpi_hog_ade
-				VNC_Vitale_Giovanni_Gallina_for_ade
-				VNC_Gino_Luzzatto_eco_ade
-				VNC_Angelo_Spanio_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_government = paternal_autocrat }
-			add_ideas = {
-				VNC_Giovanni_Ponti_hog_pau
-				VNC_Pietro_Lizier_for_pau
-				VNC_Antonio_Pavan_eco_pau
-				VNC_Giovanni_Favaretto_Fisca_sec_pau
-			}
-		}
-		else_if = {
-			limit = { has_government = national_populist }
-			add_ideas = {
-				VNC_Giovanni_Ponti_hog_pau
-				VNC_Pietro_Lizier_for_pau
-				VNC_Antonio_Pavan_eco_pau
-				VNC_Giovanni_Favaretto_Fisca_sec_pau
 			}
 		}
 	}

@@ -265,9 +265,6 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = austral.11 days = 1 } #New Guard election results
 			country_event = { id = austral.12 days = 3 } #Replace Birdwood?
-			LEC = {
-				country_event = { id = lecbrits.25 days = 1 }
-			}
 
 			random_other_country = {
 				limit = { is_ai = yes }
@@ -3051,7 +3048,6 @@ country_event = {
 		leave_faction = yes
 		separate_peace_all_wars = yes
 		hidden_effect = {
-			country_event = lecbrits.28 #remove LEC vote
 			remove_all_ministers = yes
 			create_country_leader = {
 				name = "John Curtin"
@@ -3308,7 +3304,6 @@ country_event = {
 		leave_faction = yes
 		separate_peace_all_wars = yes
 		hidden_effect = {
-			country_event = lecbrits.28 #remove LEC vote
 			remove_all_ministers = yes
 			create_country_leader = {
 				name = "John Curtin"

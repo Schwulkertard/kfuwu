@@ -761,10 +761,6 @@ ideas = {
 				}
 			}
 			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_pressure_westerners }
-				}
 			}
 			traits = {
 				medium_tank_producer_mass_2
@@ -866,10 +862,6 @@ ideas = {
 				}
 			}
 			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_pressure_westerners }
-				}
 			}
 			traits = {
 				small_ship_producer_offense_2
@@ -906,10 +898,6 @@ ideas = {
 				}
 			}
 			available = {
-				if = {
-					limit = { tag = LEC }
-					NOT = { has_completed_focus = LEC_pressure_westerners }
-				}
 			}
 			traits = {
 				fighter_producer_offense_2

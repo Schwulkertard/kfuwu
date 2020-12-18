@@ -209,9 +209,6 @@ on_actions = {
 			for_each_scope_loop = {
 				array = countries
 				if = {
-					limit = {
-						NOT = { tag = FNG }
-					}
 					add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
 				}
 			}
@@ -304,35 +301,6 @@ on_actions = {
 			log = "[GetDateText] [Root.GetName] (ROOT) on_peaceconference_ended [From.GetName] (FROM)"
 			if = {
 				limit = {
-					ROOT = { tag = PAP }
-					FROM = { tag = SRI }
-				}
-				ROOT = { country_event = papalstate.65 }
-			}
-			if = {
-				limit = {
-					ROOT = { tag = ITA }
-					FROM = { tag = SRI }
-				}
-				ROOT = { country_event = ita.173 }
-				FROM = { country_event = ita.173 }
-			}
-			if = {
-				limit = {
-					ROOT = { tag = LAT }
-					FROM = { tag = BAT }
-				}
-				ROOT = { country_event = balticduchy.196 }
-			}
-			if = {
-				limit = {
-					ROOT = { tag = EST }
-					FROM = { tag = BAT }
-				}
-				ROOT = { country_event = balticduchy.197 }
-			}
-			if = {
-				limit = {
 					OR = {
 						AND = {
 							tag = INS
@@ -370,23 +338,6 @@ on_actions = {
 							tag = RRM
 						}
 					}
-				}
-				ROOT = {
-					country_event = { id = romania.25 hours = 6 }
-					country_event = { id = romania.30 hours = 6 }
-				}
-				SER = {
-					country_event = { id = romania.15 hours = 6 }
-					country_event = { id = romania.24 days = 3 random = 96 }
-				}
-				AUS = {
-					country_event = { id = romania.24 days = 3 random = 96 }
-				}
-				UKR = {
-					country_event = { id = romania.24 days = 3 random = 96 }
-				}
-				RUS = {
-					country_event = { id = romania.24 days = 3 random = 96 }
 				}
 			}
 			ROOT = {

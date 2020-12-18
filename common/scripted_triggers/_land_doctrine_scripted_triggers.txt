@@ -25,16 +25,9 @@
 never_research_mobile_warfare = {
 	OR = {
 		tag = BEL
-		tag = CUB
-		tag = ETH
-		tag = HAW
 		tag = INC
-		tag = MAF
 		tag = SER
 		tag = SIA
-		tag = TUS
-		tag = VNC
-		tag = YEM
 	}
 }
 
@@ -44,70 +37,19 @@ never_research_mobile_warfare = {
 dont_research_mobile_warfare_if_choice_made = {
 	OR = {
 		AND = {
-			tag = AUS
-			OR = {
-				has_completed_focus = AUS_doctrine_Hickmann
-				has_completed_focus = AUS_doctrine_Jansa
-			}
-		}
-		AND = {
 			tag = CAN
 			has_completed_focus = CAN_vanier_plan
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_modern_terrico
-		}
-		AND = {
-			tag = CNT
-			has_completed_focus = CNT_standing_army_focus
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_grand_battle_plan
-		}
-		AND = {
-			tag = FLN
-			has_completed_focus = FLN_home_defense
-		}
-		AND = {
-			tag = GER
-			has_completed_focus = GER_doctrine_great_war_2
 		}
 		AND = {
 			tag = HOL
 			NOT = { has_country_flag = HOL_army_mobile }
 		}
 		AND = {
-			tag = IRE
-			has_completed_focus = IRE_FIREPOWER1
-		}
-		AND = {
 			tag = ITA
-			OR = {
-				has_completed_focus = ITA_grand_battle_plan_focus
-				has_completed_focus = ITA_superior_firepower_focus
-			}
 		}
 		AND = {
 			tag = RUS
 			NOT = { has_completed_focus = RUS_Spearhead_Doctrine }
-		}
-		AND = {
-			tag = SRD
-			has_completed_focus = SRD_superior_fire_power_plan
-		}
-		AND = {
-			tag = SWE
-			has_completed_focus = SWE_holmquist_plan
-		}
-		AND = {
-			tag = WHR
-			has_completed_focus = WHR_firepower
-		}
-		AND = {
-			tag = WLL
-			has_completed_focus = WLL_Trench_Warfare
 		}
 	}
 }
@@ -116,14 +58,10 @@ dont_research_mobile_warfare_if_choice_made = {
 # because they have focuses which require other doctrines
 never_research_superior_firepower = {
 	OR = {
-		tag = EGY
 		tag = FLN
 		tag = GER
-		tag = HOL
 		tag = INC
 		tag = VEN
-		tag = WLL
-		tag = YEM
 	}
 }
 
@@ -133,49 +71,8 @@ never_research_superior_firepower = {
 dont_research_superior_firepower_if_choice_made = {
 	OR = {
 		AND = {
-			tag = AUS
-			OR = {
-				has_completed_focus = AUS_doctrine_von_Hubicki
-				has_completed_focus = AUS_doctrine_Jansa
-			}
-		}
-		AND = {
-			tag = BEL
-			has_completed_focus = BEL_Flemish_Walloon_Officers
-		}
-		AND = {
 			tag = CAN
 			has_completed_focus = CAN_fuller_plan
-		}
-		AND = {
-			tag = CAR
-			has_completed_focus = CAR_army_of_maneuver
-		}
-		AND = {
-			tag = CNT
-			has_completed_focus = CNT_mobile_army_focus
-		}
-		AND = {
-			tag = ETH
-			OR = {
-				has_completed_focus = ETH_Modernise_High_Command
-				has_completed_focus = ETH_Legacy_Of_Adowa
-			}
-		}
-		AND = {
-			tag = IRE
-			has_completed_focus = IRE_MOBILE1
-		}
-		AND = {
-			tag = ITA
-			OR = {
-				has_completed_focus = ITA_grand_battle_plan_focus
-				has_completed_focus = ITA_mobile_warfare_focus
-			}
-		}
-		AND = {
-			tag = SER
-			has_completed_focus = SER_army_reform_mihailovic
 		}
 		AND = {
 			tag = SIA
@@ -183,26 +80,6 @@ dont_research_superior_firepower_if_choice_made = {
 				has_completed_focus = SIA_phrayaphahonplan
 				has_completed_focus = SIA_seriroengritplan
 			}
-		}
-		AND = {
-			tag = SRD
-			has_completed_focus = SRD_mobile_war_plan
-		}
-		AND = {
-			tag = SWE
-			has_completed_focus = SWE_douglas_plan
-		}
-		AND = {
-			tag = TUS
-			has_completed_focus = TUS_man_with_the_plan
-		}
-		AND = {
-			tag = VNC
-			has_completed_focus = VNC_grand_battle_plan
-		}
-		AND = {
-			tag = WHR
-			has_completed_focus = WHR_mobility
 		}
 	}
 }
@@ -212,15 +89,8 @@ dont_research_superior_firepower_if_choice_made = {
 never_research_grand_battle_plan = {
 	OR = {
 		tag = CAN
-		tag = CAR
-		tag = CNT
-		tag = DEN
 		tag = ENG
 		tag = INC
-		tag = IRE
-		tag = ITA
-		tag = SRD
-		tag = WHR
 	}
 }
 
@@ -230,32 +100,6 @@ never_research_grand_battle_plan = {
 dont_research_grand_battleplan_if_choice_made = {
 	OR = {
 		AND = {
-			tag = AUS
-			OR = {
-				has_completed_focus = AUS_doctrine_von_Hubicki
-				has_completed_focus = AUS_doctrine_Hickmann
-			}
-		}
-		AND = {
-			tag = BEL
-			has_completed_focus = BEL_German_Favoritism
-		}
-		AND = {
-			tag = EGY
-			has_completed_focus = EGY_mobile_warfare
-		}
-		AND = {
-			tag = ETH
-			OR = {
-				has_completed_focus = ETH_Improve_Firepower
-				has_completed_focus = ETH_Legacy_Of_Adowa
-			}
-		}
-		AND = {
-			tag = FLN
-			has_completed_focus = FLN_mobile_focus
-		}
-		AND = {
 			tag = GER
 			has_completed_focus = GER_doctrine_mobile_2
 		}
@@ -264,38 +108,11 @@ dont_research_grand_battleplan_if_choice_made = {
 			NOT = { has_country_flag = HOL_army_defensive }
 		}
 		AND = {
-			tag = ITA
-			OR = {
-				has_completed_focus = ITA_superior_firepower_focus
-				has_completed_focus = ITA_mobile_warfare_focus
-			}
-		}
-		AND = {
-			tag = SER
-			has_completed_focus = SER_army_reform_nedic
-		}
-		AND = {
 			tag = SIA
 			OR = {
 				has_completed_focus = SIA_phibunsongkhramplan
 				has_completed_focus = SIA_seriroengritplan
 			}
-		}
-		AND = {
-			tag = SWE
-			has_completed_focus = SWE_douglas_plan
-		}
-		AND = {
-			tag = TUS
-			has_completed_focus = TUS_superior_power
-		}
-		AND = {
-			tag = VNC
-			has_completed_focus = VNC_superior_fire_power
-		}
-		AND = {
-			tag = WLL
-			has_completed_focus = WLL_Panzer_Doctrine
 		}
 	}
 }
@@ -307,30 +124,12 @@ dont_research_grand_battleplan_if_choice_made = {
 never_research_mass_assault = {
 	OR = {
 		tag = AUS
-		tag = BEL
 		tag = CAN
-		tag = CAR
-		tag = CNT
-		tag = CUB
-		tag = DEN
-		tag = EGY
 		tag = ENG
 		tag = FLN
 		tag = GER
-		tag = HOL
 		tag = INC
-		tag = IRE
-		tag = ITA
-		tag = MAF
-		tag = SER
-		tag = SRD
-		tag = SWE
-		tag = TUS
 		tag = VEN
-		tag = VNC
-		tag = WLL
-		tag = WHR
-		tag = YEM
 	}
 }
 
@@ -339,10 +138,6 @@ never_research_mass_assault = {
 # research it if they've already made their choice for another doctrine
 dont_research_mass_assault_if_choice_made = {
 	OR = {
-		AND = {
-			tag = ETH
-			has_completed_focus = ETH_Hire_Askari_Veterans
-		}
 		AND = {
 			tag = SIA
 			OR = {

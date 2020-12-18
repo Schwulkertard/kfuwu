@@ -7935,9 +7935,6 @@ country_event = { # USA offers advisors
 		NOT = {
 			has_war_with = FROM
 			has_idea = USA_american_advisors_1
-			has_idea = CAL_american_advisors_1
-			has_idea = TEX_american_advisors_1
-			has_idea = CSA_american_advisors_1
 		}
 		OR = {
 			has_war_together_with = FROM

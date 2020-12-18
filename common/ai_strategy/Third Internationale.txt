@@ -242,42 +242,6 @@ international_protect_england = {
 	}
 }
 
-international_protect_italy = {
-	enable = {
-		NOT = { tag = SRI }
-		OR = {
-			is_in_faction_with = FRA
-			is_in_faction_with = ENG
-		}
-		SRI = {
-			OR = {
-				has_war_with = ITA
-				has_war_with = SRD
-				has_war_with = SIC
-			}
-		}
-		has_global_flag = KR_italy_balance
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = support
-		id = "SRI"
-		value = 1000
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = "SRI"
-		value = 1000
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SRI"
-		value = 10000
-	}
-}
-
 international_france = {
 	enable = {
 		OR = {
@@ -401,94 +365,6 @@ international_likes_sri = {
 	}
 }
 
-international_likes_norway = {
-	enable = {
-		OR = {
-			is_in_faction_with = FRA
-			is_in_faction_with = ENG
-		}
-		NOT = { tag = NOR }
-		is_in_europe = yes
-		has_socialist_government = yes
-		NOR = {
-			has_socialist_government = yes
-			NOT = { has_war_with = FRA }
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = befriend
-		id = "NOR"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "NOR"
-		value = 100
-	}
-}
-
-international_likes_sweden = {
-	enable = {
-		OR = {
-			is_in_faction_with = FRA
-			is_in_faction_with = ENG
-		}
-		NOT = { tag = SWE }
-		is_in_europe = yes
-		has_socialist_government = yes
-		SWE = {
-			has_socialist_government = yes
-			NOT = { has_war_with = FRA }
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = befriend
-		id = "SWE"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "SWE"
-		value = 100
-	}
-}
-
-international_likes_cnt = {
-	enable = {
-		OR = {
-			is_in_faction_with = FRA
-			is_in_faction_with = ENG
-		}
-		NOT = { tag = CNT }
-		is_in_europe = yes
-		has_socialist_government = yes
-		CNT = {
-			exists = yes
-			has_socialist_government = yes
-			NOT = { has_war_with = FRA }
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = befriend
-		id = "CNT"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "CNT"
-		value = 100
-	}
-}
-
 international_likes_sov = {
 	enable = {
 		SOV = {
@@ -497,12 +373,7 @@ international_likes_sov = {
 			NOT = { has_war_with = ROOT }
 		}
 		NOT = {
-			tag = SOV
 			tag = UKR
-			tag = WHR
-			tag = LIT
-			tag = LAT
-			tag = EST
 		}
 		is_in_europe = yes
 		has_socialist_government = yes
@@ -541,29 +412,6 @@ international_leave_norway = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "NOR"
-		value = 100
-	}
-}
-
-international_leave_sweden = {
-	enable = {
-		OR = {
-			is_in_faction_with = FRA
-			is_in_faction_with = ENG
-		}
-		GER = {
-			exists = yes
-			is_faction_leader = yes
-			has_capitulated = no
-		}
-		SWE = { is_in_faction_with = ROOT }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "SWE"
 		value = 100
 	}
 }

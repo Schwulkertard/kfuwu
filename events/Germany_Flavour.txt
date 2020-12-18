@@ -119,12 +119,6 @@ news_event = {
 
 	option = {
 		name = gerfla.4.a
-		GER = {
-			modify_country_flag = {
-				flag = women_suffrage
-				value = 1
-			}
-		}
 		custom_effect_tooltip = GER_women_suffrage_tp
 	}
 }

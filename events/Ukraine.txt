@@ -260,10 +260,6 @@ country_event = { # Invite Khrushchev
 			modifier = UKR_AUS_HUN_gov_khrushchev
 			} # -30
 		add_opinion_modifier = {
-			target = WHR
-			modifier = UKR_GER_WHR_LIT_gov_khrushchev
-			} # -20
-		add_opinion_modifier = {
 			target = LIT
 			modifier = UKR_GER_WHR_LIT_gov_khrushchev
 			} # -20
@@ -492,13 +488,6 @@ country_event = { # The Fate of the Ukrainian Monarchy
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.2
-			}
-			POL = {
-				country_event = {
-					id = poland.225
-					days = 3
-					random = 96
-				}
 			}
 		}
 
@@ -1585,10 +1574,6 @@ country_event = { # Attempt at a Military Coup
 			} # 100
 		add_opinion_modifier = {
 			target = HUN
-			modifier = UKR_OTHER_coup_succeds
-			} # 100
-		add_opinion_modifier = {
-			target = WHR
 			modifier = UKR_OTHER_coup_succeds
 			} # 100
 		add_opinion_modifier = {

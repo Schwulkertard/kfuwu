@@ -673,9 +673,7 @@ uses_generic_concerns = {
 		original_tag = DEI
 		original_tag = DEN
 		original_tag = EGY
-		original_tag = EMI
 		original_tag = ENG
-		original_tag = ETH
 		original_tag = FIN
 		original_tag = FLN
 		original_tag = FRA
@@ -695,8 +693,6 @@ uses_generic_concerns = {
 		original_tag = LEC
 		#original_tag = LIB #Unfinished List
 		original_tag = LIT
-		original_tag = LOM
-		original_tag = MAF
 		original_tag = NFA
 		original_tag = NOR
 		original_tag = OTT
@@ -714,20 +710,14 @@ uses_generic_concerns = {
 		original_tag = SCA
 		original_tag = SER
 		original_tag = SIA
-		original_tag = SIC
-		original_tag = SOM
 		original_tag = SOV
 		original_tag = SPR
-		original_tag = SRD
 		original_tag = SRI
 		original_tag = SWE
 		original_tag = SWI	
-		original_tag = TUS
 		original_tag = UKR
 		original_tag = USA
 		original_tag = VEN
-		original_tag = VNC
-		original_tag = WHR
 		original_tag = WLL
 	}
 }
@@ -764,15 +754,9 @@ is_han_chinese_tag = {
 		tag = PRC
 	}
 }
-is_non_han_chinese_tag = {
-	OR = {
-		tag = ETS
-	}
-}
 is_chinese_tag = {
 	OR = {
 		is_han_chinese_tag = yes
-		is_non_han_chinese_tag = yes
 		tag = LEC
 	}
 }
@@ -792,7 +776,6 @@ is_english_tag = {
 		tag = SCT
 		tag = GBR
 		tag = IRE
-		tag = ULS
 		tag = CAN
 		tag = HAW
 		tag = NZL
@@ -809,7 +792,6 @@ is_french_tag = {
 is_french_speaking_tag = {
 	OR = {
 		is_french_tag = YES
-		tag = QUE
 		tag = WLL
 	}
 }
@@ -824,21 +806,12 @@ is_german_tag = {
 		tag = BAV
 		tag = GEX
 		tag = BAT
-		tag = MAF
 		tag = GEA
 	}
 }
 is_italian_tag = {
 	OR = {
-		tag = ITA
 		tag = SRI
-		tag = SIC
-		tag = SRD
-		tag = PAP
-		tag = VNC
-		tag = EMI
-		tag = TUS
-		tag = LOM
 	}
 }
 is_polish_tag = {
@@ -869,24 +842,13 @@ is_turkic_tag = {
 		tag = AZE
 		tag = ALO
 		tag = TRK
-		tag = UZB
 		tag = KYR
 		tag = SIK
-	}
-}
-is_spanish_speaking_tag = {
-	OR = {
-		is_spanish_tag = yes
-		is_spanish_south_american_tag = yes
-		tag = GLC
-		tag = CUB
 	}
 }
 is_spanish_tag = {
 	OR = {
 		tag = SPR
-		tag = CAR
-		tag = CNT
 	}
 }
 is_spanish_south_american_tag = {
@@ -965,14 +927,9 @@ has_no_african_interests = {
 		has_socialist_government = yes
 		NOT = {
 			tag = POR
-			tag = MAF
 			tag = GER
 			tag = GEX
 			tag = NFA
-			AND = {
-				tag = GBR
-				NOT = { has_country_flag = GBR_decolonize }
-			}
 			AND = {
 				tag = CAN
 				NOT = { country_exists = GBR }
@@ -991,16 +948,8 @@ can_form_italy = {
 		162 = { is_owned_and_controlled_by = ROOT } #Florence
 	}
 	NOT = {
-		has_country_flag = KR_will_balkanize_italy
-		tag = ITA
 		tag = SRI
-		tag = SIC
-		tag = SRD
 		tag = PAP
-		tag = VNC
-		tag = EMI
-		tag = TUS
-		tag = LOM
 	}
 }
 

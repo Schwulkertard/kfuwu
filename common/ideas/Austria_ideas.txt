@@ -70,6 +70,26 @@ ideas = {
 			}
 		}
 
+		AUS_Unification = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_paid_reparations" }
+			picture = ROM_king_carol_emptied_accounts
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		AUS_army_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_army_1" }
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_Factor = -0.1
+				army_morale_factor = -0.2
+			}
+		}
+
 		AUS_part_of_the_Empire = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_part_of_the_Empire" }
 			picture = AUS_part_of_the_Empire
@@ -564,22 +584,6 @@ ideas = {
 
 	aircraft_manufacturer = {
 		designer = yes
-
-		phoenix = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea phoenix" }
-			allowed = {
-				original_tag = AUS
-			}
-			available = {
-				has_completed_focus = AUS_phoenix
-			}
-			traits = {
-				phoenix_fighters
-			}
-			research_bonus = {
-				fighter_techs = 0.1
-			}
-		}
 
 		wiener_neu_flugzeug = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea wiener_neu_flugzeug" }

@@ -13,7 +13,6 @@ on_actions = {
 
 			#Set up European tags array
 			add_to_array = { global.european_tags_array = AUS }
-			add_to_array = { global.european_tags_array = BAS }
 			add_to_array = { global.european_tags_array = BAT }
 			add_to_array = { global.european_tags_array = BAV }
 			add_to_array = { global.european_tags_array = BEL }
@@ -28,7 +27,6 @@ on_actions = {
 			add_to_array = { global.european_tags_array = DDR } #Prussia
 			add_to_array = { global.european_tags_array = DEN }
 			add_to_array = { global.european_tags_array = DKB }
-			add_to_array = { global.european_tags_array = EMI }
 			add_to_array = { global.european_tags_array = ENG }
 			add_to_array = { global.european_tags_array = ENP }
 			add_to_array = { global.european_tags_array = EST }
@@ -51,11 +49,9 @@ on_actions = {
 			add_to_array = { global.european_tags_array = ITA }
 			add_to_array = { global.european_tags_array = LAT }
 			add_to_array = { global.european_tags_array = LIT }
-			add_to_array = { global.european_tags_array = LOM }
 			add_to_array = { global.european_tags_array = LUX }
 			add_to_array = { global.european_tags_array = NGF } #Hanover
 			add_to_array = { global.european_tags_array = NOR }
-			add_to_array = { global.european_tags_array = OCC }
 			add_to_array = { global.european_tags_array = PAP }
 			add_to_array = { global.european_tags_array = POL }
 			add_to_array = { global.european_tags_array = POR }
@@ -75,14 +71,11 @@ on_actions = {
 			add_to_array = { global.european_tags_array = SWE }
 			add_to_array = { global.european_tags_array = SWI }
 			add_to_array = { global.european_tags_array = TRS } #Transylvania
-			add_to_array = { global.european_tags_array = TUS }
 			add_to_array = { global.european_tags_array = UKR }
-			add_to_array = { global.european_tags_array = ULS }
 			add_to_array = { global.european_tags_array = WAL }
 			add_to_array = { global.european_tags_array = WGR } #Rheinland
 			add_to_array = { global.european_tags_array = WHR }
 			add_to_array = { global.european_tags_array = WLL }
-			add_to_array = { global.european_tags_array = VNC }
 
 			#Set up Balkans tags array
 			add_to_array = { global.balkans_tags_array = BOS }
@@ -186,12 +179,10 @@ on_actions = {
 
 			#Set Up Central American tags array
 			add_to_array = { global.central_american_tags_array = CAF }
-			add_to_array = { global.central_american_tags_array = CUB }
 
 			#Set Up North American tags array
 			add_to_array = { global.north_american_tags_array = CAN }
 			add_to_array = { global.north_american_tags_array = HAW }
-			add_to_array = { global.north_american_tags_array = QUE }
 			add_to_array = { global.north_american_tags_array = USA }
 
 			#Set up Oceania tags array

@@ -46,9 +46,6 @@ country_event = {
 	option = {
 		remove_ideas = AUS_financial_ties_broken
 		remove_ideas = AUS_paid_reparations
-		HUN = {
-			remove_ideas = HUN_financial_ties_broken
-		}
 	}
 }
 
