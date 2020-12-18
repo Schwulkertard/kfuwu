@@ -1,4 +1,5 @@
 version="1.10.3"
+picture="thumbnail.png"
 replace_path="common/abilities"
 replace_path="common/ai_strategy_plans"
 replace_path="common/ai_templates"
@@ -67,4 +68,4 @@ tags={
 }
 name="KFU"
 supported_version="1.10.3"
-remote_file_id="2319298617"
+remote_file_id="2325529599"
