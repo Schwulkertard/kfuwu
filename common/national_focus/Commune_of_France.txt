@@ -1088,7 +1088,7 @@ focus_tree = {
 		x = 13
 		y = 0
 		relative_position_id = FRA_socialist_education
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -1209,7 +1209,7 @@ focus_tree = {
 				name = FRA_military_buildup
 				bonus = 1
 				uses = 1
-				category = construction_tech
+				category = industry
 			}
 			random_owned_state = {
 				limit = {
@@ -1253,7 +1253,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = FRA_road_to_war
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1304,7 +1304,7 @@ focus_tree = {
 		x = -1
 		y = 4
 		relative_position_id = FRA_road_to_war
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -1722,589 +1722,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_War_with_Netherlands
-		icon = GFX_BEL_Reclaim_Netherlands
-		available = {
-			GER = {
-				exists = yes
-				NOT = {
-					is_subject_of = FRA
-				}
-			}
-			is_subject = no
-			has_war_with = GER
-			NOT = {
-				is_in_faction_with = HOL
-				HOL = {
-					is_subject_of = FRA
-				}
-			}
-			HOL = {
-				exists = yes
-				not_has_socialist_government = yes
-			}
-			OR = {
-				NOT = {
-					has_war_with = BEL
-				}
-				34 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				AND = {
-					has_war_with = HOL
-					has_war_with = BEL
-				}
-				HOL = {
-					is_subject_of = FRA
-					has_socialist_government = yes
-				}
-				is_in_faction_with = HOL
-				7 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				GER = {
-					exists = no
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = FRA_War_with_germany
-		}
-
-		will_lead_to_war_with = HOL
-		will_lead_to_war_with = BEL
-		will_lead_to_war_with = FLN
-
-		x = -2
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 2
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = SPR
-					has_war_with = CAR
-					surrender_progress > 0.3
-				}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_War_with_Netherlands"
-			create_wargoal = {
-				type = annex_everything
-				target = HOL
-			}
-			if = {
-				limit = {
-					FLN = {
-						is_subject_of = HOL
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = FLN
-				}
-			}
-			if = {
-				limit = {
-					BEL = {
-						is_subject = no
-						is_in_faction = no
-						exists = yes
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = BEL
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = FRA_War_with_austria
-		available = {
-			OR = {
-				has_country_flag = FRA2_FOR_SORE
-				has_country_flag = FRA2_FOR_JACO
-				has_country_flag = FRA2_FOR_ANAR
-			}
-			is_subject = no
-			NOT = {
-				has_war_with = GER
-			}
-			NOT = {
-				is_in_faction_with = AUS
-				AUS = {
-					is_subject_of = FRA
-				}
-			}
-			AUS = {
-				exists = yes
-				not_has_socialist_government = yes
-			}
-			custom_trigger_tooltip = {
-				tooltip = FRA_War_with_austria_tooltip
-				OR = {
-					160 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					52 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					786 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				has_war_with = AUS
-				AUS = {
-					is_subject_of = FRA
-				}
-				is_in_faction_with = AUS
-			}
-			4 = {
-				is_controlled_by_ROOT_or_ally = yes
-			}
-		}
-
-		prerequisite = {
-			focus = FRA_War_with_germany
-		}
-
-		will_lead_to_war_with = AUS
-		will_lead_to_war_with = HUN
-
-		icon = GFX_goal_FRA_liberate_AH
-		x = 0
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 10
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = SPR
-					has_war_with = CAR
-					surrender_progress > 0.3
-				}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_War_with_austria"
-			create_wargoal = {
-				type = annex_everything
-				target = AUS
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = HUN
-			}
-			if = {
-				limit = {
-					GAL = {
-						is_subject_of = AUS
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = GAL
-				}
-			}
-			if = {
-				limit = {
-					TRS = {
-						is_subject_of = AUS
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = TRS
-				}
-			}
-			if = {
-				limit = {
-					SVK = {
-						is_subject_of = AUS
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = SVK
-				}
-			}
-			if = {
-				limit = {
-					CRO = {
-						is_subject_of = AUS
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = CRO
-				}
-			}
-			if = {
-				limit = {
-					CZE = {
-						is_subject_of = AUS
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = CZE
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = FRA_war_with_spain
-		icon = GFX_goal_FRA_liberate_Iberia
-		prerequisite = {
-			focus = FRA_War_with_germany
-		}
-		available = {
-			OR = {
-				has_country_flag = FRA2_FOR_SORE
-				has_country_flag = FRA2_FOR_JACO
-				has_country_flag = FRA2_FOR_ANAR
-			}
-			is_subject = no
-			NOT = {
-				has_war_with = GER
-			}
-			OR = {
-				SPR = {
-					AND = {
-						exists = yes
-						NOT = {
-							is_subject_of = FRA
-							is_in_faction_with = FRA
-						}
-					}
-				}
-				POR = {
-					AND = {
-						exists = yes
-						NOT = {
-							is_subject_of = FRA
-							is_in_faction_with = FRA
-						}
-					}
-				}
-				CAR = {
-					AND = {
-						exists = yes
-						NOT = {
-							is_subject_of = FRA
-							is_in_faction_with = FRA
-						}
-					}
-				}
-			}
-			controls_state = 31
-		}
-		bypass = {
-			AND = {
-				OR = {
-					has_war_with = SPR
-					SPR = {
-						is_subject_of = FRA
-					}
-					is_in_faction_with = SPR
-					AND = {
-						country_exists = CNT
-						CNT = {
-							NOT = {
-								has_war_with = CAR
-								has_war_with = SPR
-							}
-						}
-					}
-					AND = {
-						41 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
-						165 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
-					}
-				}
-
-				OR = {
-					has_war_with = POR
-					POR = {
-						is_subject_of = FRA
-					}
-					is_in_faction_with = POR
-					AND = {
-						112 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
-					}
-				}
-			}
-		}
-		will_lead_to_war_with = SPR
-		will_lead_to_war_with = CAR
-		will_lead_to_war_with = POR
-
-		x = 2
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 10
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = AUS
-					surrender_progress > 0.3
-				}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_war_with_spain"
-			if = {
-				limit = {
-					country_exists = SPR
-				}
-				create_wargoal = {
-					target = SPR
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = CAR
-				}
-				create_wargoal = {
-					target = CAR
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = POR
-					NOT = {
-						POR = {
-							is_in_faction_with = FRA
-						}
-						POR = {
-							has_socialist_government = yes
-						}
-					}
-				}
-				create_wargoal = {
-					target = POR
-					type = annex_everything
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = FRA_World_revolution
-		icon = GFX_goal_FRA_World_Revolution
-		prerequisite = {
-			focus = FRA_War_with_Netherlands
-		}
-		prerequisite = {
-			focus = FRA_War_with_austria
-		}
-		prerequisite = {
-			focus = FRA_war_with_spain
-		}
-		available = {
-			OR = {
-				has_country_flag = FRA2_FOR_SORE
-				has_country_flag = FRA2_FOR_JACO
-			}
-			custom_trigger_tooltip = {
-				tooltip = FRA_revolution_paths_tooltip
-				4 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				43 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				2 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				41 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-			}
-		}
-
-		mutually_exclusive = {
-			focus = FRA_peaceful_revolution
-			focus = FRA_european_revolution
-		}
-		x = -1
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = SPR
-					has_war_with = CAR
-					has_war_with = AUS
-					surrender_progress > 0.3
-				}
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_World_revolution"
-
-			add_ideas = Revolutionary_spirit
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = FRA_european_revolution
-		icon = GFX_focus_ger_great_red_menace
-		prerequisite = {
-			focus = FRA_War_with_Netherlands
-		}
-		prerequisite = {
-			focus = FRA_War_with_austria
-		}
-		prerequisite = {
-			focus = FRA_war_with_spain
-		}
-		available = {
-			has_country_flag = FRA2_FOR_ANAR
-			custom_trigger_tooltip = {
-				tooltip = FRA_revolution_paths_tooltip
-				4 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				43 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				2 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				41 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-			}
-		}
-
-		will_lead_to_war_with = POL
-		will_lead_to_war_with = UKR
-
-		mutually_exclusive = {
-			focus = FRA_World_revolution
-			focus = FRA_peaceful_revolution
-		}
-		x = 1
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = SPR
-					has_war_with = CAR
-					has_war_with = AUS
-					surrender_progress > 0.3
-				}
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_european_revolution"
-			custom_effect_tooltip = FRA_european_revolution_tt
-		}
-	}
-
-	focus = {
-		id = FRA_peaceful_revolution
-		icon = GFX_ITA_syndicalist_unite
-		prerequisite = {
-			focus = FRA_War_with_germany
-		}
-		available = {
-			has_country_flag = FRA2_FOR_TRAV
-		}
-
-		mutually_exclusive = {
-			focus = FRA_World_revolution
-			focus = FRA_european_revolution
-		}
-		x = -3
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					has_war_with = ITA
-					has_war_with = SPR
-					has_war_with = CAR
-					has_war_with = AUS
-					surrender_progress > 0.3
-				}
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_peaceful_revolution"
-			add_ideas = FRA_peaceful_revolution_idea
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
 		id = FRA_equipment_modern
 		icon = GFX_focus_chi_army_reform
 		x = 1
 		y = 2
 		relative_position_id = FRA_road_to_war
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -2329,7 +1752,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = FRA_road_to_war
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -2381,7 +1804,7 @@ focus_tree = {
 		icon = GFX_NATFRA_conscription
 		x = 35
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2398,7 +1821,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = FRA_communal_army
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2532,7 +1955,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FRA_communal_army
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2634,7 +2057,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = FRA_communal_army
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2738,7 +2161,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = FRA_communal_army
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2862,12 +2285,9 @@ focus_tree = {
 	focus = {
 		id = FRA_Host_the_Internationale
 		icon = GFX_goal_FRA_Internationale_Congress
-		available = {
-			hidden_trigger = { always = no }
-		}
 		x = 19
 		y = 0
-		cost = 10
+		cost = 0
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_Host_the_Internationale"
@@ -2876,66 +2296,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_mission_bhartiya
-		icon = GFX_goal_india_commune
-		prerequisite = {
-			focus = FRA_Host_the_Internationale
-		}
-		available = {
-			has_country_flag = FRA_mission_bharitya_flag
-			country_exists = BHC
-			BHC = {
-				has_socialist_government = yes
-			}
-		}
-		x = -2
-		y = 1
-		relative_position_id = FRA_Host_the_Internationale
-		cost = 4
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_mission_bhartiya"
-			BHC = {
-				country_event = comfrance.62
-			}
-		}
-	}
-
-
-	focus = {
-		id = FRA_arab_committee
-		icon = GFX_goal_INS_focus_islamic_socialism
-		prerequisite = {
-			focus = FRA_Host_the_Internationale
-		}
-		x = -1
-		y = 2
-		relative_position_id = FRA_Host_the_Internationale
-		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
-
-		available = {
-			has_country_flag = SailMo_FRA
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
-			custom_effect_tooltip = FRA_arab_committee_tooltip
-			country_event = comfrance.63
-		}
-	}
-
-	focus = {
 		id = FRA_working_women
 		icon = GFX_ITA_female_soldiers
 		prerequisite = {
 			focus = FRA_Host_the_Internationale
-		}
-		available = {
-			has_country_flag = FRA_working_women_flag
 		}
 		x = 1
 		y = 2
@@ -2951,43 +2315,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 	}
 
-	focus = {
-		id = FRA_avantgarde
-		icon = GFX_goal_art_avantgarde
-		prerequisite = {
-			focus = FRA_Host_the_Internationale
-		}
-		available = {
-
-		}
-		x = 2
-		y = 1
-		relative_position_id = FRA_Host_the_Internationale
-		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_avantgarde"
-			add_ideas = FRA_avantgarde_idea
-			ENG = {
-				country_event = comfrance.165
-			}
-			hidden_effect = {
-				if = {
-					limit = { date > 1938.08.21 }
-					hidden_effect = {
-						country_event = {
-							id = comfrance.164
-							days = 15
-							random = 360
-						}
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
 
 	focus = {
 		id = FRA_armee_de_lair
