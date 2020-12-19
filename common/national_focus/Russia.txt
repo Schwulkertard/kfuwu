@@ -655,7 +655,7 @@ focus_tree = {
 		relative_position_id = RUS_Army_Modernisation
 		x = -4
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = RUS_Okhrannoye_Otdeleniye_tooltip
@@ -689,7 +689,7 @@ focus_tree = {
 		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		}
@@ -731,7 +731,7 @@ focus_tree = {
 		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		}
@@ -839,7 +839,7 @@ focus_tree = {
 		relative_position_id = RUS_Army_Modernisation
 		x = -1
 		y = 2
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = RUS_Equipment_Modernisation
 		}
@@ -962,11 +962,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Air_Superiority"
-			add_tech_bonus = {
-				name = RUS_Air_Superiority
-				bonus = 1
-				uses = 1
-				category = fighter_techs
+			set_technology = {
+				fighter2 = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1041,7 +1038,7 @@ focus_tree = {
 		relative_position_id = RUS_Spearhead_Doctrine
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_Armour_Modernisation
 		}
