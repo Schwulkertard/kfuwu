@@ -156,6 +156,18 @@ ideas = {
 			}
 		}
 
+		GER_prepare_for_the_inevitable_idea = {
+			name = GER_prepare_for_the_inevitable
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_prepare_for_the_inevitable_ideaS"}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.1
+				stability_factor = 0.1
+			}
+			picture = generic_production_bonus
+			removal_cost = -1
+		}
+
 		GER_institut_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_institut_idea"}
 			picture = generic_air_bonus
