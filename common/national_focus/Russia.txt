@@ -21,84 +21,14 @@ focus_tree = {
 	#############
 
 	focus = {
-		id = RUS_Political_Stabilisation
-		icon = GFX_goal_generic_neutrality_focus
-		available = {
-			hidden_trigger = { always = no }
-		}
-		x = 7
-		y = 0
-		cost = 0
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus RUS_Political_Stabilisation"
-			custom_effect_tooltip = unlock_focuses
-		}
-	}
-
-	focus = {
-		id = RUS_A_Firm_Hand
-		icon = GFX_focus_ger_strike_at_the_source
-		available = {
-			OR = {
-				RUS_savinkov_in_power = yes
-			}
-		}
-		prerequisite = {
-			focus = RUS_Political_Stabilisation
-		}
-		relative_position_id = RUS_Political_Stabilisation
-		x = 0
-		y = 1
-		cost = 0
-		ai_will_do = {
-			factor = 1000
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus RUS_A_Firm_Hand"
-			if = {
-				limit = { RUS_savinkov_in_power = yes }
-				custom_effect_tooltip = RUS_A_Firm_Hand_savinkov_tooltip
-				add_stability = 0.1
-				hidden_effect = {
-					country_event = russia.18
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						RUS_wrangel_in_power = yes
-						RUS_denikin_in_power = yes
-					}
-				}
-				custom_effect_tooltip = RUS_A_Firm_Hand_military_tooltip
-				if = {
-					limit = { RUS_denikin_in_power = yes }
-					add_stability = -0.2
-				}
-				else = {
-					add_stability = -0.1
-				}
-				hidden_effect = {
-					country_event = russia.183
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
 		id = RUS_Centralised_Apparatus_Of_State
 		icon = GFX_goal_consolidating_coalitionv2
-		prerequisite = {
-			focus = RUS_A_Firm_Hand
-		}
-		relative_position_id = RUS_A_Firm_Hand
 		x = 0
-		y = 1
+		y = 0
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Centralised_Apparatus_Of_State"
-			add_stability = 0.1
+			add_stability = 0.2
 			add_war_support = 0.2
 			add_political_power = 150
 		}
@@ -114,7 +44,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = RUS_Legacy_Of_The_Whites
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = -2
 		y = 2
 		cost = 5
@@ -131,7 +61,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_A_New_Russia
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = -4
 		y = 3
 		cost = 5
@@ -178,7 +108,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_A_New_Russia
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = -2
 		y = 3
 		cost = 5
@@ -210,7 +140,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = RUS_A_New_Russia
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 2
 		y = 2
 		cost = 5
@@ -228,7 +158,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Legacy_Of_The_Whites
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 2
 		y = 3
 		cost = 5
@@ -257,7 +187,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Legacy_Of_The_Whites
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 4
 		y = 3
 		cost = 5
@@ -292,7 +222,7 @@ focus_tree = {
 			focus = RUS_Yunarmiya
 			focus = RUS_Stratocratic_Government
 		}
-		relative_position_id = RUS_A_Firm_Hand
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 0
 		y = 4
 		cost = 5
@@ -310,7 +240,7 @@ focus_tree = {
 	focus = {
 		id = RUS_Establish_The_VES
 		icon = GFX_goal_economic_control
-		x = 18
+		x = 10
 		y = 0
 		cost = 5
 		select_effect = { RUS_reduce_black_monday = yes }
@@ -636,7 +566,7 @@ focus_tree = {
 		icon = GFX_goal_RUS_army
 
 		x = 11
-		y = 7
+		y = 10
 		cost = 5
 
 		ai_will_do = {
@@ -952,7 +882,10 @@ focus_tree = {
 		relative_position_id = RUS_VVSR
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
+		available = {
+			date > 1938.5.1
+		}
 		prerequisite = {
 			focus = RUS_VVSR
 		}
@@ -1062,9 +995,13 @@ focus_tree = {
 				NOT = { has_country_flag = RUS_navy_locked }
 			}
 		}
-		x = 26
+		relative_position_id = RUS_Establish_The_VES
+		x = 3
 		y = 1
 		cost = 5
+		prerequisite = {
+			focus = RUS_Establish_The_VES
+		}
 		
 		ai_will_do = {
 			factor = 10
@@ -1142,7 +1079,7 @@ focus_tree = {
 		icon = GFX_goal_RUS_central_asia
 		x = 0
 		y = 10
-		cost = 5
+		cost = 10
 		available = {
 			date > 1937.6.1
 		}
@@ -1195,9 +1132,9 @@ focus_tree = {
 		icon = GFX_goal_RUS_caucasus
 		x = 4
 		y = 10
-		cost = 5
+		cost = 10
 		available = {
-		date > 1938.4.1
+		date > 1938.1.1
 		}
 		prerequisite = {
 			focus = RUS_Expansionism
