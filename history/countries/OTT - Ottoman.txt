@@ -87,6 +87,7 @@ set_research_slots = 3
 add_ideas = {
 	limited_conscription
 	free_trade
+	ZO_idea
 	OTT_Hueseyin_Avni_Pasa_hog_pau
 	OTT_Ali_Fuad_Pasa_for_pau
 	OTT_Resad_Muhlis_Bey_eco_sli

@@ -144,13 +144,6 @@ give_guarantee = GEO
 give_guarantee = AZE
 give_guarantee = LEC
 
-AZE = {
-	give_resource_rights = {
-		state = 990
-		receiver = GER
-	}
-}
-
 set_research_slots = 5
 set_convoys = 1000
 add_equipment_to_stockpile = {

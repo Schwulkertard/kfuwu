@@ -155,6 +155,7 @@ add_ideas = {
 	AUS_k_u_k_armee_bonus
 	AUS_vienna_circle
 	low_economic_mobilisation
+	ZO_idea
 	AUS_army_1
 	### Minister
 	AUS_Albert_von_Mensdorff_Pouilly_Dietrichstein_hog_ade

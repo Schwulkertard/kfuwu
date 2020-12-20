@@ -66,6 +66,9 @@ focus_tree = {
 	focus = {
 		id = GER_organize_the_youth
 		icon = GFX_focus_generic_little_entente
+		available = {
+		date > 1937.1.1
+		}
 		prerequisite = {
 			focus = GER_political_1
 		}
@@ -333,7 +336,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_black_monday_aftermath
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1000
@@ -341,7 +344,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht1"
-			add_stability = -0.05
+			add_stability = 0.05
 			if = {
 				limit = {
 					NOT = {
@@ -366,7 +369,7 @@ focus_tree = {
 		x = 0		
 		y = 2
 		relative_position_id = GER_black_monday_aftermath
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 1000
@@ -383,73 +386,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_schacht3
-		icon = GFX_focus_generic_polish_deal
+		id = GER_black_monday_finish
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = {
 			focus = GER_schacht2
-		}
-		bypass = {
-			10 = {
-				owner = {
-					OR = {
-						AND = {
-							is_in_faction = yes
-							NOT = { is_in_faction_with = GER }
-						}
-						is_polish_tag = no
-					}
-				}
-			}
 		}
 		x = 0
 		y = 3
 		relative_position_id = GER_black_monday_aftermath
-		cost = 5
-
-		ai_will_do = {
-			factor = 1000
-		}
-
-		available = {
-			10 = {
-				owner = {
-					is_polish_tag = yes
-					NOT = { has_war_with = ROOT }
-					OR = {
-						is_in_faction = no
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht3"
-			10 = {
-				owner = {
-					reverse_add_opinion_modifier = {
-						target = ROOT
-						modifier = polish_deal_op
-					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = polish_deal_op
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_black_monday_finish
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = {
-			focus = GER_schacht3
-		}
-		x = 0
-		y = 4
-		relative_position_id = GER_black_monday_aftermath
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 1000
@@ -479,6 +424,8 @@ focus_tree = {
 				remove_ideas = GER_black_monday2
 			}
 			add_stability = 0.40
+			add_war_support = 0.25
+			add_political_power = 100
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -487,12 +434,21 @@ focus_tree = {
 		id = GER_zollverein
 		icon = GFX_goal_generic_trade
 		prerequisite = {
-			focus = GER_black_monday_finish
+			focus = Ger_development_in_Ukraine
+		}
+		prerequisite = {
+			focus = Ger_development_in_Austria
+		}
+		prerequisite = {
+			focus = Ger_development_in_Turkey
 		}
 		x = 0
 		y = 5
 		relative_position_id = GER_black_monday_aftermath
-		cost = 5
+		cost = 10
+		available = {
+		date > 1938.4.1
+		}
 
 		ai_will_do = {
 			factor = 50
@@ -518,12 +474,12 @@ focus_tree = {
 
 	focus = {
 		id = Ger_development_in_Ukraine
-		prerequisite = { focus = GER_zollverein}
+		prerequisite = { focus = GER_black_monday_finish}
 		available = {
 		}
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 1
-		y = 6
+		x = 2
+		y = 4
 		relative_position_id = GER_black_monday_aftermath
 		cost = 5
 		available_if_capitulated = yes
@@ -539,10 +495,10 @@ focus_tree = {
 				}
 			}
 			199 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -550,12 +506,12 @@ focus_tree = {
 
 			focus = {
 		id = Ger_development_in_Austria
-		prerequisite = { focus = GER_zollverein}
+		prerequisite = { focus = GER_black_monday_finish}
 		available = {
 		}
 		icon = GFX_goal_generic_construct_civ_factory
-		x = -1
-		y = 6
+		x = -2
+		y = 4
 		relative_position_id = GER_black_monday_aftermath
 		cost = 5
 		available_if_capitulated = yes
@@ -568,41 +524,51 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					set_state_flag = GER
+					set_state_flag = AUS
 				}
 			}
 			153 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			}}
 
 			focus = {
-		id = GER_prepare_for_the_inevitable
+		id = Ger_development_in_Turkey
+		prerequisite = { focus = GER_black_monday_finish}
 		available = {
 		}
-		prerequisite = { focus = Ger_development_in_Austria 
-		}
-		prerequisite = { focus = Ger_development_in_Ukraine 
-		}
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
-		y = 7
-		offset = {
-		}
+		y = 4
 		relative_position_id = GER_black_monday_aftermath
 		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
+		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = GER_prepare_for_the_inevitable_idea
-		}
-	}
+			OTT = {
+				49 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			340 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}}
+
 
 	###############
 	### Economy ###
@@ -850,6 +816,17 @@ focus_tree = {
 				}
 			}
 
+			51 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+
+
+
 			if = {
 				limit = {
 					has_idea = siemens_schuckert
@@ -930,7 +907,8 @@ focus_tree = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
-					instant_build = yes
+					instant_build = yes	
+	
 				}
 			}
 		}
@@ -953,7 +931,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_economy
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -963,10 +941,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_krupp_steel_focus"
 			custom_effect_tooltip = GER_krupp_steel_unlock
 			51 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1025,10 +1003,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1076,10 +1054,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1128,10 +1106,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1172,11 +1150,10 @@ focus_tree = {
 		id = GER_artillery_research
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = {
-			focus = GER_krupp_steel_focus
-			focus = GER_Mauser_werke
+			focus = GER_Infantry_divs
 		}
-		x = 5
-		y = 2
+		x = 7
+		y = 3
 		relative_position_id = GER_economy
 		cost = 5
 
@@ -1197,13 +1174,62 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_mil_industry_
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = {
+			focus = GER_Mauser_werke
+			focus = GER_krupp_steel_focus
+		}
+		x = 5
+		y = 2
+		relative_position_id = GER_economy
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_industry_2"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = GER_mil_industry_2
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = {
-			focus = GER_artillery_research
-		}
-		prerequisite = {
-			focus = GER_Infantry_divs
+			focus = GER_mil_industry_
 		}
 		x = 5
 		y = 3
@@ -1350,10 +1376,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1392,7 +1418,7 @@ focus_tree = {
 		id = GER_doctrine_mobile_3
 		icon = GFX_goal_Focus_Military_Mobilisation
 		prerequisite = {
-			focus = GER_mil_industry_2
+			focus = GER_artillery_research
 		}
 		x = 7
 		y = 4
@@ -1582,7 +1608,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_mil_expansion
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 50

@@ -39,7 +39,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_quenched_militarism"}
 			picture = ENG_the_war_to_end_all_wars
 			modifier = {
-				war_support_factor = -0.2
+				war_support_factor = -0.35
 				conscription_factor = -0.20
 				army_morale_factor = -0.2
 				conscription = -0.0075
@@ -156,17 +156,6 @@ ideas = {
 			}
 		}
 
-		GER_prepare_for_the_inevitable_idea = {
-			name = GER_prepare_for_the_inevitable
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_prepare_for_the_inevitable_ideaS"}
-			modifier = {
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.1
-				stability_factor = 0.1
-			}
-			picture = generic_production_bonus
-			removal_cost = -1
-		}
 
 		GER_institut_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_institut_idea"}
@@ -292,7 +281,10 @@ ideas = {
 			available = { country_exists = GER }
 			picture = ger_revive_the_kaiserreich
 			modifier = {
-				industrial_capacity_factory = 0.03
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.1
+				stability_factor = 0.1
 			}
 		}
 

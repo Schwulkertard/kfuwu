@@ -246,6 +246,24 @@ ideas = {
 			picture = german_advisors
 		}
 
+		ZO_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ZO_idea"}
+			available = { country_exists = GER }
+			picture = ger_revive_the_kaiserreich
+		}
+
+		ZO_zollverein_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ZO_zollverein_idea"}
+			available = { country_exists = GER }
+			picture = ger_revive_the_kaiserreich
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+
 		ott_protests_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_protests_idea"}
 			picture = FRA_matignon_agreements
