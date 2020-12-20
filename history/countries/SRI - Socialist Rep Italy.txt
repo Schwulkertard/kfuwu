@@ -184,11 +184,13 @@ create_field_marshal = {# Edmondo Rossoni
 		career_officer
 		organisational_leader
 		organizer
-	}
+		panzer_leader
+		
+		}
 	id = 521
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
 	planning_skill = 2
 	logistics_skill = 4
 }
@@ -200,6 +202,8 @@ create_corps_commander = {# Dardano Fenulli
 		organizer
 		infantry_leader
 		trickster
+		desert_fox
+		trait_mountaineer
 	}
 	id = 522
 	skill = 5
@@ -281,11 +285,12 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Attilio_Teruzzi.tga"
 	traits = {
 		infantry_leader
-		adaptable
+		urban_assault_specialist
+		fortress_buster
 	}
 	id = 528
-	skill = 2
-	attack_skill = 3
+	skill = 4
+	attack_skill = 5
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
@@ -308,13 +313,15 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Pompeo_Colajanni.tga"
 	traits = {
 		commando
+		panzer_leader
+		desert_fox
 	}
 	id = 530
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 ### Admirals ###

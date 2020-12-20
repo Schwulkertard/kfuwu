@@ -217,10 +217,10 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Symon Petliura"
 	picture = "Portrait_Ukraine_Symon_Petliura.tga"
-	traits = { trickster politically_connected }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
+	traits = { trickster politically_connected ranger infantry_leader }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
 	planning_skill = 2
 	logistics_skill = 4
 }
@@ -228,7 +228,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Yevhen Konovalets"
 	picture = "Portrait_Ukraine_Yevhen_Konovalets.tga"
-	traits = { winter_specialist hill_fighter infantry_leader }
+	traits = { winter_specialist hill_fighter infantry_leader urban_assault_specialist }
 	skill = 5
 	attack_skill = 5
 	defense_skill = 4
@@ -239,12 +239,12 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Hnat Stefaniv"
 	picture = "Portrait_Ukraine_Hnat_Stefaniv.tga"
-	traits = { commando organizer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
+	traits = { commando organizer panzer_leader }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
 	planning_skill = 2
-	logistics_skill = 1
+	logistics_skill = 4
 }
 
 create_corps_commander = {
@@ -258,15 +258,15 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Dmytro Vitovsky"
 	picture = "Portrait_Ukraine_Dmytro_Vitovsky.tga"
-	traits = { trait_engineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
+	traits = { trait_engineer panzer_leader trickster }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
 	planning_skill = 2
-	logistics_skill = 1
+	logistics_skill = 4
 }
 
 create_corps_commander = {
