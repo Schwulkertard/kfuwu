@@ -243,6 +243,7 @@ create_field_marshal = {
 		war_hero
 		skilled_staffer
 		infantry_leader
+		organizer
 	}
 	skill = 5
 	attack_skill = 5
@@ -320,9 +321,10 @@ create_corps_commander = {
 	traits = {
 		trait_mountaineer
 		trickster
+		infantry_leader
 	}
-	skill = 3
-	attack_skill = 2
+	skill = 4
+	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
@@ -332,11 +334,12 @@ create_corps_commander = {
 	name = "Julius Ringel"
 	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Julius_Ringel.tga"
 	traits = {
-		trait_mountaineer
+		ranger
 		commando
+		infantry_leader
 	}
-	skill = 3
-	attack_skill = 2
+	skill = 4
+	attack_skill = 4
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
@@ -348,6 +351,7 @@ create_corps_commander = {
 	traits = {
 		hill_fighter
 		winter_specialist
+		infantry_leader
 	}
 	skill = 3
 	attack_skill = 3

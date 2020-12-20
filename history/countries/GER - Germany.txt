@@ -462,18 +462,18 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erwin von Witzleben"
 	picture = "Portrait_Germany_Erwin_von_Witzleben_kr.tga"
-	traits = { skilled_staffer career_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
+    traits = { politically_connected trait_cautious harsh_leader urban_assault_specialist infantry_leader trickster }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Wilhelm Ritter von Leeb"
 	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb_kr.tga"
-	traits = { skilled_staffer infantry_officer }
+	traits = { skilled_staffer infantry_leader }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 3

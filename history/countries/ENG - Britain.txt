@@ -345,9 +345,10 @@ create_corps_commander = {# George Sutherland Aitken
 	traits = {
 		infantry_officer
 		urban_assault_specialist
+		infantry_leader
 	}
-	skill = 2
-	attack_skill = 2
+	skill = 4
+	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 1
 	logistics_skill = 1
