@@ -303,9 +303,12 @@ add_ideas = {
 	USA_Charles_Evans_Hughes_Sr_sec_sli
 	# national ideas
 	USA_great_depression
+	USA_civil_war_aftermath_idea
+	USA_civil_war_depression_idea
+	USA_socialist_resistance1
+	USA_longist_resistance1
 	USA_slots
-	USA_political_crisis
-	isolation
+	usa_isolation
 	free_trade
 }
 

@@ -758,9 +758,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-
-	
-
+  
 	focus = {
 		id = GER_rocket
 		icon = GFX_focus_rocketry

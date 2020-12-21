@@ -14,24 +14,11 @@ ideas = {
 			}
 		}
 
-		GER_ready_to_surrender = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_ready_to_surrender"}
-			picture = generic_morale_bonus
-			modifier = {
-				surrender_limit = -0.50
-				army_org_factor = -0.25
-				army_morale_factor = -0.25
-				army_defence_factor = -0.50
-				army_attack_factor = -0.50
-			}
-		}
-
 		GER_victors_of_wwi = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_victors_of_wwi"}
 			picture = generic_victors_of_ww1
 			research_bonus = {
-				land_doctrine = -0.5
-				air_doctrine = -0.5
+				land_doctrine = -0.25
 			}
 		}
 
@@ -69,14 +56,13 @@ ideas = {
             picture = generic_navy_bonus
 			modifier = {
 			sortie_efficiency = -0.3
-			convoy_escort_efficiency = -0.15
-		    navy_anti_air_attack_factor = -0.30
-			navy_max_range_factor = -0.15
-			naval_speed_factor = -0.10
-			naval_damage_factor = -0.25
+			convoy_escort_efficiency = -0.30
+		    navy_anti_air_attack_factor = -0.50
+			navy_max_range_factor = -0.90
+			naval_speed_factor = -0.30
+			naval_damage_factor = -0.30
 	        }
 		}
-
 		# Politics
 
 		GER_easter_promises_idea = {

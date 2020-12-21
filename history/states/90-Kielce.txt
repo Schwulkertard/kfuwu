@@ -9,11 +9,10 @@ state = {
 	}
 
 	history = {
-		owner = POL
-		add_core_of = POL
+		owner = GER
+		add_core_of = GER
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 4
 			air_base = 1
 		}
 		victory_points = {
