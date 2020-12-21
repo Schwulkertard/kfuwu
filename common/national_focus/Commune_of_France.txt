@@ -1391,6 +1391,76 @@ focus_tree = {
 	}
 
 	focus = {
+		id = FRA_synthetic_rubber
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = FRA_military_buildup_two}
+		x = -3
+		y = 3
+		relative_position_id = FRA_road_to_war
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			19 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			984 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			25 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_synthetic
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = {
+			focus = FRA_synthetic_rubber
+		}
+		x = -3
+		y = 4
+		relative_position_id = FRA_road_to_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_synthetic"
+			add_tech_bonus = {
+				name = GER_synthetic
+				bonus = 1
+				uses = 2
+				category = synth_resources
+                }
+
+					modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+		
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
 		id = FRA_military_buildup_three
 		icon = GFX_goal_double_research
 		x = 2
@@ -1724,15 +1794,15 @@ focus_tree = {
 	focus = {
 		id = FRA_equipment_modern
 		icon = GFX_focus_chi_army_reform
-		x = 1
-		y = 2
-		relative_position_id = FRA_road_to_war
+		x = 0
+		y = 1
+		relative_position_id = FRA_flexible_support
 		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
 		prerequisite = {
-			focus = FRA_military_buildup
+			focus = FRA_flexible_support
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_equipment_modern"
@@ -1741,6 +1811,31 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = infantry_weapons
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = FRA_modern_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 2
+		relative_position_id = FRA_flexible_support
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = {
+			focus = FRA_equipment_modern
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_equipment_modern"
+			add_tech_bonus = {
+				name = FRA_equipment_modern
+				bonus = 1
+				uses = 1
+				category = artillery
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1758,7 +1853,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_German_borders
-			focus = FRA_equipment_modern
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_special_forces"
@@ -1778,12 +1872,12 @@ focus_tree = {
 		id = FRA_tank_division
 		icon = GFX_focus_generic_tank_destroyer
 		prerequisite = {
-			focus = FRA_equipment_modern
+			focus = FRA_principe_concentration
 		}
-		x = 3
-		y = 3
-		relative_position_id = FRA_road_to_war
-		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = FRA_principe_concentration
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1802,7 +1896,7 @@ focus_tree = {
 	focus = {
 		id = FRA_communal_army
 		icon = GFX_NATFRA_conscription
-		x = 35
+		x = 33
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -1818,15 +1912,12 @@ focus_tree = {
 	focus = {
 		id = FRA_principe_concentration
 		icon = GFX_goal_GEO_Artillery_Tactics
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = FRA_communal_army
 		cost = 5
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
-			has_country_flag = ARMY_TRAV
 		}
 		prerequisite = {
 			focus = FRA_communal_army
@@ -1851,7 +1942,7 @@ focus_tree = {
 	focus = {
 		id = FRA_tank_research
 		icon = GFX_goal_generic_army_tanks2
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = FRA_principe_concentration
 		cost = 10
@@ -1859,7 +1950,7 @@ focus_tree = {
 			factor = 3
 		}
 		prerequisite = {
-			focus = FRA_principe_concentration
+			focus = FRA_tank_division
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_tank_research"
@@ -1876,10 +1967,10 @@ focus_tree = {
 	focus = {
 		id = FRA_fast_army
 		icon = GFX_EGY_Operation_Abu
-		x = -2
+		x = 2
 		y = 1
 		relative_position_id = FRA_principe_concentration
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1894,6 +1985,25 @@ focus_tree = {
 				uses = 1
 				category = cat_mechanized_equipment
 			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = FRA_Mechanized_Army
+		icon = GFX_goal_generic_army_motorized
+		x = 2
+		y = 3
+		relative_position_id = FRA_principe_concentration
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = {
+			focus = FRA_fast_army
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_fast_army"
 			add_ideas = FRA_fast_army_idea
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
@@ -1902,7 +2012,7 @@ focus_tree = {
 	focus = {
 		id = FRA_tank_assembly_line
 		icon = GFX_focus_generic_tank_production
-		x = -3
+		x = -4
 		y = 3
 		relative_position_id = FRA_principe_concentration
 		cost = 10
@@ -1911,9 +2021,6 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = FRA_tank_quality_line
-		}
-		prerequisite = {
-			focus = FRA_tank_division
 		}
 		prerequisite = {
 			focus = FRA_tank_research
@@ -1927,7 +2034,7 @@ focus_tree = {
 	focus = {
 		id = FRA_tank_quality_line
 		icon = GFX_goal_generic_heavy_tank
-		x = -1
+		x = -2
 		y = 3
 		relative_position_id = FRA_principe_concentration
 		cost = 10
@@ -1938,9 +2045,6 @@ focus_tree = {
 			focus = FRA_tank_assembly_line
 		}
 		prerequisite = {
-			focus = FRA_tank_division
-		}
-		prerequisite = {
 			focus = FRA_tank_research
 		}
 		completion_reward = {
@@ -1949,193 +2053,19 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = FRA_centralized_hc
-		icon = GFX_focus_generic_military_mission
-		x = -1
-		y = 1
-		relative_position_id = FRA_communal_army
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_country_flag = ARMY_JACO
-		}
-		prerequisite = {
-			focus = FRA_communal_army
-		}
-		mutually_exclusive = {
-			focus = FRA_principe_concentration
-			focus = FRA_officers_initiative
-			focus = FRA_mass_conscription
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_centralized_hc"
-			add_ideas = FRA_centralized_hc_idea
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = FRA_analysing_wki
-		icon = GFX_goal_planning_bonus
-		x = -2
-		y = 2
-		relative_position_id = FRA_communal_army
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_centralized_hc
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_analysing_wki"
-			add_tech_bonus = {
-				name = FRA_analysing_wki
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = FRA_war_experience
-		icon = GFX_goal_generic_war_in_the_plate
-		x = -1
-		y = 3
-		relative_position_id = FRA_communal_army
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_centralized_hc
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_war_experience"
-			army_experience = 50
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = FRA_military_academy
-		icon = GFX_focus_generic_military_academy
-		x = -2
-		y = 4
-		relative_position_id = FRA_communal_army
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_analysing_wki
-		}
-		prerequisite = {
-			focus = FRA_war_experience
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_military_academy"
-			add_tech_bonus = {
-				name = FRA_military_academy
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			add_ideas = FRA_military_academy_idea
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = FRA_officers_initiative
-		icon = GFX_goal_generic_cavalry
-		x = 1
-		y = 1
-		relative_position_id = FRA_communal_army
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_country_flag = ARMY_SORE
-		}
-		prerequisite = {
-			focus = FRA_communal_army
-		}
-		mutually_exclusive = {
-			focus = FRA_principe_concentration
-			focus = FRA_centralized_hc
-			focus = FRA_mass_conscription
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_officers_initiative"
-			army_experience = 50
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = FRA_empower_rifleman
-		icon = GFX_EGY_Palestine_Defence
-		x = -1
-		y = 1
-		relative_position_id = FRA_officers_initiative
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-		prerequisite = {
-			focus = FRA_officers_initiative
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_empower_rifleman"
-			add_ideas = FRA_empower_rifleman_idea
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = FRA_mission_type
-		icon = GFX_goal_army_guy_2
-		x = 0
-		y = 2
-		relative_position_id = FRA_officers_initiative
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_officers_initiative
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_mission_type"
-			add_tech_bonus = {
-				name = FRA_mission_type
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
 
 	focus = {
 		id = FRA_flexible_support
 		icon = GFX_focus_generic_combined_arms
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = FRA_officers_initiative
+		relative_position_id = FRA_principe_concentration
 		cost = 10
 		ai_will_do = {
 			factor = 3
 		}
 		prerequisite = {
-			focus = FRA_officers_initiative
+			focus = FRA_principe_concentration
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_flexible_support"
@@ -2155,102 +2085,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-	focus = {
-		id = FRA_mass_conscription
-		icon = GFX_goal_generic_drafted_army
-		x = 3
-		y = 1
-		relative_position_id = FRA_communal_army
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_country_flag = ARMY_ANAR
-		}
-		prerequisite = {
-			focus = FRA_communal_army
-		}
-		mutually_exclusive = {
-			focus = FRA_principe_concentration
-			focus = FRA_centralized_hc
-			focus = FRA_officers_initiative
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_mass_conscription"
-			add_ideas = FRA_mass_conscription_idea
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-	}
-
-	focus = {
-		id = FRA_global_organization
-		icon = GFX_goal_mass_concentration_of_army
-		x = 0
-		y = 2
-		relative_position_id = FRA_mass_conscription
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_mass_conscription
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_global_organization"
-			add_tech_bonus = {
-				name = FRA_global_organization
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = FRA_mass_fire_support
-		icon = GFX_goal_generic_army_artillery
-		x = -2
-		y = 3
-		relative_position_id = FRA_mass_conscription
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_global_organization
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_mass_fire_support"
-			add_ideas = FRA_mass_fire_support_idea
-		}
-	}
-
-	focus = {
-		id = FRA_improve_manufactures
-		icon = GFX_goal_industry_air
-		x = 0
-		y = 3
-		relative_position_id = FRA_mass_conscription
-		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
-		prerequisite = {
-			focus = FRA_global_organization
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_improve_manufactures"
-			add_tech_bonus = {
-				name = FRA_improve_manufactures
-				bonus = 1
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
 
 	focus = {
 		id = FRA_grand_army_reform
@@ -2265,9 +2099,12 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_tank_assembly_line
 			focus = FRA_tank_quality_line
-			focus = FRA_military_academy
-			focus = FRA_empower_rifleman
-			focus = FRA_mass_fire_support
+		}
+		prerequisite = {
+			focus = FRA_modern_artillery
+		}
+		prerequisite = {
+			focus = FRA_Mechanized_Army
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_grand_army_reform"
@@ -2275,7 +2112,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = FRA_grand_army_reform
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}

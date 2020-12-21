@@ -639,7 +639,8 @@ focus_tree = {
 			modify_building_resources = {
 				building = synthetic_refinery
 				resource = rubber
-				amount = 1
+				amount = 2
+
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -665,8 +666,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_synthetic
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = synth_resources
+		
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -692,6 +694,42 @@ focus_tree = {
 			add_research_slot = 1
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = GER_synthetic_rubber
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GER_synthetic}
+		x = 0
+		y = 2
+		relative_position_id = GER_ig_farben
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			62 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			68 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -721,42 +759,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-	focus = {
-		id = GER_hahn_meitner
-		icon = GFX_focus_wonderweapons
-		prerequisite = {
-			focus = GER_zuse
-		}
-		x = -3
-		y = 4
-		relative_position_id = GER_economy
-		cost = 5
-		available = {
-			OR = {
-				FRA = {
-					has_completed_focus = FRA_damocles
-				}
-				ENG = {
-					has_completed_focus = ENG_westminster_project
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_hahn_meitner"
-			add_tech_bonus = {
-				name = GER_hahn_meitner
-				bonus = 1
-				uses = 1
-				category = nuclear
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
+	
 
 	focus = {
 		id = GER_rocket
@@ -764,7 +767,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_zuse
 		}
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = GER_economy
 		cost = 5
