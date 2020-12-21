@@ -111,7 +111,7 @@ FRA_internationale_category = {
 			}
 		}
 
-		cost = 50
+		cost = 10
 		days_remove = 90
 		days_re_enable = 100
 

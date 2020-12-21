@@ -44,191 +44,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {# home Rule
-		id = ENG_home_rule
-		icon = GFX_socialist_constitution
-		cost = 10
-		prerequisite = {
-			focus = ENG_tuc
-		}
-		available = {
-			has_country_flag = glais_chairman
-		}
-		x = -2
-		y = 1
-		relative_position_id = ENG_tuc
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_home_rule"
-			add_ideas = ENG_home_rule_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {# Dissolve the TUC
-		id = ENG_dissolve_tuc
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10
-		prerequisite = {
-			focus = ENG_home_rule
-		}
-		mutually_exclusive = {
-			focus = ENG_new_capital
-		}
-		x = -3
-		y = 2
-		relative_position_id = ENG_tuc
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_dissolve_tuc"
-			add_stability = -0.10
-			custom_effect_tooltip = ENG_dissolve_tuc_tp
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {# A New Capital
-		id = ENG_new_capital
-		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 10
-		prerequisite = {
-			focus = ENG_home_rule
-		}
-		mutually_exclusive = {
-			focus = ENG_dissolve_tuc
-		}
-		x = -1
-		y = 2
-		relative_position_id = ENG_tuc
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_new_capital"
-			set_capital = 128
-			custom_effect_tooltip = ENG_new_capital_tp
-		}
-	}
-
-	focus = {# Devolution
-		id = ENG_devolution
-		icon = GFX_goal_ideology_radical_socialist
-		cost = 10
-		prerequisite = {
-			focus = ENG_dissolve_tuc
-			focus = ENG_new_capital
-		}
-		mutually_exclusive = {
-			focus = ENG_evolution
-			focus = ENG_revolution
-		}
-		available = {
-			OR = {
-				has_country_flag = WK2W
-				has_country_flag = PWH2
-			}
-		}
-		x = -2
-		y = 3
-		relative_position_id = ENG_tuc
-		ai_will_do = {
-			factor = 25
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_devolution"
-			SCT = {
-				add_state_core = 133
-				add_state_core = 121
-				add_state_core = 136
-				add_state_core = 120
-				add_state_core = 938
-			}
-			WAL = {
-				add_state_core = 122
-			}
-			release = WAL
-			release = SCT
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ENG_dissolve_tuc }
-				}
-				set_autonomy = {
-					target = WAL
-					autonomy_state = kr_integrated_puppet
-					freedom_level = 0.3
-				}
-				set_autonomy = {
-					target = SCT
-					autonomy_state = kr_integrated_puppet
-					freedom_level = 0.3
-				}
-				else = {
-					hidden_effect = { set_cosmetic_tag = ENG_england }
-				}
-			}
-
-			if = {
-				limit = { is_faction_leader = yes }
-				add_to_faction = WAL
-				add_to_faction = SCT
-			}
-			else_if = {
-				limit = {
-					is_in_faction = yes
-					is_faction_leader = no
-				}
-				random_country = {
-					limit = {
-						is_faction_leader = yes
-						is_in_faction_with = ENG
-					}
-					add_to_faction = WAL
-					add_to_faction = SCT
-				}
-			}
-
-			hidden_effect = {
-				add_opinion_modifier = { target = SCT modifier = ENG_devolution_op }
-				SCT = { add_opinion_modifier = { target = ENG modifier = ENG_devolution_op } }
-				add_opinion_modifier = { target = WAL modifier = ENG_devolution_op }
-				WAL = {	add_opinion_modifier = { target = ENG modifier = ENG_devolution_op } }
-				SCT = { set_politics = { ruling_party = radical_socialist }	add_popularity = { ideology = radical_socialist popularity = 0.5 } }
-				WAL = {	set_politics = { ruling_party = radical_socialist } add_popularity = { ideology = radical_socialist popularity = 0.5 } }
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_TFV_AUTONOMY }
-	}
-
-	focus = {# The Three Armies
-		id = ENG_three_armies
-		icon = GFX_goal_generic_join_faction
-		cost = 10
-		prerequisite = {
-			focus = ENG_devolution
-		}
-		x = -2
-		y = 4
-		relative_position_id = ENG_tuc
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_three_armies"
-			hidden_effect = {
-				set_equipment_fraction = 0.5
-				WAL = { load_oob = WAL_three_armies }
-				SCT = { load_oob = SCT_three_armies }
-				add_opinion_modifier = { target = WAL modifier = ENG_three_armies_op }
-				add_opinion_modifier = { target = SCT modifier = ENG_three_armies_op }
-			}
-			custom_effect_tooltip = ENG_three_armies_tp
-		}
-	}
-
 	focus = {# Status Quo
 		id = ENG_status_quo
 		icon = GFX_Socialist_Law
@@ -243,7 +58,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_tuc
 		}
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = ENG_tuc
 		completion_reward = {
@@ -265,7 +80,7 @@ focus_tree = {
 			focus = ENG_revolution
 			focus = ENG_devolution
 		}
-		x = 0
+		x = -2
 		y = 3
 		relative_position_id = ENG_tuc
 		ai_will_do = {
@@ -2121,7 +1936,7 @@ focus_tree = {
 
 	### Foreign Policy ###
 
-	focus = {# The International
+focus = {# The International
 		id = ENG_international
 		icon = GFX_goal_FRA_Internationale_Congress
 		cost = 5
@@ -2140,6 +1955,7 @@ focus_tree = {
 					is_in_faction_with = FRA
 				}
 				add_opinion_modifier = { target = FRA modifier = ENG_international_modifier }
+				add_stability = 0.1
 			}
 			if = {
 				limit = {
@@ -2147,34 +1963,6 @@ focus_tree = {
 				}
 				add_opinion_modifier = { target = SRI modifier = ENG_international_modifier }
 			}
-		}
-	}
-
-	focus = {# Show of Force
-		id = ENG_show_of_force
-		icon = GFX_goal_rolling_the_dice
-		cost = 5
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			OR = {
-				has_war_with = GER
-				has_war_with = CAN
-			}
-		}
-		prerequisite = {
-			focus = ENG_international
-		}
-		x = -7
-		y = 1
-		relative_position_id = ENG_international
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_show_of_force"
-			country_event = uob.15
 		}
 	}
 
@@ -2189,11 +1977,11 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = ENG_international
+			focus = ENG_tuc
 		}
-		x = 8
+		x = -8
 		y = 1
-		relative_position_id = ENG_international
+		relative_position_id = ENG_tuc
 		ai_will_do = {
 			factor = 20
 		}
@@ -2569,210 +2357,4 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-	focus = {# Support Foreign Comrades
-		id = ENG_support_comrades
-		icon = GFX_focus_eng_global_defense
-		cost = 5
-		prerequisite = {
-			focus = ENG_international
-		}
-		x = 4
-		y = 1
-		relative_position_id = ENG_international
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_support_comrades"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-
-	focus = {# Mission to Norway
-		id = ENG_mission_to_norway
-		icon = GFX_goal_generic_coastal_navy
-		cost = 5
-		available = {
-			NOR = {
-				exists = yes
-				has_elected_government = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = NOR
-				NOR = {
-					OR = {
-						exists = no
-						is_subject_of = ROOT
-						has_socialist_government = yes
-						AND = {
-							is_in_faction_with = ROOT
-							has_socialist_government = yes
-						}
-					}
-				}
-			}
-		}
-		prerequisite = {
-			focus = ENG_international
-		}
-		x = -4
-		y = 1
-		relative_position_id = ENG_international
-		ai_will_do = {
-			factor = 15
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_mission_to_norway"
-			NOR = { country_event = norway.13 }
-		}
-	}
-
-	focus = {# Anglo-Norwegian Cooperation
-		id = ENG_anglo_norwegian_cooperation
-		icon = GFX_goal_FRA_develop_NOR
-		cost = 5
-		available = {
-			NOR = {
-				exists = yes
-				has_socialist_government = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			NOR = {
-				exists = no
-			}
-		}
-		prerequisite = {
-			focus = ENG_mission_to_norway
-		}
-		x = -4
-		y = 2
-		relative_position_id = ENG_international
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_anglo_norwegian_cooperation"
-			NOR = { country_event = uob.364 }
-		}
-	}
-
-	focus = {# Indian Comrades
-		id = ENG_indian_comrades
-		icon = GFX_goal_india_commune
-		cost = 5
-		prerequisite = {
-			focus = ENG_support_comrades
-		}
-		available = {
-			BHC = {
-				exists = yes
-				has_socialist_government = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			BHC = {
-				OR = {
-					exists = no
-					not_has_socialist_government = yes
-					has_war_with = ROOT
-				}
-			}
-		}
-		x = 4
-		y = 2
-		relative_position_id = ENG_international
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_indian_comrades"
-			BHC = { country_event = uob.364 }
-		}
-	}
-
-	focus = {# Further cooperation
-		id = ENG_further_cooperation
-		icon = GFX_goal_red_star_gold_wreath
-		cost = 5
-		prerequisite = {
-			focus = ENG_anglo_norwegian_cooperation
-			focus = ENG_indian_comrades
-		}
-		x = 0
-		y = 3
-		relative_position_id = ENG_international
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_further_cooperation"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-
-	focus = {# Liberation of Canada
-		id = ENG_liberation_of_canada
-		icon = GFX_focus_eng_decolonization
-		cost = 5
-		prerequisite = {
-			focus = ENG_further_cooperation
-		}
-		prerequisite = {
-			focus = ENG_home_front_victory
-		}
-		prerequisite = {
-			focus = ENG_total_mobilization
-		}
-		prerequisite = {
-			focus = ENG_statistical_warfare
-		}
-		prerequisite = {
-			focus = ENG_westminster_project
-		}
-		available = {
-			CAN = {
-				exists = yes
-				not_has_socialist_government = yes
-				NOT = {
-					is_subject_of = ROOT
-				}
-				NOT = {
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = CAN
-				CAN = {
-					exists = no
-				}
-			}
-		}
-		x = 0
-		y = 4
-		relative_position_id = ENG_international
-		will_lead_to_war_with = CAN
-		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 0
-				has_war_with = GER
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ENG_liberation_of_canada"
-			create_wargoal = { type = annex_everything target = CAN }
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-}
+	

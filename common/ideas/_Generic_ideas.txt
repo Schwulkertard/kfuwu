@@ -110,13 +110,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			picture = generic_manpower_bonus
@@ -130,13 +127,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			picture = generic_manpower_bonus
@@ -150,13 +144,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			picture = generic_manpower_bonus
@@ -169,9 +160,6 @@ ideas = {
 
 			allowed = {
 				always = no
-			}
-			available = {
-				has_war = yes
 			}
 			removal_cost = -1
 
@@ -193,9 +181,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
@@ -216,9 +201,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
@@ -238,9 +220,6 @@ ideas = {
 
 			allowed = {
 				always = no
-			}
-			available = {
-				has_war = yes
 			}
 			removal_cost = -1
 
@@ -263,9 +242,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			available = {
-				has_war = yes
-			}
 			removal_cost = -1
 
 			allowed_civil_war = {
@@ -286,9 +262,6 @@ ideas = {
 
 			allowed = {
 				always = no
-			}
-			available = {
-				has_war = yes
 			}
 			removal_cost = -1
 

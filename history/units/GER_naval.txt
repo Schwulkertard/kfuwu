@@ -8,11 +8,17 @@ units = {
 			name = "KMS"
 			location = 11360
 			ship = { name = "KMS Deutschland" definition = SH_battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = GER version_name = "Kaiser Wilhelm Class" } } }
-
+			ship = { name = "KMS Bismarck" definition = battleship equipment = { ship_hull_heavy_3 = { amount = 1 owner = GER version_name = "Bismarck Class" } } }
+			ship = { name = "KMS Tirpitz" definition = battleship equipment = { ship_hull_heavy_3 = { amount = 1 owner = GER version_name = "Bismarck Class" } } }
 			ship = { name = "KMS Fürst Bismarck" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Mackensen/Yorck Class" } } }
 			ship = { name = "KMS Yorck" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Mackensen/Yorck Class" } } }
 			ship = { name = "KMS Prinz Adalbert" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
 			ship = { name = "KMS Graf Wartensleben" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+			ship = { name = "KMS Friedrich Carl" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+			ship = { name = "KMS UwU police" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+			ship = { name = "KMS UmU police" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+			ship = { name = "KMS OwO police" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+
 			ship = { name = "KMS Goeben" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
 
 			ship = { name = "KMS Mainz" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = GER version_name = "Mainz Class" } }
@@ -105,6 +111,10 @@ units = {
 			ship = { name = "SMS Hutier" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
 			ship = { name = "SMS Straßburg" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
 			ship = { name = "SMS Liegnitz" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+			ship = { name = "SMS cute nee san" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+			ship = { name = "SMS another cute nee san" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+			ship = { name = "SMS and another cute nee san" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+			ship = { name = "SMS and again another cute nee san" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
 
 			ship = { name = "SMS H 245" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GER version_name = "T214 Class" } } }
 			ship = { name = "SMS H 246" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GER version_name = "T214 Class" } } }

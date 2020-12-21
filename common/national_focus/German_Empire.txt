@@ -404,7 +404,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_black_monday_aftermath
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1000
@@ -514,6 +514,94 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = Ger_development_in_Ukraine
+		prerequisite = { focus = GER_zollverein}
+		available = {
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 6
+		relative_position_id = GER_black_monday_aftermath
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+			UKR = {
+				791 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			199 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}}
+
+			focus = {
+		id = Ger_development_in_Austria
+		prerequisite = { focus = GER_zollverein}
+		available = {
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 6
+		relative_position_id = GER_black_monday_aftermath
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+			AUS = {
+				835 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER
+				}
+			}
+			153 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}}
+
+			focus = {
+		id = GER_prepare_for_the_inevitable
+		available = {
+		}
+		prerequisite = { focus = Ger_development_in_Austria 
+		}
+		prerequisite = { focus = Ger_development_in_Ukraine 
+		}
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 7
+		offset = {
+		}
+		relative_position_id = GER_black_monday_aftermath
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = GER_prepare_for_the_inevitable_idea
+		}
 	}
 
 	###############
@@ -682,9 +770,6 @@ focus_tree = {
 				FRA = {
 					has_completed_focus = FRA_damocles
 				}
-				ENG = {
-					has_completed_focus = ENG_westminster_project
-				}
 			}
 		}
 
@@ -736,6 +821,10 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = {
 			focus = GER_economy
+		}
+		mutually_exclusive = {
+			focus = GER_Mauser_werke
+			focus = GER_krupp_steel_focus
 		}
 		x = 1
 		y = 1
@@ -853,6 +942,10 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GER_mil_expansion
+		}
+		mutually_exclusive = {
+			focus = GER_siemens
+			focus = GER_Mauser_werke
 		}
 		x = 4
 		y = 1
@@ -1324,7 +1417,7 @@ focus_tree = {
 	focus = {
 		id = GER_mil_expansion
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 35
+		x = 32
 		y = 0
 		cost = 3
 
@@ -1796,7 +1889,7 @@ focus_tree = {
 		available = {
 			58 = { is_owned_and_controlled_by = GER }
 		}
-		x = 53
+		x = 42
 		y = 0
 		cost = 5
 

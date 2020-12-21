@@ -297,12 +297,14 @@ create_corps_commander = {
 		trait_reckless
 		trait_engineer
 		fortress_buster
+		infantry_leader
+		urban_assault_specialist
 	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
+	skill = 6
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 5
 }
 
 create_corps_commander = {

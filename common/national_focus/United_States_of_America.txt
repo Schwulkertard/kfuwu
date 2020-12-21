@@ -21,7 +21,7 @@ focus_tree = {
 		id = USA_reintroduce_gwbill
 		icon = GFX_focus_empty_coffers
 		cost = 8.00
-		x = 3
+		x = 35
 		y = 0
 		ai_will_do = {
 			factor = 100
@@ -442,41 +442,17 @@ focus_tree = {
 	### Post Civil War ###	
 
 	###Post Civil War - democracy ###
-	focus = {# Democracy Triumphs
-		id = USA_democracy_triumphs
-		icon = GFX_goal_support_democracy
-		cost = 0.00
-		available = {
-			date > 1937.1.1
-		}
-		x = 18
-		y = 0
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_democracy_triumphs"
-			remove_ideas = USA_political_crisis
-			remove_ideas = USA_black_monday
-			remove_ideas = USA_black_monday2
-			add_ideas = USA_civil_war_aftermath_idea
-			add_ideas = USA_civil_war_depression_idea
-			add_ideas = USA_socialist_resistance1
-			add_ideas = USA_longist_resistance1
-
-		}
-	}
 
 	focus = {# Education Reforms
 		id = USA_democratic_education
 		icon = GFX_goal_KTG_Bookstack
 		cost = 4.00
-		prerequisite = {
-			focus = USA_democracy_triumphs
-		}
 		relative_position_id = USA_democracy_triumphs
-		x = -2
-		y = 1
+		x = 4
+		y = 0
+		available = {
+			date > 1937.6.1
+		}
 		ai_will_do = {
 			factor = 50
 		}
@@ -495,14 +471,13 @@ focus_tree = {
 			focus = USA_democratic_education
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = -3
-		y = 2
+		x = 0
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
-			custom_effect_tooltip = USA_political_recovery_tooltip
 		}
 	}
 
@@ -514,14 +489,13 @@ focus_tree = {
 			focus = USA_defend_democracy
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = -3
-		y = 3
+		x = 0
+		y = 2
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_bill_of_rights"
-			custom_effect_tooltip = USA_political_recovery_tooltip
 		}
 	}
 
@@ -532,15 +506,19 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_bill_of_rights
 		}
+		available = {
+			has_idea = USA_civil_war_aftermath_idea4
+		}
 		relative_position_id = USA_democracy_triumphs
-		x = -3
-		y = 4
+		x = 0
+		y = 3
 		ai_will_do = {
 			factor = 40
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_values1"
 			add_ideas = USA_american_values_ideas
+			add_ideas = USA_civil_war_aftermath_idea5
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -553,8 +531,8 @@ focus_tree = {
 			focus = USA_democracy_triumphs
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 0
-		y = 1
+		x = 6
+		y = 0
 		ai_will_do = {
 			factor = 50
 		}
@@ -575,8 +553,8 @@ focus_tree = {
 			focus = USA_restore_legitimacy
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = -1
-		y = 2
+		x = 4
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
@@ -594,14 +572,15 @@ focus_tree = {
 			focus = USA_restore_legitimacy
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 1
-		y = 2
+		x = 8
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_destroy_radicalism"
 			custom_effect_tooltip = USA_fight_terorists_flag
+			add_ideas = USA_civil_war_aftermath_idea2
 		}
 	}
 
@@ -613,15 +592,18 @@ focus_tree = {
 			focus = USA_malice_and_charity
 			focus = USA_destroy_radicalism
 		}
+		available = {
+			has_idea = USA_civil_war_aftermath_idea2
+		}
 		relative_position_id = USA_democracy_triumphs
-		x = 0
-		y = 3
+		x = 6
+		y = 2
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_ensure_political_stability"
-			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_ideas = USA_civil_war_aftermath_idea3
 		}
 	}
 
@@ -636,8 +618,8 @@ focus_tree = {
 			focus = USA_ensure_political_stability
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = -1
-		y = 4
+		x = 4
+		y = 3
 		ai_will_do = {
 			factor = 50
 		}
@@ -660,8 +642,8 @@ focus_tree = {
 			focus = USA_ensure_political_stability
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 1
-		y = 4
+		x = 8
+		y = 3
 		ai_will_do = {
 			factor = 50
 		}
@@ -676,19 +658,22 @@ focus_tree = {
 	focus = {# Protect Democracy
 		id = USA_protect_democracy
 		icon = GFX_goal_usa
-		cost = 4.00
+		cost = 10
 		prerequisite = {
 			focus = USA_democracy_triumphs
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 2
-		y = 1
+		x = 8
+		y = 0
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_protect_democracy"
-			add_war_support = 0.1
+			add_timed_idea = {
+				idea = USA_recovery1
+				days = 180
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -700,34 +685,40 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_protect_democracy
 		}
+		available = {
+			has_idea = USA_civil_war_aftermath_idea3
+		}
 		relative_position_id = USA_democracy_triumphs
-		x = 3
-		y = 2
+		x = 12
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_land_of_the_free"
-			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_ideas = USA_civil_war_aftermath_idea4
 		}
 	}
 
 	focus = {# For the People
 		id = USA_for_the_people
 		icon = GFX_america_goal_eagle_deal
-		cost = 4.00
+		cost = 10
 		prerequisite = {
 			focus = USA_land_of_the_free
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 3
-		y = 3
+		x = 12
+		y = 2
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_for_the_people"
-			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_timed_idea = {
+				idea = USA_recovery1
+				days = 180
+			}
 		}
 	}
 
@@ -739,8 +730,8 @@ focus_tree = {
 			focus = USA_for_the_people
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 3
-		y = 4
+		x = 12
+		y = 3
 		ai_will_do = {
 			factor = 40
 		}
@@ -771,8 +762,8 @@ focus_tree = {
 			has_idea = USA_civil_war_aftermath_idea5
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 0
-		y = 5
+		x = 6
+		y = 4
 		ai_will_do = {
 			factor = 50
 		}
@@ -787,17 +778,24 @@ focus_tree = {
 		id = USA_begin_reconstruction
 		icon = GFX_goal_construction_engineering
 		cost = 0.00
-		prerequisite = {
-			focus = USA_democracy_triumphs
+		available = {
+			date > 1938.6.1
 		}
 		relative_position_id = USA_democracy_triumphs
-		x = 9
-		y = 1
+		x = 20
+		y = 0
 		ai_will_do = {
 			factor = 40
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_begin_reconstruction"
+			add_ideas = isolation
+			remove_ideas = 	USA_black_monday
+			hidden_effect = {
+				remove_ideas = USA_great_depression
+				remove_ideas = 	USA_black_monday2
+
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -989,11 +987,44 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_americas_industry"
-			add_tech_bonus = {
-				name = USA_rebuild_americas_industry
-				bonus = 1
-				uses = 2
-				category = industry
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1253,11 +1284,60 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_agriculture"
-			add_tech_bonus = {
-				name = USA_rebuild_agriculture
-				bonus = 1
-				uses = 2
-				category = industry
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1538,8 +1618,8 @@ focus_tree = {
 			focus = USA_electrification
 		}
 		available = {
-			has_idea = USA_civil_reconstruction_idea
 			has_completed_focus = USA_a_more_perfect_union
+			date > 1940.1.1
 		}
 		relative_position_id = USA_begin_reconstruction
 		x = 0
@@ -1549,19 +1629,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_reconstruction_finished"
-			remove_ideas = USA_civil_reconstruction_idea
-			hidden_effect = {
-				country_event = {
-					id = ustates.301
-					days = 90
-					random = 6480
-				}
-				country_event = {
-					id = ustates.308
-					days = 90
-					random = 6480
-				}
-			}
+			add_ideas = low_economic_mobilisation
 		}
 	}
 
