@@ -767,17 +767,6 @@ ideas = {
 				motorized_equipment = 0.1
 			}
 		}
-
-		nizhegorodsky_avtomobilny = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea nizhegorodsky_avtomobilny"}
-			allowed = { is_russian_tag = yes }
-			available = { owns_state = 252 } #Nizhny Novgorod
-			traits = { motorised_equipment_producer_mass_1 }
-			research_bonus = {
-				motorized_equipment = 0.1
-			}
-		}
-
 	}
 
 	#### Heavy Equipment Manufacturer ####

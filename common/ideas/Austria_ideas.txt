@@ -484,19 +484,6 @@ ideas = {
 				motorized_equipment = 0.1
 			}
 		}
-
-		sauerwerke = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sauerwerke" }
-			allowed = {
-				original_tag = AUS
-			}
-			traits = {
-				motorised_equipment_producer_mass_1
-			}
-			research_bonus = {
-				motorized_equipment = 0.1
-			}
-		}
 	}
 
 	#### Heavy Equipment Manufacturer ####

@@ -2,14 +2,10 @@ state = {
 	id = 1008
 	name = "STATE_1008" # Girga
 	manpower = 2112258
-	resources = {
-		steel = 4
-	}
 	state_category = four
 
 	history = {
-		owner = EGY
-		add_core_of = EGY
+		owner = OTT
 		buildings = {
 			infrastructure = 2
 		}

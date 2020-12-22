@@ -451,7 +451,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		available = {
-			date > 1937.6.1
+			date > 1937.1.1
 		}
 		ai_will_do = {
 			factor = 50
@@ -478,6 +478,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
+			add_ideas = USA_recovery1
 		}
 	}
 
@@ -518,7 +519,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_values1"
 			add_ideas = USA_american_values_ideas
-			add_ideas = USA_civil_war_aftermath_idea5
+			swap_ideas = {
+				remove_idea = USA_civil_war_aftermath_idea4
+				add_idea = USA_civil_war_aftermath_idea5
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -580,7 +584,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_destroy_radicalism"
 			custom_effect_tooltip = USA_fight_terorists_flag
-			add_ideas = USA_civil_war_aftermath_idea2
+			swap_ideas = {
+				remove_idea = USA_civil_war_aftermath_idea
+				add_idea = USA_civil_war_aftermath_idea2
+			}
 		}
 	}
 
@@ -603,7 +610,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_ensure_political_stability"
-			add_ideas = USA_civil_war_aftermath_idea3
+			swap_ideas = {
+				remove_idea = USA_civil_war_aftermath_idea2
+				add_idea = USA_civil_war_aftermath_idea3
+			}
 		}
 	}
 
@@ -696,7 +706,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_land_of_the_free"
-			add_ideas = USA_civil_war_aftermath_idea4
+			swap_ideas = {
+				remove_idea = USA_civil_war_aftermath_idea3
+				add_idea = USA_civil_war_aftermath_idea4
+			}
 		}
 	}
 
@@ -1670,14 +1683,7 @@ focus_tree = {
 		relative_position_id = USA_war_department
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_reform_plan"
-			country_event = ustates.602
-			hidden_effect = {
-				country_event = { id = ustates.619 days = 670 }
-				country_event = { id = ustates.621 days = 15 }
-				country_event = { id = ustates.625 days = 45 }
-				country_event = { id = ustates.626 days = 70 }
-				country_event = { id = ustates.616 days = 140 }
-			}
+			army_experience = 200
 		}
 	}
 	focus = {
@@ -1695,10 +1701,7 @@ focus_tree = {
 		relative_position_id = USA_war_department
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_air_force_debate"
-			country_event = ustates.603
-			hidden_effect = {
-				country_event = { id = ustates.623 days = 75 }
-			}
+			air_experience = 200
 		}
 	}
 	focus = {
@@ -1710,9 +1713,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
-			focus = USA_Craig_plan
 		}
-		x = -6
+		x = -4
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -1741,14 +1743,10 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_reform_plan
 		}
-		available = {
-			always = no
-		}
 		mutually_exclusive = {
 			focus = USA_chaffee_plan
-			focus = USA_Craig_plan
 		}
-		x = 0
+		x = 4
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -1770,6 +1768,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
+
 	focus = {
 		id = USA_standardize_the_M1
 		icon = GFX_goal_Arms_Export
@@ -1777,9 +1776,8 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_chaffee_plan
 			focus = USA_McNair_Plan
-			focus = USA_Craig_plan
 		}
-		x = 3
+		x = -5
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -1837,10 +1835,10 @@ focus_tree = {
 					is_core_of = USA
 					is_controlled_by = USA
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1866,10 +1864,7 @@ focus_tree = {
 		relative_position_id = USA_McNair_Plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_restart_examining_boards"
-			swap_ideas = {
-				remove_idea = USA_McNair_plan1
-				add_idea = USA_McNair_plan2
-			}
+			add_ideas = USA_McNair_plan2
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1892,10 +1887,7 @@ focus_tree = {
 		relative_position_id = USA_restart_examining_boards
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_efficient_production_program"
-			swap_ideas = {
-				remove_idea = USA_McNair_plan2
-				add_idea = USA_McNair_plan3
-			}
+			add_ideas = USA_McNair_plan3
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1904,19 +1896,10 @@ focus_tree = {
 		icon = GFX_focus_generic_provoke_border_clashes
 		cost = 5.00
 		prerequisite = {
-			focus = USA_top_notch_artillery
-		}
-		prerequisite = {
-			focus = USA_production_priority
-		}
-		available = {
-			OR = {
-				has_idea = USA_McNair_plan4_AA
-				has_idea = USA_McNair_plan4_AT
-			}
+			focus = USA_efficient_production_program
 		}
 		x = 0
-		y = 2
+		y = 1
 		ai_will_do = {
 			factor = 1.5
 			modifier = {
@@ -1927,24 +1910,7 @@ focus_tree = {
 		relative_position_id = USA_efficient_production_program
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_shock_and_awe"
-			if = {
-				limit = {
-					has_idea = USA_McNair_plan4_AA
-				}
-				swap_ideas = {
-					remove_idea = USA_McNair_plan4_AA
-					add_idea = USA_McNair_plan5_AA
-				}
-			}
-			if = {
-				limit = {
-					has_idea = USA_McNair_plan4_AT
-				}
-				swap_ideas = {
-					remove_idea = USA_McNair_plan4_AT
-					add_idea = USA_McNair_plan5_AT
-				}
-			}
+			add_ideas = USA_shock
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1953,9 +1919,9 @@ focus_tree = {
 		icon = GFX_goal_planning_bonus
 		cost = 5.00
 		prerequisite = {
-			focus = USA_armored_cavalry
 			focus = USA_shock_and_awe
-			focus = USA_engineer_corps_expansion
+			focus = USA_meds
+			focus = USA_heavies
 		}
 		ai_will_do = {
 			factor = 1.5
@@ -1968,15 +1934,7 @@ focus_tree = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 		}
-		available = {
-			has_global_flag = USA_civil_war_over_flag
-			NOT = {
-				country_exists = TEX
-				country_exists = CSA
-				country_exists = CAL
-			}
-		}
-		x = 0
+		x = -4
 		y = 1
 		relative_position_id = USA_shock_and_awe
 		completion_reward = {
@@ -1987,12 +1945,6 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-			hidden_effect = {
-				country_event = { id = ustates.627 days = 70 }#Pentagon Construction
-				country_event = { id = ustates.651 days = 35 }#AUS Trials
-				country_event = { id = ustates.652 days = 45 }#PSA Trials
-			}
-			custom_effect_tooltip = USA_trials_will_begin
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2003,7 +1955,7 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_take_the_fight_abroad
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = USA_take_the_fight_abroad
 		ai_will_do = {
@@ -2029,7 +1981,10 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_take_the_fight_abroad
 		}
-		x = 2
+		available = {
+			date > 1942.1.1
+		}
+		x = 1
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -2046,42 +2001,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
-		id = USA_liberty_bonds
-		icon = GFX_goal_ideology_market_liberal
-		cost = 5.00
-		prerequisite = {
-			focus = USA_increase_military_spending
-		}
-		x = 1
-		y = 1
-		relative_position_id = USA_increase_military_spending
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_liberty_bonds"
-			add_war_support = 0.05
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
 		id = USA_army_rangers
 		icon = GFX_goal_generic_special_forces
 		cost = 5.00
 		prerequisite = {
 			focus = USA_chaffee_plan
 			focus = USA_McNair_Plan
-			focus = USA_Craig_plan
 		}
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = USA_chaffee_plan
 		ai_will_do = {
@@ -2160,152 +2087,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 	focus = {
-		id = USA_increase_military_production
-		icon = GFX_focus_generic_tank_production
-		cost = 5.00
-		prerequisite = {
-			focus = USA_modernize_cavalry_tactics
-		}
-		prerequisite = {
-			focus = USA_mechanization_program
-		}
-		x = 0
-		y = 2
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_chaffee_plan
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_increase_military_production"
-			swap_ideas = {
-				remove_idea = USA_Chaffee_plan2
-				add_idea = USA_Chaffee_plan3
-			}
-			if = {
-				limit = {
-					has_idea = USA_american_auto_industry1
-				}
-				swap_ideas = {
-					remove_idea = USA_american_auto_industry1
-					add_idea = USA_american_auto_industry2
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = USA_american_auto_industry1
-						has_idea = USA_american_auto_industry2
-					}
-				}
-				add_ideas = USA_american_auto_industry1
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-	focus = {
-		id = USA_tank_competition
-		icon = GFX_goal_generic_army_tanks2
-		cost = 5.00
-		prerequisite = {
-			focus = USA_increase_military_production
-		}
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_increase_military_production
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_tank_competition"
-			country_event = ustates.605
-		}
-	}
-	focus = {
-		id = USA_armored_cavalry
-		icon = GFX_goal_American_Armor
-		cost = 5.00
-		prerequisite = {
-			focus = USA_tank_competition
-		}
-		x = 0
-		y = 1
-		relative_position_id = USA_tank_competition
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_armored_cavalry"
-			add_tech_bonus = {
-				name = USA_armored_cavalry
-				bonus = 1
-				uses = 1
-				category = armor
-			}
-			if = {
-				limit = {
-					has_idea = USA_Chaffee_plan4_light
-				}
-				swap_ideas = {
-					remove_idea = USA_Chaffee_plan4_light
-					add_idea = USA_Chaffee_plan5_light
-				}
-			}
-			if = {
-				limit = {
-					has_idea = USA_Chaffee_plan4_heavy
-				}
-				swap_ideas = {
-					remove_idea = USA_Chaffee_plan4_heavy
-					add_idea = USA_Chaffee_plan5_heavy
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = USA_gi_bill
-		icon = GFX_goal_brain
-		cost = 5.00
-		prerequisite = {
-			focus = USA_military_research
-		}
-		x = -1
-		y = 1
-		relative_position_id = USA_military_research
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_gi_bill"
-			add_ideas = USA_gi_bill_idea
-			increase_ruling_party_popularity_by_5 = yes
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
 		id = USA_fighter_development
 		icon = GFX_goal_generic_air_fighter
 		cost = 5.00
 		prerequisite = {
 			focus = USA_expand_the_USAAC
-			focus = USA_create_the_USAAF
+		}
+		available = {
+			date > 1939.1.1
 		}
 		x = 0
 		y = 2
@@ -2319,130 +2108,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fighter_development"
-			add_tech_bonus = {
-				name = USA_fighter_development
-				bonus = 1
-				uses = 1
-				category = fighter_techs
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = USA_expand_air_corps_tactical_school
-		icon = GFX_goal_generic_air_doctrine
-		cost = 5.00
-		prerequisite = {
-			focus = USA_aerodrome_construction
-			focus = USA_central_operating_bases
-		}
-		x = 0
-		y = 2
-		relative_position_id = USA_fighter_development
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_air_corps_tactical_school"
-			add_ideas = USA_ACTS
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-	focus = {
-		id = USA_expand_wasps
-		icon = GFX_ITA_female_soldiers
-		cost = 5.00
-		prerequisite = {
-			focus = USA_expand_air_corps_tactical_school
-		}
-		x = 2
-		y = 1
-		relative_position_id = USA_expand_air_corps_tactical_school
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_wasps"
-			air_experience = 25
-			set_rule = {
-				can_generate_female_aces = yes
-			}
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-
-	}
-	focus = {
-		id = USA_screaming_eagles
-		icon = GFX_goal_USA_screaming_eagles
-		cost = 5.00
-		prerequisite = {
-			focus = USA_expand_air_corps_tactical_school
-		}
-		available = {
-			controls_state = 362
-			has_manpower > 25000
-		}
-		x = 0
-		y = 1
-		relative_position_id = USA_expand_air_corps_tactical_school
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_screaming_eagles"
-			if = {
-				limit = { NOT = { has_tech = paratroopers } }
-				set_technology = { paratroopers = 1 }
-				else = {
-					add_tech_bonus = {
-						name = USA_screaming_eagles
-						bonus = 1
-						uses = 1
-						category = para_tech
-					}
-				}
-			}
-			country_event = ustates.608
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = USA_radar_development
-		icon = GFX_goal_generic_radar
-		cost = 5.00
-		prerequisite = {
-			focus = USA_expand_air_corps_tactical_school
-		}
-		x = -2
-		y = 1
-		relative_position_id = USA_expand_air_corps_tactical_school
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_radar_development"
-			add_tech_bonus = {
-				name = USA_radar_development
-				bonus = 1
-				uses = 2
-				category = radar_tech
-			}
+			set_technology = {
+				fighter2 = 1
+			}	
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2453,12 +2121,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_air_force_debate
 		}
-		mutually_exclusive = {
-			focus = USA_create_the_USAAF
-		}
-		available = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2466,43 +2128,16 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = USA_air_force_debate
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_the_USAAC"
-			add_ideas = USA_Expanded_USAAC1
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-	focus = {
-		id = USA_create_the_USAAF
-		icon = GFX_goal_USA_usaaf
-		cost = 5.00
-		prerequisite = {
-			focus = USA_air_force_debate
-		}
-		mutually_exclusive = {
-			focus = USA_expand_the_USAAC
-		}
-		available = {
-			always = no
-		}
-		x = 3
-		y = 1
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_air_force_debate
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_create_the_USAAF"
-			add_ideas = USA_USAAF_Formed1
-			hidden_effect = {
-				country_event = { id = ustates.610 days = 30 }
+			add_tech_bonus = {
+				name = USA_expand_the_USAAC
+				bonus = 1
+				uses = 1
+				category = cas_bomber
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -2514,7 +2149,7 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_chaffee_plan
 		}
-		x = -1
+		x = 0
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -2536,31 +2171,54 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = USA_mechanization_program
-		icon = GFX_goal_generic_army_motorized
+		id = USA_tanks
 		cost = 5.00
 		prerequisite = {
-			focus = USA_chaffee_plan
+			focus = USA_modernize_cavalry_tactics
+		}
+		x = 0
+		y = 1
+		relative_position_id = USA_modernize_cavalry_tactics
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_tanks"
+			add_tech_bonus = {
+				name = USA_tanks
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = USA_meds
+		cost = 10
+		prerequisite = {
+			focus = USA_tanks
+		}
+		mutually_exclusive = {
+			focus = USA_heavies
+		}
+		x = -1
+		y = 1
+		relative_position_id = USA_tanks
+		completion_reward = { log = "[GetDateText]: [Root.GetName]: Focus USA_meds"
+		add_ideas = USA_Chaffee_mediums
+		}
+	}
+	focus = {
+		id = USA_heavies
+		cost = 10
+		prerequisite = {
+			focus = USA_tanks
+		}
+		mutually_exclusive = {
+			focus = USA_meds
 		}
 		x = 1
 		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_chaffee_plan
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_mechanization_program"
-			swap_ideas = {
-				remove_idea = USA_Chaffee_plan1
-				add_idea = USA_Chaffee_plan2
-			}
-			country_event = ustates.606
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		relative_position_id = USA_tanks
+		completion_reward = { log = "[GetDateText]: [Root.GetName]: Focus USA_heavies"
+		add_ideas = USA_Chaffee_heavies
 	}
 	focus = {
 		id = USA_top_notch_artillery
@@ -3160,42 +2818,6 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = USA_Craig_plan
-		icon = GFX_goal_USA_police_state
-		cost = 5.00
-		prerequisite = {
-			focus = USA_reform_plan
-		}
-		available = {
-			always = no
-		}
-		mutually_exclusive = {
-			focus = USA_McNair_Plan
-			focus = USA_chaffee_plan
-		}
-		x = 6
-		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_reform_plan
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_Craig_plan"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = USA_Craig_plan
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = USA_hierarchical_reorganization

@@ -8,8 +8,7 @@ state = {
 	state_category = two
 
 	history = {
-		owner = EGY
-		add_core_of = EGY
+		owner = OTT
 		buildings = {
 			infrastructure = 2
 		}

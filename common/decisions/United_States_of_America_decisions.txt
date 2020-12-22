@@ -2043,33 +2043,3 @@ USA_conservative_democratic_policies = {# Conservative Democratic Policies
 		}
 	}
 }
-USA_Entente_decisions = {# USA join Entente
-    USA_Entente = {
-	icon = generic_political_discourse
-	allowed = {
-		original_tag = USA
-	}
-	available = {
-		is_in_faction = no
-		has_completed_focus = USA_democracy_triumphs
-	}
-	visible = {
-		country_exists = CAN
-		CAN = {
-			is_faction_leader = yes
-		}
-	}
-
-	fire_only_once = yes
-	
-	cost = 0
-	ai_will_do = {
-		factor = 100
-	}
-	complete_effect = {
-		log = "[GetDateText]: [Root.GetName]: Decision USA_Entente"
-		CAN = { add_to_faction = USA }
-		
-	    }
-	}
-}

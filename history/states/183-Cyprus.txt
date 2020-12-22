@@ -9,7 +9,7 @@ state = {
 	}
 
 	history = {
-		owner = GER
+		owner = OTT
 		buildings = {
 			infrastructure = 4
 			air_base = 1
