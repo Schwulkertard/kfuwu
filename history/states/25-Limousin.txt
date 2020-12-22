@@ -2,12 +2,17 @@ state = {
 	id = 25
 	name = "STATE_25"
 
+resources = {
+	tungsten = 161
+	chromium = 56
+	}
+
 	history = {
 		owner = FRA
 		add_claim_by = NFA
 		add_core_of = FRA
 		buildings = {
-			infrastructure = 5
+			infrastructure = 6
 			industrial_complex = 5
 		}
 		victory_points = {

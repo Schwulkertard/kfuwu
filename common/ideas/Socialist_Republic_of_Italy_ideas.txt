@@ -20,32 +20,23 @@ ideas = {
 			picture = economic_control_icon
 			modifier = {
 				political_power_gain = 0.20
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-		SRI_socialist_welfare = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_socialist_welfare"}
-			picture = can_wartime_prices_and_trade_board
-			modifier = {
-				consumer_goods_factor = -0.05
-				conscription_factor = 0.05
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 		SRI_defense_of_state = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_defense_of_state"}
 			picture = FRA_national_mobilization_focus
 			modifier = {
-				send_volunteer_size = 2
 				mobilization_speed = 0.10
-				conscription_factor = 0.10
+				conscription_factor = 0.15
 			}
 		}
 		SRI_secret_polices = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_secret_polices"}
 			picture = NOR_secret_police_idea_1
 			modifier = {
-				resistance_damage_to_garrison = -0.20
+				production_factory_max_efficiency_factor = 0.05
 				political_power_gain = 0.20
 				stability_factor = 0.10
 			}
@@ -70,7 +61,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_communal_syndicalism_idea"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				production_factory_max_efficiency_factor = 0.10
 				local_resources_factor = 0.10
 			}
 		}
@@ -79,19 +69,16 @@ ideas = {
 			picture = UK_economy_syn_idea
 			modifier = {
 				industrial_capacity_factory = 0.05
-				production_factory_max_efficiency_factor = 0.10
-				local_resources_factor = 0.10
-				production_speed_buildings_factor = 0.25
+				local_resources_factor = 0.2
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		SRI_communal_syndicalism_idea3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_communal_syndicalism_idea3"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_factory_max_efficiency_factor = 0.10
 				local_resources_factor = 0.20
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.03
 			}
 		}
 		SRI_communal_syndicalism_idea4 = {
@@ -100,45 +87,31 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.20
-				local_resources_factor = 0.10
-				production_speed_buildings_factor = 0.25
-			}
-		}
-		SRI_communal_syndicalism_idea5 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_communal_syndicalism_idea5"}
-			picture = UK_economy_syn_idea
-			modifier = {
-				industrial_capacity_factory = 0.10
-				production_factory_max_efficiency_factor = 0.20
-				local_resources_factor = 0.20
-				consumer_goods_factor = -0.05
+				local_resources_factor = 0.2
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		SRI_iri_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_iri_idea"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.20
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		SRI_iri_idea2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_iri_idea2"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				production_factory_max_efficiency_factor = 0.20
-				production_factory_efficiency_gain_factor = 0.20
-				industrial_capacity_factory = 0.20
-				production_speed_industrial_complex_factor = 0.20
+				production_speed_industrial_complex_factor = 0.3
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		SRI_iri_idea3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_iri_idea3"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.20
-				production_speed_arms_factory_factor = 0.20
+				production_speed_arms_factory_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -146,34 +119,16 @@ ideas = {
 				}
 			}
 		}
-		SRI_iri_idea4 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_iri_idea4"}
+
+		SRI_eco_stuff_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_eco_stuff_idea"}
 			picture = UK_economy_syn_idea
 			modifier = {
-				production_factory_max_efficiency_factor = 0.20
-				production_factory_efficiency_gain_factor = 0.20
-				line_change_production_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.20
-				production_speed_industrial_complex_factor = 0.20
 				conversion_cost_civ_to_mil_factor = -0.25
-			}
-		}
-		SRI_iri_idea5 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_iri_idea5"}
-			picture = UK_economy_syn_idea
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.20
-				production_speed_arms_factory_factor = 0.20
-				conversion_cost_civ_to_mil_factor = -0.25
-				equipment_conversion_speed = 0.10
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
+				production_speed_buildings_factor = 0.1
+		    }
+	    }
+
 		SRI_red_guards_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_red_guards_idea"}
 			picture = UoB_militia_idea
@@ -388,7 +343,6 @@ ideas = {
 				training_time_army_factor = -0.10
 				mobilization_speed = 0.10
 				army_morale_factor = 0.05
-				special_forces_min = 3
 			}
 		}
 		SRI_cultural_revolution_idea = {
@@ -418,15 +372,14 @@ ideas = {
 			picture = generic_agrarian_reform
 			modifier = {
 				consumer_goods_factor = -0.05
-				stability_factor = 0.05
+				stability_factor = 0.1
 			}
 		}
 		SRI_urban_communes_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_urban_communes_idea"}
 			picture = generic_central_management
 			modifier = {
-				production_factory_max_efficiency_factor  = 0.10
-				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.2
 			}
 		}
 	}

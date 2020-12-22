@@ -24,7 +24,6 @@ focus_tree = {
 		cost = 3.00
 		available = {
 			has_socialist_government = yes
-			date > 1936.4.1
 		}
 		x = 5
 		y = 0
@@ -78,7 +77,7 @@ focus_tree = {
 	focus = {# Worker Priests
 		id = SRI_worker_priests
 		icon = GFX_BEL_Improve_Catholic_Relations
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_stregthen_the_republic
 		}
@@ -104,7 +103,7 @@ focus_tree = {
 	focus = {# Focus on Rural Communes
 		id = SRI_rural_communes
 		icon = GFX_goal_agrarian_reform
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_stregthen_the_republic
 		}
@@ -130,7 +129,7 @@ focus_tree = {
 	focus = {# Focus on Urban Communes
 		id = SRI_urbanization
 		icon = GFX_collective_housing
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_stregthen_the_republic
 		}
@@ -156,7 +155,7 @@ focus_tree = {
 	focus = {# Worker Councils
 		id = SRI_worker_councils
 		icon = GFX_goal_conspiracy
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_rural_communes
 			focus = SRI_urbanization
@@ -181,7 +180,7 @@ focus_tree = {
 	focus = {# In Defense of the State
 		id = SRI_workers_self_management
 		icon = GFX_goal_national_mobilization
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_stregthen_the_republic
 		}
@@ -204,7 +203,7 @@ focus_tree = {
 	focus = {# Social Welfare
 		id = SRI_social_welfare
 		icon = GFX_focus_generic_concessions
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_worker_priests
 		}
@@ -226,14 +225,15 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_social_welfare"
-			add_ideas = SRI_socialist_welfare
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = 0.1
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {# Industrial Enlightenment
 		id = SRI_industrial_enlightenment
 		icon = GFX_goal_syndicalist_workers
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_workers_self_management
 		}
@@ -262,7 +262,7 @@ focus_tree = {
 	focus = {# Cement Congress's Authority
 		id = SRI_cement_congres_authority
 		icon = GFX_goal_commune_politics
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_social_welfare
 		}
@@ -322,7 +322,7 @@ focus_tree = {
 	focus = {# State Atheism
 		id = SRI_state_atheism
 		icon = GFX_focus_mex_triumph_over_the_cristeros
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_streghten_the_chairman
 		}
@@ -335,15 +335,14 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_state_atheism"
-			add_stability = 0.05
-			country_event = socitaly.19
+			add_stability = 0.2
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	focus = {# Secret Police
 		id = SRI_secret_police
 		icon = GFX_goal_NOR_secret_police
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_streghten_the_chairman
 		}
@@ -363,7 +362,7 @@ focus_tree = {
 	focus = {# Rouse the People
 		id = SRI_rouse_the_people
 		icon = GFX_goal_flames_of_rebellion
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_state_atheism
 		}
@@ -387,7 +386,7 @@ focus_tree = {
 	focus = {# Squadrismo
 		id = SRI_squadrismo
 		icon = GFX_goal_HOL_military_union
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_rouse_the_people
 		}
@@ -407,7 +406,7 @@ focus_tree = {
 	focus = {# Futurist Culture
 		id = SRI_futurist_culture
 		icon = GFX_focus_generic_socialist_science
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_rouse_the_people
 		}
@@ -427,7 +426,7 @@ focus_tree = {
 	focus = {# Revolutionary Commissars
 		id = SRI_revolutionary_commisars
 		icon = GFX_focus_generic_military_mission
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_rouse_the_people
 		}
@@ -447,7 +446,7 @@ focus_tree = {
 	focus = {# Cement Chairman's power
 		id = SRI_cement_chairmans_power
 		icon = GFX_focus_generic_self_management
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = SRI_squadrismo
 		}
@@ -467,7 +466,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_cement_chairmans_power"
 			remove_ideas = SRI_divided_nation
-			unlock_decision_tooltip = SRI_begin_the_cultural_revolution
 		}
 	}
 
@@ -475,7 +473,7 @@ focus_tree = {
 	focus = {# Assess the Economy
 		id = SRI_assess_the_economy
 		icon = GFX_goal_production
-		cost = 6.00
+		cost = 10.00
 		x = 16
 		y = 0
 		ai_will_do = { factor = 30 }
@@ -487,7 +485,22 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			country_event = socitaly.33
+			random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 6
+				instant_build = yes
+			}
+		  }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -495,9 +508,6 @@ focus_tree = {
 		id = SRI_communal_syndicalism
 		icon = GFX_goal_Workers_Paradise
 		cost = 6.00
-		available = {
-			has_country_flag = SRI_communal_syndicalism_flag
-		}
 		prerequisite = {
 			focus = SRI_assess_the_economy
 		}
@@ -644,7 +654,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -667,20 +677,7 @@ focus_tree = {
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_sense_of_dedication"
-			if = {
-				limit = { has_idea = SRI_communal_syndicalism_idea2 }
-				swap_ideas = {
-					remove_idea = SRI_communal_syndicalism_idea2
-					add_idea = SRI_communal_syndicalism_idea4
-				}
-			}
-			if = {
-				limit = { has_idea = SRI_communal_syndicalism_idea3 }
-				swap_ideas = {
-					remove_idea = SRI_communal_syndicalism_idea3
-					add_idea = SRI_communal_syndicalism_idea5
-				}
-			}
+			add_idea = SRI_eco_stuff_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -719,72 +716,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-	focus = {# Support the URI
-		id = SRI_support_uri
-		icon = GFX_goal_generic_radar
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_expand_universtites
-		}
-		available = {
-			has_tech = electronic_mechanical_engineering
-		}
-		x = -1
-		y = 4
-		relative_position_id = SRI_assess_the_economy
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_support_uri"
-			if = {
-				limit = {
-					NOT = { has_tech = radio }
-				}
-				set_technology = {
-					radio = 1
-				}
-			}
-			unlock_decision_tooltip = SRI_radar_in_liguria
-			unlock_decision_tooltip = SRI_radar_in_ancona
-			add_tech_bonus = {
-				name = SRI_support_uri
-				bonus = 1
-				uses = 1
-				category = radar_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Synthetic Research
-		id = SRI_synethetic_research
-		icon = GFX_goal_generic_oil_refinery
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_expand_universtites
-		}
-		x = 1
-		y = 4
-		relative_position_id = SRI_assess_the_economy
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_synethetic_research"
-			unlock_decision_tooltip = SRI_synth_in_liguria
-			unlock_decision_tooltip = SRI_fuel_in_piedmont
-			add_tech_bonus = {
-				name = SRI_synethetic_research
-				bonus = 1
-				uses = 2
-				category = synth_resources
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
+
 	focus = {# Create the IRI
 		id = SRI_create_the_iri
 		icon = GFX_goal_manage_industries
 		cost = 6.00
-		available = {
-			has_country_flag = SRI_industrial_institute_created
-		}
 		prerequisite = {
 			focus = SRI_assess_the_economy
 		}
@@ -948,39 +884,20 @@ focus_tree = {
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_mass_production"
-			if = {
-				limit = { has_idea = SRI_iri_idea2 }
-				swap_ideas = {
-					remove_idea = SRI_iri_idea2
-					add_idea = SRI_iri_idea4
+			add_idea = SRI_eco_stuff_idea
 				}
-			}
-			if = {
-				limit = { has_idea = SRI_iri_idea3 }
-				swap_ideas = {
-					remove_idea = SRI_iri_idea3
-					add_idea = SRI_iri_idea5
-				}
-			}
-		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {# Socialist Economic Miracle
 		id = SRI_revitalized_economy
 		icon = GFX_goal_FRA_develop_SRI
-		cost = 6.00
-		available = {
-			has_country_flag = SRI_italy_unified_flag
-		}
+		cost = 10.00
 		prerequisite = {
 			focus = SRI_mass_production
 			focus = SRI_sense_of_dedication
 		}
 		prerequisite = {
-			focus = SRI_support_uri
-		}
-		prerequisite = {
-			focus = SRI_synethetic_research
+			focus = SRI_expand_universtites
 		}
 		x = 0
 		y = 5
@@ -993,83 +910,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 
-	### Risorgimento ###
-	focus = {# Begin Risorgimento
-		id = SRI_risorgimento
-		icon = GFX_ITA_unification
-		cost = 6.00
-		available = {
-			has_completed_focus = SRI_military_build_up
-			OR = {
-				has_completed_focus = SRI_cement_congres_authority
-				has_completed_focus = SRI_cement_chairmans_power
-			}
-		}
-		x = 24
-		y = 0
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_risorgimento"
-			add_political_power = 100
-			add_war_support = 0.1
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
-	}
-	focus = {# Military Exercises
-		id = SRI_military_exercises
-		icon = GFX_goal_military_academy
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_risorgimento
-		}
-		x = -1
-		y = 1
-		relative_position_id = SRI_risorgimento
-		ai_will_do = { factor = 30 }
-		bypass = {
-			OR = {
-				has_war_with = ITA
-				has_war_with = SIC
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_military_exercises"
-			army_experience = 25
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-	focus = {# Naval Exercises
-		id = SRI_naval_exericises
-		icon = GFX_goal_generic_coastal_navy
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_risorgimento
-		}
-		x = 1
-		y = 1
-		relative_position_id = SRI_risorgimento
-		ai_will_do = { factor = 30 }
-		bypass = {
-			OR = {
-				has_war_with = ITA
-				has_war_with = SIC
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_naval_exericises"
-			navy_experience =  25
-		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS }
-	}
 	focus = {# Re-enforce the South
 		id = SRI_reenforce_the_south
 		icon = GFX_goal_nested_fortifications
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_military_exercises
-		}
-		prerequisite = {
-			focus = SRI_naval_exericises
+			focus = SRI_revitalized_economy
 		}
 		available = {
 			OR = {
@@ -1083,8 +929,8 @@ focus_tree = {
 			}
 		}
 		x = 2
-		y = 2
-		relative_position_id = SRI_risorgimento
+		y = 1
+		relative_position_id = SRI_revitalized_economy
 		ai_will_do = { factor = 30 }
 		bypass = {
 			OR = {
@@ -1123,10 +969,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_military_exercises
-		}
-		prerequisite = {
-			focus = SRI_naval_exericises
+			focus = SRI_revitalized_economy
 		}
 		available = {
 			OR = {
@@ -1135,8 +978,8 @@ focus_tree = {
 			}
 		}
 		x = 0
-		y = 2
-		relative_position_id = SRI_risorgimento
+		y = 1
+		relative_position_id = SRI_revitalized_economy
 		ai_will_do = { factor = 30 }
 		bypass = {
 			OR = {
@@ -1198,10 +1041,7 @@ focus_tree = {
 		icon = GFX_goal_nested_fortifications
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_military_exercises
-		}
-		prerequisite = {
-			focus = SRI_naval_exericises
+			focus = SRI_revitalized_economy
 		}
 		available = {
 			OR = {
@@ -1215,8 +1055,8 @@ focus_tree = {
 			}
 		}
 		x = -2
-		y = 2
-		relative_position_id = SRI_risorgimento
+		y = 1
+		relative_position_id = SRI_revitalized_economy
 		ai_will_do = { factor = 30 }
 		bypass = {
 			OR = {
@@ -1252,115 +1092,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-	focus = {# Hold the Fifth Congress
-		id = SRI_fifth_congress
-		icon = GFX_SRI_united
-		cost = 6.00
-		available = {
-			has_country_flag = SRI_italy_unified_flag
-		}
-		prerequisite = {
-			focus = SRI_reenforce_the_south
-			focus = SRI_reenforce_the_coast
-			focus = SRI_reenforce_the_po_line
-		}
-		x = 0
-		y = 3
-		relative_position_id = SRI_risorgimento
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_fifth_congress"
-			country_event = socitaly.41
-		}
-	}
-	focus = {# Fate of the Pope
-		id = SRI_fate_of_the_pope
-		icon = GFX_goal_accord_with_pope
-		cost = 2.00
-		prerequisite = {
-			focus = SRI_fifth_congress
-		}
-		available = {
-			NOT = { country_exists = PAP }
-			2 = { is_owned_and_controlled_by = SRI }
-			has_country_flag = SRI_fifth_congress_done
-		}
-		x = -1
-		y = 4
-		relative_position_id = SRI_risorgimento
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_fate_of_the_pope"
-			custom_effect_tooltip = SRI_fate_of_the_pope_tooltip
-			if = {# Leave the Pope alone(John or Stephen)
-				limit = {
-					has_country_flag = SRI_leave_pope_alone
-					OR = {
-						has_global_flag = PAP_john_xxiii
-						has_global_flag = PAP_stephen_x
-					}
-				}
-				country_event = socitaly.65 #Pope accepts SRI
-			}
-			if = {# Leave the Pope alone(Pious or Julius)
-				limit = {
-					has_country_flag = SRI_leave_pope_alone
-					OR = {
-						has_global_flag = PAP_pius_xii
-						has_global_flag = PAP_julius_iv
-					}
-				}
-				country_event = socitaly.50 #Pope locks himself in Vatican
-			}
-			if = {# Red Pope (John or Stephen)
-				limit = {
-					has_country_flag = SRI_have_a_red_pope
-					has_global_flag = PAP_john_xxiii
-				}
-				country_event = socitaly.65
-			}
-			if = {# Red Pope(Pious or Julius)
-				limit = {
-					has_country_flag = SRI_have_a_red_pope
-					OR = {
-						has_global_flag = PAP_john_xxiii
-						has_global_flag = PAP_stephen_x
-						has_global_flag = PAP_julius_iv
-					}
-				}
-				country_event = socitaly.51
-			}
-			if = {# Exile the Pope
-				limit = { has_country_flag = SRI_exile_the_pope }
-				country_event = socitaly.53
-			}
-		}
-	}
-	focus = {# Italian Irredentism
-		id = SRI_italian_irredentism
-		icon = GFX_SRI_irridentism
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_fifth_congress
-		}
-		x = 1
-		y = 4
-		relative_position_id = SRI_risorgimento
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_italian_irredentism"
-			custom_effect_tooltip = ITA_irredentist_decisions
-			add_war_support = 0.10
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
 
 	### Army ###
 	focus = {# Assess the Army
 		id = SRI_army
 		icon = GFX_goal_BEL_belgian_rearmement
 		cost = 6.00
-		x = 33
+		x = 29
 		y = 0
 		ai_will_do = {
 			factor = 20
@@ -1379,23 +1117,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_army"
-			country_event = socitaly.34
+			army_experience = 300
 		}
 	}
 	focus = {# Support the Red Guards
 		id = SRI_guardie_rosse
 		icon = GFX_goal_integrate_the_militia
 		cost = 6.00
-		available = {
-			has_country_flag = SRI_red_guards_supported
-		}
 		prerequisite = {
 			focus = SRI_army
 		}
 		mutually_exclusive = {
 			focus = SRI_armata_rossa
 		}
-		x = -5
+		x = -3
 		y = 1
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1429,7 +1164,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_guardie_rosse
 		}
-		x = -5
+		x = -3
 		y = 2
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1469,7 +1204,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_comitato
 		}
-		x = -5
+		x = -3
 		y = 3
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1506,7 +1241,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_small_unit_tactics
 		}
-		x = -5
+		x = -3
 		y = 4
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1540,7 +1275,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_reform_the_guards
 		}
-		x = -5
+		x = -3
 		y = 5
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1559,8 +1294,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_home_guard"
-			add_war_support = 0.10
+			log = "[GetDateText]: [Root.GetName]: Focus SRI_small_arms_industry"
+			add_ideas = SRI_small_arms_industry_idea
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -1571,9 +1306,12 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_home_guard
 		}
-		x = -6
-		y = 6
-		relative_position_id = SRI_army
+		mutually_exclusive = {
+			focus = SRI_rossi_cyclists
+			}
+		x = -2
+		y = 1
+		relative_position_id = SRI_home_guard
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1598,12 +1336,16 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_home_guard
 		}
+		mutually_exclusive = {
+			focus = SRI_guerrilla_warfare
+			}
 		available = {
 			158 = { is_owned_and_controlled_by = SRI }
 		}
-		x = -4
-		y = 6
-		relative_position_id = SRI_army
+
+		x = 2
+		y = 1
+		relative_position_id = SRI_home_guard
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1627,12 +1369,14 @@ focus_tree = {
 		icon = GFX_goal_national_artillery
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_guardie_rosse
-			focus = SRI_armata_rossa
+			focus = SRI_prepare_for_liberation
 		}
+		mutually_exclusive = {
+			focus = SRI_italian_auto_industry
+			}
 		x = -2
-		y = 2
-		relative_position_id = SRI_army
+		y = 1
+		relative_position_id = SRI_prepare_for_liberation
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1667,9 +1411,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_artillery_effort
 		}
-		x = -2
-		y = 3
-		relative_position_id = SRI_army
+		x = 0
+		y = 1
+		relative_position_id = SRI_artillery_effort
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1718,9 +1462,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_anti_air
 		}
-		x = -2
-		y = 4
-		relative_position_id = SRI_army
+		x = 0
+		y = 2
+		relative_position_id = SRI_artillery_effort
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -1745,11 +1489,10 @@ focus_tree = {
 		icon = GFX_goal_national_arsenal
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_guardie_rosse
-			focus = SRI_armata_rossa
+			focus = SRI_army	
 		}
-		x = 0
-		y = 2
+		x = 3
+		y = 1
 		relative_position_id = SRI_army
 		ai_will_do = {
 			factor = 20
@@ -1782,10 +1525,10 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_prepare_for_liberation
+			focus = SRI_army
 		}
-		x = 0
-		y = 3
+		x = -1
+		y = 1
 		relative_position_id = SRI_army
 		ai_will_do = {
 			factor = 10
@@ -1818,11 +1561,11 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_support_brigades
+			focus = SRI_rossi_cyclists
 		}
 		x = 0
-		y = 4
-		relative_position_id = SRI_army
+		y = 1
+		relative_position_id = SRI_rossi_cyclists
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1850,17 +1593,58 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+
+    focus = {# Arditi del Popolo
+		id = SRI_arditi_del_popolo
+		icon = GFX_goal_generic_special_forces
+		cost = 6.00
+		prerequisite = {
+			focus = SRI_guerrilla_warfare
+		}
+		x = 0
+		y = 1
+		relative_position_id = SRI_guerrilla_warfare
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SRI_arditi_del_popolo"
+			add_tech_bonus = {
+				name = SRI_arditi_del_popolo
+				bonus = 1
+				uses = 2
+				category = mountaineers_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
 	focus = {# Italian Automotive Unions
 		id = SRI_italian_auto_industry
 		icon = GFX_goal_Automobile_Production
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_armata_rossa
-			focus = SRI_guardie_rosse
+			focus = SRI_prepare_for_liberation
 		}
+		mutually_exclusive = {
+			focus = SRI_artillery_effort
+			}
 		x = 2
-		y = 2
-		relative_position_id = SRI_army
+		y = 1
+		relative_position_id = SRI_prepare_for_liberation
 		ai_will_do = {
 			factor = 20
 			modifier = {
@@ -1887,9 +1671,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_italian_auto_industry
 		}
-		x = 2
-		y = 3
-		relative_position_id = SRI_army
+		x = 0
+		y = 1
+		relative_position_id = SRI_italian_auto_industry
 		ai_will_do = {
 			factor = 20
 			modifier = {
@@ -1913,7 +1697,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SRI_motorized_offensive
 		}
-		x = 2
+		x = 5
 		y = 4
 		relative_position_id = SRI_army
 		ai_will_do = {
@@ -1942,196 +1726,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-	focus = {# Armata Rossa
-		id = SRI_armata_rossa
-		icon = GFX_goal_reform_socialist_army
-		cost = 6.00
-		available = {
-			has_country_flag = SRI_red_army_created
-		}
-		prerequisite = {
-			focus = SRI_army
-		}
-		mutually_exclusive = {
-			focus = SRI_guardie_rosse
-		}
-		x = 5
-		y = 1
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_armata_rossa"
-			swap_ideas = {
-				remove_idea = SRI_red_guards_idea
-				add_idea = SRI_centralized_red_army
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-	focus = {# Centralized Command
-		id = SRI_centralized_command
-		icon = GFX_goal_officers
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_armata_rossa
-		}
-		x = 5
-		y = 2
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_centralized_command"
-			add_tech_bonus = {
-				name = SRI_centralized_command
-				bonus = 1
-				uses = 2
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Integrate the Red Guards
-		id = SRI_integrate_red_guards
-		icon = GFX_goal_generic_join_faction
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_centralized_command
-		}
-		x = 5
-		y = 3
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_integrate_red_guards"
-			add_tech_bonus = {
-				name = SRI_integrate_red_guards
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			swap_ideas = {
-				remove_idea = SRI_centralized_red_army
-				add_idea = SRI_centralized_red_army2
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Dissolve the Guards
-		id = SRI_disolve_the_guards
-		icon = GFX_goal_broken_red_star
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_integrate_red_guards
-		}
-		x = 5
-		y = 4
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_disolve_the_guards"
-			swap_ideas = {
-				remove_idea = SRI_centralized_red_army2
-				add_idea = SRI_centralized_red_army3
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-	focus = {# Officer Training
-		id = SRI_officer_training
-		icon = GFX_goal_conscription
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_disolve_the_guards
-		}
-		x = 5
-		y = 5
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_officer_training"
-			army_experience = 25
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
 	focus = {# Central Logistics
 		id = SRI_central_logistics
 		icon = GFX_goal_planning_bonus
 		cost = 6.00
 		prerequisite = {
-			focus = SRI_officer_training
+			focus = SRI_army
 		}
-		x = 4
-		y = 6
+		x = 1
+		y = 1
 		relative_position_id = SRI_army
 		ai_will_do = {
 			factor = 20
@@ -2154,468 +1757,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
-	focus = {# Fronte Militare Clandestino
-		id = SRI_fronte_militare_clandestino
-		icon = GFX_goal_secret_agents
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_officer_training
-		}
-		x = 6
-		y = 6
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_fronte_militare_clandestino"
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-					has_intelligence_agency = no
-				}
-				create_intelligence_agency = yes
-			}
-			else_if = {
-				limit = {
-					has_dlc = "La Resistance"
-					has_intelligence_agency = yes
-					NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
-				}
-				upgrade_intelligence_agency = upgrade_crypto_strength
-			}
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				add_ideas = SRI_clandestin_military_lar
-			}
-			else = {
-				add_ideas = SRI_clandestin_military
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESISTANCE }
-	}
-	focus = {# Military Build Up
-		id = SRI_military_build_up
-		icon = GFX_focus_generic_combined_arms
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_reform_the_guards
-			focus = SRI_disolve_the_guards
-		}
-		prerequisite = {
-			focus = SRI_arditi_del_popolo
-		}
-		x = 0
-		y = 5
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_military_build_up"
-			unlock_decision_tooltip = SRI_mil_in_emilia2
-			unlock_decision_tooltip = SRI_mil_in_marches2
-		}
-	}
-	focus = {# Small Arm Industry
-		id = SRI_small_arms_industry
-		icon = GFX_goal_generic_small_arms
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_military_build_up
-		}
-		x = -2
-		y = 6
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_small_arms_industry"
-			add_ideas = SRI_small_arms_industry_idea
-		}
-	}
-	focus = {# Mobilize the People
-		id = SRI_mobilize_the_people
-		icon = GFX_goal_national_mobilization
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_military_build_up
-		}
-		available = {
-			OR = {
-				has_war = yes
-				has_idea = disarmed_nation
-				has_idea = volunteer_only
-			}
-		}
-		x = 0
-		y = 6
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		bypass = {
-			has_idea = scraping_the_barrel
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_mobilize_the_people"
-			increase_conscription = yes
-		}
-	}
-	focus = {# Military Research
-		id = SRI_military_research
-		icon = GFX_goal_great_science
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_military_build_up
-		}
-		x = 2
-		y = 6
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_military_research"
-			country_event = socitaly.35
-		}
-	}
-	focus = {# Female Soldiers
-		id = SRI_female_soldiers
-		icon = GFX_ITA_female_soldiers
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_mobilize_the_people
-		}
-		x = 0
-		y = 7
-		relative_position_id = SRI_army
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_female_soldiers"
-			add_ideas = SRI_revolutionary_women
-			create_corps_commander = {
-				name = "Piera Gatteschi Fondelli"
-				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Piera_Gatteschi_Fondelli.tga"
-				traits = {
-					organizer
-				}
-				skill = 1
-				attack_skill = 1
-				defense_skill = 2
-				planning_skill = 1
-				logistics_skill = 2
-				female = yes
-			}
-			set_rule = {
-				can_generate_female_aces = yes
-			}
-			hidden_effect = {
-				country_event = {
-					id = socitaly.84
-					days = 60
-				}
-				country_event = {
-					id = socitaly.110
-					days = 360
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-	}
-
-### Air Force ###
-	focus = {# Aeronautica Rosse
-		id = SRI_aeronautica_rossa
-		icon = GFX_goal_air_red
-		cost = 6.00
-		x = 42
-		y = 0
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_aeronautica_rossa"
-			air_experience = 25
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-	focus = {# Air Training School
-		id = SRI_air_training_school
-		icon = GFX_goal_generic_air_doctrine
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_aeronautica_rossa
-		}
-		x = 0
-		y = 1
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_air_training_school"
-			add_tech_bonus = {
-				name = SRI_air_training_school
-				bonus = 1
-				uses = 2
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Bomber efforts
-		id = SRI_bomber_efforts
-		icon = GFX_goal_HOL_luchtkruiser
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_air_training_school
-		}
-		x = -2
-		y = 2
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_bomber_efforts"
-			add_tech_bonus = {
-				name = SRI_bomber_efforts
-				bonus = 1
-				uses = 2
-				category = tactical_bomber
-				category = cat_strategic_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# CAS Effort
-		id = SRI_cas_efforts
-		icon = GFX_focus_usa_escort_fighters
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_air_training_school
-		}
-		x = 0
-		y = 2
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_cas_efforts"
-			add_tech_bonus = {
-				name = SRI_cas_efforts
-				bonus = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Fighter Effort
-		id = SRI_fighter_efforts
-		icon = GFX_goal_HOL_D21
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_air_training_school
-		}
-		x = 2
-		y = 2
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_fighter_efforts"
-			add_tech_bonus = {
-				name = SRI_fighter_efforts
-				bonus = 1
-				uses = 2
-				category = fighter_techs
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Paratroopers
-		id = SRI_paratroopers
-		icon = GFX_goal_generic_special_forces
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_bomber_efforts
-		}
-		prerequisite = {
-			focus = SRI_cas_efforts
-		}
-		prerequisite = {
-			focus = SRI_fighter_efforts
-		}
-		x = -1
-		y = 3
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_paratroopers"
-			add_tech_bonus = {
-				name = SRI_paratroopers
-				bonus = 1
-				uses = 1
-				category = para_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {# Maintenance Schools
-		id = SRI_maintance_schools
-		icon = GFX_goal_industry_air
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_bomber_efforts
-		}
-		prerequisite = {
-			focus = SRI_cas_efforts
-		}
-		prerequisite = {
-			focus = SRI_fighter_efforts
-		}
-		x = 1
-		y = 3
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_maintance_schools"
-			add_ideas = SRI_maintance_schools_idea
-		}
-	}
-	focus = {# Red Jets
-		id = SRI_red_jets
-		icon = GFX_focus_CZE_military_aeronautical_institute
-		cost = 6.00
-		prerequisite = {
-			focus = SRI_paratroopers
-			focus = SRI_maintance_schools
-		}
-		available = {
-			has_tech = fighter3
-		}
-		x = 0
-		y = 4
-		relative_position_id = SRI_aeronautica_rossa
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRI_red_jets"
-			add_tech_bonus = {
-				name = SRI_red_jets
-				bonus = 1
-				uses = 2
-				category = jet_technology
-				category = rocketry
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
+	
 	### Navy ###
 	focus = {# Red Navy
 		id = SRI_red_navy

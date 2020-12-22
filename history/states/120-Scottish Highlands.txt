@@ -7,7 +7,7 @@ state = {
 
 	resources = {
 		chromium = 2
-		tungsten = 322
+		tungsten = 161
 		aluminium = 64
 	}
 

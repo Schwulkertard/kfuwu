@@ -23,9 +23,9 @@ focus_tree = {
 	focus = {
 		id = RUS_Centralised_Apparatus_Of_State
 		icon = GFX_goal_consolidating_coalitionv2
-		x = 0
+		x = 5
 		y = 0
-		cost = 5
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Centralised_Apparatus_Of_State"
 			add_stability = 0.2
@@ -47,7 +47,7 @@ focus_tree = {
 		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = -2
 		y = 2
-		cost = 5
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_A_New_Russia"
 			add_ideas = RUS_a_new_russia_1
@@ -55,15 +55,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 
+focus = {
+		id = RUS_progress_cult
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = RUS_A_New_Russia }
+		x = -4
+		y = 3
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = progress_cult_focus
+		}
+	}
+
+	focus = {
+		id = RUS_Russian_realism
+		icon = GFX_goal_social_reforms
+		prerequisite = { focus = RUS_progress_cult }
+		x = -4
+		y = 4
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas=RUS_realism
+		}
+	}
+
 	focus = {
 		id = RUS_Natsguardiya
 		icon = GFX_EGY_Palestine_Defence
 		prerequisite = {
-			focus = RUS_A_New_Russia
+			focus = RUS_Yunarmiya
 		}
 		relative_position_id = RUS_Centralised_Apparatus_Of_State
-		x = -4
-		y = 3
+		x = -2
+		y = 4
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Natsguardiya"
@@ -161,7 +195,7 @@ focus_tree = {
 		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 2
 		y = 3
-		cost = 5
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Stratocratic_Government"
 			if = { #has mil. spir
@@ -179,6 +213,23 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = RUS_tradition
+		icon = GFX_goal_generic_coal_mining
+		prerequisite = { focus = RUS_Stratocratic_Government }
+		x = 2
+		y = 4
+		relative_position_id = RUS_Centralised_Apparatus_Of_State
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = RUS_tradition
+		}
 	}
 
 	focus = {
@@ -216,16 +267,12 @@ focus_tree = {
 		icon = GFX_focus_generic_eagle
 		prerequisite = {
 			focus = RUS_Natsguardiya
-			focus = RUS_Military_Spirit
-		}
-		prerequisite = {
-			focus = RUS_Yunarmiya
-			focus = RUS_Stratocratic_Government
+			focus = RUS_tradition
 		}
 		relative_position_id = RUS_Centralised_Apparatus_Of_State
 		x = 0
-		y = 4
-		cost = 5
+		y = 5
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_State_Revanchism"
 			add_ideas = RUS_state_revanchism
@@ -240,7 +287,7 @@ focus_tree = {
 	focus = {
 		id = RUS_Establish_The_VES
 		icon = GFX_goal_economic_control
-		x = 10
+		x = 15
 		y = 0
 		cost = 5
 		select_effect = { RUS_reduce_black_monday = yes }
@@ -250,10 +297,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Establish_The_VES"
-			add_stability = 0.02
+			add_stability = 0.1
+			572 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+			}	
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
+}
 
 	focus = {
 		id = RUS_Ural_Tractor_Plants
@@ -334,11 +389,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Railway_Nationalisation"
 			RUS_reduce_black_monday = yes
-			add_political_power = -100
+			add_political_power = -50
 			every_owned_state = {
 				limit = {
 					infrastructure > 0
-					infrastructure < 4
+					infrastructure < 6
 					is_impassable_state = no
 				}
 				add_building_construction = {
@@ -371,7 +426,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = RUS_Korporatsiya_Yusupova
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = industry
 			}
 			add_stability = 0.02
@@ -397,7 +452,7 @@ focus_tree = {
 		relative_position_id = RUS_Establish_The_VES
 		x = -2
 		y = 2
-		cost = 5
+		cost = 15
 		prerequisite = {
 			focus = RUS_Ural_Tractor_Plants
 		}
@@ -418,37 +473,112 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Industrial_Draft_Scheme"
 			RUS_reduce_black_monday = yes
 			add_ideas = RUS_supreme_economic_council_9
-			add_stability = 0.02
+			add_stability = 0.3
 			add_research_slot = 1
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
-		id = RUS_Resource_Prospection
-		icon = GFX_goal_generic_coal_mining
+		id = RUS_tranformation_of_nature
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = RUS_Industrial_Draft_Scheme }
+		x = -4
+		y = 3
 		relative_position_id = RUS_Establish_The_VES
-		x = 5
-		y = 1
-		cost = 10
-		prerequisite = {
-			focus = RUS_Establish_The_VES
-		}
-
+		cost = 5
 		ai_will_do = {
-			factor = 3
+			factor = 5
+		}
+		available = {
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus RUS_Resource_Prospection"
-			unlock_decision_category_tooltip = RUS_Resource_decisions
+			add_resource = {
+				type = rubber
+				amount = 40
+				state = 582
+			}
 		}
+	}
+
+	focus = {
+		id = RUS_synthetic_rubber
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = RUS_Industrial_Draft_Scheme}
+		x = 0
+		y = 3
+		relative_position_id = RUS_Establish_The_VES
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			576 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			578 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			570 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_synthetic
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = {
+			focus = RUS_synthetic_rubber
+		}
+		prerequisite = {
+			focus = RUS_tranformation_of_nature
+		}
+		x = -2
+		y = 4
+		relative_position_id = RUS_Establish_The_VES
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_synthetic"
+			add_tech_bonus = {
+				name = GER_synthetic
+				bonus = 1
+				uses = 2
+				category = synth_resources
+                }
+
+					modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 1
+		
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
 		id = RUS_Expand_The_Transsiberian
 		icon = GFX_goal_generic_railroad
-		relative_position_id = RUS_Resource_Prospection
-		x = 0
+		relative_position_id = RUS_Establish_The_VES
+		x = 5
 		y = 1
 		cost = 10
 
@@ -464,7 +594,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = RUS_Resource_Prospection
+			focus = RUS_Establish_The_VES
 		}
 
 		ai_will_do = {
@@ -539,9 +669,9 @@ focus_tree = {
 		relative_position_id = RUS_Expand_The_Transsiberian
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
-			num_of_factories > 80
+			num_of_factories > 100
 		}
 		prerequisite = {
 			focus = RUS_Expand_The_Transsiberian
@@ -565,8 +695,8 @@ focus_tree = {
 		id = RUS_Army_Modernisation
 		icon = GFX_goal_RUS_army
 
-		x = 11
-		y = 10
+		x = 28
+		y = 0
 		cost = 5
 
 		ai_will_do = {
@@ -623,10 +753,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		}
-		prerequisite = {
-			focus = RUS_Equipment_Modernisation
-		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -665,9 +791,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Reintroduce_Okhrannoye_Otdeleniye
 		}
-		prerequisite = {
-			focus = RUS_Equipment_Modernisation
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -695,7 +818,7 @@ focus_tree = {
 		id = RUS_Equipment_Modernisation
 		icon = GFX_focus_chi_army_reform
 		relative_position_id = RUS_Army_Modernisation
-		x = -2
+		x = 1
 		y = 1
 		cost = 10
 		prerequisite = {
@@ -730,14 +853,51 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RUS_Modern_Artillery
+		icon = GFX_goal_RUS_army
+		relative_position_id = RUS_Equipment_Modernisation
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = RUS_Equipment_Modernisation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Equipment_Modernisation"
+			add_tech_bonus = {
+				name = RUS_Equipment_Modernisation
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+			if = {
+				limit = {
+					has_completed_focus = RUS_Overwhelming_Firepower
+				}
+				add_tech_bonus = {
+					name = RUS_Equipment_Modernisation
+					bonus = 1
+					uses = 2
+					category = support_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
 		id = RUS_Army_Motorisation
 		icon = GFX_goal_generic_army_motorized
 		relative_position_id = RUS_Army_Modernisation
-		x = 1
-		y = 2
+		x = -2
+		y = 1
 		cost = 5
 		prerequisite = {
-			focus = RUS_Equipment_Modernisation
+			focus = RUS_Army_Modernisation
 		}
 
 		ai_will_do = {
@@ -771,7 +931,7 @@ focus_tree = {
 		y = 2
 		cost = 3
 		prerequisite = {
-			focus = RUS_Equipment_Modernisation
+			focus = RUS_Army_Modernisation
 		}
 
 		ai_will_do = {
@@ -848,6 +1008,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RUS_cas
+		icon = GFX_goal_generic_CAS
+		prerequisite = {
+			focus = RUS_VVSR
+		}
+		x = 1
+		y = 3
+		relative_position_id = RUS_Army_Modernisation
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_cas"
+			add_tech_bonus = {
+				name = RUS_cas
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+
+	focus = {
 		id = RUS_The_ORT_System
 		icon = GFX_EGY_Radio_Free_Cairo
 		relative_position_id = RUS_Reintroduce_Okhrannoye_Otdeleniye
@@ -912,7 +1100,7 @@ focus_tree = {
 		relative_position_id = RUS_Army_Modernisation
 		x = 4
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 2000
@@ -927,7 +1115,7 @@ focus_tree = {
 				name = RUS_Spearhead_Doctrine
 				bonus = 1
 				uses = 2
-				category = cat_mobile_warfare
+				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
