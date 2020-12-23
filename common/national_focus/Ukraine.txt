@@ -258,7 +258,7 @@ focus_tree = {
 		x = 5
 		y = 2
 		relative_position_id = UKR_Our_Future
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -295,13 +295,13 @@ focus_tree = {
 		x = 3
 		y = 2
 		relative_position_id = UKR_Our_Future
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_Prohibit_Syndicalism"
-			add_stability = 0.07
+			add_stability = 0.1
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -411,7 +411,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = UKR_Ukrainian_Recovery
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -432,7 +432,7 @@ focus_tree = {
 		x = -1
 		y = 3
 		relative_position_id = UKR_Ukrainian_Recovery
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -448,6 +448,14 @@ focus_tree = {
 				amount = 20
 				state = 227
 			}
+			add_tech_bonus = {
+				name = UKR_experimental_research
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}	
+
+			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -459,7 +467,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = UKR_Ukrainian_Recovery
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -522,16 +530,109 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = UKR_Ukrainian_Recovery
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_Stab_econ"
-			add_stability = 0.05
+			add_stability = 0.2
 			remove_ideas = UKR_black_monday
-		}
+		add_tech_bonus = {
+				name = UKR_experimental_research
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		
 		search_filters = { FOCUS_FILTER_STABILITY }
+	   }
+    }
+
+
+	focus = {
+		id = UKR_Arms_Industry
+		icon = GFX_goal_state_economy
+		prerequisite = { focus = UKR_Stab_econ }
+		x = 0
+		y = 1
+		relative_position_id = UKR_Stab_econ
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UKR_Kharkov_Industry"
+			791 = {
+				add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {# Weapon Manufactories
+		id = UKR_Weapon_Manufactories
+		icon = GFX_goal_USA_national_guard
+		cost = 10.00
+		prerequisite = {
+			focus = UKR_Arms_Industry
+		}
+		x = -1
+		y = 1
+		relative_position_id = UKR_Arms_Industry
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UKR_small_arms_industry"
+			add_ideas = UKR_small_arms_industry_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {# Artillery Manufactories
+		id = UKR_Artillery_Manufactories
+		icon = GFX_goal_USA_national_guard
+		cost = 10.00
+		prerequisite = {
+			focus = UKR_Arms_Industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = UKR_Arms_Industry
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UKR_cannons_idea"
+			add_ideas = UKR_cannons_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 #Army#
@@ -561,7 +662,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = UKR_Reorg_army
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -589,7 +690,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = UKR_Reorg_army
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -632,6 +733,81 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
+	focus = {# Special Forces
+		id = UKR_Special_Forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = UKR_Infantry1
+		}
+		x = -1
+		y = 1
+		relative_position_id = UKR_Infantry1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SRI_arditi_del_popolo"
+			add_tech_bonus = {
+				name = SRI_arditi_del_popolo
+				bonus = 1
+				uses = 2
+				category = mountaineers_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {# Support Brigades
+		id = UKR_support_brigades
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = UKR_Special_Forces
+		}
+		x = 0
+		y = 1
+		relative_position_id = UKR_Special_Forces
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SRI_support_brigades"
+			add_tech_bonus = {
+				name = SRI_support_brigades
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
 	focus = {
 		id = UKR_Art1
 		icon = GFX_goal_generic_army_artillery
@@ -648,8 +824,65 @@ focus_tree = {
 			add_tech_bonus = {
 				name = UKR_Art1
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {# Anti-tank artillery
+		id = UKR_anti_tank
+		icon = GFX_focus_generic_tank_destroyer
+		cost = 10.00
+		prerequisite = {
+			focus = UKR_Art1
+		}
+		x = 1
+		y = 1
+		relative_position_id = UKR_Art1
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UKR_anti_tank"
+			add_tech_bonus = {
+				name = UKR_anti_tank
+				bonus = 1
+				uses = 2
+				category = cat_anti_tank
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = UKR_rocket_development
+		icon = GFX_goal_rocket
+		x = 0
+		y = 1
+		relative_position_id = UKR_anti_tank
+		prerequisite = {
+			focus = UKR_anti_tank
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_rocket_development"
+			add_tech_bonus = {
+				name = FRA_rocket_development
+				bonus = 1
+				uses = 2
+				category = rocketry
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -662,7 +895,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = UKR_Reorg_army
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -671,11 +904,66 @@ focus_tree = {
 			add_tech_bonus = {
 				name = UKR_Doct1
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = UKR_Russian_Threat
+		icon = GFX_focus_generic_eagle
+		prerequisite = {
+			UKR_New_Army_UKR
+		}
+		relative_position_id = UKR_New_Army_UKR
+		x = 0
+		y = 2
+		cost = 10
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UKR_State_Revanchism"
+			add_ideas = UKR_state_revanchism
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	    }
+    }
+
+   focus = {
+		id = UKR_COCKYARDS
+		icon = GFX_goal_generic_foreign_investments
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_Navy_Modernisation_tooltip
+				NOT = { has_country_flag = RUS_navy_locked }
+			}
+		}
+		x = 20
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_Navy_Modernisation"
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
 
 	focus = {
@@ -693,5 +981,5 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_New_Army_UKR"
 			remove_ideas = Hetman_army
 		}
-	}
+    }
 }

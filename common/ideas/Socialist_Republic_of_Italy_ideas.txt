@@ -51,8 +51,7 @@ ideas = {
 		SRI_mass_production_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_mass_production_idea"}
 			modifier = {
-				conversion_cost_civ_to_mil_factor = -0.25
-				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.20
 			}
 
 			picture = generic_production_bonus
@@ -70,7 +69,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				local_resources_factor = 0.2
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.2
 			}
 		}
 		SRI_communal_syndicalism_idea3 = {
@@ -78,7 +77,8 @@ ideas = {
 			picture = UK_economy_syn_idea
 			modifier = {
 				local_resources_factor = 0.20
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 		SRI_communal_syndicalism_idea4 = {
@@ -88,7 +88,7 @@ ideas = {
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.20
 				local_resources_factor = 0.2
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.2
 			}
 		}
 		SRI_iri_idea = {
@@ -371,15 +371,14 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_rural_communes_idea"}
 			picture = generic_agrarian_reform
 			modifier = {
-				consumer_goods_factor = -0.05
-				stability_factor = 0.1
+				stability_factor = 0.2
 			}
 		}
 		SRI_urban_communes_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_urban_communes_idea"}
 			picture = generic_central_management
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.1
 			}
 		}
 	}
