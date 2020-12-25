@@ -311,7 +311,7 @@ ideas = {
 		ott_education_reform_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_education_reform_idea"}
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.1
 			}
 
 			picture = generic_research_bonus
@@ -371,7 +371,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_mass_production_idea"}
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.2
 					instant = yes
 				}
 			}

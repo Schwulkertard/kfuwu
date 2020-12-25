@@ -7,20 +7,19 @@ state = {
 	state_category = four
 
 	history = {
-		owner = BUL
+		owner = OTT
 		victory_points = {
 			9902 3
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
 
 			9902 = {
 				naval_base = 1
 				bunker = 1
 			}
 		}
-		add_core_of = BUL
+		add_core_of = OTT
 	}
 
 	provinces = {

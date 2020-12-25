@@ -54,10 +54,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		available = {
-			date > 1938.6.1
+        
+        available = {
+			date > 1937.6.1
 		}
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus OTT_political_interests"
@@ -77,7 +77,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -4
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -99,7 +99,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -4
 		y = 3
-		cost = 20
+		cost = 5
 		ai_will_do = {
 			factor = 70
 		}
@@ -133,7 +133,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -4
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 70
 		}
@@ -160,7 +160,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -2
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -183,7 +183,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -2
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -215,7 +215,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = -2
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -231,53 +231,18 @@ focus_tree = {
 	### Corruption chain
 
 	focus = {
-		id = OTT_fight_corruption
-		prerequisite = {
-			focus = OTT_enforce_autocracy focus = OTT_enforce_rule_of_law
-		}
-		icon = GFX_goal_generic_tackle_corruption
-		relative_position_id = OTT_internal_affairs
-		x = -3
-		y = 5
-		cost = 30
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-			has_country_flag = ott_investigation
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-
-		select_effect = {
-			country_event = {
-				id = ott.113 days = 50
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_fight_corruption"
-			custom_effect_tooltip = OTT_corruption1_tt
-		}
-	}
-
-	focus = {
 		id = OTT_eliminate_military_factions
 		prerequisite = {
-			focus = OTT_fight_corruption
+			focus = OTT_enforce_autocracy
+			focus = OTT_enforce_rule_of_law
 		}
 		icon = GFX_goal_focus_chain_army
 		relative_position_id = OTT_internal_affairs
 		x = -3
-		y = 6
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 500
-		}
-
-		available = {
-			has_country_flag = ott_investigation
 		}
 
 		select_effect = {
@@ -305,14 +270,10 @@ focus_tree = {
 		icon = GFX_goal_generic_investigation
 		relative_position_id = OTT_internal_affairs
 		x = -3
-		y = 7
+		y = 6
 		cost = 10
 		ai_will_do = {
 			factor = 500
-		}
-
-		available = {
-			has_country_flag = ott_investigation
 		}
 
 		completion_reward = {
@@ -333,7 +294,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -356,7 +317,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = 1
 		y = 2
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 50
 		}
@@ -430,7 +391,7 @@ focus_tree = {
 		relative_position_id = OTT_internal_affairs
 		x = 3
 		y = 2
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 50
 		}
@@ -560,108 +521,14 @@ focus_tree = {
 	##### FOREIGN AFFAIRS
 
 	focus = {
-		id = OTT_foreign_affairs
-		icon = GFX_goal_generic_major_alliance
-		x = 15
-		y = 0
-		cost = 5
-		ai_will_do = {
-			factor = 50
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_foreign_affairs"
-			add_political_power = 25
-			add_war_support = 0.08
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = OTT_ottoman_caliph
-		prerequisite = {
-			focus = OTT_foreign_affairs
-		}
-		icon = GFX_goal_OTT_caliph
-		relative_position_id = OTT_foreign_affairs
-		x = -1
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_ottoman_caliph"
-			reverse_add_opinion_modifier = {
-				target = BOS modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = LBA modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = AZE modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = ALO modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = AFG modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = PRF modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = MLY modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = INS modifier = ott_r_caliph
-			}
-			reverse_add_opinion_modifier = {
-				target = SUD modifier = ott_r_caliph
-			}
-			add_opinion_modifier = {
-				target = BOS modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = LBA modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = AZE modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = ALO modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = AFG modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = PRF modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = MLY modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = INS modifier = ott_rr_caliph
-			}
-			add_opinion_modifier = {
-				target = SUD modifier = ott_rr_caliph
-			}
-			# TODO - crimea reverse_add_opinion_modifier = { target = --- modifier = ott_r_caliph }
-			# TODO - dervish reverse_add_opinion_modifier = { target = --- modifier = ott_r_caliph }
-			# TODO - mountainous reverse_add_opinion_modifier = { target = --- modifier = ott_r_caliph }
-		}
-	}
-
-	focus = {
 		id = OTT_opda
 		prerequisite = {
-			focus = OTT_foreign_affairs
+			focus = OTT_internal_affairs
 		}
 		icon = GFX_goal_OTT_opda
-		relative_position_id = OTT_foreign_affairs
+		relative_position_id = OTT_internal_affairs
 		x = 0
-		y = 2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 80
@@ -691,185 +558,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
-	focus = {
-		id = OTT_retake_yemen
-		prerequisite = {
-			focus = OTT_ottoman_caliph
-		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 13
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-		available = {
-			is_neighbor_of = YEM
-			YEM = {
-				is_subject = no
-			}
-			has_country_flag = axis_defeated
-		}
-		will_lead_to_war_with = YEM
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_retake_yemen"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = YEM
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = OTT_turkic_diplomacy
-		prerequisite = {
-			focus = OTT_foreign_affairs
-		}
-		icon = GFX_goal_generic_wolf_pack
-		relative_position_id = OTT_foreign_affairs
-		x = 1
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-		available = {
-			OR = {
-				has_country_flag = axis_defeated
-				date > 1942.1.1
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_turkic_diplomacy"
-			add_political_power = 100
-			reverse_add_opinion_modifier = {
-				target = AZE modifier = ott_r_turkic_diplo
-			}
-			reverse_add_opinion_modifier = {
-				target = ALO modifier = ott_r_turkic_diplo
-			}
-			add_opinion_modifier = {
-				target = AZE modifier = ott_r_turkic_diplo
-			}
-			add_opinion_modifier = {
-				target = ALO modifier = ott_r_turkic_diplo
-			}
-			custom_effect_tooltip = OTT_turkestan_tt
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = OTT_retake_batum
-		prerequisite = {
-			focus = OTT_turkic_diplomacy
-		}
-		icon = GFX_goal_PER_Claim_Georgia
-		x = 17
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-		available = {
-			is_neighbor_of = GEO
-			GEO = {
-				NOT = {
-					is_guaranteed_by = GER
-				}
-				has_socialist_government = yes
-			}
-			has_country_flag = axis_defeated
-		}
-		will_lead_to_war_with = GEO
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_retake_batum"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = GEO
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	#focus = {
-	#	id = OTT_save_balkan_turks
-	#	prerequisite = {
-	#		focus = OTT_turkic_diplomacy
-	#	}
-	#	icon = GFX_goal_generic_alliance
-	#	x = 16
-	#	y = 2
-	#	cost = 10
-	#	ai_will_do = {
-	#		factor = 50
-	#	}
-    #
-	#	available = {
-	#		always = no
-	#	}
-    #
-	#	completion_reward = {
-	#		custom_effect_tooltip = OTT_NOT_IMPLEMENTED_YET
-	#	}
-	#}
-    #
-	#focus = {
-	#	id = OTT_azerbaijan_relations
-	#	prerequisite = {
-	#		focus = OTT_turkic_diplomacy
-	#	}
-	#	icon = GFX_goal_generic_improve_relations
-	#	x = 17
-	#	y = 3
-	#	cost = 10
-	#	ai_will_do = {
-	#		factor = 50
-	#	}
-    #
-	#	available = {
-	#		always = no
-	#	}
-    #
-	#	completion_reward = {
-	#		custom_effect_tooltip = OTT_NOT_IMPLEMENTED_YET
-	#	}
-	#}
-    #
-	#focus = {
-	#	id = OTT_status_of_crimea
-	#	prerequisite = {
-	#		focus = OTT_turkic_diplomacy
-	#	}
-	#	icon = GFX_goal_generic_military_sphere
-	#	x = 18
-	#	y = 2
-	#	cost = 10
-	#	ai_will_do = {
-	#		factor = 50
-	#	}
-    #
-	#	available = {
-	#		always = no
-	#	}
-    #
-	#	completion_reward = {
-	#		custom_effect_tooltip = OTT_NOT_IMPLEMENTED_YET
-	#	}
-	#}
 
 	##### ECONOMIC WORK
 
 	focus = {
 		id = OTT_economic_initiative
 		icon = GFX_goal_generic_production
-		x = 25
+		x = 15
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -889,11 +586,11 @@ focus_tree = {
 	### Agricultural chain
 
 	focus = {
-		id = OTT_agricultural_investments
+		id = OTT_school_of_agriculture
 		prerequisite = {
 			focus = OTT_economic_initiative
 		}
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_scientific_exchange
 		relative_position_id = OTT_economic_initiative
 		x = -4
 		y = 1
@@ -903,7 +600,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_agricultural_investments"
+			log = "[GetDateText]: [Root.GetName]: Focus OTT_school_of_agriculture"
+			add_ideas = ott_school_of_agriculture_idea
 			add_political_power = 25
 			random_owned_state = {
 				limit = {
@@ -924,28 +622,8 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
-
-	focus = {
-		id = OTT_school_of_agriculture
-		prerequisite = {
-			focus = OTT_agricultural_investments
-		}
-		icon = GFX_goal_generic_scientific_exchange
-		relative_position_id = OTT_economic_initiative
-		x = -4
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 30
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_school_of_agriculture"
-			add_ideas = ott_school_of_agriculture_idea
-		}
-	}
+		
 
 	focus = {
 		id = OTT_land_reform
@@ -955,7 +633,7 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		relative_position_id = OTT_economic_initiative
 		x = -4
-		y = 3
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 30
@@ -968,53 +646,6 @@ focus_tree = {
 			add_ideas = ott_land_reform_idea
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = OTT_mechanized_agriculture
-		prerequisite = {
-			focus = OTT_land_reform
-		}
-		icon = GFX_goal_generic_construct_civilian
-		relative_position_id = OTT_economic_initiative
-		x = -4
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-		available = {
-			has_completed_focus = OTT_anatolian_factories
-		}
-
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_mechanized_agriculture"
-			custom_effect_tooltip = OTT_uzel_unlocked_tt
-			random_owned_state = {
-				limit = {
-					state_population > 500000
-					is_core_of = OTT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			swap_ideas = {
-				remove_idea = ott_land_reform_idea
-				add_idea = ott_agricultural_revolution_idea
-			}
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 	}
 
 	### Industrial chain
@@ -1067,63 +698,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = OTT_anatolian_factories
-		prerequisite = {
-			focus = OTT_industrial_investments
-		}
-		icon = GFX_goal_generic_construct_civ_factory
-		relative_position_id = OTT_economic_initiative
-		x = 0
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 30
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_anatolian_factories"
-			340 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			344 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = OTT_encourage_construction_industry
-		prerequisite = {
-			focus = OTT_anatolian_factories
-		}
-		icon = GFX_goal_generic_construction
-		relative_position_id = OTT_economic_initiative
-		x = 0
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 30
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_encourage_construction_industry"
-			add_ideas = ott_construction_industry_idea
+            
+            add_ideas = ott_construction_industry_idea
 			add_tech_bonus = {
 				name = OTT_encourage_construction_industry
 				bonus = 1
@@ -1154,14 +730,53 @@ focus_tree = {
 	}
 
 	focus = {
+		id = OTT_anatolian_factories
+		prerequisite = {
+			focus = OTT_industrial_investments
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = OTT_economic_initiative
+		x = -1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus OTT_anatolian_factories"
+			340 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = OTT_military_industry
 		prerequisite = {
-			focus = OTT_encourage_construction_industry
+			focus = OTT_anatolian_factories
+		}
+		prerequisite = {
+			focus = OTT_aircraft_industry
 		}
 		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = OTT_economic_initiative
-		x = -2
-		y = 4
+		relative_position_id = OTT_anatolian_factories
+		x = -1
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 30
@@ -1214,16 +829,19 @@ focus_tree = {
 	focus = {
 		id = OTT_steel_industry
 		prerequisite = {
-			focus = OTT_encourage_construction_industry
+			focus = OTT_anatolian_factories
+		}
+		prerequisite = {
+			focus = OTT_aircraft_industry
 		}
 		available = {
 			controls_state = 340
 			controls_state = 356
 		}
 		icon = GFX_focus_generic_steel
-		relative_position_id = OTT_economic_initiative
-		x = 0
-		y = 4
+		relative_position_id = OTT_anatolian_factories
+		x = 1
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 50
@@ -1242,7 +860,12 @@ focus_tree = {
 			}
 			add_resource = {
 				type = steel
-				amount = 36
+				amount = 80
+				state = 356
+			}
+			add_resource = {
+				type = tungsten
+				amount = 50
 				state = 356
 			}
 		}
@@ -1252,12 +875,15 @@ focus_tree = {
 	focus = {
 		id = OTT_oil_industry
 		prerequisite = {
-			focus = OTT_encourage_construction_industry
+			focus = OTT_anatolian_factories
+		}
+		prerequisite = {
+			focus = OTT_aircraft_industry
 		}
 		icon = GFX_goal_generic_oil_refinery
-		relative_position_id = OTT_economic_initiative
-		x = 2
-		y = 4
+		relative_position_id = OTT_anatolian_factories
+		x = 3
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 20
@@ -1267,17 +893,17 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus OTT_oil_industry"
 			add_resource = {
 				type = oil
-				amount = 2
+				amount = 40
 				state = 291
 			}
 			add_resource = {
 				type = oil
-				amount = 2
+				amount = 20
 				state = 676
 			}
 			add_resource = {
 				type = oil
-				amount = 4
+				amount = 5
 				state = 680
 			}
 		}
@@ -1296,9 +922,9 @@ focus_tree = {
 			focus = OTT_oil_industry
 		}
 		icon = GFX_goal_generic_positive_trade_relations
-		relative_position_id = OTT_economic_initiative
-		x = 0
-		y = 5
+		relative_position_id = OTT_anatolian_factories
+		x = 1
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 30
@@ -1323,7 +949,7 @@ focus_tree = {
 		relative_position_id = OTT_economic_initiative
 		x = 4
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 50
 		}
@@ -1374,7 +1000,7 @@ focus_tree = {
 		relative_position_id = OTT_economic_initiative
 		x = 4
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -1443,7 +1069,7 @@ focus_tree = {
 		relative_position_id = OTT_economic_initiative
 		x = 4
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -1503,7 +1129,7 @@ focus_tree = {
 		relative_position_id = OTT_economic_initiative
 		x = 4
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -1559,9 +1185,9 @@ focus_tree = {
 	focus = {
 		id = OTT_ottoman_army
 		icon = GFX_goal_OTT_army
-		x = 41
+		x = 26
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 900
 		}
@@ -1589,7 +1215,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_axis_build_infantry
 		relative_position_id = OTT_ottoman_army
-		x = -7
+		x = -3
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1651,9 +1277,9 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_small_arms
 		relative_position_id = OTT_ottoman_army
-		x = -9
+		x = -5
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 40
 		}
@@ -1677,7 +1303,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_build_tank
 		relative_position_id = OTT_ottoman_army
-		x = -9
+		x = -5
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1709,7 +1335,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_army_artillery2
 		relative_position_id = OTT_ottoman_army
-		x = -7
+		x = -3
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -1735,9 +1361,9 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_radar
 		relative_position_id = OTT_ottoman_army
-		x = -7
+		x = -3
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 40
 		}
@@ -1761,9 +1387,9 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_army_motorized
 		relative_position_id = OTT_ottoman_army
-		x = -5
+		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -1787,7 +1413,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_army_tanks
 		relative_position_id = OTT_ottoman_army
-		x = -5
+		x = -1
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1819,7 +1445,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_construct_military
 		relative_position_id = OTT_ottoman_army
-		x = -7
+		x = -3
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -1851,7 +1477,7 @@ focus_tree = {
 		}
 		icon = GFX_focus_RAJ_lions_of_the_great_war
 		relative_position_id = OTT_ottoman_army
-		x = 0
+		x = 3
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1864,37 +1490,11 @@ focus_tree = {
 			add_tech_bonus = {
 				name = OTT_edok
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = OTT_doctrine_studies
-		prerequisite = {
-			focus = OTT_edok
-		}
-		icon = GFX_goal_generic_army_doctrines
-		relative_position_id = OTT_ottoman_army
-		x = -3
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_doctrine_studies"
-			add_tech_bonus = {
-				name = OTT_doctrine_studies
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -1904,7 +1504,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_air_production
 		relative_position_id = OTT_ottoman_army
-		x = -1
+		x = 5
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -2053,41 +1653,14 @@ focus_tree = {
 	### Army Aviation
 
 	focus = {
-		id = OTT_army_aviation_unq
-		prerequisite = {
-			focus = OTT_ottoman_army
-		}
-		icon = GFX_goal_generic_build_airforce
-		relative_position_id = OTT_ottoman_army
-		x = 7
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 20
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_army_aviation_unq"
-			air_experience = 25
-			add_tech_bonus = {
-				name = OTT_army_aviation_unq
-				bonus = 1
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
 		id = OTT_more_airbases
 		prerequisite = {
-			focus = OTT_army_aviation_unq
-		}
+			focus = OTT_ottoman_army
+			}
 		icon = GFX_goal_generic_construct_civilian
 		relative_position_id = OTT_ottoman_army
-		x = 7
-		y = 2
+		x = 0
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 70
@@ -2103,24 +1676,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus OTT_more_airbases"
-			773 = {
+			446 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 10
 					instant_build = yes
 				}
 			}
-			354 = {
+			447 = {
 				add_building_construction = {
 					type = air_base
-					level = 1
+					level = 10
 					instant_build = yes
 				}
 			}
-			291 = {
+			453 = {
 				add_building_construction = {
 					type = air_base
-					level = 1
+					level = 10
 					instant_build = yes
 				}
 			}
@@ -2129,42 +1702,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = OTT_air_warfare_academy
-		prerequisite = {
-			focus = OTT_more_airbases
-		}
-		icon = GFX_goal_generic_air_doctrine
-		relative_position_id = OTT_ottoman_army
-		x = 6
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 50
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_air_warfare_academy"
-			air_experience = 25
-			add_ideas = ott_air_warfare_academy_idea
-			add_tech_bonus = {
-				name = OTT_air_warfare_academy
-				bonus = 1
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
 		id = OTT_aircraft_industry
 		prerequisite = {
-			focus = OTT_more_airbases
+			focus = OTT_industrial_investments
 		}
 		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = OTT_ottoman_army
-		x = 8
-		y = 3
+		relative_position_id = OTT_industrial_investments
+		x = 1
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 70
@@ -2174,10 +1719,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus OTT_aircraft_industry"
 			custom_effect_tooltip = OTT_hurkus_unlocked_tt
 			773 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2185,110 +1730,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
-	focus = {
-		id = OTT_fighter_focus_unq
-		prerequisite = {
-			focus = OTT_aircraft_industry
-		}
-		icon = GFX_goal_generic_air_fighter
-		mutually_exclusive = {
-			focus = OTT_bomber_focus_unq
-		}
-		relative_position_id = OTT_ottoman_army
-		x = 7
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 30
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_fighter_focus_unq"
-			add_tech_bonus = {
-				name = OTT_fighter_focus_unq
-				bonus = 1
-				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = OTT_bomber_focus_unq
-		prerequisite = {
-			focus = OTT_aircraft_industry
-		}
-		icon = GFX_goal_generic_air_bomber
-		mutually_exclusive = {
-			focus = OTT_fighter_focus_unq
-		}
-		relative_position_id = OTT_ottoman_army
-		x = 9
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_bomber_focus_unq"
-			add_tech_bonus = {
-				name = OTT_bomber_focus_unq
-				bonus = 1
-				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
-				category = tactical_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = OTT_german_air_designs
-		prerequisite = {
-			focus = OTT_fighter_focus_unq focus = OTT_bomber_focus_unq
-		}
-		icon = GFX_goal_generic_intelligence_exchange
-		relative_position_id = OTT_ottoman_army
-		x = 8
-		y = 5
-		cost = 10
-		ai_will_do = {
-			factor = 80
-		}
-		available = {
-			country_exists = GER
-			NOT = {
-				has_country_flag = ott_german_embargo
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus OTT_german_air_designs"
-			GER = {
-				country_event = {
-					id = ott.79 days = 3
-				}
-			}
-			custom_effect_tooltip = OTT_german_approval_tt
-		}
-	}
-
 	##### OTTOMAN NAVY
 
 	focus = {
 		id = OTT_ottoman_navy
 		icon = GFX_goal_generic_amphibious_assault
-		x = 56
+		x = 36
 		y = 0
 		cost = 10
 		ai_will_do = {

@@ -10,12 +10,12 @@ state = {
 	}
 
 	history = {
-		owner = SER
+		owner = CRO
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 		}
-		add_core_of = SER
+		add_core_of = CRO
 		victory_points = {
 			3939 2
 		}
