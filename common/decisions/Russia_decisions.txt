@@ -3,26 +3,6 @@
 ## By Alpinia       ##
 ######################
 RUS_Industrial_Expansion_decisions = {
-	RUS_FIN_war = {
-		icon = generic_operation
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 1000
-		}
-		
-		cost = 0
-	
-		visible = {
-			country_exists = FIN
-		}
-		complete_effect = {
-			declare_war_on = {
-				target = FIN
-				type = annex_everything
-			}
-	}
-}
 	RUS_Develop_Industry_In_Novgorod = {
 		icon = generic_construction
 		
@@ -37,8 +17,8 @@ RUS_Industrial_Expansion_decisions = {
 			263 = { is_owned_and_controlled_by = ROOT } #Novgorod
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -81,8 +61,8 @@ RUS_Industrial_Expansion_decisions = {
 			209 = { is_owned_and_controlled_by = ROOT } #Pskov
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -125,8 +105,8 @@ RUS_Industrial_Expansion_decisions = {
 			248 = { is_owned_and_controlled_by = ROOT } #Yaroslavl
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -169,8 +149,8 @@ RUS_Industrial_Expansion_decisions = {
 			252 = { is_owned_and_controlled_by = ROOT } #Nizhny_Novgorod
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -213,8 +193,8 @@ RUS_Industrial_Expansion_decisions = {
 			249 = { is_owned_and_controlled_by = ROOT } #Kazan
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -269,8 +249,8 @@ RUS_Industrial_Expansion_decisions = {
 			651 = { is_owned_and_controlled_by = ROOT } #Ufa
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -313,8 +293,8 @@ RUS_Industrial_Expansion_decisions = {
 			653 = { is_owned_and_controlled_by = ROOT } #Yekaterinburg
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -369,8 +349,8 @@ RUS_Industrial_Expansion_decisions = {
 			571 = { is_owned_and_controlled_by = ROOT } #Omsk
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -426,8 +406,8 @@ RUS_Industrial_Expansion_decisions = {
 			570 = { is_owned_and_controlled_by = ROOT } #Novo-Nikolayevsk
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -482,8 +462,8 @@ RUS_Industrial_Expansion_decisions = {
 			568 = { is_owned_and_controlled_by = ROOT } #Krasnoyarsk
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -539,8 +519,8 @@ RUS_Industrial_Expansion_decisions = {
 			566 = { is_owned_and_controlled_by = ROOT } #Irkutsk
 		}
 
-		cost = 25
-		days_remove = 90
+		cost = 5
+		days_remove = 60
 		fire_only_once = yes
 		
 		modifier = {
@@ -597,7 +577,7 @@ RUS_Resource_decisions = {
 			569 = { is_owned_and_controlled_by = ROOT } #Shchlegovsk
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -633,7 +613,7 @@ RUS_Resource_decisions = {
 			787 = { is_owned_and_controlled_by = ROOT } #Terek
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -669,7 +649,7 @@ RUS_Resource_decisions = {
 			722 = { is_owned_and_controlled_by = ROOT } #Pechenga
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -705,7 +685,7 @@ RUS_Resource_decisions = {
 			568 = { is_owned_and_controlled_by = ROOT } #Krasnoyarsk
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -741,7 +721,7 @@ RUS_Resource_decisions = {
 			137 = { is_owned_and_controlled_by = ROOT } #Crimea
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -777,7 +757,7 @@ RUS_Resource_decisions = {
 			264 = { is_owned_and_controlled_by = ROOT } #Tikhvin
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -813,7 +793,7 @@ RUS_Resource_decisions = {
 			218 = { is_owned_and_controlled_by = ROOT } #Rostov
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -849,7 +829,7 @@ RUS_Resource_decisions = {
 			213 = { is_owned_and_controlled_by = ROOT } #Murmansk
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 
@@ -885,7 +865,7 @@ RUS_Resource_decisions = {
 			653 = { is_owned_and_controlled_by = ROOT } #Yekaterinburg
 		}
 
-		cost = 25
+		cost = 5
 		days_remove = 60
 		fire_only_once = yes
 

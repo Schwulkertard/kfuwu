@@ -53,6 +53,7 @@ add_ideas = {
 
 	#AUS_k_u_k_armee_bonus
 	AUS_part_of_the_Empire
+	neutral_idea
 }
 
 create_country_leader = {

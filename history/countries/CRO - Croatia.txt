@@ -86,6 +86,7 @@ add_ideas = {
 	AUS_part_of_the_Empire
 	ILL_croatian_command
 	ILL_federated_army
+	neutral_idea
 }
 
 add_opinion_modifier = { target = FRA modifier = embargo }

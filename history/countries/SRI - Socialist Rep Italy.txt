@@ -44,6 +44,8 @@ set_technology = {
 	early_bomber = 1
 	naval_bomber1 = 1
 	CAS1 = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
 }
 
 ### Navy - MtG ###
@@ -109,6 +111,37 @@ if = {
 set_convoys = 50
 set_stability = 0.5
 set_war_support = 0.20
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 2000
+	producer = SRI
+}
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 800
+	producer = SRI
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 50000
+	producer = SRI
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 600
+	producer = SRI
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 200
+	producer = SRI
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 200
+	producer = SRI
+}
 
 set_global_flag = KR_italy_balance
 country_event = { id = socitaly.1 days = 1 }

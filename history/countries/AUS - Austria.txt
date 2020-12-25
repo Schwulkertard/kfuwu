@@ -130,6 +130,42 @@ set_popularities = {
 
 set_convoys = 50
 
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 2000
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 500
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 50000
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 1000
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 200
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = light_tank_equipment_2
+	amount = 600
+	producer = AUS
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 900
+	producer = AUS
+}
+
 set_autonomy = {
 	target = HUN
 	autonomy_state = kr_autonomous_puppet
@@ -157,6 +193,8 @@ add_ideas = {
 	low_economic_mobilisation
 	ZO_idea
 	AUS_army_1
+	AUS_socialist_promises
+	AUS_divided_society
 	### Minister
 	AUS_Albert_von_Mensdorff_Pouilly_Dietrichstein_hog_ade
 	AUS_Edmund_Glaise_von_Horstenau_for_ade

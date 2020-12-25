@@ -18,6 +18,7 @@ set_technology = {
 	gwtank = 1
 	interwar_antiair = 1
 	radio = 1
+	interwar_antitank
 	### Air ###
 	early_fighter = 1
 	early_bomber = 1
@@ -85,6 +86,37 @@ if = {
 }
 
 set_research_slots = 4
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 1000
+	producer = UKR
+}
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 1000
+	producer = UKR
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 60000
+	producer = UKR
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 1000
+	producer = UKR
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 1000
+	producer = UKR
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 100
+	producer = UKR
+}
 
 add_opinion_modifier = { target = FRA modifier = embargo }
 add_opinion_modifier = { target = ENG modifier = embargo }

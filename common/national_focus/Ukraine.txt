@@ -925,8 +925,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_State_Revanchism"
 			add_ideas = UKR_state_revanchism
 		}
+	}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	    }
     }
 
    focus = {

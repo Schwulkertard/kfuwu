@@ -35,6 +35,7 @@ add_ideas = {
 	CZE_Prokop_Drtina_sec_sli
 
 	AUS_part_of_the_Empire
+	neutral_idea
 }
 
 set_politics = {
