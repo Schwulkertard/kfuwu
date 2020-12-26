@@ -337,7 +337,7 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_state_atheism"
-			add_stability = 0.2
+			add_stability = 0.05
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}

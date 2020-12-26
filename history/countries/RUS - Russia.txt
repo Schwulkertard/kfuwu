@@ -133,7 +133,7 @@ add_equipment_to_stockpile = {
 }
 add_equipment_to_stockpile = {
 	type = anti_tank_equipment_1
-	amount = 1000
+	amount = 2000
 	producer = RUS
 }
 

@@ -263,7 +263,7 @@ leader_traits = {
 	hog_totalist_chairman = { #Valois etc.
 
 		political_power_gain = -0.15
-		production_speed_arms_factory_factor = 0.15
+		production_speed_arms_factory_factor = 0.2
 		industrial_capacity_factory = 0.05
 		local_resources_factor = 0.05
 

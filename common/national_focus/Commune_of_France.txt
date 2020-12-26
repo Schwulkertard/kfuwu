@@ -1553,9 +1553,6 @@ focus_tree = {
 				category = infantry_weapons
 				category = cat_mechanized_equipment
 				category = naval_equipment
-				category = air_doctrine
-				category = naval_doctrine
-				category = air_equipment
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

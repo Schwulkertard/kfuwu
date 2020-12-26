@@ -87,6 +87,30 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
+			type = basic_heavy_tank
+		}
+		requested_factories = 1
+		progress = 0.50
+		efficiency = 100
+	}
+	dd_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.50
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.50
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
 			type = light_tank_equipment_2
 		}
 		requested_factories = 1

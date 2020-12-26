@@ -66,6 +66,16 @@ ideas = {
 			}
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+		ENG_militarized_industry_idea3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_militarized_industry_idea"}
+			allowed = {
+				always = no
+			}
+			modifier = {
 				production_speed_arms_factory_factor = 0.05
 			}
 			removal_cost = -1
@@ -94,8 +104,6 @@ ideas = {
 			}
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.1
-				production_speed_arms_factory_factor = 0.1
 			}
 			removal_cost = -1
 			picture = generic_production_bonus
@@ -140,8 +148,16 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_local_collective_ideas"}
 			picture = generic_production_bonus
 			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
 				industrial_capacity_factory = 0.05
-				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		ENG_autarky_achieved_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_autarky_achieved_idea"}
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 		ENG_local_collectives_ideas = {
@@ -149,7 +165,7 @@ ideas = {
 			picture = generic_production_bonus
 			modifier = {
 				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 		# Military
@@ -223,10 +239,28 @@ ideas = {
 			}
 			modifier = {
 				conscription_factor = 0.25
-				consumer_goods_factor = 0.1
 			}
 			removal_cost = -1
 			picture = UoB_women_soldiers
+		}
+		ENG_autarky_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_autarky_idea"}
+			allowed = {
+				original_tag = ENG
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_exploit_mines
+			modifier = {
+				production_speed_synthetic_refinery_factor=0.3
+				global_building_slots_factor=0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				local_resources_factor = 0.2
+			}
 		}
 		ENG_reformed_militia_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_reformed_militia_idea"}
@@ -237,9 +271,8 @@ ideas = {
 				conscription_factor = 0.1
 				army_morale_factor = 0.1
 				army_org_Factor = -0.1
-				planning_speed = -0.25
-				army_core_defence_factor = 0.15
-				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
 			}
 			picture = UoB_militia_idea
 		}
