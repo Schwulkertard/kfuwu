@@ -1,7 +1,6 @@
 ﻿capital = 689
 
 oob = "CAF"
-set_naval_oob= "CAF_naval"
 
 set_technology = {
 	### Tanks ###
@@ -315,4 +314,3 @@ create_navy_leader = {
 	coordination_skill = 3
 }
 
-CAF_start_naval_variant = yes

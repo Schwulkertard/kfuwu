@@ -7,10 +7,6 @@ SWE = {
 
 add_ideas = {
 	limited_conscription
-	SWE_Goesta_Bagge_hog_sco
-	SWE_Christian_Guenther_for_sco
-	SWE_Gustav_Cassel_eco_mli
-	SWE_Carlos_Adlercreutz_sec_ade
 }
 
 set_technology = {

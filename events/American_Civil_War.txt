@@ -79,44 +79,6 @@ country_event = { # Chief of Army
 	}
 }
 
-country_event = { # Chief of Navy
-	id = amcivwar.73
-	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.73" }
-	title = amcivwar.73.t
-	desc = amcivwar.73.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = USA
-		has_completed_focus = USA_navy
-		NOT = {
-			has_idea = USA_Charles_Edison_cnav
-			has_idea = USA_Chester_William_Nimitz_Sr_cnav
-			has_idea = USA_Ernest_Joseph_King_cnav
-			has_idea = USA_Harold_Rainsford_Stark_cnav
-			has_idea = USA_Robert_Lee_Ghormley_cnav
-			has_idea = USA_Thomas_Charles_Hart_cnav
-			has_idea = USA_William_Harrison_Standley_cnav
-		}
-	}
-
-	option = { # William Harrison Standley
-		name = amcivwar.73.a
-		add_ideas = USA_William_Harrison_Standley_cnav
-	}
-	option = { # Ernest Joseph King
-		name = amcivwar.73.b
-		add_ideas = USA_Ernest_Joseph_King_cnav
-	}
-	option = { # Thomas Hart
-		name = amcivwar.73.c
-		add_ideas = USA_Thomas_Charles_Hart_cnav
-	}
-}
-
 country_event = { # Chief of Air Force
 	id = amcivwar.74
 	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.74" }

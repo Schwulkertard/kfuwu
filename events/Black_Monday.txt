@@ -45,30 +45,6 @@ country_event = {
 				id = ustates.2
 			}
 		}
-		SIA = {
-			country_event = {
-				days = 24
-				id = siamn.4
-			}
-		}
-		JAP = {
-			country_event = {
-				days = 7
-				id = japdom.242
-			}
-		}
-		ICE = {
-			country_event = {
-				days = 2
-				id = ice.200
-			}
-		}
-		NOR = {
-			country_event = {
-				days = 7
-				id = norway.2
-			}
-		}
 		CAN = {
 			country_event = {
 				days = 2

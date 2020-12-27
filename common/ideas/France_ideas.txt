@@ -4,53 +4,6 @@
 ideas = {
 
 	country = {
-		GER_FRA_war_0 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_0"}
-			modifier = {
-				stability_factor = 0.1
-			}
-		}
-		GER_FRA_war_1 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_1"}
-			modifier = {
-				industrial_capacity_factory = 0.05
-				stability_factor = 0.1
-			}
-		}
-		GER_FRA_war_A = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_A"}
-			modifier = {
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
-			}
-		}
-		GER_FRA_war_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_2"}
-			modifier = { industrial_capacity_factory = 0.10
-			stability_factor = 0.15
-			production_factory_efficiency_gain_factor = 0.05
-			}
-		}
-		GER_FRA_war_B = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_B"}
-			modifier = { army_core_defence_factor = 0.1
-			army_core_attack_factor = 0.1
-			}
-		}
-		GER_FRA_war_3 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_3"}
-			modifier = { industrial_capacity_factory = 0.15
-			stability_factor = 0.15
-			production_factory_efficiency_gain_factor = 0.05
-			production_factory_max_efficiency_factor = 0.05
-			}
-		}
-		GER_FRA_war_C = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_FRA_war_C"}
-			modifier = { army_core_defence_factor = 0.15
-			army_core_attack_factor = 0.15
-			}
-		}
 		FRA_to_war_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_to_war_idea"}
 			allowed = { always = no }

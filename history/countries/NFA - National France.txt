@@ -126,10 +126,6 @@ set_popularities = {
 add_opinion_modifier = { target = ENG modifier = embargo }
 
 add_ideas = {
-	NFA_Maurice_Janin_hog_ade
-	NFA_Paul_Baudouin_for_ade
-	NFA_Eugene_Schueller_eco_pau
-	NFA_Eugene_Deloncle_sec_pau
 
 	NFA_anti_communard
 	limited_conscription

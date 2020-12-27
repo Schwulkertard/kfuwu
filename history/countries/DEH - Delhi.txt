@@ -1,7 +1,6 @@
 ﻿capital = 439
 
 oob = "DEH"
-set_naval_oob= "DEH_naval"
 
 set_technology = {
 	### Tanks ###
@@ -97,10 +96,6 @@ add_opinion_modifier = { target = GER modifier = embargo }
 add_opinion_modifier = { target = SAF modifier = embargo }
 
 add_ideas = {
-	DEH_Maharaja_Ganga_Singh_hog_sco
-	DEH_Sir_Atul_Chandra_Chatterjee_for_sco
-	DEH_Sir_C_D_Deshmukh_eco_sco
-	DEH_Sir_C_P_Ramaswami_Iyer_sec_mli
 	DEH_princely_power
 	DEH_backwards_economy_1
 }
@@ -452,4 +447,3 @@ create_navy_leader = {
 	coordination_skill = 1
 }
 
-DEH_start_naval_variant = yes

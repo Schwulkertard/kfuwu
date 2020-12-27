@@ -13,77 +13,12 @@ on_actions = {
 				limit = { tag = AUS }
 				country_event = aus.elections.100
 			}
-			### Belgium ###
-			if = {
-				limit = { tag = BEL }
-				country_event = bel.1000
-				country_event = bel.1001
-				country_event = belind.14
-			}
 			### Canada ###
 			if = {
 				limit = { tag = CAN }
 				country_event = canada.50 #1936
 				country_event = canada.67 #runoff
 				country_event = canada.75 #after 1936
-			}
-			### Flanders ###
-			if = {
-				limit = { tag = FLN }
-				country_event = fln.101	#Flemish Generic
-			}
-			### Britain ###
-			if = {
-				limit = { tag = GBR }
-				country_event = uk.34
-			}
-			### Netherlands ###
-			if = {
-				limit = { tag = HOL }
-				country_event = hol.5
-			}
-			### Japan ###
-			if = {
-				limit = { tag = JAP }
-				country_event = japdom.3	#1936
-				country_event = japdom.54	#1940
-				country_event = japdom.55	#1944
-			}
-			### Poland ###
-			if = {
-				limit = {
-					tag = POL
-					NOT = { has_cosmetic_tag = POL_PLC }
-				}
-				country_event = poland.45
-				country_event = poland.46
-				country_event = poland.47
-			}
-			### PLC ###
-			if = {
-				limit = {
-					tag = POL
-					has_cosmetic_tag = POL_PLC
-				}
-				country_event = plcommon.15
-			}
-			### South Africa ###
-			if = {
-				limit = { tag = SAF }
-				country_event = saf.26
-				country_event = saf.90
-				country_event = saf.91
-				country_event = saf.93
-			}
-			### Scandinavia ###
-			if = {
-				limit = { tag = SCA }
-				country_event = scandinavia.3
-			}
-			### Siam ###
-			if = {
-				limit = { tag = SIA }
-				country_event = siamn.23	#1936
 			}
 			### United States of America ###
 			if = {

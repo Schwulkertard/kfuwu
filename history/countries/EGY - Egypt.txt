@@ -1,6 +1,5 @@
 ﻿capital = 446
 OOB = "EGY"
-set_naval_oob= "EGY_naval"
 set_research_slots = 3
 set_technology = {
 	### Infantry ###
@@ -290,4 +289,3 @@ create_navy_leader = {# Mahmoud Hamza
 	coordination_skill = 3
 }
 
-EGY_start_naval_variant = yes

@@ -1,14 +1,10 @@
 state = {
 	id = 1016
 	name = "STATE_1016"
-	resources = {
-		rubber = 102
-	}
 
 	history = {
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = GER
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 3
 			10237 = {

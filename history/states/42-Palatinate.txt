@@ -4,7 +4,7 @@ state = {
 	manpower = 2699892
 	resources = {
 		steel = 100
-		aluminium = 24
+		aluminium = 100
 	}
 
 	state_category = eleven
@@ -14,7 +14,7 @@ state = {
 		add_core_of = GER
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 5
+			industrial_complex = 8
 			11560 = {
 				bunker = 2
 			}

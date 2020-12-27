@@ -71,6 +71,18 @@ technology_categories = {
 	maintenance_company_tech
 	concentrated_industry_tech
 	dispersed_industry_tech
+	desert_tech
+	shock_tech
+	jaeger_tech
+	jungle_tech
+	year_1918
+	year_1936
+	year_1937
+	year_1938
+	year_1939
+	year_1940
+	year_1941
+	year_1942
 
 	### Naval Categories ###
 	naval_minesweeping

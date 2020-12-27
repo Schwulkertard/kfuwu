@@ -73,10 +73,6 @@ add_ideas = {
 	VEN_oil_addiction
 	VEN_foreign_oil_companies
 	# Cabinet
-	VEN_Lisandro_Alvarado_hog_sde
-	VEN_Jose_Antonio_Ramos_Sucre_for_sde
-	VEN_Maria_Cruz_Salmeron_Acosta_eco_sde
-	VEN_Isaac_Jose_Pardo_Soublette_sec_sde
 }
 
 create_country_leader = {

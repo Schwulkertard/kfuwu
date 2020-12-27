@@ -4,8 +4,7 @@ state = {
 
 	history = {
 		owner = OTT
-		add_claim_by = OTT
-		add_core_of = EGY
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 2
 		}

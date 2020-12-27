@@ -12,9 +12,8 @@ state = {
 	}
 
 	history = {
-		owner = GEA
-		add_core_of = GEA
-		add_core_of = VIE
+		owner = JAP
+		add_core_of = VEN
 		victory_points = {
 			4379 3 # Hue
 		}

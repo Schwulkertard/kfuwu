@@ -113,7 +113,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	ITA_republic_federation
 	ITA_Carlo_Rosselli_hog_sde
 	ITA_Aldo_Garosci_for_sli
 	ITA_Mario_Bracci_eco_sli
@@ -406,5 +405,3 @@ create_navy_leader = {# Carlo Bergamini
 	coordination_skill = 1
 	id = 568
 }
-
-ITA_start_naval_variant = yes

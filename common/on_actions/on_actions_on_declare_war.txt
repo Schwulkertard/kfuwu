@@ -51,22 +51,6 @@ on_actions = {
 				}
 			}
 
-			# removing from Japanese economic sphere
-			if = {
-				limit = {
-					is_in_array = { global.asian_economic_sphere = ROOT }
-					FROM = { tag = JAP }
-				}
-				ROOT = { country_event = japfor.404 }
-			}
-			if = {
-				limit = {
-					is_in_array = { global.asian_economic_sphere = FROM }
-					ROOT = { tag = JAP }
-				}
-				FROM = { country_event = japfor.404 }
-			}
-
 			# Attacking an American country post-ACW while it's in recovery
 			if = {
 				limit = {

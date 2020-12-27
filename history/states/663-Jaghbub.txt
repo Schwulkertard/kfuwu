@@ -4,6 +4,7 @@ state = {
 
 	history = {
 		owner = SRI
+		add_core_of = VEN
 		victory_points = {
 			1060 1
 		}

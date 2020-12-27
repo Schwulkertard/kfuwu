@@ -227,5 +227,3 @@ create_navy_leader = {
 	maneuvering_skill = 2
 	coordination_skill = 3
 }
-
-PAP_start_naval_variant = yes

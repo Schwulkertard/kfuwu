@@ -28,11 +28,6 @@ RUS_add_stability = {
 	}
 }
 
-RUS_unlock_political_path = {
-	remove_ideas = RUS_political_instability
-	complete_national_focus = RUS_Political_Stabilisation
-}
-
 #choosing number of states affected
 
 RUS_zemstvo_add_civilian_factory = {

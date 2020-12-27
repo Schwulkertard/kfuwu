@@ -148,17 +148,6 @@ is_british_colonial_claim = {
 }
 
 # use this in state scope
-is_owned_by_GER_or_MAF = {
-	owner = {
-		OR = {
-			tag = GER
-			tag = MAF
-			is_subject_of = MAF
-		}
-	}
-}
-
-# use this in state scope
 african_state_can_be_taken = {
 	NOT = {
 		state = 879 #Katanga

@@ -8,12 +8,6 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			is_spanish_speaking_tag = yes
-		}
-		localization_key = FRA_workers_of_the_world_unite_SPA
-	}
-	text = {
-		trigger = {
 			is_italian_tag = yes
 		}
 		localization_key = FRA_workers_of_the_world_unite_ITA

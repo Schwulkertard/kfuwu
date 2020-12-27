@@ -39,12 +39,6 @@ country_event = {
 		add_stability = -0.2
 		remove_ideas_with_trait = head_of_government
 		add_ideas = FRA_Comite_de_Salut_Public_hog_syn
-		hidden_effect = {
-			country_event = {
-				days = 7
-				id = comfrance.6
-			}
-		}
 		# set 1936 election flags
 		set_country_flag = {
 			flag = FRA_ANAR

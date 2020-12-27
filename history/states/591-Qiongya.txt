@@ -9,8 +9,8 @@ state = { #Qiongya
 
 
 	history = {
-		owner = GEA
-		add_core_of = GEA
+		owner = JAP
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 2
 			air_base = 1

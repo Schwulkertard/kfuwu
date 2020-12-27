@@ -10,12 +10,11 @@ state = {
 	}
 
 	history = {
-		owner = BUR
-		add_core_of = BUR
+		owner = DEH
+		add_core_of = DEH
 		buildings = {
 			infrastructure = 3
 			air_base = 1
-			industrial_complex = 1
 		}
 		victory_points = {
 			1492 5 # Mandalay

@@ -554,10 +554,6 @@ is_in_conference_with_chinese_ally = {
 			}
 		}
 		AND = {
-			tag = JAP
-			FNG = { at_conference_has_war_with_owner = yes }
-		}
-		AND = {
 			tag = RUS
 			has_elected_government = yes
 		}
@@ -643,8 +639,6 @@ ROOT_is_restriction_exception = {
 					OR = {
 						RUS = { at_conference_no_war_with_ROOT = yes }
 						SOV = { at_conference_no_war_with_ROOT = yes }
-						MON = { at_conference_no_war_with_ROOT = yes }
-						TRK = { at_conference_no_war_with_ROOT = yes }
 					}
 				}
 				AND = {
@@ -652,7 +646,6 @@ ROOT_is_restriction_exception = {
 					OR = {
 						SOV = { at_conference_no_war_with_ROOT = yes }
 						JAP = { at_conference_no_war_with_ROOT = yes }
-						SIB = { at_conference_no_war_with_ROOT = yes }
 					}
 				}
 			}
@@ -667,7 +660,6 @@ ROOT_is_restriction_exception = {
 			OR = {
 				AND = {
 					BUL = { at_conference_has_war_with_ROOT = yes }
-					SER = { at_conference_no_war_with_ROOT = yes }
 				}
 				AND = {
 					OTT = { at_conference_has_war_with_ROOT = yes }
@@ -754,8 +746,6 @@ PREV_is_restriction_exception = {
 					OR = {
 						RUS = { at_conference_no_war_with_PREV = yes }
 						SOV = { at_conference_no_war_with_PREV = yes }
-						MON = { at_conference_no_war_with_PREV = yes }
-						TRK = { at_conference_no_war_with_PREV = yes }
 					}
 				}
 				AND = {
@@ -763,7 +753,6 @@ PREV_is_restriction_exception = {
 					OR = {
 						SOV = { at_conference_no_war_with_PREV = yes }
 						JAP = { at_conference_no_war_with_PREV = yes }
-						SIB = { at_conference_no_war_with_PREV = yes }
 					}
 				}
 			}
@@ -778,7 +767,6 @@ PREV_is_restriction_exception = {
 			OR = {
 				AND = {
 					BUL = { at_conference_has_war_with_PREV = yes }
-					SER = { at_conference_no_war_with_PREV = yes }
 				}
 				AND = {
 					OTT = { at_conference_has_war_with_PREV = yes }
@@ -802,19 +790,16 @@ PREV_is_restriction_exception = {
 		AND = {
 			OR = {
 				tag = RUS
-				tag = SOV
 			}
 			OR = {
 				FRA = { at_conference_no_war_with_PREV = yes }
 				GER = { at_conference_no_war_with_PREV = yes }
 				CAN = { at_conference_no_war_with_PREV = yes }
-				GBR = { at_conference_no_war_with_PREV = yes }
 			}
 			OR = {
 				AUS = { at_conference_has_war_with_PREV = yes }
 				HUN = { at_conference_has_war_with_PREV = yes }
 				GER = { at_conference_has_war_with_PREV = yes }
-				POL = { at_conference_has_war_with_PREV = yes }
 			}
 		}
 	}
@@ -993,7 +978,6 @@ is_exception_to_taking_states_on_other_continents = {
 		AND = {
 			is_in_europe = yes
 			NOT = { tag = RUS }
-			NOT = { tag = SOV }
 			var:global.eval_state = {
 				OR = {
 					state = 690 #Northern Bahamas
@@ -1006,7 +990,6 @@ is_exception_to_taking_states_on_other_continents = {
 		AND = {
 			OR = {
 				tag = RUS
-				tag = SOV
 			}
 			var:global.eval_state = {
 				OR = {
@@ -1021,7 +1004,6 @@ is_exception_to_taking_states_on_other_continents = {
 		AND = {
 			OR = {
 				tag = RUS
-				tag = SOV
 			}
 			any_owned_state = {
 				is_coastal = yes
@@ -1152,9 +1134,6 @@ is_exception_to_taking_states_on_other_continents = {
 		AND = {
 			OR = {
 				tag = USA
-				tag = CSA
-				tag = TEX
-				tag = CAL
 			}
 			var:global.eval_state = {
 				OR = {
@@ -1177,20 +1156,6 @@ is_exception_to_taking_states_on_other_continents = {
 		AND = {
 			is_in_australia = yes
 			var:global.eval_state = { is_southeast_asia = yes }
-		}
-		# Spanish countries will take states in South and Central America
-		AND = {
-			OR = {
-				tag = SPR
-				tag = CNT
-				tag = CAR
-			}
-			var:global.eval_state = {
-				OR = {
-					is_on_continent = south_america
-					is_on_continent = central_america
-				}
-			}
 		}
 	}
 }
@@ -1446,7 +1411,6 @@ is_willing_to_take_state_ROOT = {
 	rule_CAN_Ohio_check_ROOT = no
 	rule_CAN_Illinois_check_ROOT = no
 	rule_CAN_Indiana_check_ROOT = no
-	rule_stay_out_of_america_ROOT = no
 	rule_stay_out_of_alands_ROOT = no
 	rule_BHC_stay_out_of_siam_ROOT = no
 	rule_let_ROM_finish_civil_war_ROOT = no
@@ -1497,7 +1461,6 @@ is_willing_to_take_state_PREV = {
 	rule_CAN_Ohio_check_PREV = no
 	rule_CAN_Illinois_check_PREV = no
 	rule_CAN_Indiana_check_PREV = no
-	rule_stay_out_of_america_PREV = no
 	rule_stay_out_of_alands_PREV = no
 	rule_BHC_stay_out_of_siam_PREV = no
 	rule_let_ROM_finish_civil_war_PREV = no
@@ -1743,27 +1706,6 @@ rule_dont_take_ally_ambitions_PREV = {
 			}
 		}
 		# exception: Canada will still take states in the ACW
-		NOT = {
-			AND = {
-				OR = {
-					tag = NEE
-					tag = CAL
-				}
-				PREV = { tag = CAN }
-				var:global.eval_state = {
-					OR = {
-						region = 33 #Alaska
-						state = 685 #Panama Canal
-						is_mainland_america = yes
-					}
-				}
-				OR = {
-					TEX = { at_conference_no_war_with_PREV = yes }
-					CSA = { at_conference_no_war_with_PREV = yes }
-					CAL = { at_conference_no_war_with_PREV = yes }
-				}
-			}
-		}
 	}
 }
 
@@ -3427,7 +3369,6 @@ rule_stay_out_of_western_russia_ROOT = {
 
 rule_stay_out_of_western_russia_PREV = {
 	OR = {
-		tag = TRM
 		tag = JAP
 		is_chinese_tag = yes
 	}
@@ -3491,13 +3432,8 @@ rule_stay_out_of_siberia_ROOT = {
 	}
 	any_other_country = {
 		OR = {
-			tag = TRM
 			tag = JAP
-			tag = MON
-			tag = FNG
 			tag = QIE
-			tag = XSM
-			tag = CHI
 		}
 		at_conference_has_war_with_owner = yes
 		OR = {
@@ -3538,13 +3474,8 @@ rule_stay_out_of_siberia_PREV = {
 	}
 	any_other_country = {
 		OR = {
-			tag = TRM
 			tag = JAP
-			tag = MON
-			tag = FNG
 			tag = QIE
-			tag = XSM
-			tag = CHI
 		}
 		at_conference_has_war_with_owner = yes
 		OR = {
@@ -3586,14 +3517,6 @@ rule_JAP_leave_russian_coast_to_TRM_PREV = {
 			state = 637 #Kamchatka
 		}
 	}
-	TRM = {
-		OR = {
-			is_subject_of = JAP
-			is_in_faction_with = JAP
-		}
-		at_conference_has_war_with_owner = yes
-		var:global.eval_state = { is_claim_or_core_or_ambition_of_PREV = yes }
-	}
 }
 
 rule_AUS_stay_out_of_northern_germany_ROOT = {
@@ -3619,7 +3542,6 @@ rule_AUS_stay_out_of_northern_germany_ROOT = {
 	}
 	any_other_country = {
 		NOT = { tag = RUS }
-		NOT = { tag = SOV }
 		at_conference_has_war_with_owner = yes
 		is_willing_to_take_state_PREV = yes
 	}
@@ -3648,7 +3570,6 @@ rule_AUS_stay_out_of_northern_germany_PREV = {
 	}
 	any_other_country = {
 		NOT = { tag = RUS }
-		NOT = { tag = SOV }
 		at_conference_has_war_with_owner = yes
 		#is_willing_to_take_state_PREV = yes
 	}
@@ -3665,7 +3586,6 @@ rule_AUS_stay_out_of_eastern_germany_ROOT = {
 	}
 	any_other_country = {
 		NOT = { tag = RUS }
-		NOT = { tag = SOV }
 		at_conference_has_war_with_owner = yes
 		is_willing_to_take_state_PREV = yes
 	}
@@ -3691,7 +3611,6 @@ rule_AUS_stay_out_of_eastern_germany_PREV = {
 rule_stay_out_of_eastern_germany_ROOT = {
 	NOT = {
 		tag = RUS
-		tag = SOV
 		AND = {
 			tag = AUS
 			OR = {
@@ -3720,7 +3639,6 @@ rule_stay_out_of_eastern_germany_ROOT = {
 rule_stay_out_of_eastern_germany_PREV = {
 	NOT = {
 		tag = RUS
-		tag = SOV
 		AND = {
 			tag = AUS
 			OR = {
@@ -3787,7 +3705,6 @@ rule_stay_out_of_southern_germany_PREV = {
 rule_OTT_stay_out_of_northern_europe_ROOT = {
 	OR = {
 		tag = OTT
-		tag = TUR
 	}
 	restrict_territorial_ambitions_ROOT = no
 	var:global.eval_state = {
@@ -3821,7 +3738,6 @@ rule_OTT_stay_out_of_northern_europe_ROOT = {
 rule_OTT_stay_out_of_northern_europe_PREV = {
 	OR = {
 		tag = OTT
-		tag = TUR
 	}
 	restrict_territorial_ambitions_PREV = no
 	var:global.eval_state = {

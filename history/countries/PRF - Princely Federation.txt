@@ -457,6 +457,3 @@ create_navy_leader = { #Auto-Generated
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
-
-PRF_start_naval_variant = yes
-

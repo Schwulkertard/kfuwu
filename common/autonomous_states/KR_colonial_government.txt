@@ -37,8 +37,6 @@ autonomy_state = {
 
 	allowed = {
 		OR = {
-			tag = GEA
-			tag = MAF
 		}
 		overlord = { tag = GER }
 	}

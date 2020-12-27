@@ -13,9 +13,8 @@ state = {
 		victory_points = {
 			12268 1
 		}
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = GER
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 3
 			12268 = {

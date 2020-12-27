@@ -7,9 +7,8 @@ state = {
 	}
 
 	history = {
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = CAN
+		add_core_of = VEN
 		victory_points = {
 			7421 5
 		}

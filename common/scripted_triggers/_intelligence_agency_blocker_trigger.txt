@@ -3,10 +3,6 @@
 can_create_intelligence_agency = {
 	# change as desired
 	if = {
-		limit = { tag = SIA }
-		has_completed_focus = SIA_SDSI
-	}
-	else = {
 		always = yes
 	}
 }

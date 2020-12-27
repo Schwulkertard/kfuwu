@@ -1,6 +1,5 @@
 ﻿capital = 6
 OOB = "BEL"
-set_naval_oob= "BEL_naval"
 
 set_research_slots = 3
 
@@ -353,4 +352,3 @@ create_navy_leader = {
 	coordination_skill = 2
 }
 
-BEL_start_naval_variant = yes

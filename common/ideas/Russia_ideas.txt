@@ -7,6 +7,19 @@ ideas = {
 	##############
 
 	country = {
+		rus_free_trade = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_free_trade"}
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+			}
+			name = rus_free_trade
+			picture = generic_constitutional_guarantee
+
+		}
 		rus_fulfilled_strike_general = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_fulfilled_strike_general"}
 			allowed = { always = no }
@@ -357,9 +370,6 @@ ideas = {
 			{
 				always = no
 			}
-			allowed_civil_war = {
-				has_government = communism
-			}
 			picture = generic_wall_line
 			modifier = {
 				local_resources_factor = 0.2
@@ -416,9 +426,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tradition"}
 			allowed = {
 				always = no # Added via focus
-			}
-			allowed_civil_war = {
-				has_government = communism
 			}
 			picture = generic_manpower_bonus
 			modifier = {

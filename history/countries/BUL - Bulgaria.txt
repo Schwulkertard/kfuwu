@@ -1,7 +1,6 @@
 ﻿capital = 48
 
 oob = "BUL"
-set_naval_oob= "BUL_naval"
 
 set_technology = {
 	infantry_weapons = 1
@@ -72,8 +71,6 @@ if = {
 	}
 }
 
-country_event = { id = bulgaria.1 days = 1 } #Intro event
-
 set_research_slots = 3
 set_convoys = 40
 set_country_flag = BUL_liberal_government
@@ -83,10 +80,6 @@ set_war_support = 0.40
 
 add_ideas = {
 	extensive_conscription
-	BUL_Aleksandar_Malinov_hog_ade
-	BUL_Nikola_Mushanov_for_ade
-	BUL_Todor_Krastev_eco_ade
-	BUL_Aleksandar_Girginov_sec_ade
 }
 
 add_opinion_modifier = { target = ROM modifier = embargo }
@@ -365,4 +358,3 @@ create_navy_leader = {
 	coordination_skill = 2
 }
 
-BUL_start_naval_variant = yes

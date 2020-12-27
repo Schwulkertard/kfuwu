@@ -52,7 +52,7 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_heavy_battery
-                                        ship_super_heavy_battery
+                    ship_super_heavy_battery
 				}
 			}
 			mid_1_custom_slot = {
@@ -502,7 +502,7 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_airplane_launcher
-                                        ship_depth_charge
+                    ship_depth_charge
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -535,7 +535,7 @@ equipments = {
 		max_strength = 750
 		fuel_consumption = 50
 		reliability = 0.75
-		build_cost_ic = 5250
+		build_cost_ic = 8500
 		resources = {
 			steel = 1
 			chromium = 1

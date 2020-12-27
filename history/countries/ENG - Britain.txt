@@ -120,10 +120,6 @@ add_ideas = {
 	ENG_militia_idea
 	partial_economic_mobilisation
 	# Starting Cabinet
-	ENG_Arthur_Horner_hog_syn
-	ENG_Niclas_y_Glais_for_rso
-	ENG_Oswald_Mosley_eco_tot
-	ENG_Helen_Crawfurd_sec_rso
 }
 
 country_event = { id = uob.0 days = 1 } #Intro event

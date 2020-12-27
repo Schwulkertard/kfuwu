@@ -65,8 +65,6 @@ if = {
 	}
 }
 
-country_event = { id = finland.1 days = 1 }
-
 add_opinion_modifier = { target = SOV modifier = embargo }
 add_opinion_modifier = { target = ENG modifier = embargo }
 add_opinion_modifier = { target = BHC modifier = embargo }
@@ -105,10 +103,6 @@ diplomatic_relation = { country = GER relation = non_aggression_pact }
 give_military_access = GER
 
 add_ideas = {
-	FIN_Juho_Kusti_Paasikivi_hog_pau
-	FIN_Kaarle_Nestor_Rantakari_for_pau
-	FIN_Karl_Alfred_Paloheimo_eco_pau
-	FIN_Hjalmar_Procope_sec_pau
 	extensive_conscription
 }
 

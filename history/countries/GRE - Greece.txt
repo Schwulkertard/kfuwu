@@ -1,7 +1,6 @@
 ﻿capital = 47
 
 oob = "GRE"
-set_naval_oob= "GRE_naval"
 
 set_research_slots = 3
 
@@ -73,10 +72,6 @@ set_stability = 0.35
 set_war_support = 0.2
 
 add_ideas = {
-	GRE_Georgios_Papandreou_hog_sli
-	GRE_Themistoklis_Sofoulis_for_mli
-	GRE_Georgios_Athanasiadis_Novas_eco_sli
-	GRE_Pafsanias_Katsotas_sec_sli
 }
 
 add_opinion_modifier = { target = BUL modifier = embargo }
@@ -396,4 +391,3 @@ create_navy_leader = { #Auto-Generated
 	coordination_skill = 2
 }
 
-GRE_start_naval_variant = yes

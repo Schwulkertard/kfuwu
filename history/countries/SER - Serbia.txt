@@ -46,10 +46,6 @@ set_popularities = {
 
 add_ideas = {
 	limited_conscription
-	SER_Dragisa_Cvetkovic_hog_ade
-	SER_Aleksandar_Cincar_Markovic_for_ade
-	SER_Milan_Stojadinovic_eco_ade
-	SER_Dragisa_Cvetkovic_sec_ade
 }
 
 ### Starting party leaders

@@ -1,6 +1,5 @@
 ﻿capital = 41
 oob = "SPR"
-set_naval_oob= "SPR_naval"
 
 set_technology = {
 	### Tanks ###
@@ -100,10 +99,6 @@ add_ideas = {
 	limited_conscription
 
 	# Ministers
-	SPR_JM_Gil_Robles_Quinones_hog_ade
-	SPR_Francisco_de_Asis_Serrat_y_Bonastre_for_pau
-	SPR_German_Gil_y_Yuste_eco_pau
-	SPR_Miguel_Ponte_Manso_de_Zuniga_sec_ade
 }
 
 create_country_leader = {

@@ -10,9 +10,8 @@ state = {
 	manpower = 2533700
 
 	history = {
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = GER
+		add_core_of = VEN
 		victory_points = {
 			10354 5
 		}

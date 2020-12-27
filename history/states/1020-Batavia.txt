@@ -7,9 +7,8 @@ state = {
 	manpower = 626137
 
 	history = {
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = CAN
+		add_core_of = VEN
 		victory_points = {
 			7381 20
 		}
@@ -18,9 +17,6 @@ state = {
 			7381 = {
 				naval_base = 6
 			}
-			industrial_complex = 1
-			arms_factory = 2
-			dockyard = 1
 		}
 	}
 

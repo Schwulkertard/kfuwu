@@ -2,8 +2,14 @@ state = {
 	id = 446
 	name = "STATE_446"
 
+	resources = {
+		oil = 80
+		rubber = 30
+	}
+
 	history = {
 		owner = OTT
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 4
 			air_base = 2

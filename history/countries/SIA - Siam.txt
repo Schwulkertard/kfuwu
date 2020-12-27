@@ -1,6 +1,5 @@
 ﻿capital = 289
 OOB = "SIA"
-set_naval_oob= "SIA_naval"
 
 # Kaiserreich Siam
 
@@ -146,25 +145,7 @@ add_ideas = {
 	SIA_Narisara_Nuwattiwong_eco_ade
 	SIA_Paribatra_Sukhumbhand_sec_ade
 	limited_conscription
-
-	SIA_RPC_neutral #Starter RPC results here from 1935
-	SIA_bloated_bureaucracy
 }
-
-### Country events
-country_event = { id = siamn.1 hours = 2 } #1936 Situation
-country_event = { id = siam.26 days = 124 random = 216 } # Siamese Royal Ploughing Ceremony
-country_event = { id = siam.31 days = 124 random = 240 } # Cambodian Royal Ploughing Ceremony
-country_event = { id = siamn.9 days = 153 random = 648 } # Khana Ratsadon Coup?
-country_event = { id = siamn.12 days = 203 random = 216 } # Pridi and his Yellow Cover Book
-country_event = { id = siamn.61 days = 523 } # "Behind the Painting" Novel
-country_event = { id = siam.13 days = 1948 } # Death of Rama VII
-country_event = { id = siam.14 days = 1993 } # Paribatra Sukhumbhand reacts
-country_event = { id = siam.33 days = 3018 } # Death of Paribatra Sukhumbhand
-country_event = { id = siam.15 days = 3798 } # Death of Rama VIII
-country_event = { id = siamn.64 days = 5523 } # "Sunset over Chao Phraya" Novel
-country_event = { id = siamn.52 days = 6884 } # Phibunsongkhram dead
-country_event = { id = siam.34 days = 8649 } # Death of Chumbhotbongs Paribatra
 
 ######### List of Eligible Leader for Siam (King, Field Marshal, Revolutionary forces, ...) #############
 create_country_leader = { # Chakrabongse Line of Succession
@@ -517,6 +498,4 @@ create_navy_leader = {
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
-
-SIA_start_naval_variant = yes
 

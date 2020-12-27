@@ -24,7 +24,6 @@ CAN_can_surrender_to_america = {
 			surrender_progress < 0.20
 			NOT = {
 				is_subject = yes
-				has_completed_focus = USA_rebuild_monroe
 			}
 			OR = {
 				AND = {

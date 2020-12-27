@@ -1,7 +1,6 @@
 ﻿capital = 1091
 
 oob = "BAT"
-set_naval_oob= "BAT_naval"
 
 set_technology = {
 	### Tanks ###
@@ -332,4 +331,3 @@ create_navy_leader = {
 	coordination_skill = 2
 }
 
-BAT_start_naval_variant = yes

@@ -4,9 +4,8 @@ state={
 	name="STATE_668"
 
 	history={
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = GER
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 3
 			1574 = {

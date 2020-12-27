@@ -74,13 +74,6 @@ dont_research_superior_firepower_if_choice_made = {
 			tag = CAN
 			has_completed_focus = CAN_fuller_plan
 		}
-		AND = {
-			tag = SIA
-			OR = {
-				has_completed_focus = SIA_phrayaphahonplan
-				has_completed_focus = SIA_seriroengritplan
-			}
-		}
 	}
 }
 
@@ -102,17 +95,6 @@ dont_research_grand_battleplan_if_choice_made = {
 		AND = {
 			tag = GER
 			has_completed_focus = GER_doctrine_mobile_2
-		}
-		AND = {
-			tag = HOL
-			NOT = { has_country_flag = HOL_army_defensive }
-		}
-		AND = {
-			tag = SIA
-			OR = {
-				has_completed_focus = SIA_phibunsongkhramplan
-				has_completed_focus = SIA_seriroengritplan
-			}
 		}
 	}
 }
@@ -136,17 +118,6 @@ never_research_mass_assault = {
 # these countries have choices in their focus trees between land doctrines
 # this list is for countries that have a choice of Mass Assault, but shouldn't
 # research it if they've already made their choice for another doctrine
-dont_research_mass_assault_if_choice_made = {
-	OR = {
-		AND = {
-			tag = SIA
-			OR = {
-				has_completed_focus = SIA_phibunsongkhramplan
-				has_completed_focus = SIA_phrayaphahonplan
-			}
-		}
-	}
-}
 
 # these are for putting into focus trees, to prevent a focus from being
 # taken if other land doctrines have already been started or researched

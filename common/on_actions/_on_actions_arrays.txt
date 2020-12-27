@@ -38,7 +38,6 @@ on_actions = {
 			add_to_array = { global.european_tags_array = GBP }
 			add_to_array = { global.european_tags_array = GBR }
 			add_to_array = { global.european_tags_array = GER }
-			add_to_array = { global.european_tags_array = GLC }
 			add_to_array = { global.european_tags_array = GRE }
 			add_to_array = { global.european_tags_array = GRR } #Greek Rebels
 			add_to_array = { global.european_tags_array = GRU } #German Union
@@ -49,7 +48,6 @@ on_actions = {
 			add_to_array = { global.european_tags_array = ITA }
 			add_to_array = { global.european_tags_array = LAT }
 			add_to_array = { global.european_tags_array = LIT }
-			add_to_array = { global.european_tags_array = LUX }
 			add_to_array = { global.european_tags_array = NGF } #Hanover
 			add_to_array = { global.european_tags_array = NOR }
 			add_to_array = { global.european_tags_array = PAP }
@@ -61,11 +59,9 @@ on_actions = {
 			add_to_array = { global.european_tags_array = SCA }
 			add_to_array = { global.european_tags_array = SCT }
 			add_to_array = { global.european_tags_array = SER }
-			add_to_array = { global.european_tags_array = SIC }
 			add_to_array = { global.european_tags_array = SLO }
 			add_to_array = { global.european_tags_array = SOV }
 			add_to_array = { global.european_tags_array = SPR }
-			add_to_array = { global.european_tags_array = SRD }
 			add_to_array = { global.european_tags_array = SRI }
 			add_to_array = { global.european_tags_array = SVK }
 			add_to_array = { global.european_tags_array = SWE }
@@ -74,7 +70,6 @@ on_actions = {
 			add_to_array = { global.european_tags_array = UKR }
 			add_to_array = { global.european_tags_array = WAL }
 			add_to_array = { global.european_tags_array = WGR } #Rheinland
-			add_to_array = { global.european_tags_array = WHR }
 			add_to_array = { global.european_tags_array = WLL }
 
 			#Set up Balkans tags array
@@ -91,7 +86,6 @@ on_actions = {
 			add_to_array = { global.balkans_tags_array = TRS }
 
 			#Set up China tags array
-			add_to_array = { global.china_tags_array = ETS }
 			add_to_array = { global.china_tags_array = PRC }
 			add_to_array = { global.china_tags_array = QIE }
 			add_to_array = { global.china_tags_array = SIK }
@@ -101,7 +95,6 @@ on_actions = {
 			add_to_array = { global.asian_tags_array = BOR }
 			add_to_array = { global.asian_tags_array = CAM }
 			add_to_array = { global.asian_tags_array = DEI }
-			add_to_array = { global.asian_tags_array = ETS }
 			add_to_array = { global.asian_tags_array = GEA }
 			add_to_array = { global.asian_tags_array = INC }
 			add_to_array = { global.asian_tags_array = INS }
@@ -111,7 +104,6 @@ on_actions = {
 			add_to_array = { global.asian_tags_array = KYR } #Kyrgyzstan
 			add_to_array = { global.asian_tags_array = LAO }
 			add_to_array = { global.asian_tags_array = LEC }
-			add_to_array = { global.asian_tags_array = MAN }
 			add_to_array = { global.asian_tags_array = MLY }
 			add_to_array = { global.asian_tags_array = PHI }
 			add_to_array = { global.asian_tags_array = PRC } #Lianguang Rebels
@@ -121,7 +113,6 @@ on_actions = {
 			add_to_array = { global.asian_tags_array = SIB }
 			add_to_array = { global.asian_tags_array = SIK }
 			add_to_array = { global.asian_tags_array = TAJ }
-			add_to_array = { global.asian_tags_array = UZB }
 			add_to_array = { global.asian_tags_array = VIE }
 
 			#Set up Indian tags array
@@ -166,13 +157,9 @@ on_actions = {
 			add_to_array = { global.north_african_tags_array = SUD }
 
 			#Set up African tags array
-			add_to_array = { global.african_tags_array = ERI }
-			add_to_array = { global.african_tags_array = ETH }
 			add_to_array = { global.african_tags_array = GEX }
-			add_to_array = { global.african_tags_array = MAF }
 			add_to_array = { global.african_tags_array = SAF }
 			add_to_array = { global.african_tags_array = SFR } #South African Rebels
-			add_to_array = { global.african_tags_array = SOM }
 
 			#Set up South American tags array
 			add_to_array = { global.south_american_tags_array = VEN }

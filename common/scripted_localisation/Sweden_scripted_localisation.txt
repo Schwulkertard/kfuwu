@@ -46,55 +46,6 @@ defined_text = { # Country
 		localization_key = getFlygsRefuge_Britain
 	}
 }
-
-defined_text = { # Country
-	name = swedishBudgetAmount
-	text = {
-		trigger = {
-			check_variable = {
-				var = swe_var_budget
-				value = 0
-				compare = less_than_or_equals
-			}
-		}
-		localization_key = swedishBudgetAmount_zero
-	}
-	text = {
-		trigger = {
-			check_variable = {
-				var = swe_var_budget
-				value = 0
-				compare = greater_than
-			}
-		}
-		localization_key = swedishBudgetAmount_positive
-	}
-}
-
-defined_text = { # Country
-	name = swedishDebtAmount
-	text = {
-		trigger = {
-			check_variable = {
-				var = swe_var_debt
-				value = 0
-				compare = less_than_or_equals
-			}
-		}
-		localization_key = swedishBudgetAmount_zero
-	}
-	text = {
-		trigger = {
-			check_variable = {
-				var = swe_var_debt
-				value = 0
-				compare = greater_than
-			}
-		}
-		localization_key = swedishDebtAmount_positive
-	}
-}
-
 defined_text = {
 	name = SWE_douglasfocutext
 	text = {

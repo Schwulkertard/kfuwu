@@ -104,10 +104,6 @@ if = {
 
 add_ideas = {
 	#starting cabinet
-	AST_William_M_Hughes_hog_ade
-	AST_Vernon_AH_Sturdee_for_ade
-	AST_James_Mitchell_eco_ade
-	AST_Thomas_W_White_sec_ade
 
 	#starting modifiers
 	AST_oversized_fleet
@@ -468,3 +464,4 @@ create_navy_leader = {
 }
 
 AST_start_naval_variant = yes
+

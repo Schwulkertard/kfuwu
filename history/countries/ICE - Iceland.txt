@@ -2,13 +2,6 @@
 OOB = "empty"
 set_research_slots = 3
 
-ICE = {
-	country_event = { days = 2 id = ice.9996 }
-	country_event = { days = 8 id = ice.9997 }
-	country_event = { days = 17 id = ice.9998 }
-	country_event = { days = 27 id = ice.9999 }
-}
-
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
@@ -61,9 +54,6 @@ if = {
 
 add_ideas = {
 	disarmed_nation
-	ICE_ailing_economy
-	ICE_CWCS
-	ICE_Guttoslagurinn
 	ICE_Jon_Baldvinsson_hog_sde
 	ICE_Stefan_Johann_Stefansson_for_sde
 	ICE_Gisli_Gudmundsson_eco_sde

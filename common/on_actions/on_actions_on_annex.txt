@@ -29,39 +29,6 @@ on_actions = {
 
 			if = {
 				limit = {
-					FROM = { has_country_flag = has_offsite_mils_from_JAP }
-					country_exists = JAP
-				}
-				FROM = {
-					add_offsite_building = { type = arms_factory level = -2 }
-					clr_country_flag = has_offsite_mils_from_JAP
-				}
-				JAP = {
-					random_owned_state = {
-						limit = { has_state_flag = JAP_mils_to_china_state }
-						clr_state_flag = JAP_mils_to_china_state
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = { has_country_flag = ACW_has_deal_with_devil }
-				}
-				FROM = { clr_country_flag = ACW_has_deal_with_devil }
-				every_country = {
-					limit = { has_country_flag = ACW_deal_with_devil_@FROM }
-					clr_country_flag = ACW_has_deal_with_devil
-					clr_country_flag = ACW_deal_with_devil_@FROM
-					FROM = { clr_country_flag = ACW_deal_with_devil_@PREV }
-				}
-			}
-			if = {
-				limit = {
 					tag = HUN
 					is_ai = yes
 					FROM = { tag = AUS }
@@ -77,10 +44,6 @@ on_actions = {
 							tag = LAT
 						}
 					}
-				}
-				country_event = {
-					id = balticduchy.195
-					days = 1
 				}
 			}
 			if = {
@@ -110,93 +73,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = TRK
-					FROM = { tag = ALO }
-				}
-				country_event = {
-					id = turkestan.9
-					days = 30
-					random = 720
-				}
-			}
-			if = {
-				limit = {
-					FROM = { tag = FRA }
-				}
-				SWI = {
-					country_event = {
-						id = swiss.179
-						days = 2
-					}
-				}
-			}
-			if = {
-				limit = {
-					tag = SRI
-					FROM = { tag = ITA }
-				}
-				AUS = { country_event = { id = ita.38 hours = 1 } }
-				if = {
-					limit = { country_exists = VNC }
-					VNC = { country_event = { id = ita.38 hours = 2 } }
-				}
-			}
-			if = {
-				limit = {
-					tag = RUS
-					FROM = { tag = SOV }
-				}
-				country_event = {
-					id = russia.1951
-					days = 1
-					random = 72
-				}
-			}
-			if = {
-				limit = {
-					tag = SOV
-					FROM = { tag = RUS }
-				}
-				country_event = {
-					id = russia.1949
-					days = 1
-					random = 72
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						tag = SIC
-						OR = {
-							has_country_flag = SIC_confed
-							has_country_flag = SIC_empire
-						}
-					}
-				}
-				clr_country_flag = SIC_confed
-				clr_country_flag = SIC_empire
-				drop_cosmetic_tag = yes
-			}
-			if = {
-				limit = {
-					ROOT = { has_country_flag = ITA_libya_war_@FROM }
-				}
-				ROOT = {
-					clr_country_flag = ITA_libya_war_@FROM
-					clr_country_flag = ITA_war_for_libya
-				}
-			}
-			if = {
-				limit = {
-					FROM = { has_country_flag = ITA_libya_war_@ROOT }
-				}
-				FROM = {
-					clr_country_flag = ITA_libya_war_@ROOT
-					clr_country_flag = ITA_war_for_libya
-				}
-			}
-			if = {
-				limit = {
 					tag = USA
 					FROM = {
 						OR = {
@@ -204,10 +80,6 @@ on_actions = {
 							tag = CAN
 						}
 					}
-				}
-				country_event = {
-					id = ustates.124
-					days = 10
 				}
 			}
 			if = {
@@ -269,37 +141,13 @@ on_actions = {
 						clr_country_flag = legation_council_vote
 						event_target:new_holder = { set_country_flag = legation_council_vote }
 					}
-					if = {
-						limit = { has_idea = LEC_generic_open_door }
-						remove_ideas = { LEC_generic_open_door }
-						event_target:new_holder = { add_ideas = LEC_generic_open_door }
-					}
-					if = {
-						limit = { has_idea = LEC_better_open_door }
-						remove_ideas = { LEC_better_open_door }
-						event_target:new_holder = { add_ideas = LEC_better_open_door }
-					}
 				}
-				event_target:new_holder = { country_event = lecbrits.29 }
 			}
 			if = {
 				limit = {
 					is_in_array = {
 						array = global.LEC_voters
 						value = FROM
-					}
-				}
-				if = {
-					limit = {
-						FROM = { tag = BEL }
-						country_exists = LEC
-					}
-					LEC = {
-						country_event = {
-							id = lec.48
-							days = 3
-							random = 168
-						}
 					}
 				}
 				else = {
@@ -313,31 +161,8 @@ on_actions = {
 							limit = { has_country_flag = legation_council_vote }
 							clr_country_flag = legation_council_vote
 						}
-						if = {
-							limit = { has_idea = LEC_generic_open_door }
-							remove_ideas = { LEC_generic_open_door }
-						}
-						if = {
-							limit = { has_idea = LEC_better_open_door }
-							remove_ideas = { LEC_better_open_door }
-						}
 					}
 				}
-			}
-			
-			### Mittelafrika ###
-			
-			if = {
-				limit = {
-					event_target:current_china_leader = { tag = FROM }
-				}
-				disable_united_front_AI = yes
-			}
-			FROM = {
-				clr_country_flag = KR_can_raise_autonomy_level
-				#clr_country_flag = KR_can_lower_autonomy_level
-				#clr_country_flag = KR_can_be_annexed
-				clr_country_flag = KR_can_become_free
 			}
 		}
 	}

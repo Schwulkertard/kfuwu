@@ -4,11 +4,6 @@ OOB = "NOR"
 set_naval_oob= "NOR_naval"
 
 add_ideas = {
-
-	NOR_Johan_Henrik_Andresen_hog_mli
-	NOR_Arne_Scheel_for_mli
-	NOR_Sven_Nielsen_eco_mli
-	NOR_Harald_Gram_sec_mli
 	limited_conscription
 }
 

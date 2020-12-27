@@ -1,4 +1,4 @@
-﻿capital = 158
+﻿capital = 2
 
 oob = "SRI"
 set_naval_oob= "SRI_naval"
@@ -6,10 +6,6 @@ set_naval_oob= "SRI_naval"
 set_research_slots = 3
 
 add_ideas = {
-	SRI_Antonio_Gramsci_hog_syn
-	SRI_Pietro_Nenni_for_syn
-	SRI_Alceste_De_Ambris_eco_syn
-	SRI_Ruggiero_Grieco_sec_syn
 	SRI_divided_nation
 	SRI_red_guards_idea
 }

@@ -30,25 +30,10 @@ never_research_fleet_in_being = {
 dont_research_fleet_in_being_if_choice_made = {
 	OR = {
 		AND = {
-			tag = PER
-			NOT = { has_completed_focus = PER_com_navy }
-		}
-		AND = {
-			tag = SIA
-			has_completed_focus = SIA_wolfpacks
-		}
-		AND = {
 			tag = ENG
 			OR = {
 				has_completed_focus = ENG_anstice_plan
 				has_completed_focus = ENG_cayley_plan
-			}
-		}
-		AND = {
-			tag = USA
-			OR = {
-				has_completed_focus = USA_defend_our_trade
-				has_completed_focus = USA_carriers
 			}
 		}
 	}
@@ -66,21 +51,10 @@ never_research_trade_interdiction = {
 dont_research_trade_interdiction_if_choice_made = {
 	OR = {
 		AND = {
-			tag = SIA
-			has_completed_focus = SIA_alargefleet
-		}
-		AND = {
 			tag = ENG
 			OR = {
 				has_completed_focus = ENG_anstice_plan
 				has_completed_focus = ENG_dickens_plan
-			}
-		}
-		AND = {
-			tag = USA
-			OR = {
-				has_completed_focus = USA_grand_navy
-				has_completed_focus = USA_carriers
 			}
 		}
 	}
@@ -100,21 +74,10 @@ never_research_base_strike = {
 dont_research_base_strike_if_choice_made = {
 	OR = {
 		AND = {
-			tag = PER
-			NOT = { has_completed_focus = PER_marine_academie }
-		}
-		AND = {
 			tag = ENG
 			OR = {
 				has_completed_focus = ENG_cayley_plan
 				has_completed_focus = ENG_dickens_plan
-			}
-		}
-		AND = {
-			tag = USA
-			OR = {
-				has_completed_focus = USA_grand_navy
-				has_completed_focus = USA_defend_our_trade
 			}
 		}
 	}

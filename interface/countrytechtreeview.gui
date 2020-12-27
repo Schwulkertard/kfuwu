@@ -307,6 +307,33 @@
 			}
 
 			gridboxtype = {
+				name = "shocktroops_tree"
+				position = { x = 140 y = 1000 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+             gridboxtype = {
+				name = "desertinfantry_at_tree"
+				position = { x = 140 y = 1240 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "jaegers_tree"
+				position = { x = 140 y = 1080 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "jungletroops_tree"
+				position = { x = 140 y = 1160 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
 				name = "tech_mountaineers_tree"
 				position = { x = 140 y = 1220 }
 				slotsize = { width = 70 height = 70 }
@@ -322,9 +349,9 @@
 			
 			gridboxtype = {
 				name = "tech_special_forces_tree"
-				position = { x = 140 y = 1495 }
+				position = { x = 1575 y = 10 }
 				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
+				format = "UP"
 			}
 			
 			gridboxtype = {
@@ -5581,5 +5608,6 @@ containerWindowType = {
 			format = "UPPER_LEFT"
 		}
 	}
+
 
 }

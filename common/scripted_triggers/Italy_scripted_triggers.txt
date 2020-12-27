@@ -1,12 +1,5 @@
 #Scripted trigger for Italian tags
 
-ITA_has_irridentist_focus = {
-	if = {
-		limit = { tag = SRI }
-		has_completed_focus = SRI_italian_irredentism
-	}
-}
-
 ITA_is_catholic_country = {
 	not_has_socialist_government = yes
 	OR = {

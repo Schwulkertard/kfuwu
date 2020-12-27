@@ -5,9 +5,8 @@ state = {
 		steel = 10
 	}
 	history = {
-		owner = BUR
-		add_claim_by = SIA
-		add_claim_by = BUR
+		owner = DEH
+		add_core_of = DEH
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

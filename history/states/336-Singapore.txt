@@ -3,9 +3,8 @@ state = {
 	name = "STATE_336"
 
 	history = {
-		owner = GEA
-		add_core_of = GEA
-		add_core_of = MLY
+		owner = GER
+		add_core_of = VEN
 		victory_points = {
 			12299 20 # Singapore
 		}
@@ -15,9 +14,6 @@ state = {
 		buildings = {
 			infrastructure = 3
 			air_base = 3
-			industrial_complex = 2
-			arms_factory = 2
-			dockyard = 1
 			12299 = {
 				naval_base = 5
 				bunker = 1

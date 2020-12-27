@@ -4,15 +4,13 @@ state = {
 	provinces = {
 		1209 4306 4608 7654 10479 10491 12472
 	}
-	resources = {
-		rubber = 98
-	}
 	manpower = 15792996
-
+	resources = {
+		rubber = 78
+	}
 	history = {
-		owner = DEI
-		add_core_of = DEI
-		add_core_of = INS
+		owner = CAN
+		add_core_of = VEN
 
 		victory_points = {
 			4608 3

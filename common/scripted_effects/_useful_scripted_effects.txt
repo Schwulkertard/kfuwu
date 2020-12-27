@@ -267,11 +267,6 @@ restore_previous_government_type = {
 force_recalculate_factories = {
 	hidden_effect = {
 		if = {
-			limit = { has_idea = undisturbed_isolation }
-			add_ideas = isolation
-			add_ideas = undisturbed_isolation
-		}
-		else_if = {
 			limit = { has_idea = isolation }
 			add_ideas = civilian_economy
 			add_ideas = isolation

@@ -74,7 +74,7 @@ set_stability = 0.57
 set_war_support = 0.10
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = paternal_autocrat
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
@@ -84,13 +84,13 @@ set_popularities = {
 	totalist = 0
 	radical_socialist = 0
 	syndicalist = 0
-	social_democrat = 1
-	social_liberal = 4
-	market_liberal = 37
-	social_conservative = 20
-	authoritarian_democrat = 5
-	paternal_autocrat = 18
-	national_populist = 14
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 0
+	paternal_autocrat = 100
+	national_populist = 0
 }
 
 set_country_flag = {
@@ -134,10 +134,6 @@ set_variable = { global.legations_abstain_votes = 0 }
 
 add_ideas = {
 	free_trade
-	LEC_Cecil_Clementi_hog_sco
-	LEC_Du_Yuesheng_sec_sli
-	LEC_Zhang_Xiaolin_sec_sli
-	LEC_Huang_Jinrong_sec_sli
 }
 
 create_country_leader = {

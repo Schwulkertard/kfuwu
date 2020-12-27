@@ -499,17 +499,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@ENP = 1 }
 		}
-		# ERI = Eritrea
-		if = {
-			limit = {
-				OR = {
-					is_core_of = ERI
-					is_claimed_by = ERI
-					region = 17 #Horn of africa
-				}
-			}
-			set_variable = { ambition_area_@ERI = 1 }
-		}
 		# EST = Estonia
 		if = {
 			limit = {
@@ -519,29 +508,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@EST = 1 }
-		}
-		# ETH = Ethiopia
-		if = {
-			limit = {
-				OR = {
-					is_core_of = ETH
-					is_claimed_by = ETH
-					region = 17 #Horn of Africa
-					state = 923 #Tigray
-				}
-			}
-			set_variable = { ambition_area_@ETH = 1 }
-		}
-		# ETS = East Turkestan
-		if = {
-			limit = {
-				OR = {
-					is_core_of = ETS
-					is_claimed_by = ETS
-					region = 221 #Xinjiang
-				}
-			}
-			set_variable = { ambition_area_@ETS = 1 }
 		}
 		# FIN = Finland
 		if = {
@@ -1058,31 +1024,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@MAD = 1 }
 		}
-		# MAF = Mittelafrika
-		if = {
-			limit = {
-				OR = {
-					is_core_of = MAF
-					is_claimed_by = MAF
-					region = 139 #South Africa
-					region = 140 #Central Africa
-					region = 182 #Western Africa
-					region = 193 #Madagascar
-					region = 128 #Sudan
-					region = 190 #Middle Africa
-					region = 188 #East Arica
-					region = 17 #Horn of Africa
-					state = 708 #Comoros
-					state = 862 #Sudanese Sahara
-					state = 911 #Borkou-Ennedi
-					state = 910 #Nigerian Desert
-					state = 860 #Malian Desert
-					state = 967 #Mauritanian Desert
-					state = 968 #Adrar
-				}
-			}
-			set_variable = { ambition_area_@MAF = 1 }
-		}
 		# MLY = Malaysia
 		if = {
 			limit = {
@@ -1520,27 +1461,6 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@SIA = 1 }
 		}
-		# SIC = Two Sicilies
-		if = {
-			limit = {
-				OR = {
-					is_core_of = SIC
-					is_claimed_by = SIC
-					is_european_italy = yes
-					state = 735 #Savoy
-					state = 943 #Haute Savoie
-					state = 762 #Nice
-					state = 736 #Istria
-					state = 783 #Trentino
-					state = 39 #South Tyrol
-					state = 761 #Ticino
-					state = 103 #Lika
-					state = 163 #Dalmatia
-					state = 116 #Malta
-				}
-			}
-			set_variable = { ambition_area_@SIC = 1 }
-		}
 		# SIK = Xinjiang Clique
 		if = {
 			limit = {
@@ -1563,17 +1483,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@SLO = 1 }
-		}
-		# SOM = Somalia
-		if = {
-			limit = {
-				OR = {
-					is_core_of = SOM
-					is_claimed_by = SOM
-					region = 17
-				}
-			}
-			set_variable = { ambition_area_@SOM = 1 }
 		}
 		# SOV = Russian Socialist Republic
 		if = {
@@ -1631,27 +1540,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@SPR = 1 }
-		}
-		# SRD = Sardinia
-		if = {
-			limit = {
-				OR = {
-					is_core_of = SRD
-					is_claimed_by = SRD
-					is_european_italy = yes
-					state = 735 #Savoy
-					state = 943 #Haute Savoie
-					state = 762 #Nice
-					state = 736 #Istria
-					state = 783 #Trentino
-					state = 39 #South Tyrol
-					state = 761 #Ticino
-					state = 103 #Lika
-					state = 163 #Dalmatia
-					state = 116 #Malta
-				}
-			}
-			set_variable = { ambition_area_@SRD = 1 }
 		}
 		# SRI = Socialist Republic of Italy
 		if = {
@@ -1872,26 +1760,6 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@WAL = 1 }
-		}
-		# WHR = Belarus
-		if = {
-			limit = {
-				OR = {
-					is_core_of = WHR
-					is_claimed_by = WHR
-					state = 93 #Brest
-					state = 94 #Wolkowisk
-					state = 97 #Bialystock
-					state = 210 #Vitebsk
-					state = 241 #Gomel
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 755 #Toropets
-					state = 880 #Dvisnk
-					state = 997 #Polesie
-				}
-			}
-			set_variable = { ambition_area_@WHR = 1 }
 		}
 	}
 }

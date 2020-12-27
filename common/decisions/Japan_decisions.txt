@@ -630,7 +630,7 @@ JAP_co_prosperity_decisions = {
 		fire_only_once = no
 
 		priority = 5
-		targets = { AST BUR CAM CEY ETS HAW INC INS KAC KOR LAO LEC MLY NZL PHI PRF SAR SIA VIE }
+		targets = { AST BUR CAM CEY HAW INC INS KAC KOR LAO LEC MLY NZL PHI PRF SAR SIA VIE }
 		target_root_trigger = { has_completed_focus = JAP_osaka_conference }
 		target_trigger = {
 			FROM = {

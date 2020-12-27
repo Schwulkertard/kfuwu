@@ -1127,6 +1127,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AST_liberalize_economy"
+			add_political_power = 150
+		}
 	}
 
 	focus = {
@@ -1164,7 +1168,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_liberalize_economy"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
-			add_timed_idea = { idea = AST_liberal_economy days = 180 }
+			add_timed_idea = { idea = AST_liberal_economy days = 240 }
 			swap_ideas = {
 				remove_idea = AST_depression_1
 				add_idea = AST_depression_2
@@ -1209,7 +1213,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_privatization"
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
-			add_timed_idea = { idea = AST_privatization_effort days = 180 }
+			add_timed_idea = { idea = AST_privatization_effort days = 240 }
 			swap_ideas = {
 				remove_idea = AST_depression_1
 				add_idea = AST_depression_2
@@ -1254,7 +1258,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_reform_government"
 			add_popularity = { ideology = social_democrat popularity = 0.05 }
-			add_timed_idea = { idea = AST_government_reformed days = 180 }
+			add_timed_idea = { idea = AST_government_reformed days = 240 }
 			swap_ideas = {
 				remove_idea = AST_depression_1
 				add_idea = AST_depression_2
@@ -1525,7 +1529,7 @@ focus_tree = {
 				add_tech_bonus = {
 				name = AST_state_of_the_economy
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = industry
 			    }
 			}
@@ -1535,7 +1539,7 @@ focus_tree = {
 	focus = {
 		id = AST_civ_industry_1
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 8.00
+		cost = 5
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -1585,37 +1589,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				prioritize = { 285 } #New South Wales
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1623,7 +1596,7 @@ focus_tree = {
 	focus = {
 		id = AST_civ_industry_2
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 8.00
+		cost = 5
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -1673,37 +1646,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				prioritize = { 519 } #South Australia
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1711,7 +1653,7 @@ focus_tree = {
 	focus = {
 		id = AST_mil_industry_1
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 8.00
+		cost = 5
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -1761,37 +1703,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				prioritize = { 285 } #New South Wales
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1799,7 +1710,7 @@ focus_tree = {
 	focus = {
 		id = AST_mil_industry_2
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 8.00
+		cost = 5
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -1818,37 +1729,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_mil_industry_2"
-			random_owned_state = {
-				prioritize = { 521 } #Queensland
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 			random_owned_state = {
 				prioritize = { 284 } #New Zealand
 				limit = {
@@ -1887,7 +1767,7 @@ focus_tree = {
 	focus = {
 		id = AST_infrastructure_1
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 8.00
+		cost = 5
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -1924,7 +1804,7 @@ focus_tree = {
 	focus = {
 		id = AST_new_resources_2
 		icon = GFX_focus_generic_steel
-		cost = 8.00
+		cost = 5
 		available = {
 			OR = {
 				284 = { is_owned_and_controlled_by = AST } #New Zealand
@@ -1965,7 +1845,7 @@ focus_tree = {
 	focus = {
 		id = AST_research_council
 		icon = GFX_goal_generic_scientific_exchange
-		cost = 8.00
+		cost = 5
 		x = 33
 		y = 1
 
@@ -1989,7 +1869,7 @@ focus_tree = {
 	focus = {
 		id = AST_council_funding
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 8.00
+		cost = 5
 		prerequisite = {
 			focus = AST_research_council
 		}
@@ -2016,7 +1896,7 @@ focus_tree = {
 	focus = {
 		id = AST_radar_focus
 		icon = GFX_goal_generic_radar
-		cost = 8.00
+		cost = 5
 		available = {
 			285 = { is_owned_and_controlled_by = AST } #New South Wales
 		}
@@ -2092,7 +1972,7 @@ focus_tree = {
 	focus = {
 		id = AST_computer_focus
 		icon = GFX_goal_computer_focus
-		cost = 8.00
+		cost = 5
 		prerequisite = {
 			focus = AST_council_funding
 		}
@@ -2121,7 +2001,7 @@ focus_tree = {
 	focus = {
 		id = AST_national_university
 		icon = GFX_goal_AST_national_university
-		cost = 8.00
+		cost = 5
 		prerequisite = {
 			focus = AST_council_funding
 		}
@@ -2166,7 +2046,7 @@ focus_tree = {
 	focus = {
 		id = AST_increased_research_1
 		icon = GFX_focus_research
-		cost = 8.00
+		cost = 5
 		prerequisite = { focus = AST_radar_focus }
 		prerequisite = { focus = AST_computer_focus }
 		prerequisite = { focus = AST_national_university }
@@ -2190,7 +2070,7 @@ focus_tree = {
 	focus = {
 		id = AST_increased_research_2
 		icon = GFX_focus_research
-		cost = 8.00
+		cost = 5
 		available = {
 			num_of_factories > 35
 			NOT = { has_idea = AST_depression_1 }
@@ -2220,7 +2100,7 @@ focus_tree = {
 	focus = {
 		id = AST_rocketry_division
 		icon = GFX_focus_rocketry
-		cost = 8.00
+		cost = 5
 		prerequisite = {
 			focus = AST_increased_research_1
 		}
@@ -2249,7 +2129,7 @@ focus_tree = {
 	focus = {
 		id = AST_oil_exploration
 		icon = GFX_goal_oil_derrick
-		cost = 8.00
+		cost = 5
 		prerequisite = { focus = AST_infrastructure_1 }
 		prerequisite = { focus = AST_increased_research_1 }
 		relative_position_id = AST_research_council
@@ -2279,7 +2159,7 @@ focus_tree = {
 	focus = {
 		id = AST_uranium_mining
 		icon = GFX_focus_wonderweapons
-		cost = 8.00
+		cost = 5
 		available = {
 			519 = { is_owned_and_controlled_by = AST }
 		}
@@ -2508,10 +2388,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_cockatoo_island"
 			285 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2585,11 +2465,8 @@ focus_tree = {
 		prerequisite = {
 			focus = AST_overhaul_RAN
 		}
-		mutually_exclusive = {
-			focus = AST_scrap_reserve
-		}
 		relative_position_id = AST_state_of_the_navy
-		x = -3
+		x = 0
 		y = 3
 
 		ai_will_do = {
@@ -2620,7 +2497,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_upgrade_reserve"
-			add_timed_idea = { idea = AST_upgrading_reserve days = 180 }
+			add_timed_idea = { idea = AST_upgrading_reserve days = 90 }
 			custom_effect_tooltip = AST_is_upgrading_reserve
 		}
 	}
@@ -2795,7 +2672,7 @@ focus_tree = {
 				name = AST_heavy_ships
 				bonus = 1
 				uses = 1
-				category = ca_tech
+				category = cv_tech
 			}
 			add_tech_bonus = {
 				name = AST_heavy_ships
@@ -2805,234 +2682,6 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_scrap_reserve
-		icon = GFX_goal_AST_scrap_reserves
-		cost = 5
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-		prerequisite = {
-			focus = AST_overhaul_RAN
-		}
-		mutually_exclusive = {
-			focus = AST_upgrade_reserve
-		}
-		relative_position_id = AST_state_of_the_navy
-		x = 3
-		y = 3
-
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				has_government = market_liberal
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = paternal_autocrat
-					has_government = social_conservative
-					has_government = syndicalist
-					has_government = totalist
-				}
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 3
-				date > 1938.1.1
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_scrap_reserve"
-			add_political_power = 100
-			custom_effect_tooltip = AST_not_upgrading_reserve
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = AST_defensive_navy
-		icon = GFX_goal_generic_coastal_navy
-		cost = 5
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-		prerequisite = {
-			focus = AST_scrap_reserve
-		}
-		relative_position_id = AST_state_of_the_navy
-		x = 3
-		y = 4
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_defensive_navy"
-			add_ideas = AST_defensive_navy_idea
-		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS }
-	}
-
-	focus = {
-		id = AST_submarine_focus
-		icon = GFX_goal_generic_navy_submarine
-		cost = 5
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-		prerequisite = {
-			focus = AST_defensive_navy
-		}
-		relative_position_id = AST_state_of_the_navy
-		x = 2
-		y = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_submarine_focus"
-			add_tech_bonus = {
-				name = AST_submarine_focus
-				bonus = 1
-				uses = 2
-				category = ss_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_destroyer_focus
-		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 5
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-		prerequisite = {
-			focus = AST_defensive_navy
-		}
-		relative_position_id = AST_state_of_the_navy
-		x = 4
-		y = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_destroyer_focus"
-			add_tech_bonus = {
-				name = AST_destroyer_focus
-				bonus = 1
-				uses = 2
-				category = dd_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_coastal_defense
-		icon = GFX_focus_generic_coastal_fort
-		cost = 5
-		available = {
-			controls_all_owned_states = yes
-			any_owned_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-		prerequisite = { focus = AST_submarine_focus }
-		prerequisite = { focus = AST_destroyer_focus }
-		relative_position_id = AST_state_of_the_navy
-		x = 3
-		y = 6
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_coastal_defense"
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_in_home_area = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3046,11 +2695,10 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = AST_scrap_reserve
 			focus = AST_upgrade_reserve
 		}
 		relative_position_id = AST_state_of_the_navy
-		x = 0
+		x = 3
 		y = 4
 
 		ai_will_do = {
@@ -3089,7 +2737,7 @@ focus_tree = {
 			focus = AST_shipbuilding_board
 		}
 		relative_position_id = AST_state_of_the_navy
-		x = 0
+		x = 3
 		y = 5
 
 		ai_will_do = {
@@ -3144,7 +2792,7 @@ focus_tree = {
 			focus = AST_new_dockyards_1
 		}
 		relative_position_id = AST_state_of_the_navy
-		x = 0
+		x = 3
 		y = 6
 
 		ai_will_do = {
@@ -3180,480 +2828,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
-
-	### AIR FORCE
-
-	focus = {
-		id = AST_state_of_RAAF
-		icon = GFX_goal_AST_state_of_RAAF
-		cost = 8.00
-		x = 49
-		y = 0
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_state_of_RAAF"
-			air_experience = 25
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
-		id = AST_pilot_training
-		icon = GFX_goal_generic_air_doctrine
-		cost = 8.00
-		prerequisite = {
-			focus = AST_state_of_RAAF
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = -2
-		y = 1
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_pilot_training"
-			air_experience = 25
-			add_tech_bonus = {
-				name = AST_pilot_training
-				bonus = 1
-				uses = 2
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
-		id = AST_expand_air_base
-		icon = GFX_goal_generic_construction
-		cost = 8.00
-		available = {
-			521 = { is_owned_and_controlled_by = AST }
-		}
-		prerequisite = {
-			focus = AST_state_of_RAAF
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 0
-		y = 1
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		bypass = {
-			NOT = { owns_state = 521 }
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_expand_air_base"
-			521 = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = AST_air_production_1
-		icon = GFX_goal_generic_air_production
-		cost = 8.00
-		prerequisite = {
-			focus = AST_state_of_RAAF
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 2
-		y = 1
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_air_production_1"
-			add_ideas = AST_aviation_industry_1
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = AST_new_fighters
-		icon = GFX_goal_generic_air_fighter
-		cost = 8.00
-		prerequisite = { focus = AST_pilot_training }
-		prerequisite = { focus = AST_expand_air_base }
-		prerequisite = { focus = AST_air_production_1 }
-		mutually_exclusive = { focus = AST_new_bombers }
-		relative_position_id = AST_state_of_RAAF
-		x = -1
-		y = 2
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_new_fighters"
-			add_tech_bonus = {
-				name = AST_new_fighters
-				bonus = 1
-				uses = 2
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_CAS_effort
-		icon = GFX_goal_generic_CAS
-		cost = 8.00
-		prerequisite = {
-			focus = AST_new_fighters
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = -1
-		y = 3
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_CAS_effort"
-			add_tech_bonus = {
-				name = AST_CAS_effort
-				bonus = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_new_bombers
-		icon = GFX_goal_generic_air_bomber
-		cost = 8.00
-		prerequisite = { focus = AST_pilot_training }
-		prerequisite = { focus = AST_expand_air_base }
-		prerequisite = { focus = AST_air_production_1 }
-		mutually_exclusive = { focus = AST_new_fighters }
-		relative_position_id = AST_state_of_RAAF
-		x = 1
-		y = 2
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_new_bombers"
-			add_tech_bonus = {
-				name = AST_new_bombers
-				bonus = 1
-				uses = 2
-				category = tactical_bomber
-				category = cat_strategic_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_naval_bombers
-		icon = GFX_goal_generic_air_naval_bomber
-		cost = 8.00
-		prerequisite = {
-			focus = AST_new_bombers
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 1
-		y = 3
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_naval_bombers"
-			add_tech_bonus = {
-				name = AST_naval_bombers
-				bonus = 1
-				uses = 1
-				category = naval_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_air_observer_corps
-		icon = GFX_focus_generic_air_defense
-		cost = 8.00
-		available = {
-			controls_all_owned_states = yes
-		}
-		prerequisite = {
-			focus = AST_CAS_effort
-			focus = AST_naval_bombers
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = -2
-		y = 4
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_air_observer_corps"
-			if = {
-				limit = { NOT = { has_tech = interwar_antiair } }
-				set_technology = { interwar_antiair = 1 }
-			}
-			if = {
-				limit = { owns_state = 285 } #New South Wales
-				285 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { owns_state = 521 } #Queensland
-				521 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = AST_air_observer_corps
-				bonus = 1
-				uses = 1
-				technology = antiair1
-				technology = antiair2
-				technology = antiair3
-				technology = antiair4
-				technology = antiair5
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = AST_womens_auxiliary
-		icon = GFX_IRE_women_pilots
-		cost = 8.00
-		prerequisite = {
-			focus = AST_CAS_effort
-			focus = AST_naval_bombers
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 0
-		y = 4
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_womens_auxiliary"
-			air_experience = 50
-			set_rule = { can_generate_female_aces = yes }
-		}
-		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
-		id = AST_darwin_base
-		icon = GFX_goal_generic_occupy_states_coastal
-		cost = 8.00
-		available = {
-			520 = { is_owned_and_controlled_by = AST } #Northern Territory
-		}
-		prerequisite = {
-			focus = AST_CAS_effort
-			focus = AST_naval_bombers
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 2
-		y = 4
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		bypass = {
-			NOT = { owns_state = 520 }
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_darwin_base"
-			520 = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = AST_air_production_2
-		icon = GFX_goal_generic_air_production
-		cost = 8.00
-		available = {
-			has_idea = AST_aviation_industry_1
-		}
-		prerequisite = { focus = AST_darwin_base }
-		prerequisite = { focus = AST_air_observer_corps }
-		relative_position_id = AST_state_of_RAAF
-		x = 0
-		y = 5
-
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_air_production_2"
-			swap_ideas = {
-				remove_idea = AST_aviation_industry_1
-				add_idea = AST_aviation_industry_2
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = AST_rule_the_skies
-		icon = GFX_goal_generic_air_fighter2
-		cost = 8.00
-		prerequisite = {
-			focus = AST_air_production_2
-		}
-		relative_position_id = AST_state_of_RAAF
-		x = 0
-		y = 6
-
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AST_rule_the_skies"
-			air_experience = 50
-			add_tech_bonus = {
-				name = AST_rule_the_skies
-				bonus = 1
-				uses = 2
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-
 	### ARMY
 
 	focus = {
 		id = AST_state_of_the_army
 		icon = GFX_goal_AST_state_of_army
 		cost = 5
-		x = 58
+		x = 52
 		y = 0
 
 		ai_will_do = {

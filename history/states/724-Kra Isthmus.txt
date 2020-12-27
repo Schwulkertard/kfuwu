@@ -11,7 +11,8 @@ state = {
 
 
 	history = {
-		owner = SIA
+		owner = JAP
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -35,7 +36,6 @@ state = {
 #		victory_points = {
 #			10156 1 # Mambang/Satun
 #		}
-		add_core_of = SIA
 	}
 
 	provinces = {

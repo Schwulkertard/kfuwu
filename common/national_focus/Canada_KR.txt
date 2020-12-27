@@ -2902,35 +2902,6 @@ focus_tree = {
 		x = 28
 		y = 1
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				country_exists = CSA
-			}
-			modifier = {
-				factor = 3
-				country_exists = CSA
-				has_completed_focus = CAN_eyes_to_the_south
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-		}
-
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3155,61 +3126,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_within_arms_reach"
-			if = {
-				limit = {
-					OR = {
-						has_global_flag = ENG_CANIRE_protection
-						has_global_flag = ENG_CANIRE_support
-					}
-					IRE = {
-						exists = yes
-						is_subject = no
-						is_in_faction = no
-						not_has_socialist_government = yes
-						NOT = { is_guaranteed_by = GER }
-					}
-				}
-				unlock_decision_tooltip = CAN_approach_ireland
-			}
-			if = {
-				limit = {
-					ICE = {
-						exists = yes
-						is_subject = no
-						is_in_faction = no
-						not_has_socialist_government = yes
-						OR = {
-							has_idea = ICE_failing_economy
-							has_idea = ICE_recovering_economy_1
-							has_idea = ICE_recovering_economy_2
-							has_idea = ICE_recovering_economy_3
-							has_idea = ICE_recovering_economy_4
-							has_idea = ICE_recovering_economy_5
-							has_idea = ICE_recovering_economy_6
-						}
-						NOT = {
-							has_country_flag = ICE_expanded_fishing
-							gives_military_access_to = ROOT
-							has_war_with = ROOT
-						}
-					}
-				}
-				unlock_decision_tooltip = CAN_bailout_iceland
-			}
-			if = {
-				limit = {
-					country_exists = ENG
-					ICE = {
-						exists = yes
-						is_ai = yes
-						is_in_faction_with = ENG
-						has_completed_focus = ICE_Synd_Gov_Form
-						has_country_flag = ICE_Resist_ENG
-						NOT = { has_country_flag = ICE_Declared_Canada }
-					}
-				}
-				unlock_decision_tooltip = CAN_fund_icelandic_resistance
-			}
 			add_ideas = CAN_invasion_plans_1
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_ARMY_BONUS }
@@ -3405,7 +3321,6 @@ focus_tree = {
 						}
 					}
 				}
-				unlock_decision_tooltip = CAN_contact_irish_unionists
 			}
 			swap_ideas = {
 				remove_idea = CAN_invasion_plans_1
@@ -3466,27 +3381,6 @@ focus_tree = {
 		relative_position_id = CAN_address_army
 		x = -1
 		y = 1
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0.1
-				has_idea = CAN_Georges_Vanier_carm_sco
-			}
-			modifier = {
-				factor = 3
-				country_exists = CSA
-				has_completed_focus = CAN_eyes_to_the_south
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				country_exists = CSA
-			}
-		}
 
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -3643,27 +3537,6 @@ focus_tree = {
 		relative_position_id = CAN_address_army
 		x = 1
 		y = 1
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				country_exists = CSA
-			}
-			modifier = {
-				factor = 3
-				country_exists = CSA
-				has_completed_focus = CAN_eyes_to_the_south
-			}
-			modifier = {
-				factor = 0.1
-				has_idea = CAN_JFC_Fuller_carm_ade
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
 
 		available_if_capitulated = yes
 		cancel_if_invalid = yes

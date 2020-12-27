@@ -297,10 +297,6 @@ create_country_leader = {# Huey Long
 
 add_ideas = {
 	### cabinet ###
-	USA_Herbert_Hoover_hog_sli
-	USA_Henry_Lewis_Stimson_for_sli
-	USA_Roy_Dikeman_Chapin_Sr_eco_mli
-	USA_Charles_Evans_Hughes_Sr_sec_sli
 	# national ideas
 	USA_great_depression
 	USA_civil_war_aftermath_idea

@@ -8,8 +8,8 @@ state = {
 	}
 
 	history = {
-		owner = BUR
-		add_core_of = BUR
+		owner = DEH
+		add_core_of = DEH
 		victory_points = {
 			1330 10 # Yangon
 		}
@@ -18,8 +18,6 @@ state = {
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 1
 			air_base = 1
 			1330 = {
 				naval_base = 4
