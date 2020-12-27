@@ -6,16 +6,16 @@ state = {
 
 	resources = {
 		steel = 110
-		aluminium = 100
+		aluminium = 38
 	}
 
 	history = {
 		owner = GER
 		add_core_of = GER
 		buildings = {
-			infrastructure = 6
-			industrial_complex = 12
+			infrastructure = 7
 			arms_factory = 3
+			industrial_complex = 6
 			air_base = 6
 			3438 = {
 				bunker = 2

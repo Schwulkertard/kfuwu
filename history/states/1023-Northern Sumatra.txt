@@ -11,8 +11,9 @@ state = {
 	manpower = 2392936
 
 	history = {
-		owner = GER
-		add_core_of = VEN
+		owner = DEI
+		add_core_of = DEI
+		add_core_of = INS
 		buildings = {
 			infrastructure = 3
 			1648 = {

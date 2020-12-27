@@ -8,8 +8,7 @@ state = {
 	}
 
 	history = {
-		owner = JAP
-		add_core_of = VEN
+		owner = SIA
 		buildings = {
 			infrastructure = 3
 #			12131 = { # Pattani Landing Zone - currently disabled
@@ -19,6 +18,8 @@ state = {
 #		victory_points = {
 #			12131 1 # Pattani - 3
 #		}
+		add_core_of = SIA
+		add_core_of = MLY
 	}
 
 	provinces = {

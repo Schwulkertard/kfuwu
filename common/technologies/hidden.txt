@@ -188,7 +188,7 @@ technologies = {
 		#They're in the PSA loc file
 		infantry = {
 			mountain = {
-				attack = 0.05
+				attack = 0.1
 				defence = 0.05
 				movement = 0.1
 			}

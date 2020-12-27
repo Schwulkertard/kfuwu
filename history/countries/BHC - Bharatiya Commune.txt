@@ -1,6 +1,7 @@
 ﻿capital = 431
 
 oob = "BHC"
+set_naval_oob= "BHC_naval"
 
 set_technology = {
 	### Tanks ###
@@ -331,4 +332,6 @@ create_navy_leader = { #Auto-Generated
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
+
+BHC_start_naval_variant = yes
 

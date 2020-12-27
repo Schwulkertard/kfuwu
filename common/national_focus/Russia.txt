@@ -55,7 +55,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 
-	focus = {
+focus = {
 		id = RUS_progress_cult
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = RUS_A_New_Russia }
@@ -304,12 +304,11 @@ focus_tree = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-				}
-			}
+			}	
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
-
+}
 
 	focus = {
 		id = RUS_Ural_Tractor_Plants
@@ -694,35 +693,35 @@ focus_tree = {
 					type = arms_factory 
 					level = 2
 					instant_build = yes
-				}		
-			}
+			}		
+		}
             657 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory 
 					level = 2
 					instant_build = yes
-				}		
-			}
+			}		
+		}
 		    563 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory 
 					level = 2
 					instant_build = yes
-				}		
 			}		
+		}		
 		    564 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory 
 					level = 2
 					instant_build = yes
-				}		
-			}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+			}		
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
+}
 
 	focus = {
 		id = RUS_Research_Investments
@@ -898,6 +897,17 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+			if = {
+				limit = {
+					has_completed_focus = RUS_Overwhelming_Firepower
+				}
+				add_tech_bonus = {
+					name = RUS_Equipment_Modernisation
+					bonus = 1
+					uses = 2
+					category = support_tech
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -923,6 +933,17 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = artillery
+			}
+			if = {
+				limit = {
+					has_completed_focus = RUS_Overwhelming_Firepower
+				}
+				add_tech_bonus = {
+					name = RUS_Equipment_Modernisation
+					bonus = 1
+					uses = 2
+					category = support_tech
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1270,6 +1291,10 @@ focus_tree = {
 			factor = 5000
 			modifier = {
 				factor = 0
+				has_completed_focus = RUS_Empower_The_Duma
+			}
+			modifier = {
+				factor = 0
 				has_stability < 0.3
 			}
 		}
@@ -1493,7 +1518,7 @@ focus_tree = {
 			unlock_decision_tooltip = RUS_Attack_Germany
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
 	}
-}
+
 	
 
 	

@@ -3,8 +3,9 @@ state = {
 	name = "STATE_750"
 
 	history = {
-		owner = JAP
-		add_core_of = VEN
+		owner = SIA
+		add_claim_by = SIA
+		add_core_of = CAM
 		victory_points = {
 			7376 4 # Phnom Penh
 		}

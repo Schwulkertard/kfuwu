@@ -18,7 +18,7 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 2800 y = 900 }
 
-	###Politics###
+###Politics###
 
 	focus = {
 		id = UKR_Our_Future
@@ -94,7 +94,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 
-	###'ViN' and 'OUN'###
+###'ViN' and 'OUN'###
 
 	focus = {
 		id = UKR_Rightist_Government
@@ -229,7 +229,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
 
-	###Hetman takes power###
+###Hetman takes power###
 
 	focus = {
 		id = UKR_Skoropadsky_Policy
@@ -338,7 +338,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 
-	###New heir###
+###New heir###
 
 	focus = {
 		id = UKR_New_Scientists
@@ -365,7 +365,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-	###Industry###
+###Industry###
 
 	focus = {
 		id = UKR_Ukrainian_Recovery
@@ -544,8 +544,9 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
 	   }
-	   search_filters = { FOCUS_FILTER_STABILITY }
     }
 
 
@@ -634,7 +635,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
-	#Army#
+#Army#
 
 	focus = {
 		id = UKR_Reorg_army
@@ -914,16 +915,11 @@ focus_tree = {
 		id = UKR_Russian_Threat
 		icon = GFX_focus_generic_eagle
 		prerequisite = {
-			focus = UKR_support_brigades
+			UKR_New_Army_UKR
 		}
-		prerequisite = {
-			focus = UKR_rocket_development
-		}
-		prerequisite = {
-			focus = UKR_New_Army_UKR
-		}
-		x = 26
-		y = 5
+		relative_position_id = UKR_New_Army_UKR
+		x = 0
+		y = 2
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_State_Revanchism"
@@ -936,6 +932,12 @@ focus_tree = {
    focus = {
 		id = UKR_COCKYARDS
 		icon = GFX_goal_generic_foreign_investments
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_Navy_Modernisation_tooltip
+				NOT = { has_country_flag = RUS_navy_locked }
+			}
+		}
 		x = 20
 		y = 0
 		cost = 5

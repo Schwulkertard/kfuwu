@@ -6,12 +6,13 @@ state = {
 	}
 
 	history = {
-		owner = JAP
-		add_core_of = VEN
+		owner = SIA
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
+			arms_factory = 1
+			industrial_complex = 4
 			air_base = 3
+			dockyard = 1
 			7408 = { # Port of Bangkok & Samut Prakarn Forts
 				naval_base = 4
 				coastal_bunker = 1
@@ -29,6 +30,7 @@ state = {
 #		victory_points = {
 #			12220 2 # Ao Manao, Prachuap Khiri Khan - 2
 #		}
+		add_core_of = SIA
 	}
 
 	provinces = {

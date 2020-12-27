@@ -930,6 +930,7 @@ focus_tree = {
 				instant_build = yes
 			}
 		  }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
@@ -958,6 +959,8 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		bypass = {
 			OR = {
+				has_war_with = SIC
+				NOT = { country_exists = SIC }
 				controls_state = 742
 				controls_state = 2
 			}
@@ -1005,6 +1008,8 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		bypass = {
 			OR = {
+				has_war_with = ITA
+				has_war_with = SIC
 				NOT = {
 					controls_state = 838
 					controls_state = 162
@@ -1146,6 +1151,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = SRI_army
+		}
+		mutually_exclusive = {
+			focus = SRI_armata_rossa
 		}
 		x = -3
 		y = 1
@@ -1388,9 +1396,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SRI_italian_auto_industry
-		}
-		x = 27
-		y = 2
+			}
+		x = -2
+		y = 1
+		relative_position_id = SRI_prepare_for_liberation
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1910,6 +1919,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = SRI_naval_training
+		}
+		prerequisite = {
+			focus = SRI_air_training_school
 		}
 		x = -3
 		y = 2

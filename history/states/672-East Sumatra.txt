@@ -7,8 +7,9 @@ state = {
 	}
 
 	history = {
-		owner = GER
-		add_core_of = VEN
+		owner = DEI
+		add_core_of = DEI
+		add_core_of = INS
 		victory_points = {
 			4652 1
 		}
@@ -17,6 +18,7 @@ state = {
 		}
 		buildings = {
 			infrastructure = 3
+			industrial_complex = 1
 			air_base = 1
 			4652 = {
 				naval_base = 3

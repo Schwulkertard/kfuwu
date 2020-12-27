@@ -3,12 +3,11 @@ state = {
 	id = 447
 	name = "STATE_447"
 	resources = {
-		oil = 60
+		oil = 2
 	}
 
 	history = {
 		owner = OTT
-		add_core_of = VEN
 		victory_points = {
 			4076 20
 		}

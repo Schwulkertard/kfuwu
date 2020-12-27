@@ -1730,8 +1730,9 @@ focus_tree = {
 	focus = {
 		id = FRA_equipment_modern
 		icon = GFX_focus_chi_army_reform
-		x = 33
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = FRA_flexible_support
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -1754,8 +1755,9 @@ focus_tree = {
 	focus = {
 		id = FRA_modern_artillery
 		icon = GFX_goal_generic_army_artillery2
-		x = 33
-		y = 4
+		x = 0
+		y = 2
+		relative_position_id = FRA_flexible_support
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -1808,8 +1810,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_principe_concentration
 		}
-		x = 31
-		y = 2
+		x = -2
+		y = 1
+		relative_position_id = FRA_principe_concentration
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -1854,6 +1857,11 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_communal_army
+		}
+		mutually_exclusive = {
+			focus = FRA_centralized_hc
+			focus = FRA_officers_initiative
+			focus = FRA_mass_conscription
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_principe_concentration"

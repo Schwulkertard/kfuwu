@@ -641,19 +641,6 @@ ideas = {
 			}
 		}
 
-		opel = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea opel"}
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				motorised_equipment_producer_mass_2
-			}
-			research_bonus = {
-				motorized_equipment = 0.1
-			}
-		}
-
 		hanomag = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea hanomag"}
 			allowed = {

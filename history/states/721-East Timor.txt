@@ -6,8 +6,8 @@ state = {
 	state_category = one
 
 	history = {
-		owner = CAN
-		add_core_of = VEN
+		owner = DEI
+		add_core_of = DEI
 		victory_points = {
 			12190 1 # Dili
 		}

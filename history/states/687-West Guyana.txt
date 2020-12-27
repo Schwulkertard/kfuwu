@@ -19,7 +19,7 @@ state = {
 		victory_points = {
 			4982 5
 		}
-		add_core_of = VEN
+		add_core_of = CAN
 	}
 
 	provinces = {

@@ -78,8 +78,15 @@ if = {
 }
 
 add_ideas = {
+	CRO_Vladko_Macek_hog_sli
+	CRO_Ivo_Krbek_for_sli
+	CRO_Barisa_Smoljan_eco_sli
+	CRO_Franjo_Gazi_sec_sli
 
 	AUS_part_of_the_Empire
+	ILL_croatian_command
+	ILL_federated_army
+	neutral_idea
 }
 
 add_opinion_modifier = { target = FRA modifier = embargo }

@@ -11,8 +11,8 @@ state = {
 	}
 
 	history = {
-		owner = GER
-		add_core_of = VEN
+		owner = GEA
+		add_core_of = GEA
 		victory_points = {
 			7329 2 # Kota Bahru
 		}

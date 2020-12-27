@@ -158,8 +158,10 @@ set_popularities = {
 }
 
 add_ideas = {
-	rus_free_trade
-	closed_economy
+	RUS_Pavel_N_Milyukov_hog_mli
+	RUS_Pyetr_B_Struve_for_sli
+	RUS_Nikolay_A_Maklakov_eco_pau
+	RUS_Andrey_I_Shingarev_sec_mli
 }
 
 create_country_leader = {

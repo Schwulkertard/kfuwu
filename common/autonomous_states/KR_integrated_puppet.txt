@@ -42,7 +42,9 @@ autonomy_state = {
 		NOT = {
 			AND = {
 				OR = {
-			}
+					tag = GEA
+					tag = MAF
+				}
 				overlord = { tag = GER }
 			}
 		}

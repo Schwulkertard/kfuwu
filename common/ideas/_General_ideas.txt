@@ -461,7 +461,7 @@ ideas = {
 
 			allowed_to_remove = {
 				NOT = {
-					tag = RUS
+					has_country_flag = economic_isolation 
 				}
 			}
 
@@ -520,6 +520,7 @@ ideas = {
 				#has_manpower_for_recruit_change_to = { value = 0.015 group = mobilization_laws }
 				NOT = {
 					has_idea = isolation
+					has_idea = undisturbed_isolation
 				}
 			}
 
@@ -549,6 +550,7 @@ ideas = {
 				#has_manpower_for_recruit_change_to = { value = 0.025 group = mobilization_laws }
 				has_war_support > 0.1
 				NOT = {
+					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = cannot_have_conscription
 				}
@@ -626,6 +628,7 @@ ideas = {
 					}
 				}
 				NOT = {
+					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = cannot_have_conscription
 					has_country_flag = cannot_have_extensive_conscription
@@ -703,6 +706,7 @@ ideas = {
 					surrender_progress > 0
 				}
 				NOT = {
+					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = cannot_have_conscription
 					has_country_flag = cannot_have_extensive_conscription
@@ -781,6 +785,7 @@ ideas = {
 					surrender_progress > 0.15
 				}
 				NOT = {
+					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = cannot_have_conscription
 					has_country_flag = cannot_have_extensive_conscription
@@ -844,6 +849,7 @@ ideas = {
 					surrender_progress > 0.25
 				}
 				NOT = {
+					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = cannot_have_conscription
 					has_country_flag = cannot_have_extensive_conscription

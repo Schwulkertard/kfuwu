@@ -6,8 +6,9 @@ state = {
 	state_category = two
 
 	history = {
-		owner = JAP
-		add_core_of = VEN
+		owner = GEA
+		add_core_of = GEA
+		add_claim_by = QIE
 		buildings = {
 			dockyard = 2
 			infrastructure = 4

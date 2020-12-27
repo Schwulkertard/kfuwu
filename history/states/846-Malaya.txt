@@ -8,8 +8,9 @@ state = {
 	}
 
 	history = {
-		owner = GER
-		add_core_of = VEN
+		owner = GEA
+		add_core_of = GEA
+		add_core_of = MLY
 		victory_points = {
 			10297 3 # Kuala Lumpur
 		}
@@ -22,6 +23,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 			air_base = 2
+			industrial_complex = 2
 			10297 = {
 				naval_base = 5 # Kuala Lumpur
 			}
